@@ -1,0 +1,324 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #2c2c2c;
+    background-color: #fafaf9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(250, 250, 249, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #8b7355;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+/* Sections */
+section {
+    padding: 8rem 0;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #999;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+    line-height: 1.15;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 650px;
+    font-weight: 400;
+}
+
+/* Current Work Section */
+.current-work {
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.role {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.timeline {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 680px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 10rem 0;
+}
+
+.project {
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.project:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.project-description {
+    font-size: 1.0625rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+/* Background Section */
+.background {
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.timeline-item {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.timeline-date {
+    font-size: 0.9375rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.timeline-company {
+    font-size: 1.0625rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.timeline-description {
+    font-size: 1.0625rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    padding: 6rem 0 4rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+footer p {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #8b7355;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-container {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    section {
+        padding: 5rem 0;
+    }
+
+    .projects {
+        padding: 6rem 0;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .section-title {
+        font-size: 1.875rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+}

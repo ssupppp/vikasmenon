@@ -1,0 +1,184 @@
+PORTFOLIO CONTENT
+
+NOTES:
+- Keep descriptions concise and focused on impact
+- Use active voice and strong verbs
+- Focus on what you built and learned, not just what you did
+- After filling this out, tell Claude: "Read content.txt and update the portfolio with this information"
+
+
+
+
+My current resume:
+About me
+I love games. I am a game development executive who manages, designs and creates games.
+I am experienced in managing studios, cross functional teams, external vendors & partners to run business operations at scale. I provide direction and leadership, manage operations and development resources, maintain schedule & budget and have a consistent track record of delivering results.
+I was a member of the global production council at Zynga providing mentorship & coaching, defining production roles & responsibilities and driving various initiatives globally. I am people and player centric in my approach and have a strong operational background that helps me deliver results
+My last role was of an Executive Producer at CSR2 Racing, accountable for business performance of the Racing India division.
+Before starting as a game developer, I founded my own company which tried to solve mobility problems in Pune in 2011.
+
+Experience
+September 1, 2020
+October 31, 2023
+
+Executive Producer
+CSR2 Racing
+Established and led the Racing division at Zynga India, overseeing the whole process from feature development to live operations. Grew the team from around 8 members to 65+ within just 2 years, driving the success of the most popular Racing game on Mobile.
+Took charge of day-to-day production and managed a multi-functional team across all levels, including directly managing more than 8 producers. Streamlined our work processes and development pipeline, resulting in impressive operational results over the past 3 years.
+Delivered exciting projects that truly connected with players, including some big-name IP projects. Revamped the game development pipeline to achieve 2 major bold beat changes in a single year, while further enhancing game health and quality of the game
+
+September 1, 2017 → October 31, 2020
+
+Executive Producer
+Farmville Country Escape
+Grew game YoY & improved quality of the game by providing delightful experience for players. Significant improvement in quality of releases & player NPS due to process and pipeline changes that ensured high quality feature development
+Improved predictability of releases and roadmap by driving new processes changes and using tools (Smartsheet, Jira among many others) which established excellent operating rhythm of business.
+Solved core issues of art development during this period by reviewing the art pipeline, tying up with new vendors and driving L&D initiatives significantly improving quality and delivery of assets within budget
+
+May 30, 2012 → August 31, 2017
+
+Lead Producer/Senior Producer
+Farmville 2, Mafia Wars, ChefVille, CastleVille
+Running live operations with for multiple $30M+ titles including Farmville franchise of games for more than 2 years; Directly responsible for delivering complex bold beat projects more than 5 beat sized projects successfully which directly grew game by 10%
+Successfully increased margins and EBITDA for key titles by effective utilization of team, tooling/automation improvements and identifying new and improved vendors for asset delivery
+Created, implemented & monitored complex project plans, schedules and budgets to ensure games are created and delivered on time, at high quality and within established constraints.
+
+What is missing in this resume?
+Note -- the current date is 21-11-2025 so this is horribly outdated. 
+
+i want to update this till date 
+-- my current work
+-- my recent work
+-- my side projects and hobbies
+-- then previous experience
+
+overall i want my previous experience to be just a footnote of my current life though it has been substantial
+
+
+
+What am i doing currently?
+I am currently working with Terrabyte - since Oct 2024.
+
+Head of Games & Platform but in a startup that's pre-pmf this does not meany anything.
+
+Currently we are making AI native games & experiences on Ripple AI; working on the cutting edge of interactive experiences * AI.
+
+
+Why do I believe in Terrabyte?
+This is a web article I wrote which is not yet published but has content as to why I am excited about the work I am doing. So pick the most useful references here that double down on that -- lose the other games/examples mentioned and make a complelling and clear reason to why it is a natural choice to work at a place like Terra which is working on the pushing the frontier for gamers across the globe
+
+
+1. AI native games: Still Hour One
+AI-Native Games: Still Hour One
+The AI-native game space is still very early—hour one, if you will. But there's a big change coming, and the signs are there. Mobile gaming especially has been lagging behind, which is unusual because gaming typically leads innovation at the intersection of art, entertainment, tech, and consumer behavior.
+We need to be prepared, because this is going to explode the gaming landscape.
+What Makes a Game AI-Native?
+There's confusion about what AI-native actually means. People often conflate it with using AI in the development pipeline—procedural generation, asset creation, or level design. Different people interpret these differently.
+Playing with Inference offers a useful framework: AI-native games integrate machine learning or generative AI directly into the core game loop. These systems create content or behaviors that traditional development tools simply couldn't achieve at scale, fundamentally expanding what's possible for player agency, dynamic systems, and emergent behavior. It's about both the technology and how it transforms the player experience—not just where AI appears in production.
+A simpler way to think about it comes from Joseph Kim:
+If you remove AI from an AI-native game, the game collapses.
+AI needs to be at the center—driving the core experience and moving the player from point A to point B. The player has to be interacting with AI front and center. Obviously, there are more layers where AI can contribute, but this is the foundation—the starting point everything else builds on.
+The player must feel the AI. They don't need to know whether AI is generating the response, simulating logic, or mimicking a player—but they should feel the presence of intelligence in every interaction.
+The PC Pioneers
+This is best explained with examples. On PC and web, several games have already shown what truly AI-native experiences look like.
+AI2U: With You Til The End — the player interacts with a Yandere girl while trying to escape. Every behavior—whether she leaves the room, stays, or offers hints—is driven by AI. Parameters are controlled by AI logic. Remove AI, and the entire experience collapses.
+Suck Up! — another strong example. You play as a vampire negotiating entry into homes or talking to police officers. The entire progression depends on AI-driven dialogue and dynamic social reasoning.
+These examples show what's possible when AI drives the core experience. Right now, most of these implementations are text-driven and stat-based, but that will evolve quickly. Other interaction models—voice, gesture, emotion, expression—will soon define the next generation of AI-native games.
+The Companion App Wave
+On mobile, it's still early days, but the companion app space is seeing interesting movement.
+Ani and Valentine from Grok have set new standards for AI-driven companions. Their responses are rich and non-deterministic—but more importantly, AI controls emotion, movement, expression, and environmental cues in real time. AI spawns characters, manages animation systems, and generates emotional responses—creating a full-spectrum emotional experience led entirely by intelligence.
+Other apps like Replika, Character.AI, and Other Half have proven the demand for emotional, conversational AI. And now, new 3D-based companions are emerging, pushing the space further. There's real momentum here.
+Mobile Gaming: The Add-On Problem
+Gaming specifically is just catching up. In most cases, AI shows up as an add-on feature. You complete a level built by code and logic, and then hand over the experience to AI for a chat or report card. The core loop remains traditional; the AI layer sits on top.
+There are still great experiments. Pengu and Chonk are clever examples—co-parenting pet games built around nurturing and social play. The AI touches appear when the pet writes letters or reflects on how it felt being raised. That's creative and meaningful work.
+Match-3 and puzzle games are also starting to experiment—AI handling difficulty tuning, asset generation, or level variety. But here's the key distinction:
+If you remove AI, the game still works. The mechanic might change—but it doesn't collapse.
+These are promising first steps, but not the final destination. The next wave needs to move beyond enhancement into AI as the core interaction layer—where the gameplay itself wouldn't exist without AI.
+Gaming Catches Up
+The entire world has been exploring AI for the past few years. Every industry is figuring out what it means for them. But gaming has been unusually quiet. That's strange—because gaming has always been the bridge between new technology and human experience. We're the ones who make tech emotional, expressive, and playable.
+That's about to change—and fast.
+Why We're Excited About Building AI-Native
+At Ripple AI, we're building at the edge of what's possible. It feels like hour one again. Things are only going to accelerate from here.
+We already see hints of what's coming. Some early tests show genuine emotional connection and engagement. Others remind us how much work remains. That's the exciting part—it's unexplored territory.
+The opportunity is massive. LLMs are becoming more capable. Hardware is improving. Infrastructure is ready. Everything is aligning.
+The questions we're asking:
+
+How do we make AI interactions feel natural and emotionally real?
+How do we design loops that collapse without AI at the center?
+How do we build experiences that couldn't exist before now?
+
+We don't have all the answers yet. We're experimenting, iterating, learning. But the path forward is clear—games that live and breathe through intelligence.
+Because that's where this is headed. Not AI-assisted. Not AI-enhanced.
+AI-native.
+And we're just getting started.
+
+
+-------------
+
+
+Ripple AI live on iOS and GP 
+https://play.google.com/store/apps/details?id=com.terra.aigames&hl=en
+https://apps.apple.com/in/app/ripple-ai-chat-play-drama/id6751642933
+
+Several games and experiences in pipeline. Will be launched soon.
+
+Already live -->
+1. Redflag.exe -- You wake up and find yourself locked in a room with a perfect girlfriend. Or is she? Navigate through conversations and find a way to escape, before you become another of her victims. 
+2. Snackula --> You are a vampire out looking for a midnight snack. Knock on doors of a friendly neighbor hood and convince strangers to let you inside. 
+
+In Redflag.exe -- the AI girlfiend is the AI element
+In Snackula -- the neihbors who open the door are AI elements
+
+I guess what is relevant from a portfolio standpoint is 
+1. mobile + AI native games --> first couple of attempts
+2. end to end from inception to launch
+
+
+----------------
+
+The jump to start up and join Terrabyte
+1. It was not an easy jump
+2. Corporate life is good
+3. But it's a slow boat China
+4. Themes around : Creating something new, pushing the boundaries, calling something my own, learning new things, taking a big swing at life
+5. What is life if you are not excited by the work that is done
+
+Important to -- never diss Zynga or corporate life; talented people, i learnt a lot. I just wanted a different challenge
+
+-------------
+
+What happened before Ripple AI
+- Ripple AI since last 3 month
+- before Ripple AI, I was on Terra --> https://letsterra.com/
+Gaming Galaxy for the Next Generation
+Platform for Midcore games for GenZ Audiences
+-- 50+ games
+-- notable ones include ->
+1. Cricket games
+2. Commando Strike
+3. Traffic Rider
+4. Football
+and many many more spanning sports & action genre
+
+-----------------
+
+Another About me 
+
+# Vikas Menon
+
+# Gamer.
+Game Producer.
+Dreamer.
+
+Hi, Welcome to my page. I would love to know more about you. Feel free to [email](mailto:menonvikz@gmail.com) me or reach out through any of the means provided below.
+
+## About Me:
+
+I love games. I am a game development executive who manages, designs and creates games.  I have been doing this for the last 12 years at Zynga.
+
+I am experienced in setting and scaling various teams at Zynga to deliver strong operational and business results predictably. I have led various game development teams and have experience running live operations at scale. I am experienced in defining game development processes and structures that can help deliver “fun” to players while driving a people & player centric approach to building teams and experiences.
+
+I am also a passionate gamer and you can find me on steam playing my favorite games. Counter Strike is all my all time favorite, followed by Age of Empires 2. My favorite mobile games are Chess , Marvel Snap & Fantasy Premier League. Offline, I play Football and all sorts of card & board games. 
+
+A long, long time ago - I started a company called AyAuto Radio Rickshaws, which provided on demand auto rickshaws for commuters in Pune. 
+--------------
