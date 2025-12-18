@@ -41,3 +41,34 @@ function updateActiveLink() {
 window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
 
+// Article expand/collapse functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const articleId = this.getAttribute('data-article');
+            const fullContent = document.getElementById(`article-${articleId}`);
+            const articleCard = this.closest('.article-card');
+
+            if (fullContent.style.display === 'none') {
+                fullContent.style.display = 'block';
+                this.textContent = 'Show less';
+                articleCard.classList.add('expanded');
+            } else {
+                fullContent.style.display = 'none';
+                this.textContent = 'Read more';
+                articleCard.classList.remove('expanded');
+
+                // Scroll to article top when collapsing
+                const navHeight = document.querySelector('nav').offsetHeight;
+                const articleTop = articleCard.offsetTop - navHeight - 20;
+                window.scrollTo({
+                    top: articleTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
