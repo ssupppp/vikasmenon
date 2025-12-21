@@ -283,6 +283,190 @@ section {
     max-width: 650px;
 }
 
+/* Game Tiles */
+.game-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.game-tile {
+    display: block;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.game-tile:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.game-tile-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.game-tile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-tile:hover .game-tile-image img {
+    transform: scale(1.05);
+}
+
+.game-tile-content {
+    padding: 1.5rem;
+}
+
+.game-tile-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.game-tile-description {
+    font-size: 0.9375rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.game-tile-links {
+    margin-top: 1rem;
+}
+
+.game-tile-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.game-tile-link:hover {
+    color: #8b7355;
+}
+
+/* Project Detail Pages */
+.project-detail {
+    min-height: 100vh;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #1a1a1a;
+}
+
+.project-detail-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.project-detail-subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.project-detail-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.project-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-detail-content {
+    max-width: 700px;
+}
+
+.project-detail-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.project-detail-content h2:first-child {
+    margin-top: 0;
+}
+
+.project-detail-content p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.project-detail-content ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.project-detail-content li {
+    font-size: 1.0625rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.project-detail-content li strong {
+    color: #1a1a1a;
+}
+
+.project-status {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.project-status p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.project-status p strong {
+    color: #1a1a1a;
+}
+
 /* Video Embed */
 .video-embed {
     position: relative;
@@ -429,6 +613,27 @@ footer p {
     .article-feed {
         gap: 3rem;
     }
+
+    .game-tiles {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-detail-title {
+        font-size: 2.5rem;
+    }
+
+    .project-detail-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .project-detail-image {
+        height: 350px;
+    }
+
+    .project-detail-content h2 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -479,5 +684,21 @@ footer p {
 
     .article-feed {
         gap: 2.5rem;
+    }
+
+    .project-detail-title {
+        font-size: 2rem;
+    }
+
+    .project-detail-subtitle {
+        font-size: 1rem;
+    }
+
+    .project-detail-image {
+        height: 250px;
+    }
+
+    .project-detail-content h2 {
+        font-size: 1.375rem;
     }
 }
