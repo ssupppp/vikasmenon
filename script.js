@@ -1,45 +1,50 @@
-// Smooth scroll for navigation links
+// Tab switching for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const navHeight = document.querySelector('nav').offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
+        const targetId = this.getAttribute('href').substring(1);
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+        // Hide all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show target section
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
         }
+
+        // Update active nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.style.color = '';
+        });
+        this.style.color = '#8b7355';
+
+        // Scroll to top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
 
-// Update active nav link on scroll
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-
-function updateActiveLink() {
-    const scrollPosition = window.scrollY + 150;
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.style.color = '#8b7355';
-                }
-            });
+// Show articles section by default on load
+window.addEventListener('load', function() {
+    document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+    });
+    const articlesSection = document.getElementById('articles');
+    if (articlesSection) {
+        articlesSection.style.display = 'block';
+    }
+    // Set articles link as active
+    document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === '#articles') {
+            link.style.color = '#8b7355';
         }
     });
-}
-
-window.addEventListener('scroll', updateActiveLink);
-window.addEventListener('load', updateActiveLink);
+});
 
 // Article expand/collapse functionality
 document.addEventListener('DOMContentLoaded', function() {
