@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Zamorins - Restaurant Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #f8fafc;
+        }
+
+        .header .subtitle {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .last-updated {
+            color: #64748b;
+            font-size: 0.75rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 1rem;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            background: #334155;
+            color: #f8fafc;
+        }
+
+        .tab.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid #334155;
+        }
+
+        .metric-card.highlight {
+            border-color: #3b82f6;
+            background: linear-gradient(135deg, #1e293b 0%, #1e3a5f 100%);
+        }
+
+        .metric-card.positive {
+            border-color: #22c55e;
+        }
+
+        .metric-card.negative {
+            border-color: #ef4444;
+        }
+
+        .metric-card .label {
+            color: #94a3b8;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-card .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .metric-card .value.positive {
+            color: #22c55e;
+        }
+
+        .metric-card .value.negative {
+            color: #ef4444;
+        }
+
+        .metric-card .subtext {
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-top: 0.25rem;
+        }
+
+        /* Charts Grid */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid #334155;
+        }
+
+        .chart-card h3 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #f8fafc;
+            margin-bottom: 1rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 280px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* Tables */
+        .table-card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid #334155;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .table-card h3 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #f8fafc;
+            margin-bottom: 1rem;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 0.75rem;
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #334155;
+        }
+
+        .data-table th.right {
+            text-align: right;
+        }
+
+        .data-table td {
+            padding: 0.75rem;
+            font-size: 0.875rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .data-table td.right {
+            text-align: right;
+            font-family: 'SF Mono', Monaco, monospace;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:hover {
+            background: #334155;
+        }
+
+        .data-table .total-row {
+            font-weight: 600;
+            background: #334155;
+        }
+
+        .data-table .total-row td {
+            border-top: 2px solid #475569;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            background: #334155;
+            color: #94a3b8;
+        }
+
+        /* P&L Specific */
+        .pnl-section {
+            margin-bottom: 1rem;
+        }
+
+        .pnl-section h4 {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .pnl-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .pnl-row.indent {
+            padding-left: 1rem;
+            color: #94a3b8;
+        }
+
+        .pnl-row.total {
+            font-weight: 600;
+            border-top: 1px solid #475569;
+            margin-top: 0.5rem;
+            padding-top: 0.75rem;
+        }
+
+        .pnl-row.grand-total {
+            font-size: 1rem;
+            font-weight: 700;
+            border-top: 2px solid #475569;
+            margin-top: 0.5rem;
+            padding-top: 0.75rem;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            color: #64748b;
+        }
+
+        /* Two column layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>The Zamorins</h1>
+            <div class="subtitle">Restaurant Analytics Dashboard</div>
+        </div>
+        <div class="last-updated" id="lastUpdated">Loading...</div>
+    </header>
+
+    <div class="container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="overview">Overview</button>
+            <button class="tab" data-tab="sales">Sales Analysis</button>
+            <button class="tab" data-tab="financials">P&L Statement</button>
+            <button class="tab" data-tab="expenses">Expenses</button>
+        </div>
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <div class="metrics-grid" id="metricsGrid">
+                <div class="metric-card highlight">
+                    <div class="label">Total Revenue</div>
+                    <div class="value" id="totalRevenue">--</div>
+                    <div class="subtext" id="avgDaily">-- avg/day</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Cost of Goods Sold</div>
+                    <div class="value" id="totalCogs">--</div>
+                    <div class="subtext" id="cogsSubtext">Food costs</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Operating Expenses</div>
+                    <div class="value" id="totalOpex">--</div>
+                    <div class="subtext">Recurring costs</div>
+                </div>
+                <div class="metric-card" id="profitCard">
+                    <div class="label" id="profitLabel">Net Profit</div>
+                    <div class="value" id="operatingProfit">--</div>
+                    <div class="subtext" id="marginPct">-- margin</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Items Sold</div>
+                    <div class="value" id="itemsSold">--</div>
+                    <div class="subtext" id="avgItems">-- avg/day</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Capital Investment</div>
+                    <div class="value" id="totalCapex">--</div>
+                    <div class="subtext">One-time setup</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Days Recorded</div>
+                    <div class="value" id="daysRecorded">--</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card full-width">
+                    <h3>Daily Revenue Trend</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueTrendChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Sales by Category</h3>
+                    <div class="chart-container">
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Operating Expenses Breakdown</h3>
+                    <div class="chart-container">
+                        <canvas id="opexChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <h3>Top Selling Items</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width:40px">#</th>
+                            <th>Item</th>
+                            <th>Category</th>
+                            <th class="right">Qty</th>
+                            <th class="right">Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topItemsTable">
+                        <tr><td colspan="5" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sales Analysis Tab -->
+        <div id="sales" class="tab-content">
+            <div class="charts-grid">
+                <div class="chart-card full-width">
+                    <h3>Daily Sales & Items Sold</h3>
+                    <div class="chart-container">
+                        <canvas id="salesItemsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="table-card">
+                    <h3>Category Performance</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th class="right">Qty Sold</th>
+                                <th class="right">Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody id="categoryTable"></tbody>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <h3>All Items Performance</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th class="right">Qty</th>
+                                <th class="right">Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody id="allItemsTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- P&L Statement Tab -->
+        <div id="financials" class="tab-content">
+            <div class="two-col">
+                <div class="table-card">
+                    <h3>Profit & Loss Statement</h3>
+                    <div class="subtext" id="pnlPeriod" style="color:#64748b;font-size:0.75rem;margin-bottom:1rem;">Period: --</div>
+                    <div id="pnlStatement">
+                        <div class="pnl-section">
+                            <h4>Revenue</h4>
+                            <div id="pnlRevenueLines"></div>
+                            <div class="pnl-row total">
+                                <span>Total Revenue</span>
+                                <span id="pnlTotalRevenue">--</span>
+                            </div>
+                        </div>
+
+                        <div class="pnl-section">
+                            <h4>Cost of Goods Sold (COGS)</h4>
+                            <div id="pnlCogsLines"></div>
+                            <div class="pnl-row total">
+                                <span>Total COGS</span>
+                                <span id="pnlTotalCogs">--</span>
+                            </div>
+                        </div>
+
+                        <div class="pnl-section">
+                            <div class="pnl-row total" style="background:#1e3a5f;padding:0.75rem;border-radius:6px;">
+                                <span>Gross Profit</span>
+                                <span id="pnlGrossProfit">--</span>
+                            </div>
+                            <div class="pnl-row indent" style="font-size:0.75rem;">
+                                <span>Gross Margin</span>
+                                <span id="pnlGrossMargin">--</span>
+                            </div>
+                        </div>
+
+                        <div class="pnl-section">
+                            <h4>Operating Expenses</h4>
+                            <div id="pnlOpexLines"></div>
+                            <div class="pnl-row total">
+                                <span>Total Operating Expenses</span>
+                                <span id="pnlTotalOpex">--</span>
+                            </div>
+                        </div>
+
+                        <div class="pnl-section">
+                            <div class="pnl-row total" style="background:#1e3a5f;padding:0.75rem;border-radius:6px;">
+                                <span>Operating Profit</span>
+                                <span id="pnlOperatingProfit">--</span>
+                            </div>
+                            <div class="pnl-row indent" style="font-size:0.75rem;">
+                                <span>Operating Margin</span>
+                                <span id="pnlOpMargin">--</span>
+                            </div>
+                        </div>
+
+                        <div class="pnl-section">
+                            <h4>Other Expenses</h4>
+                            <div class="pnl-row indent">
+                                <span>Uncategorized / Other</span>
+                                <span id="pnlOtherExpenses">--</span>
+                            </div>
+                        </div>
+
+                        <div class="pnl-section">
+                            <div class="pnl-row grand-total" id="pnlProfitRow">
+                                <span>Net Profit / (Loss)</span>
+                                <span id="pnlNetProfit">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <h3>Monthly P&L Trend</h3>
+                    <div class="chart-container">
+                        <canvas id="monthlyPnlChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="table-card">
+                    <h3>Monthly Breakdown</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th class="right">Revenue</th>
+                                <th class="right">COGS</th>
+                                <th class="right">Gross Profit</th>
+                                <th class="right">OpEx</th>
+                                <th class="right">Op. Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody id="monthlyPnlTable"></tbody>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <h3>Top Vendors by Spend</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Vendor</th>
+                                <th>Type</th>
+                                <th class="right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vendorTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expenses Tab -->
+        <div id="expenses" class="tab-content">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="label">Total Expenses</div>
+                    <div class="value" id="expTotal">--</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Operating (OpEx)</div>
+                    <div class="value" id="expOpex">--</div>
+                    <div class="subtext">Recurring costs</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Capital (CapEx)</div>
+                    <div class="value" id="expCapex">--</div>
+                    <div class="subtext">One-time investments</div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="table-card">
+                    <h3>Capital Expenditure (CapEx)</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th class="right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="capexTable"></tbody>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <h3>Operating Expenses (OpEx)</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th class="right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="opexTable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <h3>Partner Contributions</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Partner</th>
+                            <th class="right">Amount Paid</th>
+                        </tr>
+                    </thead>
+                    <tbody id="partnerTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chart.js global defaults
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.borderColor = '#334155';
+        Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+
+        const colors = {
+            primary: '#3b82f6',
+            secondary: '#8b5cf6',
+            success: '#22c55e',
+            warning: '#f59e0b',
+            danger: '#ef4444',
+            info: '#06b6d4',
+            chart: ['#3b82f6', '#8b5cf6', '#22c55e', '#f59e0b', '#ef4444', '#06b6d4', '#ec4899', '#84cc16']
+        };
+
+        function formatCurrency(value) {
+            if (Math.abs(value) >= 100000) {
+                return (value / 100000).toFixed(2) + 'L';
+            }
+            return new Intl.NumberFormat('en-IN', {
+                style: 'currency',
+                currency: 'INR',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(value);
+        }
+
+        function formatNumber(value) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(value));
+        }
+
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        let chartInstances = {};
+
+        async function loadDashboard() {
+            try {
+                // Load operational data
+                let response;
+                const paths = ['../data/dashboard_data.json', './data/dashboard_data.json', 'data/dashboard_data.json'];
+                for (const path of paths) {
+                    try {
+                        response = await fetch(path);
+                        if (response.ok) break;
+                    } catch { continue; }
+                }
+                if (!response || !response.ok) throw new Error('Data not found');
+                const data = await response.json();
+
+                // Load financial data
+                let finResponse;
+                const finPaths = ['../data/financial_data.json', './data/financial_data.json', 'data/financial_data.json'];
+                for (const path of finPaths) {
+                    try {
+                        finResponse = await fetch(path);
+                        if (finResponse.ok) break;
+                    } catch { continue; }
+                }
+                let finData = null;
+                if (finResponse && finResponse.ok) {
+                    finData = await finResponse.json();
+                }
+
+                renderDashboard(data, finData);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('topItemsTable').innerHTML =
+                    '<tr><td colspan="5" style="color:#ef4444">Error loading data</td></tr>';
+            }
+        }
+
+        function renderDashboard(data, finData) {
+            const updated = new Date(data.last_updated);
+            document.getElementById('lastUpdated').textContent =
+                `Updated: ${updated.toLocaleDateString('en-IN')} ${updated.toLocaleTimeString('en-IN', {hour: '2-digit', minute: '2-digit'})}`;
+
+            // Use financial data if available for more accurate metrics
+            if (finData && finData.pnl) {
+                // Overview metrics from bank statement data
+                document.getElementById('totalRevenue').textContent = formatCurrency(finData.pnl.revenue.total);
+                document.getElementById('avgDaily').textContent = `${finData.pnl.gross_margin_pct}% gross margin`;
+                document.getElementById('totalCogs').textContent = formatCurrency(finData.pnl.cogs.total);
+                document.getElementById('cogsSubtext').textContent = `${finData.pnl.cogs_pct}% of revenue`;
+                document.getElementById('totalOpex').textContent = formatCurrency(finData.pnl.opex.total);
+                document.getElementById('totalCapex').textContent = formatCurrency(finData.pnl.capex);
+                document.getElementById('itemsSold').textContent = formatNumber(data.metrics.total_items_sold);
+                document.getElementById('avgItems').textContent = `${Math.round(data.metrics.avg_daily_items)} avg/day`;
+                document.getElementById('daysRecorded').textContent = data.metrics.days_recorded;
+
+                const profit = finData.pnl.net_profit;
+                document.getElementById('profitLabel').textContent = 'Net Profit';
+                document.getElementById('operatingProfit').textContent = formatCurrency(profit);
+                document.getElementById('operatingProfit').className = 'value ' + (profit >= 0 ? 'positive' : 'negative');
+                document.getElementById('profitCard').className = 'metric-card ' + (profit >= 0 ? 'positive' : 'negative');
+                document.getElementById('marginPct').textContent = `${finData.pnl.operating_margin_pct}% op. margin`;
+            } else {
+                // Fallback to operational data
+                document.getElementById('totalRevenue').textContent = formatCurrency(data.metrics.total_revenue);
+                document.getElementById('avgDaily').textContent = `${formatCurrency(data.metrics.avg_daily_revenue)} avg/day`;
+                document.getElementById('totalCogs').textContent = '--';
+                document.getElementById('cogsSubtext').textContent = 'No data';
+                document.getElementById('totalOpex').textContent = formatCurrency(data.metrics.total_opex);
+                document.getElementById('totalCapex').textContent = formatCurrency(data.metrics.total_capex);
+                document.getElementById('itemsSold').textContent = formatNumber(data.metrics.total_items_sold);
+                document.getElementById('avgItems').textContent = `${Math.round(data.metrics.avg_daily_items)} avg/day`;
+                document.getElementById('daysRecorded').textContent = data.metrics.days_recorded;
+
+                const profit = data.metrics.operating_profit;
+                document.getElementById('profitLabel').textContent = 'Operating Profit';
+                document.getElementById('operatingProfit').textContent = formatCurrency(profit);
+                document.getElementById('operatingProfit').className = 'value ' + (profit >= 0 ? 'positive' : 'negative');
+                document.getElementById('profitCard').className = 'metric-card ' + (profit >= 0 ? 'positive' : 'negative');
+                document.getElementById('marginPct').textContent =
+                    `${data.metrics.gross_margin_pct > 0 ? '+' : ''}${data.metrics.gross_margin_pct}% margin`;
+            }
+
+            // Charts
+            renderRevenueTrendChart(data.daily_sales);
+            renderCategoryChart(data.category_sales);
+            if (finData && finData.pnl) {
+                renderOpexChart(finData.pnl.opex.breakdown);
+            } else {
+                renderOpexChart(data.expenses.opex.by_category);
+            }
+            renderSalesItemsChart(data.daily_sales);
+
+            // Use financial monthly data if available
+            if (finData && finData.monthly) {
+                renderMonthlyPnlChart(finData.monthly);
+                renderMonthlyPnlTable(finData.monthly);
+            } else {
+                renderMonthlyPnlChart(data.monthly_pnl);
+                renderMonthlyPnlTable(data.monthly_pnl);
+            }
+
+            // Tables
+            renderTopItemsTable(data.top_items);
+            renderCategoryTable(data.category_sales);
+            renderAllItemsTable(data.top_items);
+            renderExpensesTables(data.expenses);
+            renderPnlStatement(data, finData);
+        }
+
+        function renderRevenueTrendChart(dailySales) {
+            const sorted = [...dailySales].sort((a, b) => new Date(a.date) - new Date(b.date));
+            const ctx = document.getElementById('revenueTrendChart').getContext('2d');
+
+            if (chartInstances.revenueTrend) chartInstances.revenueTrend.destroy();
+            chartInstances.revenueTrend = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: sorted.map(d => {
+                        const date = new Date(d.date);
+                        return date.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
+                    }),
+                    datasets: [{
+                        label: 'Revenue',
+                        data: sorted.map(d => d.revenue),
+                        borderColor: colors.primary,
+                        backgroundColor: colors.primary + '20',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { callback: v => formatCurrency(v) }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderCategoryChart(categorySales) {
+            const categories = Object.entries(categorySales).sort((a, b) => b[1].revenue - a[1].revenue);
+            const ctx = document.getElementById('categoryChart').getContext('2d');
+
+            if (chartInstances.category) chartInstances.category.destroy();
+            chartInstances.category = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: categories.map(([name]) => name),
+                    datasets: [{
+                        data: categories.map(([, d]) => d.revenue),
+                        backgroundColor: colors.chart,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right', labels: { boxWidth: 12, padding: 10 } }
+                    }
+                }
+            });
+        }
+
+        function renderOpexChart(opexByCategory) {
+            const categories = Object.entries(opexByCategory).sort((a, b) => b[1] - a[1]).slice(0, 7);
+            const ctx = document.getElementById('opexChart').getContext('2d');
+
+            if (chartInstances.opex) chartInstances.opex.destroy();
+            chartInstances.opex = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: categories.map(([name]) => name),
+                    datasets: [{
+                        data: categories.map(([, v]) => v),
+                        backgroundColor: colors.chart,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { callback: v => formatCurrency(v) } }
+                    }
+                }
+            });
+        }
+
+        function renderSalesItemsChart(dailySales) {
+            const sorted = [...dailySales].sort((a, b) => new Date(a.date) - new Date(b.date));
+            const ctx = document.getElementById('salesItemsChart').getContext('2d');
+
+            if (chartInstances.salesItems) chartInstances.salesItems.destroy();
+            chartInstances.salesItems = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sorted.map(d => {
+                        const date = new Date(d.date);
+                        return date.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
+                    }),
+                    datasets: [{
+                        label: 'Revenue',
+                        data: sorted.map(d => d.revenue),
+                        backgroundColor: colors.primary,
+                        yAxisID: 'y'
+                    }, {
+                        label: 'Items Sold',
+                        data: sorted.map(d => d.items_sold),
+                        type: 'line',
+                        borderColor: colors.success,
+                        backgroundColor: 'transparent',
+                        yAxisID: 'y1',
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { position: 'left', ticks: { callback: v => formatCurrency(v) } },
+                        y1: { position: 'right', grid: { drawOnChartArea: false } }
+                    }
+                }
+            });
+        }
+
+        function renderMonthlyPnlChart(monthlyPnl) {
+            const ctx = document.getElementById('monthlyPnlChart').getContext('2d');
+            const hasCogs = monthlyPnl.some(m => m.cogs !== undefined);
+
+            if (chartInstances.monthlyPnl) chartInstances.monthlyPnl.destroy();
+            chartInstances.monthlyPnl = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: monthlyPnl.map(m => m.month),
+                    datasets: hasCogs ? [
+                        {
+                            label: 'Revenue',
+                            data: monthlyPnl.map(m => m.revenue),
+                            backgroundColor: colors.primary
+                        }, {
+                            label: 'COGS',
+                            data: monthlyPnl.map(m => m.cogs || 0),
+                            backgroundColor: colors.secondary
+                        }, {
+                            label: 'OpEx',
+                            data: monthlyPnl.map(m => m.opex),
+                            backgroundColor: colors.warning
+                        }, {
+                            label: 'Operating Profit',
+                            data: monthlyPnl.map(m => m.operating_profit),
+                            backgroundColor: monthlyPnl.map(m => m.operating_profit >= 0 ? colors.success : colors.danger)
+                        }
+                    ] : [
+                        {
+                            label: 'Revenue',
+                            data: monthlyPnl.map(m => m.revenue),
+                            backgroundColor: colors.primary
+                        }, {
+                            label: 'OpEx',
+                            data: monthlyPnl.map(m => m.opex),
+                            backgroundColor: colors.warning
+                        }, {
+                            label: 'Operating Profit',
+                            data: monthlyPnl.map(m => m.operating_profit),
+                            backgroundColor: monthlyPnl.map(m => m.operating_profit >= 0 ? colors.success : colors.danger)
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { callback: v => formatCurrency(v) } }
+                    }
+                }
+            });
+        }
+
+        function renderTopItemsTable(topItems) {
+            document.getElementById('topItemsTable').innerHTML = topItems.slice(0, 15).map((item, i) => `
+                <tr>
+                    <td>${i + 1}</td>
+                    <td>${item.item}</td>
+                    <td><span class="category-badge">${item.category}</span></td>
+                    <td class="right">${formatNumber(item.qty)}</td>
+                    <td class="right">${formatCurrency(item.revenue)}</td>
+                </tr>
+            `).join('');
+        }
+
+        function renderCategoryTable(categorySales) {
+            const sorted = Object.entries(categorySales).sort((a, b) => b[1].revenue - a[1].revenue);
+            const total = sorted.reduce((sum, [, d]) => sum + d.revenue, 0);
+
+            document.getElementById('categoryTable').innerHTML = sorted.map(([name, data]) => `
+                <tr>
+                    <td>${name}</td>
+                    <td class="right">${formatNumber(data.qty)}</td>
+                    <td class="right">${formatCurrency(data.revenue)}</td>
+                </tr>
+            `).join('') + `
+                <tr class="total-row">
+                    <td>Total</td>
+                    <td class="right">${formatNumber(sorted.reduce((s, [,d]) => s + d.qty, 0))}</td>
+                    <td class="right">${formatCurrency(total)}</td>
+                </tr>
+            `;
+        }
+
+        function renderAllItemsTable(items) {
+            document.getElementById('allItemsTable').innerHTML = items.map(item => `
+                <tr>
+                    <td>${item.item}</td>
+                    <td class="right">${formatNumber(item.qty)}</td>
+                    <td class="right">${formatCurrency(item.revenue)}</td>
+                </tr>
+            `).join('');
+        }
+
+        function renderMonthlyPnlTable(monthlyPnl) {
+            // Handle both old format (without cogs) and new format (with cogs)
+            document.getElementById('monthlyPnlTable').innerHTML = monthlyPnl.map(m => {
+                const cogs = m.cogs !== undefined ? m.cogs : 0;
+                const grossProfit = m.gross_profit !== undefined ? m.gross_profit : m.revenue;
+                return `
+                    <tr>
+                        <td>${m.month}</td>
+                        <td class="right">${formatCurrency(m.revenue)}</td>
+                        <td class="right">${formatCurrency(cogs)}</td>
+                        <td class="right" style="color:${grossProfit >= 0 ? '#22c55e' : '#ef4444'}">${formatCurrency(grossProfit)}</td>
+                        <td class="right">${formatCurrency(m.opex)}</td>
+                        <td class="right" style="color:${m.operating_profit >= 0 ? '#22c55e' : '#ef4444'}">${formatCurrency(m.operating_profit)}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderExpensesTables(expenses) {
+            document.getElementById('expTotal').textContent = formatCurrency(expenses.total);
+            document.getElementById('expOpex').textContent = formatCurrency(expenses.opex.total);
+            document.getElementById('expCapex').textContent = formatCurrency(expenses.capex.total);
+
+            const capexSorted = Object.entries(expenses.capex.by_category).sort((a, b) => b[1] - a[1]);
+            document.getElementById('capexTable').innerHTML = capexSorted.map(([name, amount]) => `
+                <tr><td>${name}</td><td class="right">${formatCurrency(amount)}</td></tr>
+            `).join('') + `
+                <tr class="total-row"><td>Total CapEx</td><td class="right">${formatCurrency(expenses.capex.total)}</td></tr>
+            `;
+
+            const opexSorted = Object.entries(expenses.opex.by_category).sort((a, b) => b[1] - a[1]);
+            document.getElementById('opexTable').innerHTML = opexSorted.map(([name, amount]) => `
+                <tr><td>${name}</td><td class="right">${formatCurrency(amount)}</td></tr>
+            `).join('') + `
+                <tr class="total-row"><td>Total OpEx</td><td class="right">${formatCurrency(expenses.opex.total)}</td></tr>
+            `;
+
+            const partnerSorted = Object.entries(expenses.by_partner).sort((a, b) => b[1] - a[1]);
+            document.getElementById('partnerTable').innerHTML = partnerSorted.map(([name, amount]) => `
+                <tr><td>${name}</td><td class="right">${formatCurrency(amount)}</td></tr>
+            `).join('') + `
+                <tr class="total-row"><td>Total</td><td class="right">${formatCurrency(expenses.total)}</td></tr>
+            `;
+        }
+
+        function renderPnlStatement(data, finData) {
+            if (finData && finData.pnl) {
+                // Use financial data from bank statement
+                const pnl = finData.pnl;
+
+                // Period
+                document.getElementById('pnlPeriod').textContent =
+                    `Period: ${pnl.period.start} to ${pnl.period.end}`;
+
+                // Revenue breakdown
+                const revenueLines = Object.entries(pnl.revenue.breakdown)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([name, amount]) => `
+                        <div class="pnl-row indent">
+                            <span>${name}</span>
+                            <span>${formatCurrency(amount)}</span>
+                        </div>
+                    `).join('');
+                document.getElementById('pnlRevenueLines').innerHTML = revenueLines;
+                document.getElementById('pnlTotalRevenue').textContent = formatCurrency(pnl.revenue.total);
+
+                // COGS breakdown
+                const cogsLines = Object.entries(pnl.cogs.breakdown)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([name, amount]) => `
+                        <div class="pnl-row indent">
+                            <span>${name}</span>
+                            <span>${formatCurrency(amount)}</span>
+                        </div>
+                    `).join('');
+                document.getElementById('pnlCogsLines').innerHTML = cogsLines;
+                document.getElementById('pnlTotalCogs').textContent = formatCurrency(pnl.cogs.total);
+
+                // Gross profit
+                document.getElementById('pnlGrossProfit').textContent = formatCurrency(pnl.gross_profit);
+                document.getElementById('pnlGrossProfit').style.color = pnl.gross_profit >= 0 ? '#22c55e' : '#ef4444';
+                document.getElementById('pnlGrossMargin').textContent = `${pnl.gross_margin_pct}%`;
+
+                // OpEx breakdown
+                const opexLines = Object.entries(pnl.opex.breakdown)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([name, amount]) => `
+                        <div class="pnl-row indent">
+                            <span>${name}</span>
+                            <span>${formatCurrency(amount)}</span>
+                        </div>
+                    `).join('');
+                document.getElementById('pnlOpexLines').innerHTML = opexLines;
+                document.getElementById('pnlTotalOpex').textContent = formatCurrency(pnl.opex.total);
+
+                // Operating profit
+                document.getElementById('pnlOperatingProfit').textContent = formatCurrency(pnl.operating_profit);
+                document.getElementById('pnlOperatingProfit').style.color = pnl.operating_profit >= 0 ? '#22c55e' : '#ef4444';
+                document.getElementById('pnlOpMargin').textContent = `${pnl.operating_margin_pct}%`;
+
+                // Other expenses
+                document.getElementById('pnlOtherExpenses').textContent = formatCurrency(pnl.other_expenses);
+
+                // Net profit
+                document.getElementById('pnlNetProfit').textContent = formatCurrency(pnl.net_profit);
+                document.getElementById('pnlNetProfit').style.color = pnl.net_profit >= 0 ? '#22c55e' : '#ef4444';
+
+                // Render vendor table
+                if (finData.vendors) {
+                    const vendorRows = finData.vendors.slice(0, 15).map(v => `
+                        <tr>
+                            <td>${v.vendor}</td>
+                            <td><span class="category-badge">${v.category}</span></td>
+                            <td class="right">${formatCurrency(v.total)}</td>
+                        </tr>
+                    `).join('');
+                    document.getElementById('vendorTable').innerHTML = vendorRows;
+                }
+            } else {
+                // Fallback to operational data
+                document.getElementById('pnlPeriod').textContent = '';
+                document.getElementById('pnlRevenueLines').innerHTML = `
+                    <div class="pnl-row indent">
+                        <span>Sales Revenue</span>
+                        <span>${formatCurrency(data.pnl_summary.revenue)}</span>
+                    </div>
+                `;
+                document.getElementById('pnlTotalRevenue').textContent = formatCurrency(data.pnl_summary.revenue);
+                document.getElementById('pnlCogsLines').innerHTML = '<div class="pnl-row indent"><span>No COGS data</span><span>--</span></div>';
+                document.getElementById('pnlTotalCogs').textContent = '--';
+                document.getElementById('pnlGrossProfit').textContent = '--';
+                document.getElementById('pnlGrossMargin').textContent = '--';
+
+                const opexLines = Object.entries(data.expenses.opex.by_category)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([name, amount]) => `
+                        <div class="pnl-row indent">
+                            <span>${name}</span>
+                            <span>${formatCurrency(amount)}</span>
+                        </div>
+                    `).join('');
+                document.getElementById('pnlOpexLines').innerHTML = opexLines;
+                document.getElementById('pnlTotalOpex').textContent = formatCurrency(data.pnl_summary.operating_expenses);
+
+                const profit = data.pnl_summary.operating_profit;
+                document.getElementById('pnlOperatingProfit').textContent = formatCurrency(profit);
+                document.getElementById('pnlOperatingProfit').style.color = profit >= 0 ? '#22c55e' : '#ef4444';
+                document.getElementById('pnlOpMargin').textContent = '--';
+                document.getElementById('pnlOtherExpenses').textContent = '--';
+                document.getElementById('pnlNetProfit').textContent = formatCurrency(profit);
+                document.getElementById('pnlNetProfit').style.color = profit >= 0 ? '#22c55e' : '#ef4444';
+            }
+        }
+
+        loadDashboard();
+    </script>
+</body>
+</html>

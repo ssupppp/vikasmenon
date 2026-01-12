@@ -1,0 +1,351 @@
+{
+  "generated_at": "2026-01-12T20:26:59.443796",
+  "period": {
+    "start": "2025-11-07",
+    "end": "2026-01-10"
+  },
+  "pnl": {
+    "period": {
+      "start": "2025-11-07",
+      "end": "2026-01-10"
+    },
+    "revenue": {
+      "total": 1803526.07,
+      "breakdown": {
+        "Bank Transfer": 405040.07,
+        "Other Income": 743973.0,
+        "UPI Collections": 654513.0
+      }
+    },
+    "cogs": {
+      "total": 1163245.52,
+      "breakdown": {
+        "Annapoorneshwari Foods": 46586.0,
+        "Ganesh Food Products": 24500.0,
+        "I Bake Foods": 2560.0,
+        "MKP Enterprises": 80170.0,
+        "SLNS Traders": 3731.0,
+        "SP Soap Oil": 8265.0,
+        "Melaange Foods (invoiced)": 820821.8099999999,
+        "Blinkit (food) (partner-paid)": 21622.0,
+        "metro (food) (partner-paid)": 9840.0,
+        "Digen (food) (partner-paid)": 14750.0,
+        "Ganesh Food (partner-paid)": 7000.0,
+        "Metro (food) (partner-paid)": 71263.20999999999,
+        "Byers coffee (partner-paid)": 7000.0,
+        "HyperPure (food) (partner-paid)": 33667.5,
+        "ibake (partner-paid)": 4400.0,
+        "Amazon (food) (partner-paid)": 7069.0
+      }
+    },
+    "gross_profit": 640280.55,
+    "gross_margin_pct": 35.5,
+    "opex": {
+      "total": 1137983.9100000001,
+      "breakdown": {
+        "Association Fees": 12000.0,
+        "Cleaning": 10000.0,
+        "Delivery": 12700.0,
+        "Payment Gateway": 3182.92,
+        "Platform Fees": 37898.23,
+        "Rent": 351133.64,
+        "Salaries": 489116.12,
+        "Security": 96917.0,
+        "Taxes": 236.0,
+        "Uniforms": 52000.0,
+        "Water": 72800.0
+      }
+    },
+    "operating_profit": -497703.3600000001,
+    "operating_margin_pct": -27.6,
+    "other_expenses": 11612.9,
+    "net_profit": -509316.2600000001,
+    "capex": 30000.0,
+    "cogs_pct": 64.5,
+    "opex_pct": 63.1
+  },
+  "cash_flow": {
+    "period": {
+      "start": "2025-11-07",
+      "end": "2026-01-10"
+    },
+    "opening_balance": 0.0,
+    "closing_balance": 86297.57,
+    "operations": {
+      "inflows": 1803526.07,
+      "outflows": 1675615.6,
+      "net": 127910.46999999997
+    },
+    "investing": {
+      "capex": 30000.0,
+      "net": -30000.0
+    },
+    "financing": {
+      "transfers_in": 0.0,
+      "transfers_out": 0.0,
+      "net": 0.0
+    },
+    "other": {
+      "in": 0.0,
+      "out": 11612.9,
+      "net": -11612.9
+    },
+    "net_change": 86297.57
+  },
+  "balance_sheet": {
+    "as_of": "2026-01-10",
+    "assets": {
+      "current": {
+        "cash": 86297.57,
+        "receivables": 0,
+        "inventory": 0
+      },
+      "fixed": {
+        "equipment": 1503313.248,
+        "furniture": 501104.416,
+        "interior": 3006626.496
+      },
+      "total": 5097341.73
+    },
+    "liabilities": {
+      "current": {
+        "accounts_payable": 538473.7799999999,
+        "accrued_expenses": 0
+      },
+      "long_term": {
+        "loans": 0
+      },
+      "total": 538473.7799999999
+    },
+    "equity": {
+      "partner_capital": 4558867.95,
+      "retained_earnings": 0,
+      "total": 4558867.95
+    }
+  },
+  "capex": {
+    "total": 5011044.16,
+    "breakdown": {
+      "Deposit": 1190001.0,
+      "Furniture": 127048.0,
+      "Interior": 1930669.0,
+      "Kitchen equipments": 1160065.0,
+      "signboard": 71000.0,
+      "crockery": 730.0,
+      "Camera": 24302.0,
+      "Crockery/Hotbox (Sunnleks)": 507229.16000000003
+    }
+  },
+  "monthly": [
+    {
+      "month": "2025-11",
+      "revenue": 272362.0,
+      "cogs": 429326.46,
+      "gross_profit": -156964.46000000002,
+      "opex": 2436.0,
+      "operating_profit": -159400.46000000002,
+      "capex": 0.0
+    },
+    {
+      "month": "2025-12",
+      "revenue": 903095.1799999999,
+      "cogs": 534623.3500000001,
+      "gross_profit": 368471.82999999984,
+      "opex": 629272.15,
+      "operating_profit": -260800.32000000018,
+      "capex": 30000.0
+    },
+    {
+      "month": "2026-01",
+      "revenue": 628068.89,
+      "cogs": 22684.0,
+      "gross_profit": 605384.89,
+      "opex": 506275.76,
+      "operating_profit": 99109.13,
+      "capex": 0.0
+    }
+  ],
+  "vendors": [
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Staff",
+      "total": 473116.12,
+      "transactions": 30
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "Melaange Foods",
+      "total": 371819.69,
+      "transactions": 4
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Jyoti/Jyothi (Landlord)",
+      "total": 259600.0,
+      "transactions": 2
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "HMS Security",
+      "total": 96917.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Landlord",
+      "total": 91533.64,
+      "transactions": 8
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "MKP Enterprises",
+      "total": 80170.0,
+      "transactions": 3
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Water Tanker",
+      "total": 56400.0,
+      "transactions": 2
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Byra Uniforms",
+      "total": 52000.0,
+      "transactions": 2
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "Annapoorneshwari Foods",
+      "total": 46586.0,
+      "transactions": 4
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Zomato",
+      "total": 37898.23,
+      "transactions": 11
+    },
+    {
+      "expense_type": "capex",
+      "category": "CapEx",
+      "vendor": "Deposit",
+      "total": 30000.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "Ganesh Food Products",
+      "total": 24500.0,
+      "transactions": 6
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Drinking Water",
+      "total": 16400.0,
+      "transactions": 2
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Salma Khatun",
+      "total": 16000.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Residents Association",
+      "total": 12000.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "other",
+      "category": "Other",
+      "vendor": "Unknown",
+      "total": 11612.9,
+      "transactions": 1
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Pickup Service",
+      "total": 10600.0,
+      "transactions": 18
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Cleaning Service",
+      "total": 10000.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "SP Soap Oil",
+      "total": 8265.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "SLNS Traders",
+      "total": 3731.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "PayU",
+      "total": 3182.92,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "I Bake Foods",
+      "total": 2560.0,
+      "transactions": 4
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Delivery Partner",
+      "total": 2100.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Government",
+      "total": 236.0,
+      "transactions": 2
+    }
+  ],
+  "accounting_basis": {
+    "cogs": "accrual (invoice-based for Melaange, partner-paid for others)",
+    "opex": "cash (bank payments)",
+    "revenue": "cash (bank deposits)",
+    "capex": "from partner expense tracker"
+  },
+  "warnings": [
+    "COGS uses accrual basis for Melaange Foods (invoices)",
+    "Partner-paid COGS includes Metro, HyperPure, Blinkit, etc.",
+    "CapEx from partner expense tracker (not all in bank statement)",
+    "Balance sheet equity is simplified (Assets - Liabilities)",
+    "Receivables not tracked (Swiggy/Zomato pending payouts)"
+  ]
+}
