@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T20:26:59.443796",
+  "generated_at": "2026-01-13T22:30:17.282334",
   "period": {
     "start": "2025-11-07",
     "end": "2026-01-10"
@@ -18,7 +18,7 @@
       }
     },
     "cogs": {
-      "total": 1163245.52,
+      "total": 1299139.3900000001,
       "breakdown": {
         "Annapoorneshwari Foods": 46586.0,
         "Ganesh Food Products": 24500.0,
@@ -26,7 +26,7 @@
         "MKP Enterprises": 80170.0,
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
-        "Melaange Foods (invoiced)": 820821.8099999999,
+        "Melaange Foods (invoiced)": 956715.68,
         "Blinkit (food) (partner-paid)": 21622.0,
         "metro (food) (partner-paid)": 9840.0,
         "Digen (food) (partner-paid)": 14750.0,
@@ -38,8 +38,8 @@
         "Amazon (food) (partner-paid)": 7069.0
       }
     },
-    "gross_profit": 640280.55,
-    "gross_margin_pct": 35.5,
+    "gross_profit": 504386.67999999993,
+    "gross_margin_pct": 28.0,
     "opex": {
       "total": 1137983.9100000001,
       "breakdown": {
@@ -56,12 +56,12 @@
         "Water": 72800.0
       }
     },
-    "operating_profit": -497703.3600000001,
-    "operating_margin_pct": -27.6,
+    "operating_profit": -633597.2300000002,
+    "operating_margin_pct": -35.1,
     "other_expenses": 11612.9,
-    "net_profit": -509316.2600000001,
+    "net_profit": -645210.1300000002,
     "capex": 30000.0,
-    "cogs_pct": 64.5,
+    "cogs_pct": 72.0,
     "opex_pct": 63.1
   },
   "cash_flow": {
@@ -109,18 +109,18 @@
     },
     "liabilities": {
       "current": {
-        "accounts_payable": 538473.7799999999,
+        "accounts_payable": 674367.65,
         "accrued_expenses": 0
       },
       "long_term": {
         "loans": 0
       },
-      "total": 538473.7799999999
+      "total": 674367.65
     },
     "equity": {
-      "partner_capital": 4558867.95,
+      "partner_capital": 4422974.08,
       "retained_earnings": 0,
-      "total": 4558867.95
+      "total": 4422974.08
     }
   },
   "capex": {
@@ -158,10 +158,10 @@
     {
       "month": "2026-01",
       "revenue": 628068.89,
-      "cogs": 22684.0,
-      "gross_profit": 605384.89,
+      "cogs": 158577.87,
+      "gross_profit": 469491.02,
       "opex": 506275.76,
-      "operating_profit": 99109.13,
+      "operating_profit": -36784.73999999999,
       "capex": 0.0
     }
   ],
