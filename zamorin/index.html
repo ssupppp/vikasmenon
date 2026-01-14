@@ -1288,7 +1288,7 @@
             if (finData && finData.pnl) {
                 renderOpexChart(finData.pnl.opex.breakdown);
             } else {
-                renderOpexChart(data.expenses.opex.by_category);
+                renderOpexChart(data.expenses.opex.breakdown);
             }
             renderSalesItemsChart(data.daily_sales);
 
@@ -1302,15 +1302,15 @@
             }
 
             // Tables
-            renderTopItemsTable(data.top_items);
-            renderCategoryTable(data.category_sales);
-            renderAllItemsTable(data.top_items);
+            try { renderTopItemsTable(data.top_items); } catch(e) { console.error('TopItems error:', e); }
+            try { renderCategoryTable(data.category_sales); } catch(e) { console.error('Category error:', e); }
+            try { renderAllItemsTable(data.top_items); } catch(e) { console.error('AllItems error:', e); }
             // Use financial data for expenses (has correct breakdown)
             if (finData && finData.expenses) {
-                renderExpensesTables(finData.expenses);
+                try { renderExpensesTables(finData.expenses); } catch(e) { console.error('Expenses error:', e); }
             }
-            renderBalanceSheet(finData);
-            renderPnlStatement(data, finData);
+            try { renderBalanceSheet(finData); } catch(e) { console.error('BalanceSheet error:', e); }
+            try { renderPnlStatement(data, finData); } catch(e) { console.error('PnL error:', e); }
         }
 
         function renderRevenueTrendChart(dailySales) {
@@ -1563,19 +1563,25 @@
                 <tr class="total-row"><td>Total CapEx</td><td class="right">${formatCurrency(expenses.capex.total)}</td></tr>
             `;
 
-            const opexSorted = Object.entries(expenses.opex.by_category).sort((a, b) => b[1] - a[1]);
+            const opexSorted = Object.entries(expenses.opex.breakdown).sort((a, b) => b[1] - a[1]);
             document.getElementById('opexTable').innerHTML = opexSorted.map(([name, amount]) => `
                 <tr><td>${name}</td><td class="right">${formatCurrency(amount)}</td></tr>
             `).join('') + `
                 <tr class="total-row"><td>Total OpEx</td><td class="right">${formatCurrency(expenses.opex.total)}</td></tr>
             `;
 
-            const partnerSorted = Object.entries(expenses.by_partner).sort((a, b) => b[1] - a[1]);
-            document.getElementById('partnerTable').innerHTML = partnerSorted.map(([name, amount]) => `
-                <tr><td>${name}</td><td class="right">${formatCurrency(amount)}</td></tr>
-            `).join('') + `
-                <tr class="total-row"><td>Total</td><td class="right">${formatCurrency(expenses.total)}</td></tr>
-            `;
+            // Partner contributions (from capex by_partner if available)
+            const partnerData = expenses.by_partner || {};
+            const partnerSorted = Object.entries(partnerData).sort((a, b) => b[1] - a[1]);
+            if (partnerSorted.length > 0) {
+                document.getElementById('partnerTable').innerHTML = partnerSorted.map(([name, amount]) => `
+                    <tr><td>${name}</td><td class="right">${formatCurrency(amount)}</td></tr>
+                `).join('') + `
+                    <tr class="total-row"><td>Total</td><td class="right">${formatCurrency(Object.values(partnerData).reduce((a,b) => a+b, 0))}</td></tr>
+                `;
+            } else {
+                document.getElementById('partnerTable').innerHTML = '<tr><td colspan="2" style="color:#64748b">Partner breakdown not available</td></tr>';
+            }
         }
 
         function renderBalanceSheet(finData) {
@@ -1711,7 +1717,7 @@
                 document.getElementById('pnlGrossProfit').textContent = '--';
                 document.getElementById('pnlGrossMargin').textContent = '--';
 
-                const opexLines = Object.entries(data.expenses.opex.by_category)
+                const opexLines = Object.entries(data.expenses.opex.breakdown)
                     .sort((a, b) => b[1] - a[1])
                     .map(([name, amount]) => `
                         <div class="pnl-row indent">
