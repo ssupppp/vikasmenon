@@ -1,121 +1,121 @@
 {
   "outlet": "The Zamorins",
-  "last_updated": "2026-01-12T15:52:11.087067",
+  "last_updated": "2026-01-13T23:23:05.588040",
   "metrics": {
-    "total_revenue": 347130,
-    "total_opex": 2004518.5899999999,
-    "total_capex": 5343680.0,
-    "operating_profit": -1657388.5899999999,
-    "gross_margin_pct": -477.5,
-    "total_items_sold": 6236,
-    "days_recorded": 33,
-    "avg_daily_revenue": 10519.09090909091,
-    "avg_daily_items": 188.96969696969697
+    "total_revenue": 617491.89,
+    "total_opex": 0,
+    "total_capex": 0,
+    "operating_profit": 617491.89,
+    "gross_margin_pct": 0,
+    "total_items_sold": 10746,
+    "days_recorded": 58,
+    "avg_daily_revenue": 10646.411896551725,
+    "avg_daily_items": 185.27586206896552
   },
   "daily_sales": [
     {
       "date": "2025-11-14",
-      "revenue": 10070,
+      "revenue": 9580,
       "items_sold": 198
     },
     {
       "date": "2025-11-15",
-      "revenue": 6730,
+      "revenue": 7095,
       "items_sold": 144
     },
     {
       "date": "2025-11-16",
-      "revenue": 10830,
+      "revenue": 10430,
       "items_sold": 198
     },
     {
       "date": "2025-11-17",
-      "revenue": 5235,
+      "revenue": 5170,
       "items_sold": 101
     },
     {
       "date": "2025-11-18",
-      "revenue": 6605,
+      "revenue": 6500,
       "items_sold": 127
     },
     {
       "date": "2025-11-19",
-      "revenue": 8715,
+      "revenue": 8645,
       "items_sold": 159
     },
     {
       "date": "2025-11-20",
-      "revenue": 11050,
+      "revenue": 10975,
       "items_sold": 206
     },
     {
       "date": "2025-11-21",
-      "revenue": 7580,
+      "revenue": 7595,
       "items_sold": 129
     },
     {
       "date": "2025-11-22",
-      "revenue": 10280,
+      "revenue": 10350,
       "items_sold": 194
     },
     {
       "date": "2025-11-23",
-      "revenue": 11860,
+      "revenue": 11200,
       "items_sold": 179
     },
     {
       "date": "2025-11-24",
-      "revenue": 10395,
+      "revenue": 10445,
       "items_sold": 181
     },
     {
       "date": "2025-11-25",
-      "revenue": 10040,
+      "revenue": 9945,
       "items_sold": 193
     },
     {
       "date": "2025-11-26",
-      "revenue": 8150,
+      "revenue": 8080,
       "items_sold": 153
     },
     {
       "date": "2025-11-27",
-      "revenue": 9320,
+      "revenue": 9030,
       "items_sold": 152
     },
     {
       "date": "2025-11-28",
-      "revenue": 6695,
+      "revenue": 6505,
       "items_sold": 116
     },
     {
       "date": "2025-11-29",
-      "revenue": 9440,
+      "revenue": 9505,
       "items_sold": 160
     },
     {
       "date": "2025-11-30",
-      "revenue": 15325,
+      "revenue": 15030,
       "items_sold": 266
     },
     {
       "date": "2025-12-01",
-      "revenue": 9755,
+      "revenue": 9605,
       "items_sold": 180
     },
     {
       "date": "2025-12-02",
-      "revenue": 11075,
+      "revenue": 10775,
       "items_sold": 191
     },
     {
       "date": "2025-12-03",
-      "revenue": 14445,
+      "revenue": 13975,
       "items_sold": 230
     },
     {
       "date": "2025-12-04",
-      "revenue": 11110,
+      "revenue": 11360,
       "items_sold": 217
     },
     {
@@ -125,375 +125,532 @@
     },
     {
       "date": "2025-12-06",
-      "revenue": 11615,
+      "revenue": 11325,
       "items_sold": 205
     },
     {
       "date": "2025-12-07",
-      "revenue": 10920,
+      "revenue": 11225,
       "items_sold": 199
     },
     {
       "date": "2025-12-08",
-      "revenue": 12570,
+      "revenue": 12590,
       "items_sold": 215
     },
     {
       "date": "2025-12-09",
-      "revenue": 9655,
+      "revenue": 9550,
       "items_sold": 175
     },
     {
       "date": "2025-12-10",
-      "revenue": 10640,
+      "revenue": 10320,
       "items_sold": 189
     },
     {
       "date": "2025-12-11",
-      "revenue": 10790,
+      "revenue": 10975,
       "items_sold": 212
     },
     {
       "date": "2025-12-12",
-      "revenue": 14350,
+      "revenue": 14390,
       "items_sold": 242
     },
     {
       "date": "2025-12-13",
-      "revenue": 13590,
+      "revenue": 13215,
       "items_sold": 238
     },
     {
       "date": "2025-12-14",
-      "revenue": 11365,
+      "revenue": 11785,
       "items_sold": 268
     },
     {
       "date": "2025-12-15",
-      "revenue": 16260,
+      "revenue": 16455,
       "items_sold": 250
     },
     {
       "date": "2025-12-16",
-      "revenue": 12045,
+      "revenue": 12050,
       "items_sold": 205
+    },
+    {
+      "date": "2025-12-17",
+      "revenue": 10960.889999999998,
+      "items_sold": 204
+    },
+    {
+      "date": "2025-12-18",
+      "revenue": 12379.130000000001,
+      "items_sold": 254
+    },
+    {
+      "date": "2025-12-19",
+      "revenue": 7740.870000000001,
+      "items_sold": 136
+    },
+    {
+      "date": "2025-12-20",
+      "revenue": 11149.36,
+      "items_sold": 173
+    },
+    {
+      "date": "2025-12-21",
+      "revenue": 9641.890000000001,
+      "items_sold": 150
+    },
+    {
+      "date": "2025-12-22",
+      "revenue": 7847.629999999998,
+      "items_sold": 131
+    },
+    {
+      "date": "2025-12-23",
+      "revenue": 12582.730000000003,
+      "items_sold": 194
+    },
+    {
+      "date": "2025-12-24",
+      "revenue": 9474.220000000001,
+      "items_sold": 143
+    },
+    {
+      "date": "2025-12-25",
+      "revenue": 7403.799999999999,
+      "items_sold": 116
+    },
+    {
+      "date": "2025-12-26",
+      "revenue": 7176.090000000001,
+      "items_sold": 115
+    },
+    {
+      "date": "2025-12-27",
+      "revenue": 4984.770000000001,
+      "items_sold": 92
+    },
+    {
+      "date": "2025-12-28",
+      "revenue": 5661.800000000001,
+      "items_sold": 88
+    },
+    {
+      "date": "2025-12-29",
+      "revenue": 9704.680000000002,
+      "items_sold": 163
+    },
+    {
+      "date": "2025-12-30",
+      "revenue": 8727.41,
+      "items_sold": 138
+    },
+    {
+      "date": "2025-12-31",
+      "revenue": 10052.330000000004,
+      "items_sold": 144
+    },
+    {
+      "date": "2026-01-01",
+      "revenue": 13472.270000000006,
+      "items_sold": 203
+    },
+    {
+      "date": "2026-01-02",
+      "revenue": 8440.380000000001,
+      "items_sold": 137
+    },
+    {
+      "date": "2026-01-03",
+      "revenue": 12300.439999999999,
+      "items_sold": 207
+    },
+    {
+      "date": "2026-01-04",
+      "revenue": 10009.799999999997,
+      "items_sold": 169
+    },
+    {
+      "date": "2026-01-05",
+      "revenue": 12979.680000000002,
+      "items_sold": 213
+    },
+    {
+      "date": "2026-01-06",
+      "revenue": 18244.449999999997,
+      "items_sold": 320
+    },
+    {
+      "date": "2026-01-07",
+      "revenue": 16134.130000000008,
+      "items_sold": 264
+    },
+    {
+      "date": "2026-01-08",
+      "revenue": 17615.9,
+      "items_sold": 298
+    },
+    {
+      "date": "2026-01-09",
+      "revenue": 15312.810000000001,
+      "items_sold": 250
+    },
+    {
+      "date": "2026-01-10",
+      "revenue": 13194.43,
+      "items_sold": 208
     }
   ],
-  "category_sales": {
-    "Beverages": {
-      "qty": 2174,
-      "revenue": 61645
-    },
-    "Desserts": {
-      "qty": 32,
-      "revenue": 2480
-    },
-    "Rice & Meals": {
-      "qty": 610,
-      "revenue": 58540
-    },
-    "Salads": {
-      "qty": 18,
-      "revenue": 1800
-    },
-    "Snacks": {
-      "qty": 549,
-      "revenue": 16965
-    },
-    "Dosa Items": {
-      "qty": 1150,
-      "revenue": 116340
-    },
-    "Idli & Vada": {
-      "qty": 905,
-      "revenue": 27810
-    },
-    "Kerala Items": {
-      "qty": 501,
-      "revenue": 36690
-    },
-    "Other": {
-      "qty": 143,
-      "revenue": 17590
-    },
-    "Breakfast": {
-      "qty": 96,
-      "revenue": 5400
-    },
-    "Breads": {
-      "qty": 6,
-      "revenue": 140
-    },
-    "Cold Drinks": {
-      "qty": 52,
-      "revenue": 1730
-    }
-  },
   "top_items": [
     {
-      "item": "Masala Dosa",
-      "qty": 368,
-      "revenue": 40480,
-      "category": "Dosa Items"
-    },
-    {
-      "item": "Red Rice Meals",
-      "qty": 204,
-      "revenue": 24480,
-      "category": "Rice & Meals"
-    },
-    {
       "item": "Coffee",
-      "qty": 639,
-      "revenue": 22365,
+      "qty": 1053,
+      "revenue": 36855,
       "category": "Beverages"
-    },
-    {
-      "item": "White Rice Meal",
-      "qty": 172,
-      "revenue": 18920,
-      "category": "Rice & Meals"
-    },
-    {
-      "item": "Ghee Roast Dosa",
-      "qty": 134,
-      "revenue": 14740,
-      "category": "Dosa Items"
-    },
-    {
-      "item": "Idli",
-      "qty": 278,
-      "revenue": 13900,
-      "category": "Idli & Vada"
-    },
-    {
-      "item": "Puttu (with Kadala)",
-      "qty": 145,
-      "revenue": 13050,
-      "category": "Kerala Items"
-    },
-    {
-      "item": "Kerala Porotta With Kuruma",
-      "qty": 141,
-      "revenue": 12690,
-      "category": "Kerala Items"
-    },
-    {
-      "item": "Muringa Leaves Dos",
-      "qty": 89,
-      "revenue": 12460,
-      "category": "Other"
     },
     {
       "item": "Normal Tea 90 Ml",
-      "qty": 615,
-      "revenue": 12300,
+      "qty": 1046,
+      "revenue": 20920,
       "category": "Beverages"
     },
     {
-      "item": "Ghee Podi Dosa",
-      "qty": 119,
-      "revenue": 11900,
-      "category": "Dosa Items"
+      "item": "Ginger Tea",
+      "qty": 638,
+      "revenue": 15950,
+      "category": "Beverages"
     },
     {
-      "item": "Ginger Tea",
-      "qty": 389,
-      "revenue": 9725,
+      "item": "Masala Dosa",
+      "qty": 603,
+      "revenue": 66330,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Parippu Vada",
+      "qty": 538,
+      "revenue": 16140,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Idli",
+      "qty": 432,
+      "revenue": 21600,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Punjabi Samosa",
+      "qty": 364,
+      "revenue": 10920,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Pazham Pori",
+      "qty": 340,
+      "revenue": 13600,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Kerala Porotta With Kuruma",
+      "qty": 316,
+      "revenue": 25280,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Red Rice Meals",
+      "qty": 313,
+      "revenue": 37560,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Puttu (with Kadala)",
+      "qty": 286,
+      "revenue": 22880,
+      "category": "All Day Items"
+    },
+    {
+      "item": "White Rice Meal",
+      "qty": 269,
+      "revenue": 26900,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Single Vada",
+      "qty": 259,
+      "revenue": 6475,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Lemon Tea",
+      "qty": 223,
+      "revenue": 6690,
+      "category": "Beverages"
+    },
+    {
+      "item": "Half Coffee",
+      "qty": 220,
+      "revenue": 4400,
       "category": "Beverages"
     },
     {
       "item": "Idiyappam With Stew",
-      "qty": 95,
-      "revenue": 8550,
-      "category": "Kerala Items"
+      "qty": 198,
+      "revenue": 17820,
+      "category": "All Day Items"
     },
     {
-      "item": "Punjabi Samosa",
-      "qty": 248,
-      "revenue": 7440,
-      "category": "Snacks"
+      "item": "Ghee Roast Dosa",
+      "qty": 193,
+      "revenue": 19300,
+      "category": "All Day Items"
     },
     {
-      "item": "Plain Dosa",
-      "qty": 100,
-      "revenue": 7000,
-      "category": "Dosa Items"
-    },
-    {
-      "item": "Rava Dosa",
-      "qty": 77,
-      "revenue": 6930,
-      "category": "Dosa Items"
-    },
-    {
-      "item": "Ada Dosa",
-      "qty": 76,
-      "revenue": 6840,
-      "category": "Dosa Items"
-    },
-    {
-      "item": "Pongal",
-      "qty": 88,
-      "revenue": 6160,
-      "category": "Rice & Meals"
-    },
-    {
-      "item": "Parippu Vada",
-      "qty": 301,
-      "revenue": 6020,
-      "category": "Idli & Vada"
-    },
-    {
-      "item": "Pesarattu",
-      "qty": 49,
-      "revenue": 5880,
-      "category": "Dosa Items"
-    },
-    {
-      "item": "Pastries",
-      "qty": 54,
-      "revenue": 5130,
-      "category": "Other"
-    },
-    {
-      "item": "Hazel Nut Coffee",
-      "qty": 102,
-      "revenue": 5100,
-      "category": "Beverages"
-    },
-    {
-      "item": "Pazham Pori",
-      "qty": 201,
-      "revenue": 5025,
-      "category": "Snacks"
+      "item": "Ela Ada",
+      "qty": 192,
+      "revenue": 7680,
+      "category": "All Day Items"
     },
     {
       "item": "Medu Vada",
-      "qty": 120,
-      "revenue": 4800,
-      "category": "Idli & Vada"
+      "qty": 179,
+      "revenue": 8950,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Plain Dosa",
+      "qty": 179,
+      "revenue": 16110,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Hazel Nut Coffee",
+      "qty": 178,
+      "revenue": 10680,
+      "category": "Beverages"
+    },
+    {
+      "item": "Ghee Podi Dosa",
+      "qty": 175,
+      "revenue": 17500,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Muringa Leaves Dos",
+      "qty": 129,
+      "revenue": 6450,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Pongal",
+      "qty": 128,
+      "revenue": 8960,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Ada Dosa",
+      "qty": 108,
+      "revenue": 9720,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Rava Dosa",
+      "qty": 102,
+      "revenue": 10200,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Single Idli",
+      "qty": 93,
+      "revenue": 2325,
+      "category": "All Day Items"
     },
     {
       "item": "Oothappam",
+      "qty": 91,
+      "revenue": 7280,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Upma",
+      "qty": 86,
+      "revenue": 4300,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Single Idiappam",
+      "qty": 86,
+      "revenue": 2150,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Pastries",
+      "qty": 79,
+      "revenue": 4740,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Black Coffee",
+      "qty": 79,
+      "revenue": 2370,
+      "category": "Beverages"
+    },
+    {
+      "item": "Pesarattu",
+      "qty": 77,
+      "revenue": 6930,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Set Dosa",
+      "qty": 68,
+      "revenue": 7480,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Single Porotta",
+      "qty": 67,
+      "revenue": 1675,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Ghee Onion Dosa",
+      "qty": 66,
+      "revenue": 7260,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Idli Vada Combo",
+      "qty": 65,
+      "revenue": 3250,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Puliyogre",
       "qty": 58,
-      "revenue": 4640,
-      "category": "Dosa Items"
+      "revenue": 4060,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Kesari Bath",
+      "qty": 57,
+      "revenue": 3420,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Ghee Podi Masala Dosa",
+      "qty": 57,
+      "revenue": 6840,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Badam Milk",
+      "qty": 51,
+      "revenue": 2550,
+      "category": "Beverages"
+    },
+    {
+      "item": "Bisi Bele Bath",
+      "qty": 51,
+      "revenue": 5100,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Ghee Masala Dosa",
+      "qty": 48,
+      "revenue": 2400,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Podi Masala Dosa",
+      "qty": 46,
+      "revenue": 5060,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Cakes",
+      "qty": 36,
+      "revenue": 1800,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Onion Podi Dosa",
+      "qty": 36,
+      "revenue": 3600,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Combo Meal  Choice Of Three",
+      "qty": 36,
+      "revenue": 1800,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Fried Rice With Gobi Manjurian",
+      "qty": 36,
+      "revenue": 1800,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Curd Rice",
+      "qty": 35,
+      "revenue": 2800,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Black Tea",
+      "qty": 32,
+      "revenue": 640,
+      "category": "Beverages"
     }
   ],
-  "expenses": {
-    "capex": {
-      "by_category": {
-        "Security Deposits": 1190001.0,
-        "Furniture": 127048.0,
-        "Interior & Construction": 1930669.0,
-        "Equipment": 2095962.0
-      },
-      "by_month": {
-        "2025-07": 165828.0,
-        "2025-08": 810000.0,
-        "2025-09": 695114.0,
-        "2025-10": 2558509.0,
-        "2025-11": -29130.0,
-        "2025-12": 757359.0,
-        "2026-01": 386000.0
-      },
-      "total": 5343680.0
+  "category_sales": {
+    "All Day Items": {
+      "qty": 7040,
+      "revenue": 482885
     },
-    "opex": {
-      "by_category": {
-        "Miscellaneous": 457100.0,
-        "Marketing": 13689.0,
-        "Rent": 197255.0,
-        "Utilities": 67017.0,
-        "Other Expenses": 1137012.15,
-        "Salaries": 46739.0,
-        "Transport": 5200.0,
-        "Inventory/COGS": 80506.44
-      },
-      "by_month": {
-        "2025-07": 4389.0,
-        "2025-08": 10475.0,
-        "2025-09": 21000.0,
-        "2025-10": 314098.0,
-        "2025-11": 1237127.74,
-        "2025-12": 221349.85,
-        "2026-01": 196079.0
-      },
-      "total": 2004518.5899999999
-    },
-    "by_partner": {
-      "Sunil": 2495541.81,
-      "Sachin": 1207290.0,
-      "Vikas": 1849357.0,
-      "Sooraj": 1822594.78,
-      "sunil": 3415.0
-    },
-    "total": 7378198.59
+    "Beverages": {
+      "qty": 3706,
+      "revenue": 109455
+    }
   },
   "monthly_pnl": [
     {
-      "month": "2025-07",
-      "revenue": 0,
-      "opex": 4389.0,
-      "capex": 165828.0,
-      "operating_profit": -4389.0,
-      "net_after_capex": -170217.0
-    },
-    {
-      "month": "2025-08",
-      "revenue": 0,
-      "opex": 10475.0,
-      "capex": 810000.0,
-      "operating_profit": -10475.0,
-      "net_after_capex": -820475.0
-    },
-    {
-      "month": "2025-09",
-      "revenue": 0,
-      "opex": 21000.0,
-      "capex": 695114.0,
-      "operating_profit": -21000.0,
-      "net_after_capex": -716114.0
-    },
-    {
-      "month": "2025-10",
-      "revenue": 0,
-      "opex": 314098.0,
-      "capex": 2558509.0,
-      "operating_profit": -314098.0,
-      "net_after_capex": -2872607.0
-    },
-    {
       "month": "2025-11",
-      "revenue": 158320,
-      "opex": 1237127.74,
-      "capex": -29130.0,
-      "operating_profit": -1078807.74,
-      "net_after_capex": -1049677.74
+      "revenue": 156080,
+      "opex": 0,
+      "operating_profit": 156080
     },
     {
       "month": "2025-12",
-      "revenue": 188810,
-      "opex": 221349.85,
-      "capex": 757359.0,
-      "operating_profit": -32539.850000000006,
-      "net_after_capex": -789898.85
+      "revenue": 323707.60000000003,
+      "opex": 0,
+      "operating_profit": 323707.60000000003
     },
     {
       "month": "2026-01",
-      "revenue": 0,
-      "opex": 196079.0,
-      "capex": 386000.0,
-      "operating_profit": -196079.0,
-      "net_after_capex": -582079.0
+      "revenue": 137704.29,
+      "opex": 0,
+      "operating_profit": 137704.29
     }
   ],
+  "expenses": {
+    "total": 0,
+    "opex": {
+      "total": 0,
+      "by_category": {}
+    },
+    "capex": {
+      "total": 0,
+      "by_category": {}
+    },
+    "by_partner": {}
+  },
   "pnl_summary": {
-    "revenue": 347130,
-    "operating_expenses": 2004518.5899999999,
-    "operating_profit": -1657388.5899999999,
-    "capital_expenditure": 5343680.0,
-    "total_cash_outflow": 7348198.59
+    "revenue": 617491.89,
+    "operating_expenses": 0,
+    "operating_profit": 617491.89
   }
 }

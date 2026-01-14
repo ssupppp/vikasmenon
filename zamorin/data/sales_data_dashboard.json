@@ -1,0 +1,178 @@
+{
+  "outlet": "The Zamorins",
+  "last_updated": "2026-01-12T15:32:34.792533",
+  "metrics": {
+    "total_sales": 113319.0,
+    "avg_daily_sales": 113319.0,
+    "days_recorded": 1,
+    "total_items_sold": 247.0
+  },
+  "daily_sales": [
+    {
+      "date": "2026-01-11",
+      "total_sales": 113319.0,
+      "net_sales": 0,
+      "discount": 2131.69,
+      "tax": 5387.88
+    }
+  ],
+  "category_breakdown": {
+    "All Day Items": {
+      "qty": 388.0,
+      "total": 38714.56
+    },
+    "All Day Combos": {
+      "qty": 76.0,
+      "total": 8653.16
+    },
+    "Beverages": {
+      "qty": 296.0,
+      "total": 8616.0
+    },
+    "Breakfast Items": {
+      "qty": 24.0,
+      "total": 2079.84
+    },
+    "Desserts": {
+      "qty": 16.0,
+      "total": 1520.0
+    },
+    "Lunch Items": {
+      "qty": 44.0,
+      "total": 4518.08
+    },
+    "Snacks": {
+      "qty": 144.0,
+      "total": 4333.92
+    }
+  },
+  "payment_breakdown": {
+    "Cash": 0.0,
+    "Card": 0.0,
+    "Other": 13832.0,
+    "Swiggy Online": 2398.0,
+    "Zomato Online": 962.0
+  },
+  "top_items": [
+    {
+      "item": "Masala Dosa",
+      "qty": 15.0,
+      "revenue": 1661.79,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Coffee",
+      "qty": 28.0,
+      "revenue": 979.8600000000001,
+      "category": "Beverages"
+    },
+    {
+      "item": "Puttu Kadala Combo",
+      "qty": 7.0,
+      "revenue": 777.26,
+      "category": "All Day Combos"
+    },
+    {
+      "item": "Ghee Roast Dosa",
+      "qty": 7.0,
+      "revenue": 770.0,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Puttu (with Kadala)",
+      "qty": 8.0,
+      "revenue": 719.98,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Onion Oothappam [o]",
+      "qty": 4.0,
+      "revenue": 620.0,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Idiyappam (3) With Veg Stew [o]",
+      "qty": 5.0,
+      "revenue": 575.0,
+      "category": "All Day Combos"
+    },
+    {
+      "item": "Idiyappam With Stew",
+      "qty": 6.0,
+      "revenue": 539.98,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Pesarattu",
+      "qty": 4.0,
+      "revenue": 480.04,
+      "category": "All Day Items"
+    },
+    {
+      "item": "White Rice Meal",
+      "qty": 4.0,
+      "revenue": 440.0,
+      "category": "Lunch Items"
+    },
+    {
+      "item": "Normal Tea 90 Ml",
+      "qty": 21.0,
+      "revenue": 420.10999999999996,
+      "category": "Beverages"
+    },
+    {
+      "item": "Muringa Leaves Dos",
+      "qty": 3.0,
+      "revenue": 419.97,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Ela Ada",
+      "qty": 8.0,
+      "revenue": 378.0,
+      "category": "Snacks"
+    },
+    {
+      "item": "Set Dosa",
+      "qty": 3.0,
+      "revenue": 361.76,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Chocolate Dosa",
+      "qty": 3.0,
+      "revenue": 360.03000000000003,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Kerala Porotta With Kuruma",
+      "qty": 4.0,
+      "revenue": 359.98,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Parippu Vada",
+      "qty": 17.0,
+      "revenue": 345.0,
+      "category": "Snacks"
+    },
+    {
+      "item": "Idiyappam (3) With Veg Kurma [o]",
+      "qty": 3.0,
+      "revenue": 345.0,
+      "category": "All Day Combos"
+    },
+    {
+      "item": "Idli Vada Combo",
+      "qty": 4.0,
+      "revenue": 339.98,
+      "category": "Breakfast Items"
+    },
+    {
+      "item": "Idli",
+      "qty": 6.0,
+      "revenue": 300.0,
+      "category": "All Day Items"
+    }
+  ]
+}

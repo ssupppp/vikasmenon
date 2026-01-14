@@ -319,6 +319,130 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Expandable Metric Cards */
+        .metric-card.expandable {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .metric-card.expandable:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .metric-card .expand-icon {
+            float: right;
+            color: #64748b;
+            font-size: 0.75rem;
+            transition: transform 0.2s;
+        }
+
+        .metric-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .metric-card .detail-panel {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #334155;
+        }
+
+        .metric-card.expanded .detail-panel {
+            display: block;
+        }
+
+        .detail-panel .view-toggle {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .detail-panel .view-btn {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.7rem;
+            border: 1px solid #475569;
+            background: transparent;
+            color: #94a3b8;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .detail-panel .view-btn:hover {
+            background: #334155;
+        }
+
+        .detail-panel .view-btn.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.4rem 0;
+            font-size: 0.75rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-row .label {
+            color: #94a3b8;
+            font-size: 0.75rem;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .detail-row .amount {
+            font-family: 'SF Mono', Monaco, monospace;
+            color: #e2e8f0;
+        }
+
+        .detail-row.sub-item {
+            padding-left: 1rem;
+            font-size: 0.7rem;
+        }
+
+        .detail-row.sub-item .label {
+            color: #64748b;
+        }
+
+        .detail-section-title {
+            font-size: 0.65rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.75rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px dashed #475569;
+        }
+
+        .badge-fixed {
+            display: inline-block;
+            padding: 0.1rem 0.4rem;
+            font-size: 0.6rem;
+            background: #1e3a5f;
+            color: #60a5fa;
+            border-radius: 3px;
+            margin-left: 0.5rem;
+        }
+
+        .badge-variable {
+            display: inline-block;
+            padding: 0.1rem 0.4rem;
+            font-size: 0.6rem;
+            background: #3f3f1e;
+            color: #fbbf24;
+            border-radius: 3px;
+            margin-left: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -342,20 +466,26 @@
         <!-- Overview Tab -->
         <div id="overview" class="tab-content active">
             <div class="metrics-grid" id="metricsGrid">
-                <div class="metric-card highlight">
+                <div class="metric-card highlight expandable" id="revenueCard" onclick="toggleExpand('revenueCard')">
+                    <span class="expand-icon">▼</span>
                     <div class="label">Total Revenue</div>
                     <div class="value" id="totalRevenue">--</div>
                     <div class="subtext" id="avgDaily">-- avg/day</div>
+                    <div class="detail-panel" id="revenueDetails"></div>
                 </div>
-                <div class="metric-card">
+                <div class="metric-card expandable" id="cogsCard" onclick="toggleExpand('cogsCard')">
+                    <span class="expand-icon">▼</span>
                     <div class="label">Cost of Goods Sold</div>
                     <div class="value" id="totalCogs">--</div>
                     <div class="subtext" id="cogsSubtext">Food costs</div>
+                    <div class="detail-panel" id="cogsDetails"></div>
                 </div>
-                <div class="metric-card">
+                <div class="metric-card expandable" id="opexCard" onclick="toggleExpand('opexCard')">
+                    <span class="expand-icon">▼</span>
                     <div class="label">Operating Expenses</div>
                     <div class="value" id="totalOpex">--</div>
-                    <div class="subtext">Recurring costs</div>
+                    <div class="subtext" id="opexSubtext">Recurring costs</div>
+                    <div class="detail-panel" id="opexDetails"></div>
                 </div>
                 <div class="metric-card" id="profitCard">
                     <div class="label" id="profitLabel">Net Profit</div>
@@ -367,10 +497,12 @@
                     <div class="value" id="itemsSold">--</div>
                     <div class="subtext" id="avgItems">-- avg/day</div>
                 </div>
-                <div class="metric-card">
+                <div class="metric-card expandable" id="capexCard" onclick="toggleExpand('capexCard')">
+                    <span class="expand-icon">▼</span>
                     <div class="label">Capital Investment</div>
                     <div class="value" id="totalCapex">--</div>
                     <div class="subtext">One-time setup</div>
+                    <div class="detail-panel" id="capexDetails"></div>
                 </div>
                 <div class="metric-card">
                     <div class="label">Days Recorded</div>
@@ -671,6 +803,217 @@
             return new Intl.NumberFormat('en-IN').format(Math.round(value));
         }
 
+        // Expandable panel toggle
+        function toggleExpand(cardId) {
+            const card = document.getElementById(cardId);
+            card.classList.toggle('expanded');
+        }
+
+        // Store financial data globally for detail rendering
+        let globalFinData = null;
+
+        // Render Revenue details (by Channel)
+        function renderRevenueDetails(finData) {
+            if (!finData || !finData.pnl || !finData.pnl.revenue) return;
+
+            const byChannel = finData.pnl.revenue.by_channel || {};
+            const bySource = finData.pnl.revenue.by_source || finData.pnl.revenue.breakdown || {};
+
+            let html = `
+                <div class="view-toggle">
+                    <button class="view-btn active" onclick="event.stopPropagation(); showRevenueView('channel')">By Channel</button>
+                    <button class="view-btn" onclick="event.stopPropagation(); showRevenueView('source')">By Source</button>
+                </div>
+                <div id="revenueChannelView">
+                    ${Object.entries(byChannel)
+                        .filter(([_, amt]) => amt > 0)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([channel, amount]) => `
+                            <div class="detail-row">
+                                <span class="label">${channel}</span>
+                                <span class="amount">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('')}
+                </div>
+                <div id="revenueSourceView" style="display:none">
+                    ${Object.entries(bySource)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([source, amount]) => `
+                            <div class="detail-row">
+                                <span class="label">${source}</span>
+                                <span class="amount">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('')}
+                </div>
+            `;
+            document.getElementById('revenueDetails').innerHTML = html;
+        }
+
+        function showRevenueView(view) {
+            document.getElementById('revenueChannelView').style.display = view === 'channel' ? 'block' : 'none';
+            document.getElementById('revenueSourceView').style.display = view === 'source' ? 'block' : 'none';
+            document.querySelectorAll('#revenueDetails .view-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', (view === 'channel' && i === 0) || (view === 'source' && i === 1));
+            });
+        }
+
+        // Render COGS details (by Vendor + by Category)
+        function renderCogsDetails(finData) {
+            if (!finData || !finData.pnl || !finData.pnl.cogs) return;
+
+            const byVendor = finData.pnl.cogs.by_vendor || finData.pnl.cogs.breakdown || {};
+            const byCategory = finData.pnl.cogs.by_category || {};
+
+            let html = `
+                <div class="view-toggle">
+                    <button class="view-btn active" onclick="event.stopPropagation(); showCogsView('category')">By Category</button>
+                    <button class="view-btn" onclick="event.stopPropagation(); showCogsView('vendor')">By Vendor</button>
+                </div>
+                <div id="cogsCategoryView">
+                    ${Object.entries(byCategory)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([cat, amount]) => `
+                            <div class="detail-row">
+                                <span class="label">${cat}</span>
+                                <span class="amount">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('')}
+                </div>
+                <div id="cogsVendorView" style="display:none">
+                    ${Object.entries(byVendor)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 10)
+                        .map(([vendor, amount]) => `
+                            <div class="detail-row">
+                                <span class="label">${vendor.replace(' (partner-paid)', '').replace(' (invoiced)', '')}</span>
+                                <span class="amount">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('')}
+                    ${Object.keys(byVendor).length > 10 ? '<div class="detail-row"><span class="label" style="color:#64748b">...and more</span></div>' : ''}
+                </div>
+            `;
+            document.getElementById('cogsDetails').innerHTML = html;
+        }
+
+        function showCogsView(view) {
+            document.getElementById('cogsCategoryView').style.display = view === 'category' ? 'block' : 'none';
+            document.getElementById('cogsVendorView').style.display = view === 'vendor' ? 'block' : 'none';
+            document.querySelectorAll('#cogsDetails .view-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', (view === 'category' && i === 0) || (view === 'vendor' && i === 1));
+            });
+        }
+
+        // Render OpEx details (by Category + Fixed/Variable)
+        function renderOpexDetails(finData) {
+            if (!finData || !finData.pnl || !finData.pnl.opex) return;
+
+            const byCategory = finData.pnl.opex.by_category || finData.pnl.opex.breakdown || {};
+            const fixed = finData.pnl.opex.fixed || {};
+            const variable = finData.pnl.opex.variable || {};
+            const fixedTotal = finData.pnl.opex.fixed_total || 0;
+            const variableTotal = finData.pnl.opex.variable_total || 0;
+
+            let html = `
+                <div class="view-toggle">
+                    <button class="view-btn active" onclick="event.stopPropagation(); showOpexView('category')">By Category</button>
+                    <button class="view-btn" onclick="event.stopPropagation(); showOpexView('fixedvar')">Fixed/Variable</button>
+                </div>
+                <div id="opexCategoryView">
+                    ${Object.entries(byCategory)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 8)
+                        .map(([cat, amount]) => `
+                            <div class="detail-row">
+                                <span class="label">${cat.replace(' (partner-paid)', '')}</span>
+                                <span class="amount">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('')}
+                    ${Object.keys(byCategory).length > 8 ? '<div class="detail-row"><span class="label" style="color:#64748b">...and more</span></div>' : ''}
+                </div>
+                <div id="opexFixedVarView" style="display:none">
+                    <div class="detail-section-title">Fixed Costs <span class="badge-fixed">${formatCurrency(fixedTotal)}</span></div>
+                    ${Object.entries(fixed)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([cat, amount]) => `
+                            <div class="detail-row sub-item">
+                                <span class="label">${cat.replace(' (partner-paid)', '')}</span>
+                                <span class="amount">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('')}
+                    <div class="detail-section-title">Variable Costs <span class="badge-variable">${formatCurrency(variableTotal)}</span></div>
+                    ${Object.entries(variable)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([cat, amount]) => `
+                            <div class="detail-row sub-item">
+                                <span class="label">${cat.replace(' (partner-paid)', '')}</span>
+                                <span class="amount">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('')}
+                </div>
+            `;
+            document.getElementById('opexDetails').innerHTML = html;
+        }
+
+        function showOpexView(view) {
+            document.getElementById('opexCategoryView').style.display = view === 'category' ? 'block' : 'none';
+            document.getElementById('opexFixedVarView').style.display = view === 'fixedvar' ? 'block' : 'none';
+            document.querySelectorAll('#opexDetails .view-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', (view === 'category' && i === 0) || (view === 'fixedvar' && i === 1));
+            });
+        }
+
+        // Render CapEx details (by Category + by Partner)
+        function renderCapexDetails(finData) {
+            if (!finData || !finData.capex) return;
+
+            const byCategory = finData.capex.by_category || finData.capex.breakdown || {};
+            const byPartner = finData.capex.by_partner || {};
+            const details = finData.capex.details || {};
+
+            let html = `
+                <div class="view-toggle">
+                    <button class="view-btn active" onclick="event.stopPropagation(); showCapexView('category')">By Category</button>
+                    <button class="view-btn" onclick="event.stopPropagation(); showCapexView('partner')">By Partner</button>
+                </div>
+                <div id="capexCategoryView">
+                    ${Object.entries(byCategory)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([cat, amount]) => {
+                            const partnerBreakdown = details[cat] || {};
+                            const partnerStr = Object.entries(partnerBreakdown)
+                                .map(([p, a]) => `${p}: ${formatCurrency(a)}`)
+                                .join(', ');
+                            return `
+                                <div class="detail-row">
+                                    <span class="label">${cat}</span>
+                                    <span class="amount">${formatCurrency(amount)}</span>
+                                </div>
+                                ${partnerStr ? `<div class="detail-row sub-item"><span class="label">${partnerStr}</span></div>` : ''}
+                            `;
+                        }).join('')}
+                </div>
+                <div id="capexPartnerView" style="display:none">
+                    ${Object.entries(byPartner)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([partner, amount]) => `
+                            <div class="detail-row">
+                                <span class="label">${partner}</span>
+                                <span class="amount">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('')}
+                </div>
+            `;
+            document.getElementById('capexDetails').innerHTML = html;
+        }
+
+        function showCapexView(view) {
+            document.getElementById('capexCategoryView').style.display = view === 'category' ? 'block' : 'none';
+            document.getElementById('capexPartnerView').style.display = view === 'partner' ? 'block' : 'none';
+            document.querySelectorAll('#capexDetails .view-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', (view === 'category' && i === 0) || (view === 'partner' && i === 1));
+            });
+        }
+
         // Tab switching
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
@@ -724,6 +1067,17 @@
             document.getElementById('lastUpdated').textContent =
                 `Updated: ${updated.toLocaleDateString('en-IN')} ${updated.toLocaleTimeString('en-IN', {hour: '2-digit', minute: '2-digit'})}`;
 
+            // Store globally for detail rendering
+            globalFinData = finData;
+
+            // Render expandable detail panels
+            if (finData) {
+                renderRevenueDetails(finData);
+                renderCogsDetails(finData);
+                renderOpexDetails(finData);
+                renderCapexDetails(finData);
+            }
+
             // Use financial data if available for more accurate metrics
             if (finData && finData.pnl) {
                 // Overview metrics from bank statement data
@@ -732,7 +1086,9 @@
                 document.getElementById('totalCogs').textContent = formatCurrency(finData.pnl.cogs.total);
                 document.getElementById('cogsSubtext').textContent = `${finData.pnl.cogs_pct}% of revenue`;
                 document.getElementById('totalOpex').textContent = formatCurrency(finData.pnl.opex.total);
-                document.getElementById('totalCapex').textContent = formatCurrency(finData.pnl.capex);
+                const fixedPct = finData.pnl.opex.fixed_total ? Math.round(finData.pnl.opex.fixed_total / finData.pnl.opex.total * 100) : 0;
+                document.getElementById('opexSubtext').textContent = `${fixedPct}% fixed, ${100-fixedPct}% variable`;
+                document.getElementById('totalCapex').textContent = formatCurrency(finData.capex ? finData.capex.total : finData.pnl.capex);
                 document.getElementById('itemsSold').textContent = formatNumber(data.metrics.total_items_sold);
                 document.getElementById('avgItems').textContent = `${Math.round(data.metrics.avg_daily_items)} avg/day`;
                 document.getElementById('daysRecorded').textContent = data.metrics.days_recorded;
