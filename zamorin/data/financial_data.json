@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-14T15:13:01.241221",
+  "generated_at": "2026-01-14T15:37:50.941274",
   "period": {
     "start": "2025-11-07",
     "end": "2026-01-10"
@@ -280,6 +280,80 @@
       "Licenses": 20000.0
     }
   },
+  "expenses": {
+    "total": 2614628.3000000003,
+    "cogs": {
+      "total": 1299139.3900000001,
+      "breakdown": {
+        "Annapoorneshwari Foods": 46586.0,
+        "Ganesh Food Products": 24500.0,
+        "I Bake Foods": 2560.0,
+        "MKP Enterprises": 80170.0,
+        "SLNS Traders": 3731.0,
+        "SP Soap Oil": 8265.0,
+        "Melaange Foods (invoiced)": 956715.68,
+        "Blinkit (food) (partner-paid)": 21622.0,
+        "metro (food) (partner-paid)": 9840.0,
+        "Digen (food) (partner-paid)": 14750.0,
+        "Ganesh Food (partner-paid)": 7000.0,
+        "Metro (food) (partner-paid)": 71263.20999999999,
+        "Byers coffee (partner-paid)": 7000.0,
+        "HyperPure (food) (partner-paid)": 33667.5,
+        "ibake (partner-paid)": 4400.0,
+        "Amazon (food) (partner-paid)": 7069.0
+      },
+      "monthly": {
+        "2025-11": 429326.46,
+        "2025-12": 534623.3500000001,
+        "2026-01": 158577.87
+      }
+    },
+    "opex": {
+      "total": 1315488.9100000001,
+      "breakdown": {
+        "Association Fees": 12000.0,
+        "Cleaning": 10000.0,
+        "Delivery": 12700.0,
+        "Payment Gateway": 3182.92,
+        "Platform Fees": 37898.23,
+        "Rent": 351133.64,
+        "Salaries": 489116.12,
+        "Security": 96917.0,
+        "Taxes": 236.0,
+        "Uniforms": 52000.0,
+        "Water": 72800.0,
+        "Software (partner-paid)": 62162.0,
+        "Electricity (partner-paid)": 32706.0,
+        "Marketing (partner-paid)": 62219.0,
+        "Mobile/Telecom (partner-paid)": 418.0,
+        "Licenses (partner-paid)": 20000.0
+      },
+      "monthly": {
+        "2025-11": 2436.0,
+        "2025-12": 629272.15,
+        "2026-01": 506275.76
+      }
+    },
+    "capex": {
+      "total": 3821043.16,
+      "by_category": {
+        "Furniture": 127048.0,
+        "Interior": 1930669.0,
+        "Kitchen equipments": 1160065.0,
+        "signboard": 71000.0,
+        "crockery": 730.0,
+        "Camera": 24302.0,
+        "Crockery/Hotbox (Sunnleks)": 507229.16000000003
+      }
+    },
+    "security_deposits": {
+      "total": 1190001.0,
+      "breakdown": {
+        "Deposit": 1190001.0
+      },
+      "note": "Assets (recoverable), not expenses"
+    }
+  },
   "monthly": [
     {
       "month": "2025-11",
@@ -310,6 +384,88 @@
       "opex": 506275.76,
       "operating_profit": -476178.08,
       "capex": 0.0
+    }
+  ],
+  "weekly": [
+    {
+      "week_start": "2025-11-03",
+      "week_end": "2025-11-09",
+      "revenue": 0,
+      "cogs": 0.0,
+      "opex": 0.0,
+      "operating_profit": 0.0
+    },
+    {
+      "week_start": "2025-11-10",
+      "week_end": "2025-11-16",
+      "revenue": 30252.480000000003,
+      "cogs": 0.0,
+      "opex": 0.0,
+      "operating_profit": 30252.480000000003
+    },
+    {
+      "week_start": "2025-11-17",
+      "week_end": "2025-11-23",
+      "revenue": 62055.99,
+      "cogs": 14461.0,
+      "opex": 0.0,
+      "operating_profit": 47594.99
+    },
+    {
+      "week_start": "2025-11-24",
+      "week_end": "2025-11-30",
+      "revenue": 69214.94999999998,
+      "cogs": 123689.63,
+      "opex": 2436.0,
+      "operating_profit": -56910.68000000002
+    },
+    {
+      "week_start": "2025-12-01",
+      "week_end": "2025-12-07",
+      "revenue": 76518.68,
+      "cogs": 72146.0,
+      "opex": 435194.94,
+      "operating_profit": -430822.26
+    },
+    {
+      "week_start": "2025-12-08",
+      "week_end": "2025-12-14",
+      "revenue": 81502.78,
+      "cogs": 130451.0,
+      "opex": 53810.21,
+      "operating_profit": -102758.43
+    },
+    {
+      "week_start": "2025-12-15",
+      "week_end": "2025-12-21",
+      "revenue": 81211.98999999999,
+      "cogs": 65570.0,
+      "opex": 2100.0,
+      "operating_profit": 13541.98999999999
+    },
+    {
+      "week_start": "2025-12-22",
+      "week_end": "2025-12-28",
+      "revenue": 55264.37,
+      "cogs": 0.0,
+      "opex": 0.0,
+      "operating_profit": 55264.37
+    },
+    {
+      "week_start": "2025-12-29",
+      "week_end": "2026-01-04",
+      "revenue": 73468.01999999999,
+      "cogs": 7000.0,
+      "opex": 229167.0,
+      "operating_profit": -162698.98
+    },
+    {
+      "week_start": "2026-01-05",
+      "week_end": "2026-01-10",
+      "revenue": 93864.25,
+      "cogs": 124314.06,
+      "opex": 415275.76,
+      "operating_profit": -445725.57
     }
   ],
   "vendors": [
@@ -493,8 +649,8 @@
     "validations": [],
     "data_sources": {
       "petpooja": [
-        "Dec15_Jan13_daywise.xlsx",
-        "Nov_14_Dec_14_daywise.xlsx"
+        "Nov_14_Dec_14_daywise.xlsx",
+        "Dec15_Jan13_daywise.xlsx"
       ],
       "bank": "C:\\Users\\vikas\\Downloads\\Jan\\zamorin\\account statement\\Acct Statement_XX4144_12012026.xls",
       "partner_expense": "Zamorin_Latest_To_Export_Expenses.csv"
