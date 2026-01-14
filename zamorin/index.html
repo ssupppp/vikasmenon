@@ -91,6 +91,33 @@
             display: block;
         }
 
+        .period-selector {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .period-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .period-btn:hover {
+            background: #334155;
+            color: #f8fafc;
+        }
+
+        .period-btn.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: #fff;
+        }
+
         /* Metrics Grid */
         .metrics-grid {
             display: grid;
@@ -246,6 +273,24 @@
 
         .data-table .total-row td {
             border-top: 2px solid #475569;
+        }
+
+        .data-table .section-header td {
+            background: #1e293b;
+            padding-top: 1rem;
+            border-bottom: none;
+        }
+
+        .data-table .subtotal-row {
+            background: #1e293b;
+        }
+
+        .data-table .subtotal-row td {
+            border-top: 1px solid #475569;
+        }
+
+        .data-table .indent {
+            padding-left: 1.5rem;
         }
 
         .category-badge {
@@ -461,10 +506,17 @@
             <button class="tab" data-tab="sales">Sales Analysis</button>
             <button class="tab" data-tab="financials">P&L Statement</button>
             <button class="tab" data-tab="expenses">Expenses</button>
+            <button class="tab" data-tab="balance-sheet">Balance Sheet</button>
         </div>
 
         <!-- Overview Tab -->
         <div id="overview" class="tab-content active">
+            <!-- Period Selector -->
+            <div class="period-selector" style="margin-bottom: 1rem; display: flex; gap: 0.5rem;">
+                <button class="period-btn active" data-period="all" onclick="setPeriod('all')">All Time</button>
+                <button class="period-btn" data-period="month" onclick="setPeriod('month')">This Month</button>
+                <button class="period-btn" data-period="week" onclick="setPeriod('week')">This Week</button>
+            </div>
             <div class="metrics-grid" id="metricsGrid">
                 <div class="metric-card highlight expandable" id="revenueCard" onclick="toggleExpand('revenueCard')">
                     <span class="expand-icon">▼</span>
@@ -769,6 +821,59 @@
                 </table>
             </div>
         </div>
+
+        <!-- Balance Sheet Tab -->
+        <div id="balance-sheet" class="tab-content">
+            <div class="metrics-grid">
+                <div class="metric-card highlight">
+                    <div class="label">Total Assets</div>
+                    <div class="value" id="bsAssets">--</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Total Liabilities</div>
+                    <div class="value" id="bsLiabilities">--</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Equity</div>
+                    <div class="value" id="bsEquity">--</div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="table-card">
+                    <h3>Assets</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th class="right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="assetsTable"></tbody>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <h3>Liabilities & Equity</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th class="right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="liabilitiesTable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <p class="subtext" style="padding: 1rem; color: #64748b;">
+                    As of <span id="bsAsOf">--</span> | 
+                    Security Deposits are recoverable assets (not expenses)
+                </p>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -786,6 +891,64 @@
             info: '#06b6d4',
             chart: ['#3b82f6', '#8b5cf6', '#22c55e', '#f59e0b', '#ef4444', '#06b6d4', '#ec4899', '#84cc16']
         };
+
+        let currentPeriod = 'all';
+        let globalData = null;
+        let globalFinData = null;
+
+        function setPeriod(period) {
+            currentPeriod = period;
+            document.querySelectorAll('.period-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.period === period);
+            });
+            updateMetricsForPeriod();
+        }
+
+        function updateMetricsForPeriod() {
+            if (!globalFinData) return;
+            
+            const now = new Date();
+            const thisMonth = now.toISOString().slice(0, 7);
+            const weekly = globalFinData.weekly || [];
+            const monthly = globalFinData.monthly || [];
+            
+            let revenue = 0, cogs = 0, opex = 0, days = 0;
+            
+            if (currentPeriod === 'all') {
+                revenue = globalFinData.pnl.revenue.total;
+                cogs = globalFinData.pnl.cogs.total;
+                opex = globalFinData.pnl.opex.total;
+                days = globalFinData.period ? (globalFinData.period.days || monthly.length * 30) : 61;
+            } else if (currentPeriod === 'month') {
+                // Get current month data
+                const monthData = monthly.find(m => m.month === thisMonth) || monthly[monthly.length - 1];
+                if (monthData) {
+                    revenue = monthData.revenue;
+                    cogs = monthData.cogs;
+                    opex = monthData.opex;
+                    days = 30;
+                }
+            } else if (currentPeriod === 'week') {
+                // Get latest week data
+                const weekData = weekly[weekly.length - 1];
+                if (weekData) {
+                    revenue = weekData.revenue;
+                    cogs = weekData.cogs;
+                    opex = weekData.opex;
+                    days = 7;
+                }
+            }
+            
+            document.getElementById('totalRevenue').textContent = formatCurrency(revenue);
+            document.getElementById('avgDaily').textContent = formatCurrency(revenue / Math.max(days, 1)) + ' avg/day';
+            document.getElementById('totalCogs').textContent = formatCurrency(cogs);
+            document.getElementById('totalOpex').textContent = formatCurrency(opex);
+            document.getElementById('daysRecorded').textContent = days;
+            
+            const profit = revenue - cogs - opex;
+            document.getElementById('operatingProfit').textContent = formatCurrency(profit);
+            document.getElementById('operatingProfit').className = 'value ' + (profit >= 0 ? 'positive' : 'negative');
+        }
 
         function formatCurrency(value) {
             if (Math.abs(value) >= 100000) {
@@ -1091,7 +1254,8 @@
                 document.getElementById('totalCapex').textContent = formatCurrency(finData.capex ? finData.capex.total : finData.pnl.capex);
                 document.getElementById('itemsSold').textContent = formatNumber(data.metrics.total_items_sold);
                 document.getElementById('avgItems').textContent = `${Math.round(data.metrics.avg_daily_items)} avg/day`;
-                document.getElementById('daysRecorded').textContent = data.metrics.days_recorded;
+                document.getElementById('daysRecorded').textContent = finData ? finData.reconciliation.revenue.petpooja_sales > 0 ? 
+                    finData.period.days || data.metrics.days_recorded : data.metrics.days_recorded : data.metrics.days_recorded;
 
                 const profit = finData.pnl.net_profit;
                 document.getElementById('profitLabel').textContent = 'Net Profit';
@@ -1109,7 +1273,8 @@
                 document.getElementById('totalCapex').textContent = formatCurrency(data.metrics.total_capex);
                 document.getElementById('itemsSold').textContent = formatNumber(data.metrics.total_items_sold);
                 document.getElementById('avgItems').textContent = `${Math.round(data.metrics.avg_daily_items)} avg/day`;
-                document.getElementById('daysRecorded').textContent = data.metrics.days_recorded;
+                document.getElementById('daysRecorded').textContent = finData ? finData.reconciliation.revenue.petpooja_sales > 0 ? 
+                    finData.period.days || data.metrics.days_recorded : data.metrics.days_recorded : data.metrics.days_recorded;
 
                 const profit = data.metrics.operating_profit;
                 document.getElementById('profitLabel').textContent = 'Operating Profit';
@@ -1143,7 +1308,11 @@
             renderTopItemsTable(data.top_items);
             renderCategoryTable(data.category_sales);
             renderAllItemsTable(data.top_items);
-            renderExpensesTables(data.expenses);
+            // Use financial data for expenses (has correct breakdown)
+            if (finData && finData.expenses) {
+                renderExpensesTables(finData.expenses);
+            }
+            renderBalanceSheet(finData);
             renderPnlStatement(data, finData);
         }
 
@@ -1410,6 +1579,51 @@
             `).join('') + `
                 <tr class="total-row"><td>Total</td><td class="right">${formatCurrency(expenses.total)}</td></tr>
             `;
+        }
+
+        function renderBalanceSheet(finData) {
+            if (!finData || !finData.balance_sheet) return;
+            
+            const bs = finData.balance_sheet;
+            
+            // Summary metrics
+            document.getElementById('bsAssets').textContent = formatCurrency(bs.assets.total);
+            document.getElementById('bsLiabilities').textContent = formatCurrency(bs.liabilities.total);
+            document.getElementById('bsEquity').textContent = formatCurrency(bs.equity.total);
+            document.getElementById('bsAsOf').textContent = bs.as_of;
+            
+            // Assets table
+            let assetsHtml = '';
+            assetsHtml += '<tr class="section-header"><td colspan="2"><strong>Current Assets</strong></td></tr>';
+            assetsHtml += '<tr><td class="indent">Cash & Bank</td><td class="right">' + formatCurrency(bs.assets.current.cash) + '</td></tr>';
+            if (bs.assets.current.receivables > 0) {
+                assetsHtml += '<tr><td class="indent">Receivables</td><td class="right">' + formatCurrency(bs.assets.current.receivables) + '</td></tr>';
+            }
+            
+            if (bs.assets.non_current && bs.assets.non_current.security_deposits > 0) {
+                assetsHtml += '<tr class="section-header"><td colspan="2"><strong>Non-Current Assets</strong></td></tr>';
+                assetsHtml += '<tr><td class="indent">Security Deposits</td><td class="right">' + formatCurrency(bs.assets.non_current.security_deposits) + '</td></tr>';
+            }
+            
+            assetsHtml += '<tr class="section-header"><td colspan="2"><strong>Fixed Assets</strong></td></tr>';
+            assetsHtml += '<tr><td class="indent">Equipment</td><td class="right">' + formatCurrency(bs.assets.fixed.equipment) + '</td></tr>';
+            assetsHtml += '<tr><td class="indent">Furniture</td><td class="right">' + formatCurrency(bs.assets.fixed.furniture) + '</td></tr>';
+            assetsHtml += '<tr><td class="indent">Interior</td><td class="right">' + formatCurrency(bs.assets.fixed.interior) + '</td></tr>';
+            assetsHtml += '<tr class="total-row"><td><strong>Total Assets</strong></td><td class="right"><strong>' + formatCurrency(bs.assets.total) + '</strong></td></tr>';
+            
+            document.getElementById('assetsTable').innerHTML = assetsHtml;
+            
+            // Liabilities & Equity table
+            let liabHtml = '';
+            liabHtml += '<tr class="section-header"><td colspan="2"><strong>Current Liabilities</strong></td></tr>';
+            liabHtml += '<tr><td class="indent">Accounts Payable</td><td class="right">' + formatCurrency(bs.liabilities.current.accounts_payable) + '</td></tr>';
+            liabHtml += '<tr class="subtotal-row"><td>Total Liabilities</td><td class="right">' + formatCurrency(bs.liabilities.total) + '</td></tr>';
+            
+            liabHtml += '<tr class="section-header"><td colspan="2"><strong>Equity</strong></td></tr>';
+            liabHtml += '<tr><td class="indent">Partner Capital</td><td class="right">' + formatCurrency(bs.equity.partner_capital) + '</td></tr>';
+            liabHtml += '<tr class="total-row"><td><strong>Total Liabilities + Equity</strong></td><td class="right"><strong>' + formatCurrency(bs.liabilities.total + bs.equity.total) + '</strong></td></tr>';
+            
+            document.getElementById('liabilitiesTable').innerHTML = liabHtml;
         }
 
         function renderPnlStatement(data, finData) {
