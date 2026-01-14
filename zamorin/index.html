@@ -972,9 +972,6 @@
             card.classList.toggle('expanded');
         }
 
-        // Store financial data globally for detail rendering
-        let globalFinData = null;
-
         // Render Revenue details (by Channel)
         function renderRevenueDetails(finData) {
             if (!finData || !finData.pnl || !finData.pnl.revenue) return;
