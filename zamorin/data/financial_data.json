@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-14T14:47:35.237918",
+  "generated_at": "2026-01-14T15:13:01.241221",
   "period": {
     "start": "2025-11-07",
     "end": "2026-01-10"
@@ -186,10 +186,13 @@
         "receivables": 0,
         "inventory": 0
       },
+      "non_current": {
+        "security_deposits": 1190001.0
+      },
       "fixed": {
-        "equipment": 1503313.248,
-        "furniture": 501104.416,
-        "interior": 3006626.496
+        "equipment": 1146312.948,
+        "furniture": 382104.31600000005,
+        "interior": 2292625.896
       },
       "total": 5097341.73
     },
@@ -210,9 +213,8 @@
     }
   },
   "capex": {
-    "total": 5011044.16,
+    "total": 3821043.16,
     "breakdown": {
-      "Deposit": 1190001.0,
       "Furniture": 127048.0,
       "Interior": 1930669.0,
       "Kitchen equipments": 1160065.0,
@@ -222,7 +224,6 @@
       "Crockery/Hotbox (Sunnleks)": 507229.16000000003
     },
     "by_category": {
-      "Deposit": 1190001.0,
       "Furniture": 127048.0,
       "Interior": 1930669.0,
       "Kitchen equipments": 1160065.0,
@@ -232,18 +233,12 @@
       "Crockery/Hotbox (Sunnleks)": 507229.16000000003
     },
     "by_partner": {
-      "Sachin": 993619.0,
-      "Vikas": 1191765.0,
-      "Sooraj": 1349716.0,
-      "Sunil": 1475944.1600000001
+      "Sunil": 734943.16,
+      "Sachin": 610619.0,
+      "Sooraj": 1316716.0,
+      "Vikas": 1158765.0
     },
     "details": {
-      "Deposit": {
-        "Sachin": 383000.0,
-        "Vikas": 33000.0,
-        "Sooraj": 33000.0,
-        "Sunil": 741001.0
-      },
       "Furniture": {
         "Sunil": 72984.0,
         "Sachin": 8950.0,
@@ -288,32 +283,32 @@
   "monthly": [
     {
       "month": "2025-11",
-      "revenue": 0.0,
+      "revenue": 161523.41999999998,
       "capital_contributions": 272362.0,
       "cogs": 429326.46,
-      "gross_profit": -429326.46,
+      "gross_profit": -267803.04000000004,
       "opex": 2436.0,
-      "operating_profit": -431762.46,
+      "operating_profit": -270239.04000000004,
       "capex": 0.0
     },
     {
       "month": "2025-12",
-      "revenue": 0.0,
+      "revenue": 322982.24,
       "capital_contributions": 903095.1799999999,
       "cogs": 534623.3500000001,
-      "gross_profit": -534623.3500000001,
+      "gross_profit": -211641.1100000001,
       "opex": 629272.15,
-      "operating_profit": -1163895.5,
+      "operating_profit": -840913.2600000001,
       "capex": 30000.0
     },
     {
       "month": "2026-01",
-      "revenue": 0.0,
+      "revenue": 188675.55,
       "capital_contributions": 628068.89,
       "cogs": 158577.87,
-      "gross_profit": -158577.87,
+      "gross_profit": 30097.679999999993,
       "opex": 506275.76,
-      "operating_profit": -664853.63,
+      "operating_profit": -476178.08,
       "capex": 0.0
     }
   ],
@@ -498,8 +493,8 @@
     "validations": [],
     "data_sources": {
       "petpooja": [
-        "Nov_14_Dec_14_daywise.xlsx",
-        "Dec15_Jan13_daywise.xlsx"
+        "Dec15_Jan13_daywise.xlsx",
+        "Nov_14_Dec_14_daywise.xlsx"
       ],
       "bank": "C:\\Users\\vikas\\Downloads\\Jan\\zamorin\\account statement\\Acct Statement_XX4144_12012026.xls",
       "partner_expense": "Zamorin_Latest_To_Export_Expenses.csv"
