@@ -1620,6 +1620,13 @@
             let liabHtml = '';
             liabHtml += '<tr class="section-header"><td colspan="2"><strong>Current Liabilities</strong></td></tr>';
             liabHtml += '<tr><td class="indent">Accounts Payable</td><td class="right">' + formatCurrency(bs.liabilities.current.accounts_payable) + '</td></tr>';
+
+            // Vendor breakdown for accounts payable
+            const apBreakdown = bs.liabilities.current.accounts_payable_breakdown || {};
+            Object.entries(apBreakdown).forEach(([vendor, amount]) => {
+                liabHtml += '<tr><td class="indent" style="padding-left:2.5rem;color:#94a3b8;font-size:0.85rem">' + vendor + '</td><td class="right" style="color:#94a3b8;font-size:0.85rem">' + formatCurrency(amount) + '</td></tr>';
+            });
+
             liabHtml += '<tr class="subtotal-row"><td>Total Liabilities</td><td class="right">' + formatCurrency(bs.liabilities.total) + '</td></tr>';
             
             liabHtml += '<tr class="section-header"><td colspan="2"><strong>Equity</strong></td></tr>';

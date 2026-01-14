@@ -1,13 +1,15 @@
 {
-  "generated_at": "2026-01-14T15:37:50.941274",
+  "generated_at": "2026-01-14T18:02:07.185535",
   "period": {
-    "start": "2025-11-07",
-    "end": "2026-01-10"
+    "start": "2025-11-14",
+    "end": "2026-01-13",
+    "days": 61
   },
   "pnl": {
     "period": {
-      "start": "2025-11-07",
-      "end": "2026-01-10"
+      "start": "2025-11-14",
+      "end": "2026-01-13",
+      "days": 61
     },
     "revenue": {
       "total": 673181.2100000001,
@@ -27,7 +29,8 @@
       "source": "petpooja_exports",
       "period": {
         "start": "2025-11-14",
-        "end": "2026-01-13"
+        "end": "2026-01-13",
+        "days": 61
       }
     },
     "cogs": {
@@ -199,6 +202,9 @@
     "liabilities": {
       "current": {
         "accounts_payable": 674367.65,
+        "accounts_payable_breakdown": {
+          "Melaange": 674367.65
+        },
         "accrued_expenses": 0
       },
       "long_term": {
@@ -344,12 +350,30 @@
         "crockery": 730.0,
         "Camera": 24302.0,
         "Crockery/Hotbox (Sunnleks)": 507229.16000000003
+      },
+      "by_partner": {
+        "Sunil": 734943.16,
+        "Sachin": 610619.0,
+        "Sooraj": 1316716.0,
+        "Vikas": 1158765.0
       }
+    },
+    "by_partner": {
+      "Sunil": 734943.16,
+      "Sachin": 610619.0,
+      "Sooraj": 1316716.0,
+      "Vikas": 1158765.0
     },
     "security_deposits": {
       "total": 1190001.0,
       "breakdown": {
         "Deposit": 1190001.0
+      },
+      "by_partner": {
+        "Sachin": 383000.0,
+        "Vikas": 33000.0,
+        "Sooraj": 33000.0,
+        "Sunil": 741001.0
       },
       "note": "Assets (recoverable), not expenses"
     }
@@ -649,8 +673,8 @@
     "validations": [],
     "data_sources": {
       "petpooja": [
-        "Nov_14_Dec_14_daywise.xlsx",
-        "Dec15_Jan13_daywise.xlsx"
+        "Dec15_Jan13_daywise.xlsx",
+        "Nov_14_Dec_14_daywise.xlsx"
       ],
       "bank": "C:\\Users\\vikas\\Downloads\\Jan\\zamorin\\account statement\\Acct Statement_XX4144_12012026.xls",
       "partner_expense": "Zamorin_Latest_To_Export_Expenses.csv"
