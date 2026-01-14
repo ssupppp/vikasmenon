@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-14T18:52:39.498517",
+  "generated_at": "2026-01-14T18:58:21.964384",
   "period": {
     "start": "2025-11-14",
     "end": "2026-01-13",
@@ -201,22 +201,22 @@
     },
     "liabilities": {
       "current": {
-        "accounts_payable": 1406518.65,
+        "accounts_payable": 1206518.65,
         "accounts_payable_breakdown": {
           "Melaange": 674367.65,
-          "Shilpa_Interiors": 732151.0
+          "Shilpa_Interiors": 532151.0
         },
         "accrued_expenses": 0
       },
       "long_term": {
         "loans": 0
       },
-      "total": 1406518.65
+      "total": 1206518.65
     },
     "equity": {
-      "partner_capital": 3690823.0800000005,
+      "partner_capital": 3890823.0800000005,
       "retained_earnings": 0,
-      "total": 3690823.0800000005
+      "total": 3890823.0800000005
     }
   },
   "capex": {
