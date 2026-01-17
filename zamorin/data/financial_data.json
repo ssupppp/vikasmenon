@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-01-14T18:58:21.964384",
+  "generated_at": "2026-01-17T16:32:08.693541",
   "period": {
     "start": "2025-11-14",
-    "end": "2026-01-13",
-    "days": 61
+    "end": "2026-01-15",
+    "days": 63
   },
   "pnl": {
     "period": {
       "start": "2025-11-14",
-      "end": "2026-01-13",
-      "days": 61
+      "end": "2026-01-15",
+      "days": 63
     },
     "revenue": {
-      "total": 673181.2100000001,
+      "total": 711539.87,
       "breakdown": {
         "2025-11": 161523.41999999998,
         "2025-12": 322982.24,
-        "2026-01": 188675.55
+        "2026-01": 227034.21
       },
       "by_source": {
-        "Petpooja Sales": 673181.2100000001
+        "Petpooja Sales": 711539.87
       },
       "by_channel": {
-        "Dine-in/Direct": 673181.2100000001,
+        "Dine-in/Direct": 711539.87,
         "Swiggy": 0,
         "Zomato": 0
       },
       "source": "petpooja_exports",
       "period": {
         "start": "2025-11-14",
-        "end": "2026-01-13",
-        "days": 61
+        "end": "2026-01-15",
+        "days": 63
       }
     },
     "cogs": {
@@ -80,8 +80,8 @@
         "Main Ingredients": 956715.68
       }
     },
-    "gross_profit": -625958.18,
-    "gross_margin_pct": -93.0,
+    "gross_profit": -587599.5200000001,
+    "gross_margin_pct": -82.6,
     "opex": {
       "total": 1315488.9100000001,
       "breakdown": {
@@ -145,13 +145,13 @@
       "bank_paid": 1137983.9100000001,
       "partner_paid": 177505.0
     },
-    "operating_profit": -1941447.0900000003,
-    "operating_margin_pct": -288.4,
+    "operating_profit": -1903088.4300000002,
+    "operating_margin_pct": -267.5,
     "other_expenses": 11612.9,
-    "net_profit": -1953059.9900000002,
+    "net_profit": -1914701.33,
     "capex": 30000.0,
-    "cogs_pct": 193.0,
-    "opex_pct": 195.4
+    "cogs_pct": 182.6,
+    "opex_pct": 184.9
   },
   "cash_flow": {
     "period": {
@@ -201,22 +201,21 @@
     },
     "liabilities": {
       "current": {
-        "accounts_payable": 1206518.65,
+        "accounts_payable": 674367.65,
         "accounts_payable_breakdown": {
-          "Melaange": 674367.65,
-          "Shilpa_Interiors": 532151.0
+          "Melaange": 674367.65
         },
         "accrued_expenses": 0
       },
       "long_term": {
         "loans": 0
       },
-      "total": 1206518.65
+      "total": 674367.65
     },
     "equity": {
-      "partner_capital": 3890823.0800000005,
+      "partner_capital": 4422974.08,
       "retained_earnings": 0,
-      "total": 3890823.0800000005
+      "total": 4422974.08
     }
   },
   "capex": {
@@ -402,12 +401,12 @@
     },
     {
       "month": "2026-01",
-      "revenue": 188675.55,
+      "revenue": 227034.21,
       "capital_contributions": 628068.89,
       "cogs": 158577.87,
-      "gross_profit": 30097.679999999993,
+      "gross_profit": 68456.34,
       "opex": 506275.76,
-      "operating_profit": -476178.08,
+      "operating_profit": -437819.42000000004,
       "capex": 0.0
     }
   ],
@@ -652,7 +651,7 @@
   "accounting_basis": {
     "cogs": "accrual (invoice-based for Melaange, partner-paid for others)",
     "opex": "cash (bank payments) + partner-paid (electricity, internet, licenses)",
-    "revenue": "petpooja_exports (official day-wise sales)",
+    "revenue": "petpooja_email_reports (daily auto-fetched sales data)",
     "capex": "from partner expense tracker"
   },
   "warnings": [
@@ -666,7 +665,7 @@
   ],
   "reconciliation": {
     "revenue": {
-      "petpooja_sales": 673181.2100000001,
+      "petpooja_sales": 711539.87,
       "bank_deposits_total": 1803526.07,
       "difference_type": "capital_contributions",
       "source": "petpooja_exports"
@@ -675,7 +674,8 @@
     "data_sources": {
       "petpooja": [
         "Dec15_Jan13_daywise.xlsx",
-        "Nov_14_Dec_14_daywise.xlsx"
+        "Nov_14_Dec_14_daywise.xlsx",
+        "Jan14_daywise.xlsx"
       ],
       "bank": "C:\\Users\\vikas\\Downloads\\Jan\\zamorin\\account statement\\Acct Statement_XX4144_12012026.xls",
       "partner_expense": "Zamorin_Latest_To_Export_Expenses.csv"

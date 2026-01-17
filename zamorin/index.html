@@ -45,6 +45,58 @@
             font-size: 0.75rem;
         }
 
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .refresh-btn {
+            padding: 0.5rem 1rem;
+            background: #22c55e;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .refresh-btn:hover {
+            background: #16a34a;
+        }
+
+        .refresh-btn:disabled {
+            background: #64748b;
+            cursor: not-allowed;
+        }
+
+        .refresh-btn.loading .refresh-icon {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .refresh-status {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        .refresh-status.success {
+            color: #22c55e;
+        }
+
+        .refresh-status.error {
+            color: #ef4444;
+        }
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -496,7 +548,16 @@
             <h1>The Zamorins</h1>
             <div class="subtitle">Restaurant Analytics Dashboard</div>
         </div>
-        <div class="last-updated" id="lastUpdated">Loading...</div>
+        <div class="header-actions">
+            <button class="refresh-btn" id="refreshBtn" onclick="refreshData()">
+                <span class="refresh-icon">&#8635;</span>
+                <span class="refresh-text">Refresh Data</span>
+            </button>
+            <div>
+                <div class="last-updated" id="lastUpdated">Loading...</div>
+                <div class="refresh-status" id="refreshStatus"></div>
+            </div>
+        </div>
     </header>
 
     <div class="container">
@@ -1188,12 +1249,15 @@
 
         async function loadDashboard() {
             try {
+                // Cache-busting timestamp to ensure fresh data
+                const cacheBuster = '?v=' + Date.now();
+
                 // Load operational data
                 let response;
                 const paths = ['../data/dashboard_data.json', './data/dashboard_data.json', 'data/dashboard_data.json'];
                 for (const path of paths) {
                     try {
-                        response = await fetch(path);
+                        response = await fetch(path + cacheBuster, { cache: 'no-store' });
                         if (response.ok) break;
                     } catch { continue; }
                 }
@@ -1205,7 +1269,7 @@
                 const finPaths = ['../data/financial_data.json', './data/financial_data.json', 'data/financial_data.json'];
                 for (const path of finPaths) {
                     try {
-                        finResponse = await fetch(path);
+                        finResponse = await fetch(path + cacheBuster, { cache: 'no-store' });
                         if (finResponse.ok) break;
                     } catch { continue; }
                 }
@@ -1620,13 +1684,6 @@
             let liabHtml = '';
             liabHtml += '<tr class="section-header"><td colspan="2"><strong>Current Liabilities</strong></td></tr>';
             liabHtml += '<tr><td class="indent">Accounts Payable</td><td class="right">' + formatCurrency(bs.liabilities.current.accounts_payable) + '</td></tr>';
-
-            // Vendor breakdown for accounts payable
-            const apBreakdown = bs.liabilities.current.accounts_payable_breakdown || {};
-            Object.entries(apBreakdown).forEach(([vendor, amount]) => {
-                liabHtml += '<tr><td class="indent" style="padding-left:2.5rem;color:#94a3b8;font-size:0.85rem">' + vendor + '</td><td class="right" style="color:#94a3b8;font-size:0.85rem">' + formatCurrency(amount) + '</td></tr>';
-            });
-
             liabHtml += '<tr class="subtotal-row"><td>Total Liabilities</td><td class="right">' + formatCurrency(bs.liabilities.total) + '</td></tr>';
             
             liabHtml += '<tr class="section-header"><td colspan="2"><strong>Equity</strong></td></tr>';
@@ -1745,7 +1802,100 @@
             }
         }
 
+        // ============================================
+        // REFRESH DATA FUNCTIONALITY
+        // ============================================
+        const API_URL = 'http://localhost:5050';
+        let refreshCheckInterval = null;
+
+        async function refreshData() {
+            const btn = document.getElementById('refreshBtn');
+            const statusEl = document.getElementById('refreshStatus');
+
+            // Update button state
+            btn.disabled = true;
+            btn.classList.add('loading');
+            btn.querySelector('.refresh-text').textContent = 'Fetching...';
+            statusEl.textContent = 'Connecting to server...';
+            statusEl.className = 'refresh-status';
+
+            try {
+                // Trigger update
+                const response = await fetch(`${API_URL}/update`, { method: 'POST' });
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    statusEl.textContent = 'Update started, fetching emails...';
+                    // Start polling for completion
+                    startStatusPolling();
+                } else {
+                    throw new Error(data.message || 'Failed to start update');
+                }
+            } catch (error) {
+                btn.disabled = false;
+                btn.classList.remove('loading');
+                btn.querySelector('.refresh-text').textContent = 'Refresh Data';
+                statusEl.textContent = 'Error: ' + (error.message.includes('Failed to fetch')
+                    ? 'API server not running. Start with: python api_server.py'
+                    : error.message);
+                statusEl.className = 'refresh-status error';
+            }
+        }
+
+        function startStatusPolling() {
+            // Poll every 2 seconds for status
+            refreshCheckInterval = setInterval(checkRefreshStatus, 2000);
+        }
+
+        async function checkRefreshStatus() {
+            const btn = document.getElementById('refreshBtn');
+            const statusEl = document.getElementById('refreshStatus');
+
+            try {
+                const response = await fetch(`${API_URL}/status`);
+                const status = await response.json();
+
+                if (!status.running) {
+                    // Update complete
+                    clearInterval(refreshCheckInterval);
+                    btn.disabled = false;
+                    btn.classList.remove('loading');
+                    btn.querySelector('.refresh-text').textContent = 'Refresh Data';
+
+                    if (status.last_result && status.last_result.success) {
+                        statusEl.textContent = 'Update complete! Reloading...';
+                        statusEl.className = 'refresh-status success';
+                        // Reload dashboard data
+                        setTimeout(() => {
+                            loadDashboard();
+                            statusEl.textContent = 'Data refreshed successfully';
+                        }, 1000);
+                    } else {
+                        statusEl.textContent = 'Update failed: ' + (status.last_error || 'Unknown error');
+                        statusEl.className = 'refresh-status error';
+                    }
+                } else {
+                    statusEl.textContent = 'Processing... please wait';
+                }
+            } catch (error) {
+                // Server might be busy, continue polling
+            }
+        }
+
+        // Check if API server is available on load
+        async function checkApiServer() {
+            try {
+                const response = await fetch(`${API_URL}/health`);
+                if (response.ok) {
+                    document.getElementById('refreshBtn').style.display = 'flex';
+                }
+            } catch {
+                // API server not running - button still visible but will show error
+            }
+        }
+
         loadDashboard();
+        checkApiServer();
     </script>
 </body>
 </html>
