@@ -1391,7 +1391,7 @@
                     }),
                     datasets: [{
                         label: 'Revenue',
-                        data: sorted.map(d => d.revenue),
+                        data: sorted.map(d => d.revenue || d.total_sales),
                         borderColor: colors.primary,
                         backgroundColor: colors.primary + '20',
                         fill: true,
@@ -1479,12 +1479,12 @@
                     }),
                     datasets: [{
                         label: 'Revenue',
-                        data: sorted.map(d => d.revenue),
+                        data: sorted.map(d => d.revenue || d.total_sales),
                         backgroundColor: colors.primary,
                         yAxisID: 'y'
                     }, {
                         label: 'Items Sold',
-                        data: sorted.map(d => d.items_sold),
+                        data: sorted.map(d => d.items_sold || 0),
                         type: 'line',
                         borderColor: colors.success,
                         backgroundColor: 'transparent',
