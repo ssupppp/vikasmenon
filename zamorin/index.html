@@ -1287,6 +1287,21 @@
         }
 
         function renderDashboard(data, finData) {
+            // Normalize data field names for compatibility
+            data.category_sales = data.category_sales || data.category_breakdown || {};
+            // Convert category format if needed (total -> revenue)
+            if (data.category_sales && !Object.values(data.category_sales)[0]?.revenue) {
+                for (const [key, val] of Object.entries(data.category_sales)) {
+                    if (val.total !== undefined) val.revenue = val.total;
+                }
+            }
+            data.metrics = data.metrics || {};
+            data.metrics.total_revenue = data.metrics.total_revenue || data.metrics.total_sales || 0;
+            data.metrics.avg_daily_revenue = data.metrics.avg_daily_revenue || data.metrics.avg_daily_sales || 0;
+            data.metrics.total_items_sold = data.metrics.total_items_sold || 0;
+            data.metrics.avg_daily_items = data.metrics.avg_daily_items || Math.round(data.metrics.total_items_sold / (data.metrics.days_recorded || 1));
+            data.expenses = data.expenses || { opex: { breakdown: {} } };
+
             const updated = new Date(data.last_updated);
             document.getElementById('lastUpdated').textContent =
                 `Updated: ${updated.toLocaleDateString('en-IN')} ${updated.toLocaleTimeString('en-IN', {hour: '2-digit', minute: '2-digit'})}`;
