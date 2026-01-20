@@ -2727,23 +2727,15 @@
         }
 
         function renderItemSalesInsights(itemData) {
-            // Update top items table with item-wise report data (more accurate)
-            if (itemData && itemData.top_items && itemData.top_items.length > 0) {
-                // Get category from by_category for display
-                const catMap = {};
-                if (itemData.by_category) {
-                    itemData.by_category.forEach(c => catMap[c.category] = c.category);
-                }
+            // Use period-specific data - default to "all" period
+            const topItems = itemData.top_items_all || itemData.top_items;
+            const byCategory = itemData.by_category_all || itemData.by_category;
 
-                document.getElementById('topItemsTable').innerHTML = itemData.top_items.slice(0, 15).map((item, i) => `
-                    <tr>
-                        <td>${i + 1}</td>
-                        <td>${item.item}</td>
-                        <td><span class="category-badge">-</span></td>
-                        <td class="right">${formatNumber(item.qty)}</td>
-                        <td class="right">${formatCurrency(item.revenue)}</td>
-                    </tr>
-                `).join('');
+            if (topItems && topItems.length > 0) {
+                renderTopItemsForPeriod(topItems);
+            }
+            if (byCategory) {
+                renderCategoryForPeriod(byCategory, topItems);
             }
         }
 
