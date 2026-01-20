@@ -3497,7 +3497,6 @@
             });
         }
 
-        initMobileNav();
     </script>
 
     <!-- Mobile Bottom Navigation -->
@@ -3506,13 +3505,13 @@
             <span class="mobile-nav-icon">📊</span>
             <span class="mobile-nav-label">Home</span>
         </button>
+        <button class="mobile-nav-item" data-tab="estimate">
+            <span class="mobile-nav-icon">📋</span>
+            <span class="mobile-nav-label">Estimate</span>
+        </button>
         <button class="mobile-nav-item" data-tab="sales">
             <span class="mobile-nav-icon">📈</span>
             <span class="mobile-nav-label">Sales</span>
-        </button>
-        <button class="mobile-nav-item" data-tab="menu-costs">
-            <span class="mobile-nav-icon">🍽️</span>
-            <span class="mobile-nav-label">Menu</span>
         </button>
         <button class="mobile-nav-item" data-tab="financials">
             <span class="mobile-nav-icon">📄</span>
@@ -3523,5 +3522,6 @@
             <span class="mobile-nav-label">Costs</span>
         </button>
     </nav>
+    <script>initMobileNav();</script>
 </body>
 </html>
