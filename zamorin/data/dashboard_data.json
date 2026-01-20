@@ -475,14 +475,14 @@
     },
     {
       "date": "2026-01-11",
-      "revenue": 16393.87,
+      "revenue": 17192.0,
       "total_sales": 17192.0,
       "bills": 76,
       "discount": 99.98
     },
     {
       "date": "2026-01-12",
-      "revenue": 16282.29,
+      "revenue": 17160.0,
       "total_sales": 17160.0,
       "bills": 77,
       "discount": 0.0
@@ -496,7 +496,7 @@
     },
     {
       "date": "2026-01-14",
-      "revenue": 17116.66,
+      "revenue": 18013.0,
       "total_sales": 18013.0,
       "bills": 92,
       "discount": 0.0
@@ -510,36 +510,36 @@
     },
     {
       "date": "2026-01-16",
-      "revenue": 41849.84,
-      "total_sales": 41849.84,
-      "bills": 90,
+      "revenue": 21447.0,
+      "total_sales": 21447.0,
+      "bills": 86,
       "discount": 560.0
     },
     {
       "date": "2026-01-17",
-      "revenue": 42796.409999999996,
-      "total_sales": 42796.409999999996,
-      "bills": 86,
+      "revenue": 18194.0,
+      "total_sales": 18194.0,
+      "bills": 76,
       "discount": 679.9499999999999
     },
     {
       "date": "2026-01-18",
-      "revenue": 33666.76,
-      "total_sales": 33666.76,
-      "bills": 76,
-      "discount": 0.0
-    },
-    {
-      "date": "2026-01-19",
-      "revenue": 46663.34,
-      "total_sales": 46663.34,
+      "revenue": 23352.0,
+      "total_sales": 23352.0,
       "bills": 100,
       "discount": 0.0
     },
     {
+      "date": "2026-01-19",
+      "revenue": 18472.0,
+      "total_sales": 18472.0,
+      "bills": 97,
+      "discount": 0.0
+    },
+    {
       "date": "2026-01-20",
-      "revenue": 36930.82,
-      "total_sales": 36930.82,
+      "revenue": 18472.0,
+      "total_sales": 18472.0,
       "bills": 97,
       "discount": 0.0
     }
