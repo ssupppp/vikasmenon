@@ -1087,10 +1087,6 @@
                     <div class="summary-value" id="estimateDay">--</div>
                     <div class="summary-label">Tomorrow's Forecast</div>
                 </div>
-                <div class="summary-card">
-                    <div class="summary-value" id="estimateTotalItems">--</div>
-                    <div class="summary-label">Expected Items</div>
-                </div>
             </div>
 
             <div class="info-banner" id="estimateMethod" style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px; margin-bottom: var(--space-md); font-size: 0.9rem;">
@@ -2692,7 +2688,6 @@
             // Update summary cards
             const dayInfo = data.estimate_for;
             document.getElementById('estimateDay').textContent = `${dayInfo.day_of_week}, ${new Date(dayInfo.date).toLocaleDateString('en-IN', { month: 'short', day: 'numeric' })}`;
-            document.getElementById('estimateTotalItems').textContent = formatNumber(data.total_expected_items);
 
             // Update method banner
             document.getElementById('estimateMethod').innerHTML = `<strong>Method:</strong> ${data.method}`;
