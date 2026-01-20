@@ -1,0 +1,569 @@
+{
+  "total": 872509.21,
+  "total_sales": 872509.21,
+  "total_bills": 4232,
+  "days_count": 75,
+  "period": {
+    "start": "2025-11-07",
+    "end": "2026-01-20",
+    "days": 75
+  },
+  "monthly": {
+    "2025-11": 222078.41999999998,
+    "2025-12": 322982.24000000005,
+    "2026-01": 327448.55000000005
+  },
+  "monthly_bills": {
+    "2025-11": 898,
+    "2025-12": 1729,
+    "2026-01": 1637
+  },
+  "daily": [
+    {
+      "date": "2025-11-07",
+      "revenue": 10683.0,
+      "total_sales": 10683.0,
+      "bills": 0,
+      "discount": 0,
+      "source": "bank_statement"
+    },
+    {
+      "date": "2025-11-08",
+      "revenue": 8756.0,
+      "total_sales": 8756.0,
+      "bills": 0,
+      "discount": 0,
+      "source": "bank_statement"
+    },
+    {
+      "date": "2025-11-09",
+      "revenue": 11130.0,
+      "total_sales": 11130.0,
+      "bills": 0,
+      "discount": 0,
+      "source": "bank_statement"
+    },
+    {
+      "date": "2025-11-10",
+      "revenue": 5730.0,
+      "total_sales": 5730.0,
+      "bills": 0,
+      "discount": 0,
+      "source": "bank_statement"
+    },
+    {
+      "date": "2025-11-11",
+      "revenue": 8325.0,
+      "total_sales": 8325.0,
+      "bills": 0,
+      "discount": 0,
+      "source": "bank_statement"
+    },
+    {
+      "date": "2025-11-12",
+      "revenue": 11560.0,
+      "total_sales": 11560.0,
+      "bills": 0,
+      "discount": 0,
+      "source": "bank_statement"
+    },
+    {
+      "date": "2025-11-13",
+      "revenue": 4371.0,
+      "total_sales": 4371.0,
+      "bills": 0,
+      "discount": 0,
+      "source": "bank_statement",
+      "note": "Estimated from T+2 settlement on Nov 15"
+    },
+    {
+      "date": "2025-11-14",
+      "revenue": 10223.86,
+      "total_sales": 10485.0,
+      "bills": 57,
+      "discount": 238.56
+    },
+    {
+      "date": "2025-11-15",
+      "revenue": 7819.06,
+      "total_sales": 8105.0,
+      "bills": 48,
+      "discount": 90.48
+    },
+    {
+      "date": "2025-11-16",
+      "revenue": 12209.56,
+      "total_sales": 11399.0,
+      "bills": 62,
+      "discount": 1858.11
+    },
+    {
+      "date": "2025-11-17",
+      "revenue": 5214.34,
+      "total_sales": 5475.0,
+      "bills": 38,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-18",
+      "revenue": 6761.88,
+      "total_sales": 6970.0,
+      "bills": 40,
+      "discount": 123.81
+    },
+    {
+      "date": "2025-11-19",
+      "revenue": 8542.77,
+      "total_sales": 8970.0,
+      "bills": 61,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-20",
+      "revenue": 11571.4,
+      "total_sales": 12150.0,
+      "bills": 59,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-21",
+      "revenue": 7828.53,
+      "total_sales": 8220.0,
+      "bills": 46,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-22",
+      "revenue": 10509.53,
+      "total_sales": 11251.0,
+      "bills": 58,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-23",
+      "revenue": 11627.54,
+      "total_sales": 12209.0,
+      "bills": 53,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-24",
+      "revenue": 10484.74,
+      "total_sales": 10781.0,
+      "bills": 58,
+      "discount": 220.0
+    },
+    {
+      "date": "2025-11-25",
+      "revenue": 9980.88,
+      "total_sales": 10480.0,
+      "bills": 67,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-26",
+      "revenue": 8250.44,
+      "total_sales": 8548.0,
+      "bills": 52,
+      "discount": 109.52
+    },
+    {
+      "date": "2025-11-27",
+      "revenue": 9222.88,
+      "total_sales": 9684.0,
+      "bills": 53,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-28",
+      "revenue": 6428.53,
+      "total_sales": 6750.0,
+      "bills": 50,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-29",
+      "revenue": 9438.02,
+      "total_sales": 10025.0,
+      "bills": 41,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-11-30",
+      "revenue": 15409.46,
+      "total_sales": 16180.0,
+      "bills": 55,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-01",
+      "revenue": 9323.79,
+      "total_sales": 9790.0,
+      "bills": 56,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-02",
+      "revenue": 10638.11,
+      "total_sales": 11035.0,
+      "bills": 57,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-03",
+      "revenue": 14718.92,
+      "total_sales": 15375.0,
+      "bills": 70,
+      "discount": 76.2
+    },
+    {
+      "date": "2025-12-04",
+      "revenue": 11185.64,
+      "total_sales": 11745.0,
+      "bills": 68,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-05",
+      "revenue": 8345.67,
+      "total_sales": 8763.0,
+      "bills": 49,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-06",
+      "revenue": 11418.02,
+      "total_sales": 11988.0,
+      "bills": 58,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-07",
+      "revenue": 10888.53,
+      "total_sales": 11433.0,
+      "bills": 57,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-08",
+      "revenue": 12589.54,
+      "total_sales": 13219.0,
+      "bills": 64,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-09",
+      "revenue": 9827.47,
+      "total_sales": 10319.0,
+      "bills": 56,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-10",
+      "revenue": 10165.61,
+      "total_sales": 10674.0,
+      "bills": 60,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-11",
+      "revenue": 10412.34,
+      "total_sales": 10933.0,
+      "bills": 60,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-12",
+      "revenue": 14328.63,
+      "total_sales": 15045.0,
+      "bills": 63,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-13",
+      "revenue": 13194.21,
+      "total_sales": 13864.0,
+      "bills": 56,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-14",
+      "revenue": 10984.98,
+      "total_sales": 11509.0,
+      "bills": 53,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-15",
+      "revenue": 16195.13,
+      "total_sales": 17005.0,
+      "bills": 69,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-16",
+      "revenue": 12944.72,
+      "total_sales": 13592.0,
+      "bills": 69,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-17",
+      "revenue": 11027.55,
+      "total_sales": 11579.0,
+      "bills": 63,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-18",
+      "revenue": 12379.13,
+      "total_sales": 13028.0,
+      "bills": 76,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-19",
+      "revenue": 7874.21,
+      "total_sales": 8268.0,
+      "bills": 60,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-20",
+      "revenue": 11149.36,
+      "total_sales": 11567.0,
+      "bills": 58,
+      "discount": 133.33
+    },
+    {
+      "date": "2025-12-21",
+      "revenue": 9641.89,
+      "total_sales": 10124.0,
+      "bills": 47,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-22",
+      "revenue": 7847.63,
+      "total_sales": 8240.0,
+      "bills": 51,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-23",
+      "revenue": 12582.73,
+      "total_sales": 13207.0,
+      "bills": 61,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-24",
+      "revenue": 9474.22,
+      "total_sales": 10033.0,
+      "bills": 44,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-25",
+      "revenue": 7403.8,
+      "total_sales": 7774.0,
+      "bills": 39,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-26",
+      "revenue": 7176.09,
+      "total_sales": 7535.0,
+      "bills": 43,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-27",
+      "revenue": 4984.77,
+      "total_sales": 5234.0,
+      "bills": 33,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-28",
+      "revenue": 5795.13,
+      "total_sales": 6085.0,
+      "bills": 28,
+      "discount": 0.0
+    },
+    {
+      "date": "2025-12-29",
+      "revenue": 9704.68,
+      "total_sales": 10106.0,
+      "bills": 59,
+      "discount": 79.99
+    },
+    {
+      "date": "2025-12-30",
+      "revenue": 8727.41,
+      "total_sales": 8871.0,
+      "bills": 49,
+      "discount": 280.0
+    },
+    {
+      "date": "2025-12-31",
+      "revenue": 10052.33,
+      "total_sales": 10285.0,
+      "bills": 53,
+      "discount": 257.5
+    },
+    {
+      "date": "2026-01-01",
+      "revenue": 13491.32,
+      "total_sales": 13589.0,
+      "bills": 55,
+      "discount": 550.49
+    },
+    {
+      "date": "2026-01-02",
+      "revenue": 8440.38,
+      "total_sales": 8737.0,
+      "bills": 52,
+      "discount": 119.5
+    },
+    {
+      "date": "2026-01-03",
+      "revenue": 13042.1,
+      "total_sales": 13454.0,
+      "bills": 70,
+      "discount": 247.45
+    },
+    {
+      "date": "2026-01-04",
+      "revenue": 10009.8,
+      "total_sales": 9989.0,
+      "bills": 52,
+      "discount": 511.67
+    },
+    {
+      "date": "2026-01-05",
+      "revenue": 13070.15,
+      "total_sales": 13330.0,
+      "bills": 79,
+      "discount": 376.32
+    },
+    {
+      "date": "2026-01-06",
+      "revenue": 18244.45,
+      "total_sales": 19054.0,
+      "bills": 94,
+      "discount": 97.5
+    },
+    {
+      "date": "2026-01-07",
+      "revenue": 16134.13,
+      "total_sales": 16137.0,
+      "bills": 84,
+      "discount": 792.16
+    },
+    {
+      "date": "2026-01-08",
+      "revenue": 17855.9,
+      "total_sales": 17863.0,
+      "bills": 100,
+      "discount": 845.73
+    },
+    {
+      "date": "2026-01-09",
+      "revenue": 15365.19,
+      "total_sales": 16134.0,
+      "bills": 87,
+      "discount": 0.0
+    },
+    {
+      "date": "2026-01-10",
+      "revenue": 13194.43,
+      "total_sales": 13927.0,
+      "bills": 62,
+      "discount": 0.0
+    },
+    {
+      "date": "2026-01-11",
+      "revenue": 16393.87,
+      "total_sales": 17192.0,
+      "bills": 76,
+      "discount": 99.98
+    },
+    {
+      "date": "2026-01-12",
+      "revenue": 16282.29,
+      "total_sales": 17160.0,
+      "bills": 77,
+      "discount": 0.0
+    },
+    {
+      "date": "2026-01-13",
+      "revenue": 17151.54,
+      "total_sales": 18053.0,
+      "bills": 88,
+      "discount": 0.0
+    },
+    {
+      "date": "2026-01-14",
+      "revenue": 18053.0,
+      "total_sales": 18053.0,
+      "bills": 92,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-15",
+      "revenue": 18013.0,
+      "total_sales": 18013.0,
+      "bills": 92,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-16",
+      "revenue": 21242.0,
+      "total_sales": 21242.0,
+      "bills": 86,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-17",
+      "revenue": 21447.0,
+      "total_sales": 21447.0,
+      "bills": 86,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-18",
+      "revenue": 18194.0,
+      "total_sales": 18194.0,
+      "bills": 76,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-19",
+      "revenue": 23352.0,
+      "total_sales": 23352.0,
+      "bills": 100,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-20",
+      "revenue": 18472.0,
+      "total_sales": 18472.0,
+      "bills": 97,
+      "discount": 0
+    }
+  ],
+  "payment_modes": {
+    "cash": 9555.0,
+    "card": 2225.0,
+    "other": 688828.0,
+    "wallet": 0.0,
+    "online": 17931.0
+  },
+  "source_files": [
+    "Dec15_Jan13_daywise.xlsx",
+    "Nov_14_Dec_14_daywise.xlsx",
+    "Jan14_daywise.xlsx"
+  ],
+  "parsed_at": "2026-01-15T22:26:48.006037"
+}

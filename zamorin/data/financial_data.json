@@ -12,20 +12,20 @@
       "days": 75
     },
     "revenue": {
-      "total": 974002.04,
+      "total": 872509.21,
       "breakdown": {
         "2025-11": 222078.41999999998,
         "2025-12": 322982.24000000005,
-        "2026-01": 428941.38000000006
+        "2026-01": 327448.55000000005
       },
       "by_source": {
         "Petpooja Sales": 974002.04
       },
       "by_channel": {
-        "Dine-in/Direct": 958015.15,
+        "Dine-in/Direct": 857502.21,
         "Swiggy": 0,
-        "Zomato": 15986.89,
-        "note": "Zomato from bank: Eternal Ltd (Rs. 8,609.83) + Razorpay (Rs. 7,377.06). T+5 settlement, started late Dec 2025. Swiggy not yet active or settled."
+        "Zomato": 15007,
+        "note": "Online orders (Swiggy+Zomato) from Petpooja. Detailed split pending."
       },
       "source": "petpooja_item_reports",
       "period": {
@@ -79,8 +79,8 @@
         "Main Ingredients": 956715.68
       }
     },
-    "gross_profit": -325137.3500000001,
-    "gross_margin_pct": -33.4,
+    "gross_profit": -426630.18000000017,
+    "gross_margin_pct": -48.9,
     "opex": {
       "total": 1315488.9100000001,
       "breakdown": {
@@ -144,17 +144,17 @@
       "bank_paid": 1137983.9100000001,
       "partner_paid": 177505.0
     },
-    "operating_profit": -1640626.2600000002,
-    "operating_margin_pct": -168.4,
+    "operating_profit": -1742119.0900000003,
+    "operating_margin_pct": -199.7,
     "other_expenses": 11612.9,
-    "net_profit": -1640626.2600000002,
+    "net_profit": -1753731.9900000002,
     "capex": 30000.0,
-    "cogs_pct": 133.4,
-    "opex_pct": 184.9,
-    "net_margin_pct": -168.4,
-    "avg_daily_revenue": 12986.69,
+    "cogs_pct": 148.9,
+    "opex_pct": 150.8,
+    "net_margin_pct": -201.0,
+    "avg_daily_revenue": 11633.46,
     "avg_daily_cogs": 17321.86,
-    "avg_daily_profit": -21875.02
+    "avg_daily_profit": -23383.09
   },
   "cash_flow": {
     "period": {
