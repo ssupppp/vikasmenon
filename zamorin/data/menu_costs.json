@@ -1,0 +1,1858 @@
+{
+  "generated_at": "2026-01-20",
+  "total_items": 56,
+  "overall_avg_margin_pct": 56.4,
+  "overall_avg_food_cost_pct": 43.6,
+  "category_summary": [
+    {
+      "category": "DOSA",
+      "item_count": 24,
+      "avg_margin_pct": 66.4,
+      "min_margin_pct": 59.7,
+      "max_margin_pct": 73.1
+    },
+    {
+      "category": "BREAKFAST",
+      "item_count": 10,
+      "avg_margin_pct": 31.4,
+      "min_margin_pct": 9.8,
+      "max_margin_pct": 79.5
+    },
+    {
+      "category": "COMBO",
+      "item_count": 5,
+      "avg_margin_pct": 40.7,
+      "min_margin_pct": 24.0,
+      "max_margin_pct": 54.8
+    },
+    {
+      "category": "LUNCH",
+      "item_count": 5,
+      "avg_margin_pct": 63.4,
+      "min_margin_pct": 56.6,
+      "max_margin_pct": 71.2
+    },
+    {
+      "category": "LUNCH COMBO",
+      "item_count": 2,
+      "avg_margin_pct": 42.5,
+      "min_margin_pct": 38.8,
+      "max_margin_pct": 46.1
+    },
+    {
+      "category": "DINNER",
+      "item_count": 4,
+      "avg_margin_pct": 49.8,
+      "min_margin_pct": 25.1,
+      "max_margin_pct": 76.7
+    },
+    {
+      "category": "SNACKS",
+      "item_count": 4,
+      "avg_margin_pct": 66.8,
+      "min_margin_pct": 52.0,
+      "max_margin_pct": 80.0
+    },
+    {
+      "category": "DESSERTS",
+      "item_count": 2,
+      "avg_margin_pct": 89.5,
+      "min_margin_pct": 89.5,
+      "max_margin_pct": 89.5
+    }
+  ],
+  "best_margins": [
+    {
+      "name": "Pastries",
+      "category": "DESSERTS",
+      "price": 95,
+      "cost": 10,
+      "margin_pct": 89.5
+    },
+    {
+      "name": "Cake",
+      "category": "DESSERTS",
+      "price": 95,
+      "cost": 10,
+      "margin_pct": 89.5
+    },
+    {
+      "name": "Ela Ada",
+      "category": "SNACKS",
+      "price": 40,
+      "cost": 8,
+      "margin_pct": 80.0
+    },
+    {
+      "name": "Kesari Bath",
+      "category": "BREAKFAST",
+      "price": 60,
+      "cost": 12.32,
+      "margin_pct": 79.5
+    },
+    {
+      "name": "Fried Rice with Gobi Manchurian",
+      "category": "DINNER",
+      "price": 165,
+      "cost": 38.48,
+      "margin_pct": 76.7
+    },
+    {
+      "name": "Rava Dosa",
+      "category": "DOSA",
+      "price": 140,
+      "cost": 37.68,
+      "margin_pct": 73.1
+    },
+    {
+      "name": "Muringa Leaves Dosa",
+      "category": "DOSA",
+      "price": 140,
+      "cost": 37.68,
+      "margin_pct": 73.1
+    },
+    {
+      "name": "Oothappam",
+      "category": "DOSA",
+      "price": 130,
+      "cost": 37.18,
+      "margin_pct": 71.4
+    },
+    {
+      "name": "Puliyogare",
+      "category": "LUNCH",
+      "price": 80,
+      "cost": 23.0,
+      "margin_pct": 71.2
+    },
+    {
+      "name": "Pesarattu Dosa",
+      "category": "DOSA",
+      "price": 120,
+      "cost": 35.18,
+      "margin_pct": 70.7
+    }
+  ],
+  "worst_margins": [
+    {
+      "name": "Medu Vada (2 pcs)",
+      "category": "BREAKFAST",
+      "price": 50,
+      "cost": 45.12,
+      "margin_pct": 9.8
+    },
+    {
+      "name": "Single Vada",
+      "category": "BREAKFAST",
+      "price": 25,
+      "cost": 22.5,
+      "margin_pct": 10.0
+    },
+    {
+      "name": "Pongal",
+      "category": "BREAKFAST",
+      "price": 60,
+      "cost": 52.2,
+      "margin_pct": 13.0
+    },
+    {
+      "name": "Pongal + Vada Combo",
+      "category": "COMBO",
+      "price": 90,
+      "cost": 68.41,
+      "margin_pct": 24.0
+    },
+    {
+      "name": "Idiappam with Veg Kurma",
+      "category": "DINNER",
+      "price": 90,
+      "cost": 67.4,
+      "margin_pct": 25.1
+    },
+    {
+      "name": "Idli (2 pcs)",
+      "category": "BREAKFAST",
+      "price": 50,
+      "cost": 34.19,
+      "margin_pct": 31.6
+    },
+    {
+      "name": "Idiappam with Veg Stew",
+      "category": "BREAKFAST",
+      "price": 90,
+      "cost": 61.39,
+      "margin_pct": 31.8
+    },
+    {
+      "name": "Single Idli",
+      "category": "BREAKFAST",
+      "price": 25,
+      "cost": 17.03,
+      "margin_pct": 31.9
+    },
+    {
+      "name": "Upma",
+      "category": "BREAKFAST",
+      "price": 60,
+      "cost": 40.33,
+      "margin_pct": 32.8
+    },
+    {
+      "name": "Kerala Puttu with Kadala",
+      "category": "BREAKFAST",
+      "price": 90,
+      "cost": 60.1,
+      "margin_pct": 33.2
+    }
+  ],
+  "items": [
+    {
+      "category": "DOSA",
+      "name": "Plain Dosa",
+      "price": 90,
+      "cost": 34.93,
+      "margin": 55.07,
+      "margin_pct": 61.2,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Masala Dosa",
+      "price": 110,
+      "cost": 44.29,
+      "margin": 65.72,
+      "margin_pct": 59.7,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "dosa_masala",
+          "qty_gm": 130
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Ghee Dosa",
+      "price": 110,
+      "cost": 37.92,
+      "margin": 72.08,
+      "margin_pct": 65.5,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "ghee",
+          "qty_gm": 6
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Ghee Roast Dosa",
+      "price": 110,
+      "cost": 37.92,
+      "margin": 72.08,
+      "margin_pct": 65.5,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "ghee",
+          "qty_gm": 6
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Ghee Masala Dosa",
+      "price": 120,
+      "cost": 47.29,
+      "margin": 72.72,
+      "margin_pct": 60.6,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "dosa_masala",
+          "qty_gm": 130
+        },
+        {
+          "name": "ghee",
+          "qty_gm": 6
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Dosa",
+      "price": 110,
+      "cost": 35.43,
+      "margin": 74.57,
+      "margin_pct": 67.8,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "podi",
+          "qty_gm": 5
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Masala Dosa",
+      "price": 120,
+      "cost": 44.79,
+      "margin": 75.22,
+      "margin_pct": 62.7,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "dosa_masala",
+          "qty_gm": 130
+        },
+        {
+          "name": "podi",
+          "qty_gm": 5
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Ghee Dosa",
+      "price": 120,
+      "cost": 38.42,
+      "margin": 81.58,
+      "margin_pct": 68.0,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "podi",
+          "qty_gm": 5
+        },
+        {
+          "name": "ghee",
+          "qty_gm": 6
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Dosa",
+      "price": 110,
+      "cost": 35.93,
+      "margin": 74.07,
+      "margin_pct": 67.3,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Masala Dosa",
+      "price": 120,
+      "cost": 45.29,
+      "margin": 74.72,
+      "margin_pct": 62.3,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "dosa_masala",
+          "qty_gm": 130
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Ghee Dosa",
+      "price": 120,
+      "cost": 38.92,
+      "margin": 81.08,
+      "margin_pct": 67.6,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "ghee",
+          "qty_gm": 6
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Ghee Masala Dosa",
+      "price": 130,
+      "cost": 48.29,
+      "margin": 81.72,
+      "margin_pct": 62.9,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "dosa_masala",
+          "qty_gm": 130
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "ghee",
+          "qty_gm": 6
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Onion Dosa",
+      "price": 120,
+      "cost": 36.43,
+      "margin": 83.57,
+      "margin_pct": 69.6,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "podi",
+          "qty_gm": 5
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Onion Masala Dosa",
+      "price": 130,
+      "cost": 45.79,
+      "margin": 84.22,
+      "margin_pct": 64.8,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "dosa_masala",
+          "qty_gm": 130
+        },
+        {
+          "name": "podi",
+          "qty_gm": 5
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Onion Ghee Dosa",
+      "price": 130,
+      "cost": 39.42,
+      "margin": 90.58,
+      "margin_pct": 69.7,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "podi",
+          "qty_gm": 5
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "ghee",
+          "qty_gm": 6
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Onion Ghee Masala Dosa",
+      "price": 140,
+      "cost": 48.79,
+      "margin": 91.22,
+      "margin_pct": 65.2,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "dosa_masala",
+          "qty_gm": 130
+        },
+        {
+          "name": "podi",
+          "qty_gm": 5
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "ghee",
+          "qty_gm": 6
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Set Dosa",
+      "price": 110,
+      "cost": 42.18,
+      "margin": 67.82,
+      "margin_pct": 61.7,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 270
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Rava Dosa",
+      "price": 140,
+      "cost": 37.68,
+      "margin": 102.32,
+      "margin_pct": 73.1,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 180
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Rava Masala Dosa",
+      "price": 150,
+      "cost": 47.04,
+      "margin": 102.97,
+      "margin_pct": 68.6,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 180
+        },
+        {
+          "name": "dosa_masala",
+          "qty_gm": 130
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Pesarattu Dosa",
+      "price": 120,
+      "cost": 35.18,
+      "margin": 84.82,
+      "margin_pct": 70.7,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 130
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Adai Dosa",
+      "price": 120,
+      "cost": 35.18,
+      "margin": 84.82,
+      "margin_pct": 70.7,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 130
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Muringa Leaves Dosa",
+      "price": 140,
+      "cost": 37.68,
+      "margin": 102.32,
+      "margin_pct": 73.1,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 180
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Chocolate Dosa",
+      "price": 120,
+      "cost": 42.93,
+      "margin": 77.07,
+      "margin_pct": 64.2,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 125
+        },
+        {
+          "name": "chocolate",
+          "qty_gm": 60
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "DOSA",
+      "name": "Oothappam",
+      "price": 130,
+      "cost": 37.18,
+      "margin": 92.82,
+      "margin_pct": 71.4,
+      "ingredients": [
+        {
+          "name": "dosa_batter",
+          "qty_gm": 150
+        },
+        {
+          "name": "onion",
+          "qty_gm": 20
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Idli (2 pcs)",
+      "price": 50,
+      "cost": 34.19,
+      "margin": 15.81,
+      "margin_pct": 31.6,
+      "ingredients": [
+        {
+          "name": "idli_batter",
+          "qty_gm": 142
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Single Idli",
+      "price": 25,
+      "cost": 17.03,
+      "margin": 7.97,
+      "margin_pct": 31.9,
+      "ingredients": [
+        {
+          "name": "idli_batter",
+          "qty_gm": 71
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 62
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Medu Vada (2 pcs)",
+      "price": 50,
+      "cost": 45.12,
+      "margin": 4.88,
+      "margin_pct": 9.8,
+      "ingredients": [
+        {
+          "name": "vada_batter",
+          "qty_gm": 222
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Single Vada",
+      "price": 25,
+      "cost": 22.5,
+      "margin": 2.5,
+      "margin_pct": 10.0,
+      "ingredients": [
+        {
+          "name": "vada_batter",
+          "qty_gm": 111
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 62
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 25
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Upma",
+      "price": 60,
+      "cost": 40.33,
+      "margin": 19.67,
+      "margin_pct": 32.8,
+      "ingredients": [
+        {
+          "name": "upma",
+          "qty_gm": 265
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 27
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Pongal",
+      "price": 60,
+      "cost": 52.2,
+      "margin": 7.8,
+      "margin_pct": 13.0,
+      "ingredients": [
+        {
+          "name": "pongal",
+          "qty_gm": 250
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Kesari Bath",
+      "price": 60,
+      "cost": 12.32,
+      "margin": 47.68,
+      "margin_pct": 79.5,
+      "ingredients": [
+        {
+          "name": "kesari",
+          "qty_gm": 160
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Kerala Puttu with Kadala",
+      "price": 90,
+      "cost": 60.1,
+      "margin": 29.9,
+      "margin_pct": 33.2,
+      "ingredients": [
+        {
+          "name": "puttu",
+          "qty_gm": 230
+        },
+        {
+          "name": "kadala_curry",
+          "qty_gm": 250
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Half Puttu with Kadala",
+      "price": 50,
+      "cost": 30.05,
+      "margin": 19.95,
+      "margin_pct": 39.9,
+      "ingredients": [
+        {
+          "name": "puttu",
+          "qty_gm": 115
+        },
+        {
+          "name": "kadala_curry",
+          "qty_gm": 125
+        }
+      ]
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Idiappam with Veg Stew",
+      "price": 90,
+      "cost": 61.39,
+      "margin": 28.61,
+      "margin_pct": 31.8,
+      "ingredients": [
+        {
+          "name": "idiappam",
+          "qty_gm": 200
+        },
+        {
+          "name": "veg_stew",
+          "qty_gm": 115
+        },
+        {
+          "name": "kadala_curry",
+          "qty_gm": 120
+        }
+      ]
+    },
+    {
+      "category": "COMBO",
+      "name": "Idli-Vada Combo",
+      "price": 85,
+      "cost": 50.4,
+      "margin": 34.6,
+      "margin_pct": 40.7,
+      "ingredients": [
+        {
+          "name": "idli_batter",
+          "qty_gm": 142
+        },
+        {
+          "name": "vada_batter",
+          "qty_gm": 111
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "COMBO",
+      "name": "Upma + Vada Combo",
+      "price": 90,
+      "cost": 54.14,
+      "margin": 35.86,
+      "margin_pct": 39.8,
+      "ingredients": [
+        {
+          "name": "upma",
+          "qty_gm": 265
+        },
+        {
+          "name": "vada_batter",
+          "qty_gm": 111
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "COMBO",
+      "name": "Pongal + Vada Combo",
+      "price": 90,
+      "cost": 68.41,
+      "margin": 21.59,
+      "margin_pct": 24.0,
+      "ingredients": [
+        {
+          "name": "pongal",
+          "qty_gm": 250
+        },
+        {
+          "name": "vada_batter",
+          "qty_gm": 111
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "COMBO",
+      "name": "Upma + Kesari Bath Combo",
+      "price": 120,
+      "cost": 54.25,
+      "margin": 65.75,
+      "margin_pct": 54.8,
+      "ingredients": [
+        {
+          "name": "upma",
+          "qty_gm": 265
+        },
+        {
+          "name": "kesari",
+          "qty_gm": 160
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 125
+        },
+        {
+          "name": "coconut_chutney",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "COMBO",
+      "name": "Puttu Kadala Combo",
+      "price": 115,
+      "cost": 64.1,
+      "margin": 50.9,
+      "margin_pct": 44.3,
+      "ingredients": [
+        {
+          "name": "puttu",
+          "qty_gm": 230
+        },
+        {
+          "name": "kadala_curry",
+          "qty_gm": 250
+        }
+      ]
+    },
+    {
+      "category": "LUNCH",
+      "name": "Rice Meal (Red Rice)",
+      "price": 110,
+      "cost": 47.76,
+      "margin": 62.24,
+      "margin_pct": 56.6,
+      "ingredients": [
+        {
+          "name": "red_rice",
+          "qty_gm": 450
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 100
+        },
+        {
+          "name": "rasam",
+          "qty_gm": 100
+        },
+        {
+          "name": "curd",
+          "qty_gm": 50
+        },
+        {
+          "name": "avial",
+          "qty_gm": 50
+        },
+        {
+          "name": "poriyal",
+          "qty_gm": 50
+        },
+        {
+          "name": "podi",
+          "qty_gm": 15
+        },
+        {
+          "name": "payasam",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "LUNCH",
+      "name": "Rice Meal (White Rice)",
+      "price": 110,
+      "cost": 44.7,
+      "margin": 65.3,
+      "margin_pct": 59.4,
+      "ingredients": [
+        {
+          "name": "white_rice",
+          "qty_gm": 450
+        },
+        {
+          "name": "sambar",
+          "qty_gm": 100
+        },
+        {
+          "name": "rasam",
+          "qty_gm": 100
+        },
+        {
+          "name": "curd",
+          "qty_gm": 50
+        },
+        {
+          "name": "avial",
+          "qty_gm": 50
+        },
+        {
+          "name": "poriyal",
+          "qty_gm": 50
+        },
+        {
+          "name": "podi",
+          "qty_gm": 15
+        },
+        {
+          "name": "payasam",
+          "qty_gm": 50
+        }
+      ]
+    },
+    {
+      "category": "LUNCH",
+      "name": "Curd Rice",
+      "price": 60,
+      "cost": 24.0,
+      "margin": 36.0,
+      "margin_pct": 60.0,
+      "ingredients": [
+        {
+          "name": "curd_rice",
+          "qty_gm": 300
+        }
+      ]
+    },
+    {
+      "category": "LUNCH",
+      "name": "Bisi Bele Bath",
+      "price": 80,
+      "cost": 24.03,
+      "margin": 55.97,
+      "margin_pct": 70.0,
+      "ingredients": [
+        {
+          "name": "bisibele_bath",
+          "qty_gm": 270
+        }
+      ]
+    },
+    {
+      "category": "LUNCH",
+      "name": "Puliyogare",
+      "price": 80,
+      "cost": 23.0,
+      "margin": 57.0,
+      "margin_pct": 71.2,
+      "ingredients": [
+        {
+          "name": "puliyogare",
+          "qty_gm": 230
+        }
+      ]
+    },
+    {
+      "category": "LUNCH COMBO",
+      "name": "Combo 1 (CR + Puliyogare + Pulav)",
+      "price": 130,
+      "cost": 70.04,
+      "margin": 59.96,
+      "margin_pct": 46.1,
+      "ingredients": [
+        {
+          "name": "curd_rice",
+          "qty_gm": 300
+        },
+        {
+          "name": "puliyogare",
+          "qty_gm": 230
+        },
+        {
+          "name": "pulav",
+          "qty_gm": 240
+        }
+      ]
+    },
+    {
+      "category": "LUNCH COMBO",
+      "name": "Combo 2 (CR + BBB + Pongal)",
+      "price": 130,
+      "cost": 79.53,
+      "margin": 50.47,
+      "margin_pct": 38.8,
+      "ingredients": [
+        {
+          "name": "curd_rice",
+          "qty_gm": 300
+        },
+        {
+          "name": "bisibele_bath",
+          "qty_gm": 270
+        },
+        {
+          "name": "pongal",
+          "qty_gm": 250
+        }
+      ]
+    },
+    {
+      "category": "DINNER",
+      "name": "Kerala Porotta with Kadala",
+      "price": 90,
+      "cost": 42.58,
+      "margin": 47.42,
+      "margin_pct": 52.7,
+      "ingredients": [
+        {
+          "name": "porotta_batter",
+          "qty_gm": 180
+        },
+        {
+          "name": "kadala_curry",
+          "qty_gm": 250
+        }
+      ]
+    },
+    {
+      "category": "DINNER",
+      "name": "Porotta (2) + Kadala + Kurma",
+      "price": 150,
+      "cost": 82.66,
+      "margin": 67.34,
+      "margin_pct": 44.9,
+      "ingredients": [
+        {
+          "name": "porotta_batter",
+          "qty_gm": 360
+        },
+        {
+          "name": "kadala_curry",
+          "qty_gm": 250
+        },
+        {
+          "name": "veg_kurma",
+          "qty_gm": 200
+        }
+      ]
+    },
+    {
+      "category": "DINNER",
+      "name": "Idiappam with Veg Kurma",
+      "price": 90,
+      "cost": 67.4,
+      "margin": 22.6,
+      "margin_pct": 25.1,
+      "ingredients": [
+        {
+          "name": "idiappam",
+          "qty_gm": 200
+        },
+        {
+          "name": "veg_kurma",
+          "qty_gm": 200
+        }
+      ]
+    },
+    {
+      "category": "DINNER",
+      "name": "Fried Rice with Gobi Manchurian",
+      "price": 165,
+      "cost": 38.48,
+      "margin": 126.52,
+      "margin_pct": 76.7,
+      "ingredients": [
+        {
+          "name": "fried_rice",
+          "qty_gm": 320
+        },
+        {
+          "name": "manchurian",
+          "qty_gm": 150
+        }
+      ]
+    },
+    {
+      "category": "SNACKS",
+      "name": "Punjabi Samosa",
+      "price": 35,
+      "cost": 11,
+      "margin": 24,
+      "margin_pct": 68.6,
+      "ingredients": [
+        {
+          "name": "samosa",
+          "qty_gm": 1
+        }
+      ]
+    },
+    {
+      "category": "SNACKS",
+      "name": "Pazham Pori",
+      "price": 25,
+      "cost": 12,
+      "margin": 13,
+      "margin_pct": 52.0,
+      "ingredients": [
+        {
+          "name": "pazham_pori",
+          "qty_gm": 1
+        }
+      ]
+    },
+    {
+      "category": "SNACKS",
+      "name": "Parippu Vada",
+      "price": 15,
+      "cost": 5,
+      "margin": 10,
+      "margin_pct": 66.7,
+      "ingredients": [
+        {
+          "name": "parippu_vada",
+          "qty_gm": 1
+        }
+      ]
+    },
+    {
+      "category": "SNACKS",
+      "name": "Ela Ada",
+      "price": 40,
+      "cost": 8,
+      "margin": 32,
+      "margin_pct": 80.0,
+      "ingredients": [
+        {
+          "name": "ela_ada",
+          "qty_gm": 1
+        }
+      ]
+    },
+    {
+      "category": "DESSERTS",
+      "name": "Pastries",
+      "price": 95,
+      "cost": 10,
+      "margin": 85,
+      "margin_pct": 89.5,
+      "ingredients": [
+        {
+          "name": "pastry",
+          "qty_gm": 1
+        }
+      ]
+    },
+    {
+      "category": "DESSERTS",
+      "name": "Cake",
+      "price": 95,
+      "cost": 10,
+      "margin": 85,
+      "margin_pct": 89.5,
+      "ingredients": [
+        {
+          "name": "cake",
+          "qty_gm": 1
+        }
+      ]
+    }
+  ],
+  "ingredient_costs": {
+    "sambar": 128,
+    "coconut_chutney": 94,
+    "tomato_chutney": 89,
+    "coriander_chutney": 96,
+    "pineapple_chutney": 134,
+    "dosa_masala": 72,
+    "puttu": 120,
+    "kadala_curry": 130,
+    "upma": 65,
+    "pongal": 126,
+    "kesari": 77,
+    "veg_stew": 73,
+    "veg_kurma": 150,
+    "red_rice": 32.8,
+    "white_rice": 26,
+    "avial": 63,
+    "poriyal": 59,
+    "rasam": 36,
+    "curd_rice": 80,
+    "pulav": 96,
+    "puliyogare": 100,
+    "bisibele_bath": 89,
+    "porotta_batter": 56,
+    "payasam": 80,
+    "manchurian": 120,
+    "fried_rice": 64,
+    "curd": 60,
+    "dosa_batter": 50,
+    "idli_batter": 95,
+    "vada_batter": 110,
+    "idiappam": 187,
+    "podi": 100,
+    "pastry_piece": 10,
+    "cake_piece": 10,
+    "pazham_pori_piece": 12,
+    "samosa_piece": 11,
+    "parippu_vada_piece": 5,
+    "ela_ada_piece": 8
+  }
+}

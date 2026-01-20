@@ -6,6 +6,51 @@
     <title>The Zamorins - Restaurant Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+        /* ===== CSS DESIGN SYSTEM ===== */
+        :root {
+            /* Colors */
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --border: #334155;
+            --border-focus: #3b82f6;
+
+            --text-primary: #f8fafc;
+            --text-secondary: #e2e8f0;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+
+            --accent: #3b82f6;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+
+            /* Typography */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 2rem;
+
+            /* Touch */
+            --touch-min: 44px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+
+            /* Transitions */
+            --transition: 200ms ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,64 +59,109 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
+            background: var(--bg-primary);
+            color: var(--text-secondary);
             min-height: 100vh;
+            padding-bottom: 70px; /* Space for bottom nav on mobile */
         }
 
+        @media (min-width: 768px) {
+            body {
+                padding-bottom: 0;
+            }
+        }
+
+        /* ===== HEADER ===== */
         .header {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            padding: 1.5rem 2rem;
-            border-bottom: 1px solid #334155;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: var(--space-md);
+            border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 50;
         }
 
         .header h1 {
-            font-size: 1.5rem;
+            font-size: var(--text-lg);
             font-weight: 600;
-            color: #f8fafc;
+            color: var(--text-primary);
         }
 
         .header .subtitle {
-            color: #94a3b8;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .header {
+                padding: var(--space-lg) var(--space-xl);
+            }
+            .header h1 {
+                font-size: var(--text-2xl);
+            }
+            .header .subtitle {
+                display: block;
+                color: var(--text-muted);
+                font-size: var(--text-sm);
+                margin-top: var(--space-xs);
+            }
         }
 
         .last-updated {
-            color: #64748b;
-            font-size: 0.75rem;
+            color: var(--text-dim);
+            font-size: var(--text-xs);
         }
 
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: var(--space-sm);
         }
 
         .refresh-btn {
-            padding: 0.5rem 1rem;
-            background: #22c55e;
+            padding: var(--space-sm);
+            min-width: var(--touch-min);
+            min-height: var(--touch-min);
+            background: var(--success);
             border: none;
-            border-radius: 6px;
+            border-radius: var(--radius-sm);
             color: #fff;
             cursor: pointer;
-            font-size: 0.8rem;
+            font-size: var(--text-sm);
             font-weight: 500;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            transition: all 0.2s;
+            justify-content: center;
+            gap: var(--space-sm);
+            transition: all var(--transition);
+            touch-action: manipulation;
+        }
+
+        .refresh-btn .refresh-text {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .refresh-btn {
+                padding: var(--space-sm) var(--space-md);
+            }
+            .refresh-btn .refresh-text {
+                display: inline;
+            }
         }
 
         .refresh-btn:hover {
             background: #16a34a;
         }
 
+        .refresh-btn:active {
+            transform: scale(0.97);
+        }
+
         .refresh-btn:disabled {
-            background: #64748b;
+            background: var(--text-dim);
             cursor: not-allowed;
         }
 
@@ -85,53 +175,67 @@
         }
 
         .refresh-status {
-            font-size: 0.75rem;
-            color: #94a3b8;
+            font-size: var(--text-xs);
+            color: var(--text-muted);
         }
 
-        .refresh-status.success {
-            color: #22c55e;
-        }
+        .refresh-status.success { color: var(--success); }
+        .refresh-status.error { color: var(--danger); }
 
-        .refresh-status.error {
-            color: #ef4444;
-        }
-
+        /* ===== CONTAINER ===== */
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 1.5rem;
+            padding: var(--space-md);
         }
 
-        /* Tabs */
+        @media (min-width: 768px) {
+            .container {
+                padding: var(--space-lg);
+            }
+        }
+
+        /* ===== DESKTOP TABS (hidden on mobile) ===== */
         .tabs {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 1rem;
+            display: none;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .tabs {
+                display: flex;
+            }
         }
 
         .tab {
-            padding: 0.75rem 1.5rem;
+            padding: var(--space-sm) var(--space-lg);
+            min-height: var(--touch-min);
             background: transparent;
-            border: 1px solid #334155;
-            border-radius: 8px;
-            color: #94a3b8;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            color: var(--text-muted);
             cursor: pointer;
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
             font-weight: 500;
-            transition: all 0.2s;
+            transition: all var(--transition);
+            touch-action: manipulation;
         }
 
         .tab:hover {
-            background: #334155;
-            color: #f8fafc;
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .tab:active {
+            transform: scale(0.97);
         }
 
         .tab.active {
-            background: #3b82f6;
-            border-color: #3b82f6;
+            background: var(--accent);
+            border-color: var(--accent);
             color: #fff;
         }
 
@@ -141,143 +245,263 @@
 
         .tab-content.active {
             display: block;
+            animation: fadeIn 0.2s ease;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== MOBILE BOTTOM NAVIGATION ===== */
+        .mobile-nav {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: var(--space-xs) 0;
+            padding-bottom: calc(var(--space-xs) + env(safe-area-inset-bottom, 0));
+            z-index: 100;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-nav {
+                display: none;
+            }
+        }
+
+        .mobile-nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            padding: var(--space-sm) var(--space-xs);
+            min-height: var(--touch-min);
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: color var(--transition);
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-nav-item:active {
+            opacity: 0.8;
+        }
+
+        .mobile-nav-item.active {
+            color: var(--accent);
+        }
+
+        .mobile-nav-icon {
+            font-size: 1.25rem;
+        }
+
+        .mobile-nav-label {
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        /* ===== PERIOD SELECTOR ===== */
         .period-selector {
             display: flex;
-            gap: 0.5rem;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-md);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: var(--space-xs);
+        }
+
+        .period-selector::-webkit-scrollbar {
+            display: none;
         }
 
         .period-btn {
-            padding: 0.5rem 1rem;
+            padding: var(--space-sm) var(--space-md);
+            min-height: var(--touch-min);
+            white-space: nowrap;
             background: transparent;
-            border: 1px solid #334155;
-            border-radius: 6px;
-            color: #94a3b8;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
             cursor: pointer;
-            font-size: 0.8rem;
-            transition: all 0.2s;
+            font-size: var(--text-sm);
+            transition: all var(--transition);
+            touch-action: manipulation;
         }
 
-        .period-btn:hover {
-            background: #334155;
-            color: #f8fafc;
+        .period-btn:active {
+            transform: scale(0.97);
         }
 
         .period-btn.active {
-            background: #3b82f6;
-            border-color: #3b82f6;
+            background: var(--accent);
+            border-color: var(--accent);
             color: #fff;
         }
 
-        /* Metrics Grid */
+        /* ===== METRICS GRID ===== */
         .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        @media (min-width: 480px) {
+            .metrics-grid {
+                gap: var(--space-md);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: var(--space-lg);
+                margin-bottom: var(--space-lg);
+            }
         }
 
         .metric-card {
-            background: #1e293b;
-            border-radius: 12px;
-            padding: 1.25rem;
-            border: 1px solid #334155;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            border: 1px solid var(--border);
+        }
+
+        @media (min-width: 768px) {
+            .metric-card {
+                padding: var(--space-lg);
+            }
         }
 
         .metric-card.highlight {
-            border-color: #3b82f6;
-            background: linear-gradient(135deg, #1e293b 0%, #1e3a5f 100%);
+            border-color: var(--accent);
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #1e3a5f 100%);
         }
 
         .metric-card.positive {
-            border-color: #22c55e;
+            border-color: var(--success);
         }
 
         .metric-card.negative {
-            border-color: #ef4444;
+            border-color: var(--danger);
         }
 
         .metric-card .label {
-            color: #94a3b8;
-            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-size: var(--text-xs);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--space-xs);
         }
 
         .metric-card .value {
-            font-size: 1.5rem;
+            font-size: var(--text-xl);
             font-weight: 700;
-            color: #f8fafc;
+            color: var(--text-primary);
         }
 
-        .metric-card .value.positive {
-            color: #22c55e;
+        @media (min-width: 768px) {
+            .metric-card .value {
+                font-size: var(--text-2xl);
+            }
         }
 
-        .metric-card .value.negative {
-            color: #ef4444;
-        }
+        .metric-card .value.positive { color: var(--success); }
+        .metric-card .value.negative { color: var(--danger); }
 
         .metric-card .subtext {
-            font-size: 0.7rem;
-            color: #64748b;
-            margin-top: 0.25rem;
+            font-size: var(--text-xs);
+            color: var(--text-dim);
+            margin-top: var(--space-xs);
         }
 
-        /* Charts Grid */
+        /* ===== CHARTS ===== */
         .charts-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
         }
 
-        @media (max-width: 1024px) {
+        @media (min-width: 768px) {
             .charts-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-lg);
+                margin-bottom: var(--space-lg);
             }
         }
 
         .chart-card {
-            background: #1e293b;
-            border-radius: 12px;
-            padding: 1.25rem;
-            border: 1px solid #334155;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            border: 1px solid var(--border);
+        }
+
+        @media (min-width: 768px) {
+            .chart-card {
+                padding: var(--space-lg);
+            }
         }
 
         .chart-card h3 {
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
             font-weight: 600;
-            color: #f8fafc;
-            margin-bottom: 1rem;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
         }
 
         .chart-container {
             position: relative;
-            height: 280px;
+            height: 200px;
+        }
+
+        @media (min-width: 480px) {
+            .chart-container {
+                height: 240px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 280px;
+            }
         }
 
         .full-width {
             grid-column: 1 / -1;
         }
 
-        /* Tables */
+        /* ===== TABLES ===== */
         .table-card {
-            background: #1e293b;
-            border-radius: 12px;
-            padding: 1.25rem;
-            border: 1px solid #334155;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            border: 1px solid var(--border);
             overflow: hidden;
-            margin-bottom: 1.5rem;
+            margin-bottom: var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .table-card {
+                padding: var(--space-lg);
+                margin-bottom: var(--space-lg);
+            }
         }
 
         .table-card h3 {
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
             font-weight: 600;
-            color: #f8fafc;
-            margin-bottom: 1rem;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
         }
 
         .data-table {
@@ -287,12 +511,12 @@
 
         .data-table th {
             text-align: left;
-            padding: 0.75rem;
-            font-size: 0.7rem;
-            color: #94a3b8;
+            padding: var(--space-sm);
+            font-size: var(--text-xs);
+            color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            border-bottom: 1px solid #334155;
+            border-bottom: 1px solid var(--border);
         }
 
         .data-table th.right {
@@ -300,9 +524,9 @@
         }
 
         .data-table td {
-            padding: 0.75rem;
-            font-size: 0.875rem;
-            border-bottom: 1px solid #334155;
+            padding: var(--space-sm);
+            font-size: var(--text-sm);
+            border-bottom: 1px solid var(--border);
         }
 
         .data-table td.right {
@@ -315,12 +539,12 @@
         }
 
         .data-table tr:hover {
-            background: #334155;
+            background: var(--bg-tertiary);
         }
 
         .data-table .total-row {
             font-weight: 600;
-            background: #334155;
+            background: var(--bg-tertiary);
         }
 
         .data-table .total-row td {
@@ -328,13 +552,13 @@
         }
 
         .data-table .section-header td {
-            background: #1e293b;
-            padding-top: 1rem;
+            background: var(--bg-secondary);
+            padding-top: var(--space-md);
             border-bottom: none;
         }
 
         .data-table .subtotal-row {
-            background: #1e293b;
+            background: var(--bg-secondary);
         }
 
         .data-table .subtotal-row td {
@@ -342,58 +566,149 @@
         }
 
         .data-table .indent {
-            padding-left: 1.5rem;
+            padding-left: var(--space-lg);
         }
 
         .category-badge {
             display: inline-block;
-            padding: 0.25rem 0.5rem;
+            padding: var(--space-xs) var(--space-sm);
             border-radius: 4px;
-            font-size: 0.7rem;
-            background: #334155;
-            color: #94a3b8;
+            font-size: var(--text-xs);
+            background: var(--bg-tertiary);
+            color: var(--text-muted);
         }
 
-        /* P&L Specific */
+        /* ===== EXPANDABLE ROWS ===== */
+        .expandable-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+
+        .expandable-row {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .expandable-row-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md);
+            min-height: var(--touch-min);
+            cursor: pointer;
+            transition: background var(--transition);
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .expandable-row-header:active {
+            background: var(--bg-tertiary);
+        }
+
+        .expandable-row-header .row-title {
+            font-size: var(--text-sm);
+            font-weight: 500;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .expandable-row-header .row-value {
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .expandable-row-header .expand-icon {
+            color: var(--text-muted);
+            font-size: var(--text-xs);
+            transition: transform var(--transition);
+        }
+
+        .expandable-row.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .expandable-row-content {
+            display: none;
+            padding: 0 var(--space-md) var(--space-md);
+            border-top: 1px solid var(--border);
+        }
+
+        .expandable-row.expanded .expandable-row-content {
+            display: block;
+        }
+
+        .sub-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) 0;
+            padding-left: var(--space-md);
+            border-bottom: 1px solid var(--border);
+            font-size: var(--text-sm);
+        }
+
+        .sub-row:last-child {
+            border-bottom: none;
+        }
+
+        .sub-row .sub-label {
+            color: var(--text-muted);
+        }
+
+        .sub-row .sub-value {
+            font-family: 'SF Mono', Monaco, monospace;
+            color: var(--text-secondary);
+        }
+
+        /* ===== P&L SPECIFIC ===== */
         .pnl-section {
-            margin-bottom: 1rem;
+            margin-bottom: var(--space-md);
         }
 
         .pnl-section h4 {
-            font-size: 0.75rem;
-            color: #64748b;
+            font-size: var(--text-xs);
+            color: var(--text-dim);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #334155;
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--border);
         }
 
         .pnl-row {
             display: flex;
             justify-content: space-between;
-            padding: 0.5rem 0;
-            font-size: 0.875rem;
+            padding: var(--space-sm) 0;
+            font-size: var(--text-sm);
         }
 
         .pnl-row.indent {
-            padding-left: 1rem;
-            color: #94a3b8;
+            padding-left: var(--space-md);
+            color: var(--text-muted);
         }
 
         .pnl-row.total {
             font-weight: 600;
             border-top: 1px solid #475569;
-            margin-top: 0.5rem;
-            padding-top: 0.75rem;
+            margin-top: var(--space-sm);
+            padding-top: var(--space-sm);
         }
 
         .pnl-row.grand-total {
-            font-size: 1rem;
+            font-size: var(--text-base);
             font-weight: 700;
             border-top: 2px solid #475569;
-            margin-top: 0.5rem;
-            padding-top: 0.75rem;
+            margin-top: var(--space-sm);
+            padding-top: var(--space-sm);
         }
 
         .loading {
@@ -401,38 +716,46 @@
             align-items: center;
             justify-content: center;
             height: 200px;
-            color: #64748b;
+            color: var(--text-dim);
         }
 
-        /* Two column layout */
+        /* ===== TWO COLUMN LAYOUT ===== */
         .two-col {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             .two-col {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-lg);
             }
         }
 
-        /* Expandable Metric Cards */
+        /* ===== EXPANDABLE METRIC CARDS ===== */
         .metric-card.expandable {
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all var(--transition);
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .metric-card.expandable:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        .metric-card.expandable:active {
+            transform: scale(0.98);
+        }
+
+        @media (min-width: 768px) {
+            .metric-card.expandable:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            }
         }
 
         .metric-card .expand-icon {
             float: right;
-            color: #64748b;
-            font-size: 0.75rem;
-            transition: transform 0.2s;
+            color: var(--text-dim);
+            font-size: var(--text-xs);
+            transition: transform var(--transition);
         }
 
         .metric-card.expanded .expand-icon {
@@ -441,9 +764,9 @@
 
         .metric-card .detail-panel {
             display: none;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #334155;
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--border);
         }
 
         .metric-card.expanded .detail-panel {
@@ -452,37 +775,40 @@
 
         .detail-panel .view-toggle {
             display: flex;
-            gap: 0.5rem;
-            margin-bottom: 0.75rem;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-sm);
+            overflow-x: auto;
         }
 
         .detail-panel .view-btn {
-            padding: 0.25rem 0.75rem;
-            font-size: 0.7rem;
+            padding: var(--space-sm) var(--space-md);
+            min-height: 36px;
+            font-size: var(--text-xs);
             border: 1px solid #475569;
             background: transparent;
-            color: #94a3b8;
+            color: var(--text-muted);
             border-radius: 4px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all var(--transition);
+            white-space: nowrap;
         }
 
-        .detail-panel .view-btn:hover {
-            background: #334155;
+        .detail-panel .view-btn:active {
+            transform: scale(0.97);
         }
 
         .detail-panel .view-btn.active {
-            background: #3b82f6;
-            border-color: #3b82f6;
+            background: var(--accent);
+            border-color: var(--accent);
             color: white;
         }
 
         .detail-row {
             display: flex;
             justify-content: space-between;
-            padding: 0.4rem 0;
-            font-size: 0.75rem;
-            border-bottom: 1px solid #334155;
+            padding: var(--space-sm) 0;
+            font-size: var(--text-sm);
+            border-bottom: 1px solid var(--border);
         }
 
         .detail-row:last-child {
@@ -490,55 +816,122 @@
         }
 
         .detail-row .label {
-            color: #94a3b8;
-            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-size: var(--text-sm);
             text-transform: none;
             letter-spacing: normal;
         }
 
         .detail-row .amount {
             font-family: 'SF Mono', Monaco, monospace;
-            color: #e2e8f0;
+            color: var(--text-secondary);
         }
 
         .detail-row.sub-item {
-            padding-left: 1rem;
-            font-size: 0.7rem;
+            padding-left: var(--space-md);
+            font-size: var(--text-xs);
         }
 
         .detail-row.sub-item .label {
-            color: #64748b;
+            color: var(--text-dim);
         }
 
         .detail-section-title {
-            font-size: 0.65rem;
-            color: #64748b;
+            font-size: var(--text-xs);
+            color: var(--text-dim);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-top: 0.75rem;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.25rem;
+            margin-top: var(--space-sm);
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-xs);
             border-bottom: 1px dashed #475569;
         }
 
         .badge-fixed {
             display: inline-block;
-            padding: 0.1rem 0.4rem;
-            font-size: 0.6rem;
+            padding: 2px 6px;
+            font-size: 10px;
             background: #1e3a5f;
             color: #60a5fa;
             border-radius: 3px;
-            margin-left: 0.5rem;
+            margin-left: var(--space-sm);
         }
 
         .badge-variable {
             display: inline-block;
-            padding: 0.1rem 0.4rem;
-            font-size: 0.6rem;
+            padding: 2px 6px;
+            font-size: 10px;
             background: #3f3f1e;
             color: #fbbf24;
             border-radius: 3px;
-            margin-left: 0.5rem;
+            margin-left: var(--space-sm);
+        }
+
+        /* ===== TYPE FILTER (for expenses) ===== */
+        .type-filter {
+            display: flex;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-md);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .type-btn {
+            padding: var(--space-sm) var(--space-md);
+            min-height: var(--touch-min);
+            white-space: nowrap;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: var(--text-sm);
+            transition: all var(--transition);
+            touch-action: manipulation;
+        }
+
+        .type-btn:active {
+            transform: scale(0.97);
+        }
+
+        .type-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        /* ===== SUMMARY CARDS ROW ===== */
+        .summary-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        .summary-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            text-align: center;
+        }
+
+        .summary-card .summary-value {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .summary-card .summary-label {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            margin-top: var(--space-xs);
+        }
+
+        @media (min-width: 768px) {
+            .summary-card .summary-value {
+                font-size: var(--text-xl);
+            }
         }
     </style>
 </head>
@@ -565,6 +958,8 @@
         <div class="tabs">
             <button class="tab active" data-tab="overview">Overview</button>
             <button class="tab" data-tab="sales">Sales Analysis</button>
+            <button class="tab" data-tab="menu-costs">Menu Costs</button>
+            <button class="tab" data-tab="inventory">Inventory</button>
             <button class="tab" data-tab="financials">P&L Statement</button>
             <button class="tab" data-tab="expenses">Expenses</button>
             <button class="tab" data-tab="balance-sheet">Balance Sheet</button>
@@ -573,7 +968,7 @@
         <!-- Overview Tab -->
         <div id="overview" class="tab-content active">
             <!-- Period Selector -->
-            <div class="period-selector" style="margin-bottom: 1rem; display: flex; gap: 0.5rem;">
+            <div class="period-selector">
                 <button class="period-btn active" data-period="all" onclick="setPeriod('all')">All Time</button>
                 <button class="period-btn" data-period="month" onclick="setPeriod('month')">This Month</button>
                 <button class="period-btn" data-period="week" onclick="setPeriod('week')">This Week</button>
@@ -667,42 +1062,186 @@
 
         <!-- Sales Analysis Tab -->
         <div id="sales" class="tab-content">
+            <!-- Sales Period Selector -->
+            <div class="period-selector">
+                <button class="period-btn" data-sales-period="daily" onclick="setSalesPeriod('daily')">Daily</button>
+                <button class="period-btn" data-sales-period="weekly" onclick="setSalesPeriod('weekly')">Weekly</button>
+                <button class="period-btn" data-sales-period="monthly" onclick="setSalesPeriod('monthly')">Monthly</button>
+                <button class="period-btn active" data-sales-period="all" onclick="setSalesPeriod('all')">All Time</button>
+            </div>
+
+            <!-- Sales Summary -->
+            <div class="summary-row">
+                <div class="summary-card">
+                    <div class="summary-value" id="salesRevenue">--</div>
+                    <div class="summary-label">Revenue</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="salesItems">--</div>
+                    <div class="summary-label">Items</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="salesBills">--</div>
+                    <div class="summary-label">Bills</div>
+                </div>
+            </div>
+
+            <!-- Sales Chart -->
+            <div class="chart-card" style="margin-bottom: var(--space-md);">
+                <h3>Revenue Trend</h3>
+                <div class="chart-container">
+                    <canvas id="salesItemsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Category Drill-Down -->
+            <div class="table-card">
+                <h3>Sales by Category</h3>
+                <div class="expandable-list" id="salesCategoryList">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Costs Tab -->
+        <div id="menu-costs" class="tab-content">
+            <!-- Summary Cards -->
+            <div class="summary-cards-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-md);margin-bottom:var(--space-lg);">
+                <div class="summary-card">
+                    <div class="summary-value" id="menuAvgMargin">--</div>
+                    <div class="summary-label">Avg Margin</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="menuFoodCost">--</div>
+                    <div class="summary-label">Food Cost %</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="menuTotalItems">--</div>
+                    <div class="summary-label">Menu Items</div>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="type-filter" style="margin-bottom:var(--space-md);">
+                <button class="type-btn active" data-menu-cat="all" onclick="filterMenuCategory('all')">All</button>
+                <button class="type-btn" data-menu-cat="DOSA" onclick="filterMenuCategory('DOSA')">Dosa</button>
+                <button class="type-btn" data-menu-cat="BREAKFAST" onclick="filterMenuCategory('BREAKFAST')">Breakfast</button>
+                <button class="type-btn" data-menu-cat="LUNCH" onclick="filterMenuCategory('LUNCH')">Lunch</button>
+                <button class="type-btn" data-menu-cat="DINNER" onclick="filterMenuCategory('DINNER')">Dinner</button>
+                <button class="type-btn" data-menu-cat="SNACKS" onclick="filterMenuCategory('SNACKS')">Snacks</button>
+            </div>
+
             <div class="charts-grid">
-                <div class="chart-card full-width">
-                    <h3>Daily Sales & Items Sold</h3>
+                <div class="chart-card">
+                    <h3>Margin by Category</h3>
                     <div class="chart-container">
-                        <canvas id="salesItemsChart"></canvas>
+                        <canvas id="marginByCategoryChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Top 10 High Margin Items</h3>
+                    <div class="chart-container">
+                        <canvas id="bestMarginsChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <div class="two-col">
-                <div class="table-card">
-                    <h3>Category Performance</h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th class="right">Qty Sold</th>
-                                <th class="right">Revenue</th>
-                            </tr>
-                        </thead>
-                        <tbody id="categoryTable"></tbody>
-                    </table>
-                </div>
+            <!-- Menu Items Table -->
+            <div class="table-card">
+                <h3>Menu Items Cost Analysis</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Category</th>
+                            <th class="right">Price</th>
+                            <th class="right">Cost</th>
+                            <th class="right">Margin</th>
+                            <th class="right">%</th>
+                        </tr>
+                    </thead>
+                    <tbody id="menuCostsTable">
+                        <tr><td colspan="6" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <div class="table-card">
-                    <h3>All Items Performance</h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Item</th>
-                                <th class="right">Qty</th>
-                                <th class="right">Revenue</th>
-                            </tr>
-                        </thead>
-                        <tbody id="allItemsTable"></tbody>
-                    </table>
+            <!-- Worst Margins Alert -->
+            <div class="table-card" style="border-left:3px solid var(--warning);">
+                <h3 style="color:var(--warning);">⚠️ Low Margin Items (Review Pricing)</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Category</th>
+                            <th class="right">Price</th>
+                            <th class="right">Cost</th>
+                            <th class="right">Margin %</th>
+                        </tr>
+                    </thead>
+                    <tbody id="worstMarginsTable">
+                        <tr><td colspan="5" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Inventory Tab -->
+        <div id="inventory" class="tab-content">
+            <!-- Summary Cards -->
+            <div class="summary-cards-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-md);margin-bottom:var(--space-lg);">
+                <div class="summary-card">
+                    <div class="summary-value" id="invTotalOrders">--</div>
+                    <div class="summary-label">Orders Analyzed</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="invMatchRate">--</div>
+                    <div class="summary-label">Match Rate</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="invIngredients">--</div>
+                    <div class="summary-label">Ingredients Used</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="invTotalCost">--</div>
+                    <div class="summary-label">Est. Ingredient Cost</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card full-width">
+                    <h3>Top 10 Ingredients by Usage (kg)</h3>
+                    <div class="chart-container">
+                        <canvas id="ingredientUsageChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ingredient Usage Table -->
+            <div class="table-card">
+                <h3>Ingredient Usage Analysis</h3>
+                <p style="color:var(--text-muted);font-size:0.75rem;margin-bottom:1rem;" id="invSourceNote">Based on sales data</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Ingredient</th>
+                            <th class="right">Total (kg)</th>
+                            <th class="right">Orders</th>
+                            <th class="right">Cost/kg</th>
+                            <th class="right">Total Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ingredientUsageTable">
+                        <tr><td colspan="5" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Unmatched Items (for debugging) -->
+            <div class="table-card" style="border-left:3px solid var(--text-muted);">
+                <h3 style="color:var(--text-muted);">Unmatched Items (not in recipe database)</h3>
+                <div id="unmatchedItemsList" style="color:var(--text-dim);font-size:0.8rem;">
+                    Loading...
                 </div>
             </div>
         </div>
@@ -824,62 +1363,44 @@
 
         <!-- Expenses Tab -->
         <div id="expenses" class="tab-content">
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="label">Total Expenses</div>
-                    <div class="value" id="expTotal">--</div>
+            <!-- Type Filter -->
+            <div class="type-filter">
+                <button class="type-btn active" data-exp-type="all" onclick="setExpenseType('all')">All</button>
+                <button class="type-btn" data-exp-type="cogs" onclick="setExpenseType('cogs')">COGS</button>
+                <button class="type-btn" data-exp-type="opex" onclick="setExpenseType('opex')">OpEx</button>
+                <button class="type-btn" data-exp-type="capex" onclick="setExpenseType('capex')">CapEx</button>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="summary-row">
+                <div class="summary-card" id="cogsSummary">
+                    <div class="summary-value" id="expCogs">--</div>
+                    <div class="summary-label">COGS</div>
                 </div>
-                <div class="metric-card">
-                    <div class="label">Operating (OpEx)</div>
-                    <div class="value" id="expOpex">--</div>
-                    <div class="subtext">Recurring costs</div>
+                <div class="summary-card" id="opexSummary">
+                    <div class="summary-value" id="expOpex">--</div>
+                    <div class="summary-label">OpEx</div>
                 </div>
-                <div class="metric-card">
-                    <div class="label">Capital (CapEx)</div>
-                    <div class="value" id="expCapex">--</div>
-                    <div class="subtext">One-time investments</div>
+                <div class="summary-card" id="capexSummary">
+                    <div class="summary-value" id="expCapex">--</div>
+                    <div class="summary-label">CapEx</div>
                 </div>
             </div>
 
-            <div class="two-col">
-                <div class="table-card">
-                    <h3>Capital Expenditure (CapEx)</h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th class="right">Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody id="capexTable"></tbody>
-                    </table>
-                </div>
-
-                <div class="table-card">
-                    <h3>Operating Expenses (OpEx)</h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th class="right">Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody id="opexTable"></tbody>
-                    </table>
-                </div>
-            </div>
-
+            <!-- Expenses Drill-Down List -->
             <div class="table-card">
-                <h3>Partner Contributions</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Partner</th>
-                            <th class="right">Amount Paid</th>
-                        </tr>
-                    </thead>
-                    <tbody id="partnerTable"></tbody>
-                </table>
+                <h3 id="expensesListTitle">All Expenses by Category</h3>
+                <div class="expandable-list" id="expensesCategoryList">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Partner Contributions -->
+            <div class="table-card" id="partnerSection">
+                <h3>Partner Contributions (CapEx)</h3>
+                <div class="expandable-list" id="partnerList">
+                    <!-- Populated by JS -->
+                </div>
             </div>
         </div>
 
@@ -954,6 +1475,8 @@
         };
 
         let currentPeriod = 'all';
+        let currentSalesPeriod = 'all';
+        let currentExpenseType = 'all';
         let globalData = null;
         let globalFinData = null;
 
@@ -967,14 +1490,14 @@
 
         function updateMetricsForPeriod() {
             if (!globalFinData) return;
-            
+
             const now = new Date();
             const thisMonth = now.toISOString().slice(0, 7);
             const weekly = globalFinData.weekly || [];
             const monthly = globalFinData.monthly || [];
-            
+
             let revenue = 0, cogs = 0, opex = 0, days = 0;
-            
+
             if (currentPeriod === 'all') {
                 revenue = globalFinData.pnl.revenue.total;
                 cogs = globalFinData.pnl.cogs.total;
@@ -999,16 +1522,352 @@
                     days = 7;
                 }
             }
-            
+
             document.getElementById('totalRevenue').textContent = formatCurrency(revenue);
             document.getElementById('avgDaily').textContent = formatCurrency(revenue / Math.max(days, 1)) + ' avg/day';
             document.getElementById('totalCogs').textContent = formatCurrency(cogs);
             document.getElementById('totalOpex').textContent = formatCurrency(opex);
             document.getElementById('daysRecorded').textContent = days;
-            
+
             const profit = revenue - cogs - opex;
             document.getElementById('operatingProfit').textContent = formatCurrency(profit);
             document.getElementById('operatingProfit').className = 'value ' + (profit >= 0 ? 'positive' : 'negative');
+        }
+
+        // ============================================
+        // SALES PERIOD SELECTOR
+        // ============================================
+        function setSalesPeriod(period) {
+            currentSalesPeriod = period;
+            document.querySelectorAll('[data-sales-period]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.salesPeriod === period);
+            });
+            updateSalesView();
+        }
+
+        function updateSalesView() {
+            if (!globalData || !globalFinData) return;
+
+            const daily = globalData.daily_sales || [];
+            const weekly = globalFinData.weekly || [];
+            const monthly = globalFinData.monthly || [];
+
+            let revenue = 0, items = 0, bills = 0, chartData = [];
+
+            if (currentSalesPeriod === 'daily') {
+                // Last 7 days
+                const last7 = daily.slice(-7);
+                revenue = last7.reduce((s, d) => s + d.revenue, 0);
+                items = last7.reduce((s, d) => s + d.items_sold, 0);
+                bills = last7.reduce((s, d) => s + d.bills, 0);
+                chartData = last7;
+            } else if (currentSalesPeriod === 'weekly') {
+                // Last 4 weeks
+                const last4 = weekly.slice(-4);
+                revenue = last4.reduce((s, w) => s + w.revenue, 0);
+                chartData = weekly;
+            } else if (currentSalesPeriod === 'monthly') {
+                revenue = monthly.reduce((s, m) => s + m.revenue, 0);
+                chartData = monthly;
+            } else {
+                // All time
+                revenue = globalData.metrics.total_revenue;
+                items = globalData.metrics.total_items_sold;
+                bills = daily.reduce((s, d) => s + d.bills, 0);
+                chartData = daily;
+            }
+
+            document.getElementById('salesRevenue').textContent = formatCurrency(revenue);
+            document.getElementById('salesItems').textContent = items > 0 ? formatNumber(items) : '--';
+            document.getElementById('salesBills').textContent = bills > 0 ? formatNumber(bills) : '--';
+
+            // Update chart
+            renderSalesChart(chartData, currentSalesPeriod);
+        }
+
+        function renderSalesChart(data, period) {
+            const ctx = document.getElementById('salesItemsChart').getContext('2d');
+            if (chartInstances.salesItems) chartInstances.salesItems.destroy();
+
+            let labels, revenues;
+            if (period === 'monthly') {
+                labels = data.map(d => d.month);
+                revenues = data.map(d => d.revenue);
+            } else if (period === 'weekly') {
+                labels = data.map(d => {
+                    const start = new Date(d.week_start);
+                    return start.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
+                });
+                revenues = data.map(d => d.revenue);
+            } else {
+                const sorted = [...data].sort((a, b) => new Date(a.date) - new Date(b.date));
+                labels = sorted.map(d => {
+                    const date = new Date(d.date);
+                    return date.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
+                });
+                revenues = sorted.map(d => d.revenue);
+            }
+
+            chartInstances.salesItems = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Revenue',
+                        data: revenues,
+                        backgroundColor: colors.primary,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { callback: v => formatCurrency(v) }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45,
+                                font: { size: 10 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // ============================================
+        // SALES CATEGORY DRILL-DOWN
+        // ============================================
+        function renderSalesCategoryDrilldown() {
+            if (!globalData) return;
+
+            const categories = globalData.category_sales || {};
+            const topItems = globalData.top_items || [];
+
+            const container = document.getElementById('salesCategoryList');
+            if (!container) return;
+
+            const sorted = Object.entries(categories).sort((a, b) => b[1].revenue - a[1].revenue);
+
+            container.innerHTML = sorted.map(([category, data], idx) => {
+                const categoryItems = topItems.filter(item => item.category === category);
+                const itemsHtml = categoryItems.length > 0
+                    ? categoryItems.map(item => `
+                        <div class="sub-row">
+                            <span class="sub-label">${item.item}</span>
+                            <span class="sub-value">${formatNumber(item.qty)} qty · ${formatCurrency(item.revenue)}</span>
+                        </div>
+                    `).join('')
+                    : '<div class="sub-row"><span class="sub-label">No item data</span></div>';
+
+                return `
+                    <div class="expandable-row" id="sales-cat-${idx}">
+                        <div class="expandable-row-header" onclick="toggleExpandRow('sales-cat-${idx}')">
+                            <span class="row-title">${category}</span>
+                            <span class="row-value">
+                                ${formatNumber(data.qty)} · ${formatCurrency(data.revenue)}
+                                <span class="expand-icon">▼</span>
+                            </span>
+                        </div>
+                        <div class="expandable-row-content">
+                            ${itemsHtml}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // ============================================
+        // EXPENSE TYPE FILTER
+        // ============================================
+        function setExpenseType(type) {
+            currentExpenseType = type;
+            document.querySelectorAll('[data-exp-type]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.expType === type);
+            });
+            updateExpenseView();
+        }
+
+        function updateExpenseView() {
+            if (!globalFinData) return;
+
+            const titles = {
+                all: 'All Expenses by Category',
+                cogs: 'Cost of Goods Sold (COGS)',
+                opex: 'Operating Expenses (OpEx)',
+                capex: 'Capital Expenditure (CapEx)'
+            };
+            document.getElementById('expensesListTitle').textContent = titles[currentExpenseType];
+
+            // Show/hide partner section based on type
+            const partnerSection = document.getElementById('partnerSection');
+            partnerSection.style.display = (currentExpenseType === 'all' || currentExpenseType === 'capex') ? 'block' : 'none';
+
+            renderExpensesDrilldown();
+        }
+
+        function renderExpensesDrilldown() {
+            if (!globalFinData) return;
+
+            const container = document.getElementById('expensesCategoryList');
+            if (!container) return;
+
+            let categories = {};
+            let vendorData = globalFinData.vendors || [];
+
+            if (currentExpenseType === 'all') {
+                // Combine all categories
+                const cogs = globalFinData.pnl?.cogs?.by_category || {};
+                const opex = globalFinData.pnl?.opex?.by_category || {};
+                const capex = globalFinData.capex?.by_category || {};
+
+                Object.entries(cogs).forEach(([k, v]) => {
+                    categories[k] = { amount: v, type: 'COGS' };
+                });
+                Object.entries(opex).forEach(([k, v]) => {
+                    categories[k] = { amount: v, type: 'OpEx' };
+                });
+                Object.entries(capex).forEach(([k, v]) => {
+                    categories[k] = { amount: v, type: 'CapEx' };
+                });
+            } else if (currentExpenseType === 'cogs') {
+                const cogs = globalFinData.pnl?.cogs?.by_category || {};
+                Object.entries(cogs).forEach(([k, v]) => {
+                    categories[k] = { amount: v, type: 'COGS' };
+                });
+                vendorData = vendorData.filter(v => v.expense_type === 'cogs');
+            } else if (currentExpenseType === 'opex') {
+                const opex = globalFinData.pnl?.opex?.by_category || {};
+                Object.entries(opex).forEach(([k, v]) => {
+                    categories[k] = { amount: v, type: 'OpEx' };
+                });
+                vendorData = vendorData.filter(v => v.expense_type === 'opex');
+            } else if (currentExpenseType === 'capex') {
+                const capex = globalFinData.capex?.by_category || {};
+                const details = globalFinData.capex?.details || {};
+                Object.entries(capex).forEach(([k, v]) => {
+                    categories[k] = { amount: v, type: 'CapEx', partners: details[k] || {} };
+                });
+            }
+
+            const sorted = Object.entries(categories).sort((a, b) => b[1].amount - a[1].amount);
+
+            container.innerHTML = sorted.map(([category, data], idx) => {
+                // Find vendors for this category
+                const catVendors = vendorData.filter(v => {
+                    const catLower = category.toLowerCase().replace(' (partner-paid)', '');
+                    const vendorCat = (v.category || '').toLowerCase();
+                    return vendorCat.includes(catLower) || catLower.includes(vendorCat);
+                });
+
+                let detailHtml = '';
+
+                if (currentExpenseType === 'capex' && data.partners) {
+                    // For CapEx, show partner breakdown
+                    detailHtml = Object.entries(data.partners)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([partner, amount]) => `
+                            <div class="sub-row">
+                                <span class="sub-label">${partner}</span>
+                                <span class="sub-value">${formatCurrency(amount)}</span>
+                            </div>
+                        `).join('');
+                } else if (catVendors.length > 0) {
+                    detailHtml = catVendors
+                        .sort((a, b) => b.total - a.total)
+                        .slice(0, 5)
+                        .map(v => `
+                            <div class="sub-row">
+                                <span class="sub-label">${v.vendor}</span>
+                                <span class="sub-value">${formatCurrency(v.total)}</span>
+                            </div>
+                        `).join('');
+                } else {
+                    detailHtml = '<div class="sub-row"><span class="sub-label">No vendor breakdown</span></div>';
+                }
+
+                const typeBadge = currentExpenseType === 'all'
+                    ? `<span class="category-badge">${data.type}</span>`
+                    : '';
+
+                return `
+                    <div class="expandable-row" id="exp-cat-${idx}">
+                        <div class="expandable-row-header" onclick="toggleExpandRow('exp-cat-${idx}')">
+                            <span class="row-title">${typeBadge} ${category.replace(' (partner-paid)', '')}</span>
+                            <span class="row-value">
+                                ${formatCurrency(data.amount)}
+                                <span class="expand-icon">▼</span>
+                            </span>
+                        </div>
+                        <div class="expandable-row-content">
+                            ${detailHtml}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderPartnerDrilldown() {
+            if (!globalFinData || !globalFinData.capex) return;
+
+            const container = document.getElementById('partnerList');
+            if (!container) return;
+
+            const byPartner = globalFinData.capex.by_partner || {};
+            const details = globalFinData.capex.details || {};
+
+            const sorted = Object.entries(byPartner).sort((a, b) => b[1] - a[1]);
+
+            container.innerHTML = sorted.map(([partner, total], idx) => {
+                // Find categories this partner contributed to
+                const partnerCats = [];
+                Object.entries(details).forEach(([cat, partners]) => {
+                    if (partners[partner]) {
+                        partnerCats.push({ category: cat, amount: partners[partner] });
+                    }
+                });
+
+                const catHtml = partnerCats
+                    .sort((a, b) => b.amount - a.amount)
+                    .map(c => `
+                        <div class="sub-row">
+                            <span class="sub-label">${c.category}</span>
+                            <span class="sub-value">${formatCurrency(c.amount)}</span>
+                        </div>
+                    `).join('');
+
+                return `
+                    <div class="expandable-row" id="partner-${idx}">
+                        <div class="expandable-row-header" onclick="toggleExpandRow('partner-${idx}')">
+                            <span class="row-title">${partner}</span>
+                            <span class="row-value">
+                                ${formatCurrency(total)}
+                                <span class="expand-icon">▼</span>
+                            </span>
+                        </div>
+                        <div class="expandable-row-content">
+                            ${catHtml}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // ============================================
+        // EXPANDABLE ROW TOGGLE
+        // ============================================
+        function toggleExpandRow(id) {
+            const row = document.getElementById(id);
+            if (row) {
+                row.classList.toggle('expanded');
+            }
         }
 
         function formatCurrency(value) {
@@ -1278,7 +2137,39 @@
                     finData = await finResponse.json();
                 }
 
+                // Load menu costs data
+                let menuCostsData = null;
+                const menuPaths = ['../data/menu_costs.json', './data/menu_costs.json', 'data/menu_costs.json'];
+                for (const path of menuPaths) {
+                    try {
+                        const menuResponse = await fetch(path + cacheBuster, { cache: 'no-store' });
+                        if (menuResponse.ok) {
+                            menuCostsData = await menuResponse.json();
+                            break;
+                        }
+                    } catch { continue; }
+                }
+
+                // Load inventory usage data
+                let inventoryData = null;
+                const invPaths = ['../data/inventory_usage.json', './data/inventory_usage.json', 'data/inventory_usage.json'];
+                for (const path of invPaths) {
+                    try {
+                        const invResponse = await fetch(path + cacheBuster, { cache: 'no-store' });
+                        if (invResponse.ok) {
+                            inventoryData = await invResponse.json();
+                            break;
+                        }
+                    } catch { continue; }
+                }
+
                 renderDashboard(data, finData);
+                if (menuCostsData) {
+                    renderMenuCosts(menuCostsData);
+                }
+                if (inventoryData) {
+                    renderInventory(inventoryData);
+                }
             } catch (error) {
                 console.error('Error loading data:', error);
                 document.getElementById('topItemsTable').innerHTML =
@@ -1390,28 +2281,45 @@
             }
             try { renderBalanceSheet(finData); } catch(e) { console.error('BalanceSheet error:', e); }
             try { renderPnlStatement(data, finData); } catch(e) { console.error('PnL error:', e); }
+
+            // New drill-down renderers
+            try { updateSalesView(); } catch(e) { console.error('Sales view error:', e); }
+            try { renderSalesCategoryDrilldown(); } catch(e) { console.error('Sales category error:', e); }
+            try { updateExpenseView(); } catch(e) { console.error('Expense view error:', e); }
+            try { renderPartnerDrilldown(); } catch(e) { console.error('Partner error:', e); }
+
+            // Update expense summary cards
+            if (finData) {
+                document.getElementById('expCogs').textContent = formatCurrency(finData.pnl?.cogs?.total || 0);
+                document.getElementById('expOpex').textContent = formatCurrency(finData.pnl?.opex?.total || 0);
+                document.getElementById('expCapex').textContent = formatCurrency(finData.capex?.total || 0);
+            }
         }
 
         function renderRevenueTrendChart(dailySales) {
+            const isMobile = window.innerWidth < 768;
+            // Show fewer data points on mobile
             const sorted = [...dailySales].sort((a, b) => new Date(a.date) - new Date(b.date));
+            const displayData = isMobile ? sorted.slice(-14) : sorted;
             const ctx = document.getElementById('revenueTrendChart').getContext('2d');
 
             if (chartInstances.revenueTrend) chartInstances.revenueTrend.destroy();
             chartInstances.revenueTrend = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: sorted.map(d => {
+                    labels: displayData.map(d => {
                         const date = new Date(d.date);
                         return date.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
                     }),
                     datasets: [{
                         label: 'Revenue',
-                        data: sorted.map(d => d.revenue || d.total_sales),
+                        data: displayData.map(d => d.revenue || d.total_sales),
                         borderColor: colors.primary,
                         backgroundColor: colors.primary + '20',
                         fill: true,
                         tension: 0.3,
-                        pointRadius: 3
+                        pointRadius: isMobile ? 2 : 3,
+                        pointHitRadius: 20
                     }]
                 },
                 options: {
@@ -1421,7 +2329,18 @@
                     scales: {
                         y: {
                             beginAtZero: true,
-                            ticks: { callback: v => formatCurrency(v) }
+                            ticks: {
+                                callback: v => formatCurrency(v),
+                                font: { size: isMobile ? 10 : 12 }
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45,
+                                font: { size: isMobile ? 9 : 11 },
+                                maxTicksLimit: isMobile ? 7 : 15
+                            }
                         }
                     }
                 }
@@ -1431,6 +2350,7 @@
         function renderCategoryChart(categorySales) {
             const categories = Object.entries(categorySales).sort((a, b) => b[1].revenue - a[1].revenue);
             const ctx = document.getElementById('categoryChart').getContext('2d');
+            const isMobile = window.innerWidth < 768;
 
             if (chartInstances.category) chartInstances.category.destroy();
             chartInstances.category = new Chart(ctx, {
@@ -1447,21 +2367,29 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { position: 'right', labels: { boxWidth: 12, padding: 10 } }
+                        legend: {
+                            position: isMobile ? 'bottom' : 'right',
+                            labels: {
+                                boxWidth: isMobile ? 10 : 12,
+                                padding: isMobile ? 8 : 10,
+                                font: { size: isMobile ? 11 : 12 }
+                            }
+                        }
                     }
                 }
             });
         }
 
         function renderOpexChart(opexByCategory) {
-            const categories = Object.entries(opexByCategory).sort((a, b) => b[1] - a[1]).slice(0, 7);
+            const isMobile = window.innerWidth < 768;
+            const categories = Object.entries(opexByCategory).sort((a, b) => b[1] - a[1]).slice(0, isMobile ? 5 : 7);
             const ctx = document.getElementById('opexChart').getContext('2d');
 
             if (chartInstances.opex) chartInstances.opex.destroy();
             chartInstances.opex = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: categories.map(([name]) => name),
+                    labels: categories.map(([name]) => name.replace(' (partner-paid)', '').substring(0, 12)),
                     datasets: [{
                         data: categories.map(([, v]) => v),
                         backgroundColor: colors.chart,
@@ -1474,7 +2402,17 @@
                     indexAxis: 'y',
                     plugins: { legend: { display: false } },
                     scales: {
-                        x: { ticks: { callback: v => formatCurrency(v) } }
+                        x: {
+                            ticks: {
+                                callback: v => formatCurrency(v),
+                                font: { size: isMobile ? 10 : 12 }
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                font: { size: isMobile ? 10 : 12 }
+                            }
+                        }
                     }
                 }
             });
@@ -1520,6 +2458,7 @@
 
         function renderMonthlyPnlChart(monthlyPnl) {
             const ctx = document.getElementById('monthlyPnlChart').getContext('2d');
+            const isMobile = window.innerWidth < 768;
             const hasCogs = monthlyPnl.some(m => m.cogs !== undefined);
 
             if (chartInstances.monthlyPnl) chartInstances.monthlyPnl.destroy();
@@ -1541,7 +2480,7 @@
                             data: monthlyPnl.map(m => m.opex),
                             backgroundColor: colors.warning
                         }, {
-                            label: 'Operating Profit',
+                            label: 'Profit',
                             data: monthlyPnl.map(m => m.operating_profit),
                             backgroundColor: monthlyPnl.map(m => m.operating_profit >= 0 ? colors.success : colors.danger)
                         }
@@ -1555,7 +2494,7 @@
                             data: monthlyPnl.map(m => m.opex),
                             backgroundColor: colors.warning
                         }, {
-                            label: 'Operating Profit',
+                            label: 'Profit',
                             data: monthlyPnl.map(m => m.operating_profit),
                             backgroundColor: monthlyPnl.map(m => m.operating_profit >= 0 ? colors.success : colors.danger)
                         }
@@ -1564,8 +2503,28 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: isMobile ? 'bottom' : 'top',
+                            labels: {
+                                boxWidth: isMobile ? 10 : 12,
+                                padding: isMobile ? 6 : 10,
+                                font: { size: isMobile ? 10 : 12 }
+                            }
+                        }
+                    },
                     scales: {
-                        y: { ticks: { callback: v => formatCurrency(v) } }
+                        y: {
+                            ticks: {
+                                callback: v => formatCurrency(v),
+                                font: { size: isMobile ? 10 : 12 }
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                font: { size: isMobile ? 10 : 12 }
+                            }
+                        }
                     }
                 }
             });
@@ -1911,6 +2870,314 @@
 
         loadDashboard();
         checkApiServer();
+
+        // ============================================
+        // MENU COSTS TAB
+        // ============================================
+        let globalMenuCostsData = null;
+        let currentMenuCategory = 'all';
+
+        function renderMenuCosts(data) {
+            globalMenuCostsData = data;
+
+            // Summary cards
+            document.getElementById('menuAvgMargin').textContent = data.overall_avg_margin_pct + '%';
+            document.getElementById('menuFoodCost').textContent = data.overall_avg_food_cost_pct + '%';
+            document.getElementById('menuTotalItems').textContent = data.total_items;
+
+            // Render charts
+            renderMarginByCategoryChart(data.category_summary);
+            renderBestMarginsChart(data.best_margins);
+
+            // Render tables
+            renderMenuCostsTable(data.items);
+            renderWorstMarginsTable(data.worst_margins);
+        }
+
+        function filterMenuCategory(category) {
+            currentMenuCategory = category;
+
+            // Update button states
+            document.querySelectorAll('[data-menu-cat]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.menuCat === category);
+            });
+
+            if (globalMenuCostsData) {
+                const filteredItems = category === 'all'
+                    ? globalMenuCostsData.items
+                    : globalMenuCostsData.items.filter(i => i.category === category);
+                renderMenuCostsTable(filteredItems);
+            }
+        }
+
+        function renderMarginByCategoryChart(categorySummary) {
+            const ctx = document.getElementById('marginByCategoryChart');
+            if (!ctx) return;
+
+            if (chartInstances.marginByCategory) {
+                chartInstances.marginByCategory.destroy();
+            }
+
+            const sortedCats = categorySummary.sort((a, b) => b.avg_margin_pct - a.avg_margin_pct);
+
+            chartInstances.marginByCategory = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sortedCats.map(c => c.category),
+                    datasets: [{
+                        label: 'Avg Margin %',
+                        data: sortedCats.map(c => c.avg_margin_pct),
+                        backgroundColor: sortedCats.map(c =>
+                            c.avg_margin_pct >= 60 ? colors.success :
+                            c.avg_margin_pct >= 50 ? colors.primary :
+                            c.avg_margin_pct >= 40 ? colors.warning : colors.danger
+                        ),
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => `${ctx.raw.toFixed(1)}% margin`
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { callback: v => v + '%' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderBestMarginsChart(bestMargins) {
+            const ctx = document.getElementById('bestMarginsChart');
+            if (!ctx) return;
+
+            if (chartInstances.bestMargins) {
+                chartInstances.bestMargins.destroy();
+            }
+
+            chartInstances.bestMargins = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: bestMargins.map(i => i.name.length > 20 ? i.name.substring(0, 18) + '...' : i.name),
+                    datasets: [{
+                        label: 'Margin %',
+                        data: bestMargins.map(i => i.margin_pct),
+                        backgroundColor: colors.success,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => {
+                                    const item = bestMargins[ctx.dataIndex];
+                                    return `₹${item.price} - Cost: ₹${item.cost} = ${item.margin_pct}%`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { callback: v => v + '%' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderMenuCostsTable(items) {
+            const tbody = document.getElementById('menuCostsTable');
+            if (!tbody) return;
+
+            const sortedItems = [...items].sort((a, b) => b.margin_pct - a.margin_pct);
+
+            tbody.innerHTML = sortedItems.map(item => {
+                const marginColor = item.margin_pct >= 60 ? 'var(--success)' :
+                                   item.margin_pct >= 50 ? 'var(--text-primary)' :
+                                   item.margin_pct >= 40 ? 'var(--warning)' : 'var(--danger)';
+                return `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td style="color:var(--text-muted);font-size:0.75rem">${item.category}</td>
+                        <td class="right">₹${item.price}</td>
+                        <td class="right">₹${item.cost.toFixed(1)}</td>
+                        <td class="right">₹${item.margin.toFixed(1)}</td>
+                        <td class="right" style="color:${marginColor};font-weight:600">${item.margin_pct}%</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderWorstMarginsTable(worstMargins) {
+            const tbody = document.getElementById('worstMarginsTable');
+            if (!tbody) return;
+
+            tbody.innerHTML = worstMargins.map(item => `
+                <tr>
+                    <td>${item.name}</td>
+                    <td style="color:var(--text-muted);font-size:0.75rem">${item.category}</td>
+                    <td class="right">₹${item.price}</td>
+                    <td class="right">₹${item.cost}</td>
+                    <td class="right" style="color:var(--warning);font-weight:600">${item.margin_pct}%</td>
+                </tr>
+            `).join('');
+        }
+
+        // ============================================
+        // INVENTORY TAB
+        // ============================================
+        function renderInventory(data) {
+            // Summary cards
+            document.getElementById('invTotalOrders').textContent = formatNumber(data.summary.total_orders_analyzed);
+            document.getElementById('invMatchRate').textContent = data.summary.match_rate + '%';
+            document.getElementById('invIngredients').textContent = data.summary.unique_ingredients;
+            document.getElementById('invTotalCost').textContent = formatCurrency(data.summary.total_ingredient_cost);
+
+            // Source note
+            if (data.period && data.period.source) {
+                document.getElementById('invSourceNote').textContent = `Source: ${data.period.source}`;
+            }
+
+            // Render chart
+            renderIngredientUsageChart(data.top_ingredients);
+
+            // Render table
+            renderIngredientUsageTable(data.all_ingredients);
+
+            // Render unmatched items
+            if (data.unmatched_items && data.unmatched_items.length > 0) {
+                document.getElementById('unmatchedItemsList').textContent = data.unmatched_items.join(', ');
+            } else {
+                document.getElementById('unmatchedItemsList').textContent = 'All items matched!';
+            }
+        }
+
+        function renderIngredientUsageChart(topIngredients) {
+            const ctx = document.getElementById('ingredientUsageChart');
+            if (!ctx) return;
+
+            if (chartInstances.ingredientUsage) {
+                chartInstances.ingredientUsage.destroy();
+            }
+
+            chartInstances.ingredientUsage = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: topIngredients.map(i => i.ingredient),
+                    datasets: [{
+                        label: 'Usage (kg)',
+                        data: topIngredients.map(i => i.total_kg),
+                        backgroundColor: colors.primary,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => {
+                                    const item = topIngredients[ctx.dataIndex];
+                                    return `${item.total_kg} kg (${item.orders_using} orders)`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { callback: v => v + ' kg' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderIngredientUsageTable(ingredients) {
+            const tbody = document.getElementById('ingredientUsageTable');
+            if (!tbody) return;
+
+            tbody.innerHTML = ingredients.map(ing => `
+                <tr>
+                    <td>${ing.ingredient}</td>
+                    <td class="right">${ing.total_kg.toFixed(2)}</td>
+                    <td class="right">${formatNumber(ing.orders_using)}</td>
+                    <td class="right">${ing.cost_per_kg ? '₹' + ing.cost_per_kg : '-'}</td>
+                    <td class="right">${ing.total_cost ? '₹' + ing.total_cost.toFixed(0) : '-'}</td>
+                </tr>
+            `).join('');
+        }
+
+        // ============================================
+        // MOBILE NAVIGATION
+        // ============================================
+        function initMobileNav() {
+            document.querySelectorAll('.mobile-nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const tabId = item.dataset.tab;
+
+                    // Update mobile nav active state
+                    document.querySelectorAll('.mobile-nav-item').forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+
+                    // Update desktop tabs active state
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    const desktopTab = document.querySelector(`.tab[data-tab="${tabId}"]`);
+                    if (desktopTab) desktopTab.classList.add('active');
+
+                    // Show corresponding content
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        }
+
+        initMobileNav();
     </script>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+        <button class="mobile-nav-item active" data-tab="overview">
+            <span class="mobile-nav-icon">📊</span>
+            <span class="mobile-nav-label">Home</span>
+        </button>
+        <button class="mobile-nav-item" data-tab="sales">
+            <span class="mobile-nav-icon">📈</span>
+            <span class="mobile-nav-label">Sales</span>
+        </button>
+        <button class="mobile-nav-item" data-tab="menu-costs">
+            <span class="mobile-nav-icon">🍽️</span>
+            <span class="mobile-nav-label">Menu</span>
+        </button>
+        <button class="mobile-nav-item" data-tab="financials">
+            <span class="mobile-nav-icon">📄</span>
+            <span class="mobile-nav-label">P&L</span>
+        </button>
+        <button class="mobile-nav-item" data-tab="expenses">
+            <span class="mobile-nav-icon">💰</span>
+            <span class="mobile-nav-label">Costs</span>
+        </button>
+    </nav>
 </body>
 </html>

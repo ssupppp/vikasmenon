@@ -1,36 +1,37 @@
 {
-  "generated_at": "2026-01-17T16:32:08.693541",
+  "generated_at": "2026-01-20T15:50:05.788323",
   "period": {
-    "start": "2025-11-14",
-    "end": "2026-01-15",
-    "days": 63
+    "start": "2025-11-07",
+    "end": "2026-01-20",
+    "days": 75
   },
   "pnl": {
     "period": {
-      "start": "2025-11-14",
-      "end": "2026-01-15",
-      "days": 63
+      "start": "2025-11-07",
+      "end": "2026-01-20",
+      "days": 75
     },
     "revenue": {
-      "total": 711539.87,
+      "total": 974002.04,
       "breakdown": {
-        "2025-11": 161523.41999999998,
-        "2025-12": 322982.24,
-        "2026-01": 227034.21
+        "2025-11": 222078.41999999998,
+        "2025-12": 322982.24000000005,
+        "2026-01": 428941.38000000006
       },
       "by_source": {
-        "Petpooja Sales": 711539.87
+        "Petpooja Sales": 974002.04
       },
       "by_channel": {
-        "Dine-in/Direct": 711539.87,
+        "Dine-in/Direct": 958015.15,
         "Swiggy": 0,
-        "Zomato": 0
+        "Zomato": 15986.89,
+        "note": "Zomato from bank: Eternal Ltd (Rs. 8,609.83) + Razorpay (Rs. 7,377.06). T+5 settlement, started late Dec 2025. Swiggy not yet active or settled."
       },
-      "source": "petpooja_exports",
+      "source": "petpooja_item_reports",
       "period": {
-        "start": "2025-11-14",
-        "end": "2026-01-15",
-        "days": 63
+        "start": "2025-11-07",
+        "end": "2026-01-20",
+        "days": 75
       }
     },
     "cogs": {
@@ -43,15 +44,14 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (food) (partner-paid)": 21622.0,
-        "metro (food) (partner-paid)": 9840.0,
-        "Digen (food) (partner-paid)": 14750.0,
-        "Ganesh Food (partner-paid)": 7000.0,
-        "Metro (food) (partner-paid)": 71263.20999999999,
-        "Byers coffee (partner-paid)": 7000.0,
-        "HyperPure (food) (partner-paid)": 33667.5,
-        "ibake (partner-paid)": 4400.0,
-        "Amazon (food) (partner-paid)": 7069.0
+        "Blinkit (partner-paid)": 21622.0,
+        "Metro (partner-paid)": 81103.21,
+        "Digen (partner-paid)": 14750.0,
+        "Ganesh Food Products (partner-paid)": 7000.0,
+        "Byers Coffee (partner-paid)": 7000.0,
+        "HyperPure (partner-paid)": 33667.5,
+        "I Bake Foods (partner-paid)": 4400.0,
+        "Amazon (partner-paid)": 7069.0
       },
       "by_vendor": {
         "Annapoorneshwari Foods": 46586.0,
@@ -61,15 +61,14 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (food) (partner-paid)": 21622.0,
-        "metro (food) (partner-paid)": 9840.0,
-        "Digen (food) (partner-paid)": 14750.0,
-        "Ganesh Food (partner-paid)": 7000.0,
-        "Metro (food) (partner-paid)": 71263.20999999999,
-        "Byers coffee (partner-paid)": 7000.0,
-        "HyperPure (food) (partner-paid)": 33667.5,
-        "ibake (partner-paid)": 4400.0,
-        "Amazon (food) (partner-paid)": 7069.0
+        "Blinkit (partner-paid)": 21622.0,
+        "Metro (partner-paid)": 81103.21,
+        "Digen (partner-paid)": 14750.0,
+        "Ganesh Food Products (partner-paid)": 7000.0,
+        "Byers Coffee (partner-paid)": 7000.0,
+        "HyperPure (partner-paid)": 33667.5,
+        "I Bake Foods (partner-paid)": 4400.0,
+        "Amazon (partner-paid)": 7069.0
       },
       "by_category": {
         "Batter & Ready Items": 53546.0,
@@ -80,8 +79,8 @@
         "Main Ingredients": 956715.68
       }
     },
-    "gross_profit": -587599.5200000001,
-    "gross_margin_pct": -82.6,
+    "gross_profit": -325137.3500000001,
+    "gross_margin_pct": -33.4,
     "opex": {
       "total": 1315488.9100000001,
       "breakdown": {
@@ -145,13 +144,17 @@
       "bank_paid": 1137983.9100000001,
       "partner_paid": 177505.0
     },
-    "operating_profit": -1903088.4300000002,
-    "operating_margin_pct": -267.5,
+    "operating_profit": -1640626.2600000002,
+    "operating_margin_pct": -168.4,
     "other_expenses": 11612.9,
-    "net_profit": -1914701.33,
+    "net_profit": -1640626.2600000002,
     "capex": 30000.0,
-    "cogs_pct": 182.6,
-    "opex_pct": 184.9
+    "cogs_pct": 133.4,
+    "opex_pct": 184.9,
+    "net_margin_pct": -168.4,
+    "avg_daily_revenue": 12986.69,
+    "avg_daily_cogs": 17321.86,
+    "avg_daily_profit": -21875.02
   },
   "cash_flow": {
     "period": {
@@ -254,12 +257,27 @@
         "Vikas": 850000.0,
         "Sunil": 154000.0,
         "Sooraj": 856000.0,
-        "Sachin": 70669.0
+        "Sachin": 70669.0,
+        "vendors": {
+          "Madhukar (Civil Work)": {
+            "contract_total": 2357151.0,
+            "paid": 1876665.0,
+            "balance_due": 480486.0
+          },
+          "Ashraf (Wall Decor)": 56000.0,
+          "Celestum (Lights)": 40719.0,
+          "Sri Ganesh Frame": 4100.0,
+          "MM Nursery (Plants)": 4000.0,
+          "Porter": 850.0
+        }
       },
       "Kitchen equipments": {
         "Sachin": 500000.0,
         "Sooraj": 351300.0,
-        "Vikas": 308765.0
+        "Vikas": 308765.0,
+        "vendors": {
+          "Dolar Engineering": 1095000.0
+        }
       },
       "signboard": {
         "Sooraj": 40000.0,
@@ -298,15 +316,14 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (food) (partner-paid)": 21622.0,
-        "metro (food) (partner-paid)": 9840.0,
-        "Digen (food) (partner-paid)": 14750.0,
-        "Ganesh Food (partner-paid)": 7000.0,
-        "Metro (food) (partner-paid)": 71263.20999999999,
-        "Byers coffee (partner-paid)": 7000.0,
-        "HyperPure (food) (partner-paid)": 33667.5,
-        "ibake (partner-paid)": 4400.0,
-        "Amazon (food) (partner-paid)": 7069.0
+        "Blinkit (partner-paid)": 21622.0,
+        "Metro (partner-paid)": 81103.21,
+        "Digen (partner-paid)": 14750.0,
+        "Ganesh Food Products (partner-paid)": 7000.0,
+        "Byers Coffee (partner-paid)": 7000.0,
+        "HyperPure (partner-paid)": 33667.5,
+        "I Bake Foods (partner-paid)": 4400.0,
+        "Amazon (partner-paid)": 7069.0
       },
       "monthly": {
         "2025-11": 429326.46,
