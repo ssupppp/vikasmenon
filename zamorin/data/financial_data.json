@@ -35,7 +35,7 @@
       }
     },
     "cogs": {
-      "total": 1299139.3900000001,
+      "total": 1401053.23,
       "breakdown": {
         "Annapoorneshwari Foods": 46586.0,
         "Ganesh Food Products": 24500.0,
@@ -44,14 +44,14 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (partner-paid)": 21622.0,
-        "Metro (partner-paid)": 81103.21,
-        "Digen (partner-paid)": 14750.0,
+        "Blinkit (partner-paid)": 33221.0,
+        "Metro (partner-paid)": 98261.75,
+        "Digen (partner-paid)": 29500.0,
         "Ganesh Food Products (partner-paid)": 7000.0,
-        "Byers Coffee (partner-paid)": 7000.0,
-        "HyperPure (partner-paid)": 33667.5,
+        "Byers Coffee (partner-paid)": 10500.0,
+        "HyperPure (partner-paid)": 58754.8,
         "I Bake Foods (partner-paid)": 4400.0,
-        "Amazon (partner-paid)": 7069.0
+        "Amazon (partner-paid)": 36888.0
       },
       "by_vendor": {
         "Annapoorneshwari Foods": 46586.0,
@@ -61,14 +61,14 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (partner-paid)": 21622.0,
-        "Metro (partner-paid)": 81103.21,
-        "Digen (partner-paid)": 14750.0,
+        "Blinkit (partner-paid)": 33221.0,
+        "Metro (partner-paid)": 98261.75,
+        "Digen (partner-paid)": 29500.0,
         "Ganesh Food Products (partner-paid)": 7000.0,
-        "Byers Coffee (partner-paid)": 7000.0,
-        "HyperPure (partner-paid)": 33667.5,
+        "Byers Coffee (partner-paid)": 10500.0,
+        "HyperPure (partner-paid)": 58754.8,
         "I Bake Foods (partner-paid)": 4400.0,
-        "Amazon (partner-paid)": 7069.0
+        "Amazon (partner-paid)": 36888.0
       },
       "by_category": {
         "Batter & Ready Items": 53546.0,
@@ -79,8 +79,8 @@
         "Main Ingredients": 956715.68
       }
     },
-    "gross_profit": -424535.3400000001,
-    "gross_margin_pct": -48.9,
+    "gross_profit": -526449.1799999999,
+    "gross_margin_pct": -60.2,
     "opex": {
       "total": 1315488.9100000001,
       "breakdown": {
@@ -144,14 +144,14 @@
       "bank_paid": 1137983.9100000001,
       "partner_paid": 177505.0
     },
-    "operating_profit": -1740024.2500000002,
-    "operating_margin_pct": -199.7,
+    "operating_profit": -1841938.09,
+    "operating_margin_pct": -210.6,
     "other_expenses": 11612.9,
-    "net_profit": -1751637.1500000001,
+    "net_profit": -1853550.99,
     "capex": 30000.0,
-    "cogs_pct": 148.5,
+    "cogs_pct": 160.2,
     "opex_pct": 150.8,
-    "net_margin_pct": -201.0,
+    "net_margin_pct": -211.9,
     "avg_daily_revenue": 11661.39,
     "avg_daily_cogs": 17321.86,
     "avg_daily_profit": -23355.16
@@ -307,7 +307,7 @@
   "expenses": {
     "total": 2614628.3000000003,
     "cogs": {
-      "total": 1299139.3900000001,
+      "total": 1401053.23,
       "breakdown": {
         "Annapoorneshwari Foods": 46586.0,
         "Ganesh Food Products": 24500.0,
@@ -316,19 +316,39 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (partner-paid)": 21622.0,
-        "Metro (partner-paid)": 81103.21,
-        "Digen (partner-paid)": 14750.0,
+        "Blinkit (partner-paid)": 33221.0,
+        "Metro (partner-paid)": 98261.75,
+        "Digen (partner-paid)": 29500.0,
         "Ganesh Food Products (partner-paid)": 7000.0,
-        "Byers Coffee (partner-paid)": 7000.0,
-        "HyperPure (partner-paid)": 33667.5,
+        "Byers Coffee (partner-paid)": 10500.0,
+        "HyperPure (partner-paid)": 58754.8,
         "I Bake Foods (partner-paid)": 4400.0,
-        "Amazon (partner-paid)": 7069.0
+        "Amazon (partner-paid)": 36888.0
       },
-      "monthly": {
-        "2025-11": 429326.46,
-        "2025-12": 534623.3500000001,
-        "2026-01": 158577.87
+      "by_vendor": {
+        "Annapoorneshwari Foods": 46586.0,
+        "Ganesh Food Products": 24500.0,
+        "I Bake Foods": 2560.0,
+        "MKP Enterprises": 80170.0,
+        "SLNS Traders": 3731.0,
+        "SP Soap Oil": 8265.0,
+        "Melaange Foods (invoiced)": 956715.68,
+        "Blinkit (partner-paid)": 33221.0,
+        "Metro (partner-paid)": 98261.75,
+        "Digen (partner-paid)": 29500.0,
+        "Ganesh Food Products (partner-paid)": 7000.0,
+        "Byers Coffee (partner-paid)": 10500.0,
+        "HyperPure (partner-paid)": 58754.8,
+        "I Bake Foods (partner-paid)": 4400.0,
+        "Amazon (partner-paid)": 36888.0
+      },
+      "by_category": {
+        "Batter & Ready Items": 53546.0,
+        "Beverages": 38500.0,
+        "Cooking Gas": 80170.0,
+        "Groceries & Provisions": 161942.71,
+        "Cooking Oil": 8265.0,
+        "Main Ingredients": 956715.68
       }
     },
     "opex": {

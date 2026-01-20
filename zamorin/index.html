@@ -1020,7 +1020,14 @@
 
             <div class="charts-grid">
                 <div class="chart-card full-width">
-                    <h3>Daily Revenue Trend</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <h3 style="margin: 0;">Revenue Trend</h3>
+                        <div class="period-selector" style="margin: 0;">
+                            <button class="period-btn active" data-trend-period="daily" onclick="setTrendPeriod('daily')">Daily</button>
+                            <button class="period-btn" data-trend-period="weekly" onclick="setTrendPeriod('weekly')">Weekly</button>
+                            <button class="period-btn" data-trend-period="monthly" onclick="setTrendPeriod('monthly')">Monthly</button>
+                        </div>
+                    </div>
                     <div class="chart-container">
                         <canvas id="revenueTrendChart"></canvas>
                     </div>
@@ -1476,9 +1483,11 @@
 
         let currentPeriod = 'all';
         let currentSalesPeriod = 'all';
+        let currentTrendPeriod = 'daily';
         let currentExpenseType = 'all';
         let globalData = null;
         let globalFinData = null;
+        let itemSalesData = null;
 
         function setPeriod(period) {
             currentPeriod = period;
@@ -1532,6 +1541,19 @@
             const profit = revenue - cogs - opex;
             document.getElementById('operatingProfit').textContent = formatCurrency(profit);
             document.getElementById('operatingProfit').className = 'value ' + (profit >= 0 ? 'positive' : 'negative');
+        }
+
+        // ============================================
+        // TREND PERIOD SELECTOR (Overview Tab)
+        // ============================================
+        function setTrendPeriod(period) {
+            currentTrendPeriod = period;
+            document.querySelectorAll('[data-trend-period]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.trendPeriod === period);
+            });
+            if (globalData && globalFinData) {
+                renderRevenueTrendChart(globalData.daily_sales || [], globalFinData);
+            }
         }
 
         // ============================================
@@ -2163,12 +2185,27 @@
                     } catch { continue; }
                 }
 
+                // Load item sales data (from Petpooja item-wise reports)
+                const itemPaths = ['../data/item_sales.json', './data/item_sales.json', 'data/item_sales.json'];
+                for (const path of itemPaths) {
+                    try {
+                        const itemResponse = await fetch(path + cacheBuster, { cache: 'no-store' });
+                        if (itemResponse.ok) {
+                            itemSalesData = await itemResponse.json();
+                            break;
+                        }
+                    } catch { continue; }
+                }
+
                 renderDashboard(data, finData);
                 if (menuCostsData) {
                     renderMenuCosts(menuCostsData);
                 }
                 if (inventoryData) {
                     renderInventory(inventoryData);
+                }
+                if (itemSalesData) {
+                    renderItemSalesInsights(itemSalesData);
                 }
             } catch (error) {
                 console.error('Error loading data:', error);
@@ -2253,7 +2290,7 @@
             }
 
             // Charts
-            renderRevenueTrendChart(data.daily_sales);
+            renderRevenueTrendChart(data.daily_sales, finData);
             renderCategoryChart(data.category_sales);
             if (finData && finData.pnl) {
                 renderOpexChart(finData.pnl.opex.breakdown);
@@ -2296,30 +2333,49 @@
             }
         }
 
-        function renderRevenueTrendChart(dailySales) {
+        function renderRevenueTrendChart(dailySales, finData) {
             const isMobile = window.innerWidth < 768;
-            // Show fewer data points on mobile
-            const sorted = [...dailySales].sort((a, b) => new Date(a.date) - new Date(b.date));
-            const displayData = isMobile ? sorted.slice(-14) : sorted;
             const ctx = document.getElementById('revenueTrendChart').getContext('2d');
+
+            let displayData = [];
+            let labels = [];
+            let chartType = 'line';
+
+            if (currentTrendPeriod === 'weekly' && finData && finData.weekly) {
+                // Weekly view
+                displayData = finData.weekly;
+                labels = displayData.map(w => w.week || w.label || `Week ${displayData.indexOf(w) + 1}`);
+                chartType = 'bar';
+            } else if (currentTrendPeriod === 'monthly' && finData && finData.monthly) {
+                // Monthly view
+                displayData = finData.monthly;
+                labels = displayData.map(m => m.month);
+                chartType = 'bar';
+            } else {
+                // Daily view (default)
+                const sorted = [...dailySales].sort((a, b) => new Date(a.date) - new Date(b.date));
+                displayData = isMobile ? sorted.slice(-14) : sorted;
+                labels = displayData.map(d => {
+                    const date = new Date(d.date);
+                    return date.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
+                });
+            }
 
             if (chartInstances.revenueTrend) chartInstances.revenueTrend.destroy();
             chartInstances.revenueTrend = new Chart(ctx, {
-                type: 'line',
+                type: chartType,
                 data: {
-                    labels: displayData.map(d => {
-                        const date = new Date(d.date);
-                        return date.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
-                    }),
+                    labels: labels,
                     datasets: [{
                         label: 'Revenue',
-                        data: displayData.map(d => d.revenue || d.total_sales),
+                        data: displayData.map(d => d.revenue || d.total_sales || 0),
                         borderColor: colors.primary,
-                        backgroundColor: colors.primary + '20',
-                        fill: true,
+                        backgroundColor: chartType === 'bar' ? colors.primary : colors.primary + '20',
+                        fill: chartType === 'line',
                         tension: 0.3,
                         pointRadius: isMobile ? 2 : 3,
-                        pointHitRadius: 20
+                        pointHitRadius: 20,
+                        borderRadius: chartType === 'bar' ? 4 : 0
                     }]
                 },
                 options: {
@@ -2540,6 +2596,27 @@
                     <td class="right">${formatCurrency(item.revenue)}</td>
                 </tr>
             `).join('');
+        }
+
+        function renderItemSalesInsights(itemData) {
+            // Update top items table with item-wise report data (more accurate)
+            if (itemData && itemData.top_items && itemData.top_items.length > 0) {
+                // Get category from by_category for display
+                const catMap = {};
+                if (itemData.by_category) {
+                    itemData.by_category.forEach(c => catMap[c.category] = c.category);
+                }
+
+                document.getElementById('topItemsTable').innerHTML = itemData.top_items.slice(0, 15).map((item, i) => `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${item.item}</td>
+                        <td><span class="category-badge">-</span></td>
+                        <td class="right">${formatNumber(item.qty)}</td>
+                        <td class="right">${formatCurrency(item.revenue)}</td>
+                    </tr>
+                `).join('');
+            }
         }
 
         function renderCategoryTable(categorySales) {
