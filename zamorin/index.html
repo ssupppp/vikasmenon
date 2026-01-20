@@ -1653,6 +1653,71 @@
 
             // Update chart
             renderSalesChart(chartData, currentSalesPeriod);
+
+            // Update top items and categories based on period
+            if (itemSalesData) {
+                let topItems, byCategory;
+                if (currentSalesPeriod === 'daily') {
+                    topItems = itemSalesData.top_items_daily || itemSalesData.top_items;
+                    byCategory = itemSalesData.by_category_daily || itemSalesData.by_category;
+                } else if (currentSalesPeriod === 'weekly') {
+                    topItems = itemSalesData.top_items_weekly || itemSalesData.top_items;
+                    byCategory = itemSalesData.by_category_weekly || itemSalesData.by_category;
+                } else {
+                    topItems = itemSalesData.top_items_all || itemSalesData.top_items;
+                    byCategory = itemSalesData.by_category_all || itemSalesData.by_category;
+                }
+                renderTopItemsForPeriod(topItems);
+                renderCategoryForPeriod(byCategory, topItems);
+            }
+        }
+
+        function renderTopItemsForPeriod(topItems) {
+            if (!topItems || topItems.length === 0) return;
+            document.getElementById('topItemsTable').innerHTML = topItems.slice(0, 15).map((item, i) => `
+                <tr>
+                    <td>${i + 1}</td>
+                    <td>${item.item}</td>
+                    <td><span class="category-badge">-</span></td>
+                    <td class="right">${formatNumber(item.qty)}</td>
+                    <td class="right">${formatCurrency(item.revenue)}</td>
+                </tr>
+            `).join('');
+        }
+
+        function renderCategoryForPeriod(byCategory, topItems) {
+            const container = document.getElementById('salesCategoryList');
+            if (!container || !byCategory) return;
+
+            container.innerHTML = byCategory.map((cat, idx) => {
+                const categoryItems = topItems ? topItems.filter(item =>
+                    item.item.toLowerCase().includes(cat.category.toLowerCase().split(' ')[0])
+                ).slice(0, 5) : [];
+
+                const itemsHtml = categoryItems.length > 0
+                    ? categoryItems.map(item => `
+                        <div class="sub-row">
+                            <span class="sub-label">${item.item}</span>
+                            <span class="sub-value">${formatNumber(item.qty)} qty · ${formatCurrency(item.revenue)}</span>
+                        </div>
+                    `).join('')
+                    : '';
+
+                return `
+                    <div class="expandable-row" id="sales-cat-${idx}">
+                        <div class="expandable-row-header" onclick="toggleExpandRow('sales-cat-${idx}')">
+                            <span class="row-title">${cat.category}</span>
+                            <span class="row-value">
+                                ${formatNumber(cat.qty)} · ${formatCurrency(cat.revenue)}
+                                <span class="expand-icon">▼</span>
+                            </span>
+                        </div>
+                        <div class="expandable-row-content">
+                            ${itemsHtml}
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
 
         function renderSalesChart(data, period) {
