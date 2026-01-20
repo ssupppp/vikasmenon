@@ -1091,29 +1091,10 @@
                     <div class="summary-value" id="estimateTotalItems">--</div>
                     <div class="summary-label">Expected Items</div>
                 </div>
-                <div class="summary-card">
-                    <div class="summary-value" id="estimateConfidence">--</div>
-                    <div class="summary-label">Data Points</div>
-                </div>
             </div>
 
             <div class="info-banner" id="estimateMethod" style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px; margin-bottom: var(--space-md); font-size: 0.9rem;">
                 Loading estimate method...
-            </div>
-
-            <div class="charts-grid">
-                <div class="chart-card">
-                    <h3>Expected Items by Category</h3>
-                    <div class="chart-container">
-                        <canvas id="estimateCategoryChart"></canvas>
-                    </div>
-                </div>
-                <div class="chart-card">
-                    <h3>Historical Data Coverage</h3>
-                    <div class="chart-container">
-                        <canvas id="dataCoverageChart"></canvas>
-                    </div>
-                </div>
             </div>
 
             <div class="table-card">
@@ -1123,12 +1104,15 @@
                         <tr>
                             <th style="width:40px">#</th>
                             <th>Item</th>
-                            <th class="right">Expected Qty</th>
-                            <th class="right">Confidence</th>
+                            <th class="right">Expected</th>
+                            <th class="right" id="histCol1">--</th>
+                            <th class="right" id="histCol2">--</th>
+                            <th class="right" id="histCol3">--</th>
+                            <th class="right" id="histCol4">--</th>
                         </tr>
                     </thead>
                     <tbody id="estimateItemsTable">
-                        <tr><td colspan="4" class="loading">Loading...</td></tr>
+                        <tr><td colspan="7" class="loading">Loading...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -2709,26 +2693,35 @@
             const dayInfo = data.estimate_for;
             document.getElementById('estimateDay').textContent = `${dayInfo.day_of_week}, ${new Date(dayInfo.date).toLocaleDateString('en-IN', { month: 'short', day: 'numeric' })}`;
             document.getElementById('estimateTotalItems').textContent = formatNumber(data.total_expected_items);
-            document.getElementById('estimateConfidence').textContent = `${data.data_used.total_days} ${dayInfo.day_of_week}${data.data_used.total_days > 1 ? 's' : ''}`;
 
             // Update method banner
             document.getElementById('estimateMethod').innerHTML = `<strong>Method:</strong> ${data.method}`;
 
-            // Render items table
+            // Set column headers with actual dates
+            const dates = data.data_used.dates;
+            const formatDateHeader = (dateStr) => {
+                const d = new Date(dateStr);
+                const day = d.toLocaleDateString('en-IN', { weekday: 'short' });
+                const date = d.getDate();
+                return `${day} ${date}`;
+            };
+            document.getElementById('histCol1').textContent = formatDateHeader(dates[0]);
+            document.getElementById('histCol2').textContent = formatDateHeader(dates[1]);
+            document.getElementById('histCol3').textContent = formatDateHeader(dates[2]);
+            document.getElementById('histCol4').textContent = formatDateHeader(dates[3]);
+
+            // Render items table with history
             document.getElementById('estimateItemsTable').innerHTML = data.estimated_items.map((item, i) => `
                 <tr>
                     <td>${i + 1}</td>
                     <td>${item.item}</td>
                     <td class="right"><strong>${item.expected_qty}</strong></td>
-                    <td class="right"><span class="category-badge ${item.confidence}">${item.confidence}</span></td>
+                    <td class="right">${item.history[0]}</td>
+                    <td class="right">${item.history[1]}</td>
+                    <td class="right">${item.history[2]}</td>
+                    <td class="right">${item.history[3]}</td>
                 </tr>
             `).join('');
-
-            // Render category chart
-            renderEstimateCategoryChart(data.by_category);
-
-            // Render data coverage chart
-            renderDataCoverageChart(data.historical_data, dayInfo.day_of_week);
         }
 
         function renderEstimateCategoryChart(categories) {
