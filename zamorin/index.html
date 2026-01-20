@@ -1062,7 +1062,14 @@
             </div>
 
             <div class="table-card">
-                <h3>Top Selling Items</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <h3 style="margin: 0;">Top Selling Items</h3>
+                    <div class="period-selector" style="margin: 0;">
+                        <button class="period-btn active" data-top-period="all" onclick="setTopItemsPeriod('all')">All Time</button>
+                        <button class="period-btn" data-top-period="week" onclick="setTopItemsPeriod('week')">Last Week</button>
+                        <button class="period-btn" data-top-period="yesterday" onclick="setTopItemsPeriod('yesterday')">Yesterday</button>
+                    </div>
+                </div>
                 <table class="data-table">
                     <thead>
                         <tr>
@@ -1670,6 +1677,22 @@
                 renderTopItemsForPeriod(topItems);
                 renderCategoryForPeriod(byCategory, topItems);
             }
+        }
+
+        function setTopItemsPeriod(period) {
+            document.querySelectorAll('[data-top-period]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.topPeriod === period);
+            });
+            if (!itemSalesData) return;
+            let topItems;
+            if (period === 'yesterday') {
+                topItems = itemSalesData.top_items_yesterday;
+            } else if (period === 'week') {
+                topItems = itemSalesData.top_items_last_week;
+            } else {
+                topItems = itemSalesData.top_items_all || itemSalesData.top_items;
+            }
+            renderTopItemsForPeriod(topItems);
         }
 
         function renderTopItemsForPeriod(topItems) {

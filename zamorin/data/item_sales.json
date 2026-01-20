@@ -596,5 +596,209 @@
       "qty": 56,
       "revenue": 4719.26
     }
+  ],
+  "top_items_yesterday": [
+    {
+      "item": "Coffee",
+      "qty": 32,
+      "revenue": 1066.56
+    },
+    {
+      "item": "Red Rice Meals",
+      "qty": 22,
+      "revenue": 2304.72
+    },
+    {
+      "item": "Normal Tea 90 Ml",
+      "qty": 20,
+      "revenue": 381.0
+    },
+    {
+      "item": "Ginger Tea",
+      "qty": 18,
+      "revenue": 428.58
+    },
+    {
+      "item": "Parippu Vada",
+      "qty": 17,
+      "revenue": 242.93
+    },
+    {
+      "item": "Masala Dosa",
+      "qty": 14,
+      "revenue": 1527.12
+    },
+    {
+      "item": "Puttu (with Kadala)",
+      "qty": 11,
+      "revenue": 942.81
+    },
+    {
+      "item": "Pazham Pori",
+      "qty": 11,
+      "revenue": 261.91
+    },
+    {
+      "item": "Kerala Porotta With Kuruma",
+      "qty": 10,
+      "revenue": 857.1
+    },
+    {
+      "item": "Idiyappam With Stew",
+      "qty": 8,
+      "revenue": 685.68
+    },
+    {
+      "item": "White Rice Meal",
+      "qty": 8,
+      "revenue": 838.08
+    },
+    {
+      "item": "Ela Ada",
+      "qty": 7,
+      "revenue": 266.7
+    },
+    {
+      "item": "Idli",
+      "qty": 6,
+      "revenue": 285.72
+    },
+    {
+      "item": "Punjabi Samosa",
+      "qty": 5,
+      "revenue": 166.65
+    },
+    {
+      "item": "Hazel Nut Coffee",
+      "qty": 4,
+      "revenue": 190.48
+    },
+    {
+      "item": "Combo Meal  Choice Of Three",
+      "qty": 4,
+      "revenue": 495.24
+    },
+    {
+      "item": "Plain Dosa",
+      "qty": 4,
+      "revenue": 342.84
+    },
+    {
+      "item": "Onion Masala Dosa",
+      "qty": 3,
+      "revenue": 342.87
+    },
+    {
+      "item": "Upma",
+      "qty": 3,
+      "revenue": 171.42
+    },
+    {
+      "item": "Curd Rice",
+      "qty": 3,
+      "revenue": 171.42
+    }
+  ],
+  "top_items_last_week": [
+    {
+      "item": "Coffee",
+      "qty": 207,
+      "revenue": 6899.31
+    },
+    {
+      "item": "Normal Tea 90 Ml",
+      "qty": 188,
+      "revenue": 3581.4
+    },
+    {
+      "item": "Parippu Vada",
+      "qty": 173,
+      "revenue": 2700.57
+    },
+    {
+      "item": "Ginger Tea",
+      "qty": 88,
+      "revenue": 2095.28
+    },
+    {
+      "item": "Masala Dosa",
+      "qty": 86,
+      "revenue": 9130.32
+    },
+    {
+      "item": "Idli",
+      "qty": 86,
+      "revenue": 4232.22
+    },
+    {
+      "item": "Idiyappam With Stew",
+      "qty": 80,
+      "revenue": 6856.8
+    },
+    {
+      "item": "Kerala Porotta With Kuruma",
+      "qty": 67,
+      "revenue": 5742.57
+    },
+    {
+      "item": "Punjabi Samosa",
+      "qty": 67,
+      "revenue": 2266.46
+    },
+    {
+      "item": "Pazham Pori",
+      "qty": 66,
+      "revenue": 1689.07
+    },
+    {
+      "item": "Red Rice Meals",
+      "qty": 63,
+      "revenue": 6599.88
+    },
+    {
+      "item": "Puttu (with Kadala)",
+      "qty": 58,
+      "revenue": 4971.18
+    },
+    {
+      "item": "Medu Vada",
+      "qty": 57,
+      "revenue": 2763.86
+    },
+    {
+      "item": "Ela Ada",
+      "qty": 55,
+      "revenue": 2178.3
+    },
+    {
+      "item": "Plain Dosa",
+      "qty": 53,
+      "revenue": 4630.5
+    },
+    {
+      "item": "Hazel Nut Coffee",
+      "qty": 36,
+      "revenue": 1714.32
+    },
+    {
+      "item": "Half Coffee",
+      "qty": 32,
+      "revenue": 609.6
+    },
+    {
+      "item": "Ghee Roast Dosa",
+      "qty": 32,
+      "revenue": 3352.32
+    },
+    {
+      "item": "Single Vada",
+      "qty": 30,
+      "revenue": 714.3
+    },
+    {
+      "item": "White Rice Meal",
+      "qty": 30,
+      "revenue": 3142.8
+    }
   ]
 }
