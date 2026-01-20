@@ -1,0 +1,216 @@
+{
+  "generated_at": "2026-01-20T18:23:45.566950",
+  "estimate_for": {
+    "date": "2026-01-21",
+    "day_of_week": "Wednesday"
+  },
+  "method": "Average of 1 Wednesday(s): 2026-01-14",
+  "data_used": {
+    "dates": [
+      "2026-01-14"
+    ],
+    "total_days": 1
+  },
+  "estimated_items": [
+    {
+      "item": "Normal Tea 90 Ml",
+      "expected_qty": 43,
+      "confidence": "low"
+    },
+    {
+      "item": "Coffee",
+      "expected_qty": 29,
+      "confidence": "low"
+    },
+    {
+      "item": "Parippu Vada",
+      "expected_qty": 21,
+      "confidence": "low"
+    },
+    {
+      "item": "Plain Dosa",
+      "expected_qty": 16,
+      "confidence": "low"
+    },
+    {
+      "item": "Red Rice Meals",
+      "expected_qty": 16,
+      "confidence": "low"
+    },
+    {
+      "item": "Ginger Tea",
+      "expected_qty": 13,
+      "confidence": "low"
+    },
+    {
+      "item": "Kerala Porotta With Kuruma",
+      "expected_qty": 12,
+      "confidence": "low"
+    },
+    {
+      "item": "Puttu (with Kadala)",
+      "expected_qty": 9,
+      "confidence": "low"
+    },
+    {
+      "item": "Punjabi Samosa",
+      "expected_qty": 8,
+      "confidence": "low"
+    },
+    {
+      "item": "Pazham Pori",
+      "expected_qty": 7,
+      "confidence": "low"
+    },
+    {
+      "item": "Idli",
+      "expected_qty": 7,
+      "confidence": "low"
+    },
+    {
+      "item": "Ela Ada",
+      "expected_qty": 7,
+      "confidence": "low"
+    },
+    {
+      "item": "Single Vada",
+      "expected_qty": 7,
+      "confidence": "low"
+    },
+    {
+      "item": "Fresh Lime Juice Water",
+      "expected_qty": 6,
+      "confidence": "low"
+    },
+    {
+      "item": "Black Coffee",
+      "expected_qty": 5,
+      "confidence": "low"
+    },
+    {
+      "item": "Idiyappam With Stew",
+      "expected_qty": 5,
+      "confidence": "low"
+    },
+    {
+      "item": "Hazel Nut Coffee",
+      "expected_qty": 5,
+      "confidence": "low"
+    },
+    {
+      "item": "Pastries",
+      "expected_qty": 5,
+      "confidence": "low"
+    },
+    {
+      "item": "Ghee Masala Dosa",
+      "expected_qty": 5,
+      "confidence": "low"
+    },
+    {
+      "item": "Idli Vada Combo",
+      "expected_qty": 4,
+      "confidence": "low"
+    },
+    {
+      "item": "Pesarattu",
+      "expected_qty": 4,
+      "confidence": "low"
+    },
+    {
+      "item": "Masala Dosa",
+      "expected_qty": 4,
+      "confidence": "low"
+    },
+    {
+      "item": "Lemon Tea",
+      "expected_qty": 4,
+      "confidence": "low"
+    },
+    {
+      "item": "Podi Masala Dosa",
+      "expected_qty": 4,
+      "confidence": "low"
+    },
+    {
+      "item": "Oothappam",
+      "expected_qty": 3,
+      "confidence": "low"
+    }
+  ],
+  "by_category": [
+    {
+      "category": "Beverages",
+      "expected_qty": 111
+    },
+    {
+      "category": "All Day Items",
+      "expected_qty": 97
+    },
+    {
+      "category": "Snacks",
+      "expected_qty": 43
+    },
+    {
+      "category": "Lunch Items",
+      "expected_qty": 21
+    },
+    {
+      "category": "All Day Combos",
+      "expected_qty": 15
+    },
+    {
+      "category": "Desserts",
+      "expected_qty": 5
+    },
+    {
+      "category": "Breakfast Items",
+      "expected_qty": 4
+    }
+  ],
+  "total_expected_items": 296,
+  "historical_data": {
+    "Monday": {
+      "dates": [
+        "2026-01-12",
+        "2026-01-19"
+      ],
+      "count": 2
+    },
+    "Tuesday": {
+      "dates": [],
+      "count": 0
+    },
+    "Wednesday": {
+      "dates": [
+        "2026-01-14"
+      ],
+      "count": 1
+    },
+    "Thursday": {
+      "dates": [
+        "2026-01-15"
+      ],
+      "count": 1
+    },
+    "Friday": {
+      "dates": [
+        "2026-01-16"
+      ],
+      "count": 1
+    },
+    "Saturday": {
+      "dates": [
+        "2026-01-17"
+      ],
+      "count": 1
+    },
+    "Sunday": {
+      "dates": [
+        "2026-01-11",
+        "2026-01-18"
+      ],
+      "count": 2
+    }
+  }
+}

@@ -577,6 +577,18 @@
             background: var(--bg-tertiary);
             color: var(--text-muted);
         }
+        .category-badge.high {
+            background: #22c55e30;
+            color: #22c55e;
+        }
+        .category-badge.medium {
+            background: #f59e0b30;
+            color: #f59e0b;
+        }
+        .category-badge.low {
+            background: #ef444430;
+            color: #ef4444;
+        }
 
         /* ===== EXPANDABLE ROWS ===== */
         .expandable-list {
@@ -957,6 +969,7 @@
         <!-- Tabs -->
         <div class="tabs">
             <button class="tab active" data-tab="overview">Overview</button>
+            <button class="tab" data-tab="estimate">Estimate</button>
             <button class="tab" data-tab="sales">Sales Analysis</button>
             <button class="tab" data-tab="menu-costs">Menu Costs</button>
             <button class="tab" data-tab="inventory">Inventory</button>
@@ -1062,6 +1075,60 @@
                     </thead>
                     <tbody id="topItemsTable">
                         <tr><td colspan="5" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Estimate Tab -->
+        <div id="estimate" class="tab-content">
+            <div class="summary-row" style="margin-bottom: var(--space-md);">
+                <div class="summary-card" style="flex: 2;">
+                    <div class="summary-value" id="estimateDay">--</div>
+                    <div class="summary-label">Tomorrow's Forecast</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="estimateTotalItems">--</div>
+                    <div class="summary-label">Expected Items</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="estimateConfidence">--</div>
+                    <div class="summary-label">Data Points</div>
+                </div>
+            </div>
+
+            <div class="info-banner" id="estimateMethod" style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px; margin-bottom: var(--space-md); font-size: 0.9rem;">
+                Loading estimate method...
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Expected Items by Category</h3>
+                    <div class="chart-container">
+                        <canvas id="estimateCategoryChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Historical Data Coverage</h3>
+                    <div class="chart-container">
+                        <canvas id="dataCoverageChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <h3>Items to Prepare Tomorrow</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width:40px">#</th>
+                            <th>Item</th>
+                            <th class="right">Expected Qty</th>
+                            <th class="right">Confidence</th>
+                        </tr>
+                    </thead>
+                    <tbody id="estimateItemsTable">
+                        <tr><td colspan="4" class="loading">Loading...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1488,6 +1555,7 @@
         let globalData = null;
         let globalFinData = null;
         let itemSalesData = null;
+        let demandEstimateData = null;
 
         function setPeriod(period) {
             currentPeriod = period;
@@ -2197,6 +2265,18 @@
                     } catch { continue; }
                 }
 
+                // Load demand estimate data
+                const estimatePaths = ['../data/demand_estimate.json', './data/demand_estimate.json', 'data/demand_estimate.json'];
+                for (const path of estimatePaths) {
+                    try {
+                        const estResponse = await fetch(path + cacheBuster, { cache: 'no-store' });
+                        if (estResponse.ok) {
+                            demandEstimateData = await estResponse.json();
+                            break;
+                        }
+                    } catch { continue; }
+                }
+
                 renderDashboard(data, finData);
                 if (menuCostsData) {
                     renderMenuCosts(menuCostsData);
@@ -2206,6 +2286,9 @@
                 }
                 if (itemSalesData) {
                     renderItemSalesInsights(itemSalesData);
+                }
+                if (demandEstimateData) {
+                    renderDemandEstimate(demandEstimateData);
                 }
             } catch (error) {
                 console.error('Error loading data:', error);
@@ -2617,6 +2700,122 @@
                     </tr>
                 `).join('');
             }
+        }
+
+        function renderDemandEstimate(data) {
+            if (!data) return;
+
+            // Update summary cards
+            const dayInfo = data.estimate_for;
+            document.getElementById('estimateDay').textContent = `${dayInfo.day_of_week}, ${new Date(dayInfo.date).toLocaleDateString('en-IN', { month: 'short', day: 'numeric' })}`;
+            document.getElementById('estimateTotalItems').textContent = formatNumber(data.total_expected_items);
+            document.getElementById('estimateConfidence').textContent = `${data.data_used.total_days} ${dayInfo.day_of_week}${data.data_used.total_days > 1 ? 's' : ''}`;
+
+            // Update method banner
+            document.getElementById('estimateMethod').innerHTML = `<strong>Method:</strong> ${data.method}`;
+
+            // Render items table
+            document.getElementById('estimateItemsTable').innerHTML = data.estimated_items.map((item, i) => `
+                <tr>
+                    <td>${i + 1}</td>
+                    <td>${item.item}</td>
+                    <td class="right"><strong>${item.expected_qty}</strong></td>
+                    <td class="right"><span class="category-badge ${item.confidence}">${item.confidence}</span></td>
+                </tr>
+            `).join('');
+
+            // Render category chart
+            renderEstimateCategoryChart(data.by_category);
+
+            // Render data coverage chart
+            renderDataCoverageChart(data.historical_data, dayInfo.day_of_week);
+        }
+
+        function renderEstimateCategoryChart(categories) {
+            const ctx = document.getElementById('estimateCategoryChart').getContext('2d');
+            const isMobile = window.innerWidth < 768;
+
+            if (chartInstances.estimateCategory) chartInstances.estimateCategory.destroy();
+            chartInstances.estimateCategory = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: categories.map(c => c.category),
+                    datasets: [{
+                        label: 'Expected Qty',
+                        data: categories.map(c => c.expected_qty),
+                        backgroundColor: colors.chart,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { font: { size: isMobile ? 10 : 12 } }
+                        },
+                        y: {
+                            ticks: { font: { size: isMobile ? 10 : 12 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderDataCoverageChart(historicalData, targetDay) {
+            const ctx = document.getElementById('dataCoverageChart').getContext('2d');
+            const isMobile = window.innerWidth < 768;
+            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+            if (chartInstances.dataCoverage) chartInstances.dataCoverage.destroy();
+            chartInstances.dataCoverage = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: days,
+                    datasets: [{
+                        label: 'Days of Data',
+                        data: days.map(d => historicalData[d]?.count || 0),
+                        backgroundColor: days.map(d => d === targetDay ? colors.primary : colors.chart[0] + '60'),
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: function(context) {
+                                    const day = days[context.dataIndex];
+                                    const dates = historicalData[day]?.dates || [];
+                                    return dates.length > 0 ? dates.join(', ') : 'No data';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1,
+                                font: { size: isMobile ? 10 : 12 }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Days of Data',
+                                font: { size: 11 }
+                            }
+                        },
+                        x: {
+                            ticks: { font: { size: isMobile ? 9 : 11 } }
+                        }
+                    }
+                }
+            });
         }
 
         function renderCategoryTable(categorySales) {
