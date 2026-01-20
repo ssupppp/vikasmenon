@@ -1,7 +1,7 @@
 {
-  "total": 872509.21,
-  "total_sales": 872509.21,
-  "total_bills": 4232,
+  "total": 874604.05,
+  "total_sales": 874604.05,
+  "total_bills": 4271,
   "days_count": 75,
   "period": {
     "start": "2025-11-07",
@@ -11,7 +11,7 @@
   "monthly": {
     "2025-11": 222078.41999999998,
     "2025-12": 322982.24000000005,
-    "2026-01": 327448.55000000005
+    "2026-01": 329543.39
   },
   "monthly_bills": {
     "2025-11": 898,
@@ -484,17 +484,17 @@
     },
     {
       "date": "2026-01-11",
-      "revenue": 16393.87,
+      "revenue": 17192.0,
       "total_sales": 17192.0,
       "bills": 76,
-      "discount": 99.98
+      "discount": 0
     },
     {
       "date": "2026-01-12",
-      "revenue": 16282.29,
+      "revenue": 17160.0,
       "total_sales": 17160.0,
       "bills": 77,
-      "discount": 0.0
+      "discount": 0
     },
     {
       "date": "2026-01-13",
@@ -505,44 +505,44 @@
     },
     {
       "date": "2026-01-14",
-      "revenue": 18053.0,
-      "total_sales": 18053.0,
-      "bills": 92,
-      "discount": 0
-    },
-    {
-      "date": "2026-01-15",
       "revenue": 18013.0,
       "total_sales": 18013.0,
       "bills": 92,
       "discount": 0
     },
     {
-      "date": "2026-01-16",
+      "date": "2026-01-15",
       "revenue": 21242.0,
       "total_sales": 21242.0,
-      "bills": 86,
+      "bills": 120,
       "discount": 0
     },
     {
-      "date": "2026-01-17",
+      "date": "2026-01-16",
       "revenue": 21447.0,
       "total_sales": 21447.0,
       "bills": 86,
       "discount": 0
     },
     {
-      "date": "2026-01-18",
+      "date": "2026-01-17",
       "revenue": 18194.0,
       "total_sales": 18194.0,
       "bills": 76,
       "discount": 0
     },
     {
-      "date": "2026-01-19",
+      "date": "2026-01-18",
       "revenue": 23352.0,
       "total_sales": 23352.0,
       "bills": 100,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-19",
+      "revenue": 18472.0,
+      "total_sales": 18472.0,
+      "bills": 97,
       "discount": 0
     },
     {

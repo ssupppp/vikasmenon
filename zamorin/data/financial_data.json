@@ -12,11 +12,11 @@
       "days": 75
     },
     "revenue": {
-      "total": 872509.21,
+      "total": 874604.05,
       "breakdown": {
         "2025-11": 222078.41999999998,
         "2025-12": 322982.24000000005,
-        "2026-01": 327448.55000000005
+        "2026-01": 329543.39
       },
       "by_source": {
         "Petpooja Sales": 974002.04
@@ -79,7 +79,7 @@
         "Main Ingredients": 956715.68
       }
     },
-    "gross_profit": -426630.18000000017,
+    "gross_profit": -424535.3400000001,
     "gross_margin_pct": -48.9,
     "opex": {
       "total": 1315488.9100000001,
@@ -144,17 +144,17 @@
       "bank_paid": 1137983.9100000001,
       "partner_paid": 177505.0
     },
-    "operating_profit": -1742119.0900000003,
+    "operating_profit": -1740024.2500000002,
     "operating_margin_pct": -199.7,
     "other_expenses": 11612.9,
-    "net_profit": -1753731.9900000002,
+    "net_profit": -1751637.1500000001,
     "capex": 30000.0,
-    "cogs_pct": 148.9,
+    "cogs_pct": 148.5,
     "opex_pct": 150.8,
     "net_margin_pct": -201.0,
-    "avg_daily_revenue": 11633.46,
+    "avg_daily_revenue": 11661.39,
     "avg_daily_cogs": 17321.86,
-    "avg_daily_profit": -23383.09
+    "avg_daily_profit": -23355.16
   },
   "cash_flow": {
     "period": {
