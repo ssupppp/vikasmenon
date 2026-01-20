@@ -1,2427 +1,553 @@
 {
-  "generated_at": "2026-01-20T20:52:02.068520",
+  "generated_at": "2026-01-20T20:57:01.180687",
   "estimate_for": {
     "date": "2026-01-21",
     "day_of_week": "Wednesday"
   },
-  "method": "Weighted: 50% 2026-01-14 + 30% 2026-01-07 + 10% 2025-12-31 + 10% 2026-01-19 (yesterday)",
-  "weights": {
-    "last": 0.5,
-    "prev": 0.3,
-    "third": 0.1,
-    "yesterday": 0.1
-  },
+  "method": "Weighted: 50% last Wed + 30% prev Wed + 10% third Wed + 10% yesterday",
   "data_used": {
-    "same_weekday_dates": [
+    "dates": [
       "2026-01-14",
       "2026-01-07",
-      "2025-12-31"
+      "2025-12-31",
+      "2026-01-19"
     ],
-    "yesterday": "2026-01-19",
-    "total_same_weekdays": 10
+    "weights": [
+      0.5,
+      0.3,
+      0.1,
+      0.1
+    ]
+  },
+  "reference_totals": {
+    "2026-01-14": 296,
+    "2026-01-07": 264,
+    "2025-12-31": 144,
+    "2026-01-19": 277
   },
   "estimated_items": [
     {
       "item": "Normal Tea 90 Ml",
       "expected_qty": 35,
-      "exact_qty": 35.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 43,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 34,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 13,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 20,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        43,
+        34,
+        13,
+        20
+      ]
     },
     {
       "item": "Coffee",
       "expected_qty": 24,
-      "exact_qty": 23.5,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 29,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 16,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 10,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 32,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        29,
+        16,
+        10,
+        32
+      ]
     },
     {
       "item": "Ginger Tea",
       "expected_qty": 15,
-      "exact_qty": 15.4,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 13,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 23,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 18,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        13,
+        23,
+        2,
+        18
+      ]
     },
     {
       "item": "Parippu Vada",
       "expected_qty": 14,
-      "exact_qty": 14.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 21,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 5,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 17,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        21,
+        5,
+        3,
+        17
+      ]
     },
     {
       "item": "Punjabi Samosa",
       "expected_qty": 11,
-      "exact_qty": 11.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 8,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 21,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 5,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        8,
+        21,
+        3,
+        5
+      ]
     },
     {
       "item": "Red Rice Meals",
       "expected_qty": 11,
-      "exact_qty": 10.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 16,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 4,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 22,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        16,
+        0,
+        4,
+        22
+      ]
     },
     {
       "item": "Kerala Porotta With Kuruma",
       "expected_qty": 10,
-      "exact_qty": 10.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 12,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 9,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 6,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 10,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        12,
+        9,
+        6,
+        10
+      ]
     },
     {
       "item": "Puttu (with Kadala)",
       "expected_qty": 10,
-      "exact_qty": 9.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 9,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 13,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 11,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        9,
+        13,
+        2,
+        11
+      ]
     },
     {
       "item": "Plain Dosa",
       "expected_qty": 9,
-      "exact_qty": 9.4,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 16,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 4,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        16,
+        3,
+        1,
+        4
+      ]
     },
     {
       "item": "Idiyappam With Stew",
       "expected_qty": 7,
-      "exact_qty": 7.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 5,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 11,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 5,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 8,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        5,
+        11,
+        5,
+        8
+      ]
     },
     {
       "item": "Masala Dosa",
       "expected_qty": 7,
-      "exact_qty": 7.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 4,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 8,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 12,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 14,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        4,
+        8,
+        12,
+        14
+      ]
     },
     {
       "item": "Ela Ada",
       "expected_qty": 7,
-      "exact_qty": 6.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 7,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 7,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 7,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        7,
+        7,
+        3,
+        7
+      ]
     },
     {
       "item": "Pazham Pori",
       "expected_qty": 6,
-      "exact_qty": 5.8,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 7,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 11,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        7,
+        3,
+        3,
+        11
+      ]
     },
     {
       "item": "Red Rice Meal",
       "expected_qty": 5,
-      "exact_qty": 5.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 17,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        0,
+        17,
+        0,
+        0
+      ]
     },
     {
       "item": "Idli",
       "expected_qty": 5,
-      "exact_qty": 5.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 7,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 6,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        7,
+        3,
+        1,
+        6
+      ]
     },
     {
       "item": "Single Vada",
       "expected_qty": 5,
-      "exact_qty": 4.8,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 7,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        7,
+        3,
+        1,
+        3
+      ]
     },
     {
       "item": "Idli Vada Combo",
       "expected_qty": 4,
-      "exact_qty": 4.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 4,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 9,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        4,
+        3,
+        9,
+        2
+      ]
     },
     {
       "item": "Black Coffee",
       "expected_qty": 4,
-      "exact_qty": 3.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 5,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        5,
+        3,
+        0,
+        3
+      ]
     },
     {
       "item": "Lemon Tea",
       "expected_qty": 4,
-      "exact_qty": 3.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 4,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 4,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        4,
+        3,
+        4,
+        3
+      ]
     },
     {
       "item": "Ghee Masala Dosa",
       "expected_qty": 4,
-      "exact_qty": 3.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 5,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        5,
+        2,
+        3,
+        2
+      ]
     },
     {
       "item": "Pastries",
       "expected_qty": 3,
-      "exact_qty": 3.4,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 5,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        5,
+        2,
+        1,
+        2
+      ]
     },
     {
       "item": "Hazel Nut Coffee",
       "expected_qty": 3,
-      "exact_qty": 3.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 5,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 4,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        5,
+        1,
+        1,
+        4
+      ]
     },
     {
       "item": "Fresh Lime Juice Water",
       "expected_qty": 3,
-      "exact_qty": 3.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 6,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        6,
+        1,
+        0,
+        0
+      ]
     },
     {
       "item": "Ghee Roast Dosa",
       "expected_qty": 3,
-      "exact_qty": 3.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 3,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 4,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        3,
+        3,
+        4,
+        2
+      ]
     },
     {
       "item": "Podi Masala Dosa",
       "expected_qty": 3,
-      "exact_qty": 2.8,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 4,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 4,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        4,
+        1,
+        4,
+        1
+      ]
     },
     {
       "item": "Upma",
       "expected_qty": 3,
-      "exact_qty": 2.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 3,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        3,
+        2,
+        3,
+        3
+      ]
     },
     {
       "item": "Pongal",
       "expected_qty": 3,
-      "exact_qty": 2.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 2,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 4,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        2,
+        4,
+        3,
+        2
+      ]
     },
     {
       "item": "Pesarattu",
       "expected_qty": 2,
-      "exact_qty": 2.5,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 4,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        4,
+        1,
+        1,
+        1
+      ]
     },
     {
       "item": "Onion Masala Dosa",
       "expected_qty": 2,
-      "exact_qty": 2.5,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 3,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        3,
+        2,
+        1,
+        3
+      ]
     },
     {
       "item": "Curd Rice",
       "expected_qty": 2,
-      "exact_qty": 2.4,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 3,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        3,
+        2,
+        0,
+        3
+      ]
     },
     {
       "item": "White Rice Meal",
       "expected_qty": 2,
-      "exact_qty": 2.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 4,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 8,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        0,
+        4,
+        3,
+        8
+      ]
     },
     {
       "item": "Onion Oothappam [o]",
       "expected_qty": 2,
-      "exact_qty": 2.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 3,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        3,
+        1,
+        0,
+        3
+      ]
     },
     {
       "item": "Half Coffee",
       "expected_qty": 2,
-      "exact_qty": 2.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 4,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 7,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        0,
+        4,
+        7,
+        2
+      ]
     },
     {
       "item": "Kerala Porotta (2) With Kadala Curry And Veg Kurma Combo",
       "expected_qty": 2,
-      "exact_qty": 2.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 4,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        1,
+        4,
+        1,
+        2
+      ]
     },
     {
       "item": "Podi Dosa",
       "expected_qty": 2,
-      "exact_qty": 2.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 3,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        3,
+        1,
+        1,
+        1
+      ]
     },
     {
       "item": "Oothappam",
       "expected_qty": 2,
-      "exact_qty": 1.8,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 3,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        3,
+        0,
+        1,
+        2
+      ]
     },
     {
       "item": "Puttu Kadala Combo",
       "expected_qty": 2,
-      "exact_qty": 1.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 2,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        2,
+        2,
+        0,
+        1
+      ]
     },
     {
       "item": "Bisi Bele Bath",
       "expected_qty": 2,
-      "exact_qty": 1.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 3,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        1,
+        2,
+        3,
+        3
+      ]
     },
     {
       "item": "Ghee Podi Dosa",
       "expected_qty": 2,
-      "exact_qty": 1.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        1,
+        3,
+        0,
+        2
+      ]
     },
     {
       "item": "Onion Podi Dosa",
       "expected_qty": 1,
-      "exact_qty": 1.4,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 2,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        2,
+        1,
+        0,
+        1
+      ]
     },
     {
       "item": "Set Dosa",
       "expected_qty": 1,
-      "exact_qty": 1.4,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        1,
+        2,
+        1,
+        2
+      ]
     },
     {
       "item": "Muringa Leaves Dos",
       "expected_qty": 1,
-      "exact_qty": 1.4,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        1,
+        2,
+        2,
+        1
+      ]
     },
     {
       "item": "Fried Rice With Gobi Manjurian",
       "expected_qty": 1,
-      "exact_qty": 1.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        1,
+        2,
+        0,
+        2
+      ]
     },
     {
       "item": "Onion Dosa",
       "expected_qty": 1,
-      "exact_qty": 1.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 2,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        2,
+        1,
+        0,
+        0
+      ]
     },
     {
       "item": "Puliyogre",
       "expected_qty": 1,
-      "exact_qty": 1.2,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        0,
+        3,
+        2,
+        1
+      ]
     },
     {
       "item": "Ada Dosa",
       "expected_qty": 1,
-      "exact_qty": 1.2,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        1,
+        1,
+        1,
+        3
+      ]
     },
     {
       "item": "Onion Ghee Masala Dosa",
       "expected_qty": 1,
-      "exact_qty": 1.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 2,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        2,
+        0,
+        0,
+        1
+      ]
     },
     {
       "item": "Coke",
       "expected_qty": 1,
-      "exact_qty": 1.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 2,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        2,
+        0,
+        0,
+        0
+      ]
     },
     {
       "item": "Onion Ghee Dosa",
       "expected_qty": 1,
-      "exact_qty": 1.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 2,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        2,
+        0,
+        0,
+        0
+      ]
     },
     {
       "item": "Ponga Vada Combo",
       "expected_qty": 1,
-      "exact_qty": 1.0,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Single Idli",
-      "expected_qty": 1,
-      "exact_qty": 0.9,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 3,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Rava Dosa",
-      "expected_qty": 1,
-      "exact_qty": 0.8,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Black Tea",
-      "expected_qty": 1,
-      "exact_qty": 0.8,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Rave Masala Dosa",
-      "expected_qty": 1,
-      "exact_qty": 0.8,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Ghee Onion Dosa",
-      "expected_qty": 1,
-      "exact_qty": 0.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Idiyappam (3) With Veg Stew",
-      "expected_qty": 1,
-      "exact_qty": 0.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Combo Meal  Choice Of Three",
-      "expected_qty": 1,
-      "exact_qty": 0.7,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 4,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Medu Vada",
-      "expected_qty": 1,
-      "exact_qty": 0.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Single Porotta",
-      "expected_qty": 1,
-      "exact_qty": 0.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Single Idiappam",
-      "expected_qty": 1,
-      "exact_qty": 0.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Ghee Onion Podi Dosa",
-      "expected_qty": 1,
-      "exact_qty": 0.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Kinley- 1tr",
-      "expected_qty": 1,
-      "exact_qty": 0.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Kinley- 500ml",
-      "expected_qty": 1,
-      "exact_qty": 0.6,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 2,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Boost",
-      "expected_qty": 0,
-      "exact_qty": 0.5,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Medu Vada (2)",
-      "expected_qty": 0,
-      "exact_qty": 0.5,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 3,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Pulav",
-      "expected_qty": 0,
-      "exact_qty": 0.5,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Thums Up",
-      "expected_qty": 0,
-      "exact_qty": 0.5,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 1,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Idiyappam (3) With Veg Kurma",
-      "expected_qty": 0,
-      "exact_qty": 0.4,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Kesari Bath",
-      "expected_qty": 0,
-      "exact_qty": 0.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Badam Milk",
-      "expected_qty": 0,
-      "exact_qty": 0.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Clear Water 300 Ml",
-      "expected_qty": 0,
-      "exact_qty": 0.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Ghee Dosa",
-      "expected_qty": 0,
-      "exact_qty": 0.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Podi Onion Masala Dosa",
-      "expected_qty": 0,
-      "exact_qty": 0.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Upma Kesari Bath Combo",
-      "expected_qty": 0,
-      "exact_qty": 0.3,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 1,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Cakes",
-      "expected_qty": 0,
-      "exact_qty": 0.2,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Limca",
-      "expected_qty": 0,
-      "exact_qty": 0.2,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 2,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Sprite",
-      "expected_qty": 0,
-      "exact_qty": 0.2,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Extra Masala For Dosas",
-      "expected_qty": 0,
-      "exact_qty": 0.2,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 2,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Milk",
-      "expected_qty": 0,
-      "exact_qty": 0.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Ghee Podi Masala Dosa",
-      "expected_qty": 0,
-      "exact_qty": 0.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Combo - Pulyodre Pulav Curd Rice",
-      "expected_qty": 0,
-      "exact_qty": 0.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Maaza",
-      "expected_qty": 0,
-      "exact_qty": 0.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Chocolate Dosa",
-      "expected_qty": 0,
-      "exact_qty": 0.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 1,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 0,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Upma Vada Combo",
-      "expected_qty": 0,
-      "exact_qty": 0.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
-    },
-    {
-      "item": "Ginger Coffee",
-      "expected_qty": 0,
-      "exact_qty": 0.1,
-      "breakdown": {
-        "last": {
-          "date": "2026-01-14",
-          "qty": 0,
-          "weight": 0.5
-        },
-        "prev": {
-          "date": "2026-01-07",
-          "qty": 0,
-          "weight": 0.3
-        },
-        "third": {
-          "date": "2025-12-31",
-          "qty": 0,
-          "weight": 0.1
-        },
-        "yesterday": {
-          "date": "2026-01-19",
-          "qty": 1,
-          "weight": 0.1
-        }
-      }
+      "history": [
+        0,
+        3,
+        1,
+        0
+      ]
     }
   ],
   "total_expected_items": 269,
   "historical_data": {
     "Monday": {
-      "dates": [
-        "2025-11-17",
-        "2025-11-24",
-        "2025-12-01",
-        "2025-12-08",
-        "2025-12-15",
-        "2025-12-22",
-        "2025-12-29",
-        "2026-01-05",
-        "2026-01-12",
-        "2026-01-19"
-      ],
       "count": 10
     },
     "Tuesday": {
-      "dates": [
-        "2025-11-11",
-        "2025-11-18",
-        "2025-11-25",
-        "2025-12-02",
-        "2025-12-09",
-        "2025-12-16",
-        "2025-12-23",
-        "2025-12-30",
-        "2026-01-06",
-        "2026-01-13"
-      ],
       "count": 10
     },
     "Wednesday": {
-      "dates": [
-        "2025-11-12",
-        "2025-11-19",
-        "2025-11-26",
-        "2025-12-03",
-        "2025-12-10",
-        "2025-12-17",
-        "2025-12-24",
-        "2025-12-31",
-        "2026-01-07",
-        "2026-01-14"
-      ],
       "count": 10
     },
     "Thursday": {
-      "dates": [
-        "2025-11-13",
-        "2025-11-20",
-        "2025-11-27",
-        "2025-12-04",
-        "2025-12-11",
-        "2025-12-18",
-        "2025-12-25",
-        "2026-01-01",
-        "2026-01-08",
-        "2026-01-15"
-      ],
       "count": 10
     },
     "Friday": {
-      "dates": [
-        "2025-11-14",
-        "2025-11-21",
-        "2025-11-28",
-        "2025-12-05",
-        "2025-12-12",
-        "2025-12-19",
-        "2025-12-26",
-        "2026-01-02",
-        "2026-01-09",
-        "2026-01-16"
-      ],
       "count": 10
     },
     "Saturday": {
-      "dates": [
-        "2025-11-15",
-        "2025-11-22",
-        "2025-11-29",
-        "2025-12-06",
-        "2025-12-13",
-        "2025-12-20",
-        "2025-12-27",
-        "2026-01-03",
-        "2026-01-10",
-        "2026-01-17"
-      ],
       "count": 10
     },
     "Sunday": {
-      "dates": [
-        "2025-11-16",
-        "2025-11-23",
-        "2025-11-30",
-        "2025-12-07",
-        "2025-12-14",
-        "2025-12-21",
-        "2025-12-28",
-        "2026-01-04",
-        "2026-01-11",
-        "2026-01-18"
-      ],
       "count": 10
     }
   }
