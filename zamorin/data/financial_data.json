@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-20T15:50:05.788323",
+  "generated_at": "2026-01-21T14:53:12.903490",
   "period": {
     "start": "2025-11-07",
     "end": "2026-01-20",
@@ -19,15 +19,14 @@
         "2026-01": 329543.39
       },
       "by_source": {
-        "Petpooja Sales": 974002.04
+        "Petpooja Sales": 874604.05
       },
       "by_channel": {
-        "Dine-in/Direct": 857502.21,
+        "Dine-in/Direct": 874604.05,
         "Swiggy": 0,
-        "Zomato": 15007,
-        "note": "Online orders (Swiggy+Zomato) from Petpooja. Detailed split pending."
+        "Zomato": 0
       },
-      "source": "petpooja_item_reports",
+      "source": "petpooja_exports",
       "period": {
         "start": "2025-11-07",
         "end": "2026-01-20",
@@ -35,7 +34,7 @@
       }
     },
     "cogs": {
-      "total": 1401053.23,
+      "total": 1299139.3900000001,
       "breakdown": {
         "Annapoorneshwari Foods": 46586.0,
         "Ganesh Food Products": 24500.0,
@@ -44,14 +43,15 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (partner-paid)": 33221.0,
-        "Metro (partner-paid)": 98261.75,
-        "Digen (partner-paid)": 29500.0,
-        "Ganesh Food Products (partner-paid)": 7000.0,
-        "Byers Coffee (partner-paid)": 10500.0,
-        "HyperPure (partner-paid)": 58754.8,
-        "I Bake Foods (partner-paid)": 4400.0,
-        "Amazon (partner-paid)": 36888.0
+        "Blinkit (food) (partner-paid)": 21622.0,
+        "metro (food) (partner-paid)": 9840.0,
+        "Digen (food) (partner-paid)": 14750.0,
+        "Ganesh Food (partner-paid)": 7000.0,
+        "Metro (food) (partner-paid)": 71263.20999999999,
+        "Byers coffee (partner-paid)": 7000.0,
+        "HyperPure (food) (partner-paid)": 33667.5,
+        "ibake (partner-paid)": 4400.0,
+        "Amazon (food) (partner-paid)": 7069.0
       },
       "by_vendor": {
         "Annapoorneshwari Foods": 46586.0,
@@ -61,14 +61,15 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (partner-paid)": 33221.0,
-        "Metro (partner-paid)": 98261.75,
-        "Digen (partner-paid)": 29500.0,
-        "Ganesh Food Products (partner-paid)": 7000.0,
-        "Byers Coffee (partner-paid)": 10500.0,
-        "HyperPure (partner-paid)": 58754.8,
-        "I Bake Foods (partner-paid)": 4400.0,
-        "Amazon (partner-paid)": 36888.0
+        "Blinkit (food) (partner-paid)": 21622.0,
+        "metro (food) (partner-paid)": 9840.0,
+        "Digen (food) (partner-paid)": 14750.0,
+        "Ganesh Food (partner-paid)": 7000.0,
+        "Metro (food) (partner-paid)": 71263.20999999999,
+        "Byers coffee (partner-paid)": 7000.0,
+        "HyperPure (food) (partner-paid)": 33667.5,
+        "ibake (partner-paid)": 4400.0,
+        "Amazon (food) (partner-paid)": 7069.0
       },
       "by_category": {
         "Batter & Ready Items": 53546.0,
@@ -79,8 +80,8 @@
         "Main Ingredients": 956715.68
       }
     },
-    "gross_profit": -526449.1799999999,
-    "gross_margin_pct": -60.2,
+    "gross_profit": -424535.3400000001,
+    "gross_margin_pct": -48.5,
     "opex": {
       "total": 1315488.9100000001,
       "breakdown": {
@@ -144,17 +145,13 @@
       "bank_paid": 1137983.9100000001,
       "partner_paid": 177505.0
     },
-    "operating_profit": -1841938.09,
-    "operating_margin_pct": -210.6,
+    "operating_profit": -1740024.2500000002,
+    "operating_margin_pct": -198.9,
     "other_expenses": 11612.9,
-    "net_profit": -1853550.99,
+    "net_profit": -1751637.1500000001,
     "capex": 30000.0,
-    "cogs_pct": 160.2,
-    "opex_pct": 150.8,
-    "net_margin_pct": -211.9,
-    "avg_daily_revenue": 11661.39,
-    "avg_daily_cogs": 17321.86,
-    "avg_daily_profit": -23355.16
+    "cogs_pct": 148.5,
+    "opex_pct": 150.4
   },
   "cash_flow": {
     "period": {
@@ -257,27 +254,12 @@
         "Vikas": 850000.0,
         "Sunil": 154000.0,
         "Sooraj": 856000.0,
-        "Sachin": 70669.0,
-        "vendors": {
-          "Madhukar (Civil Work)": {
-            "contract_total": 2357151.0,
-            "paid": 1876665.0,
-            "balance_due": 480486.0
-          },
-          "Ashraf (Wall Decor)": 56000.0,
-          "Celestum (Lights)": 40719.0,
-          "Sri Ganesh Frame": 4100.0,
-          "MM Nursery (Plants)": 4000.0,
-          "Porter": 850.0
-        }
+        "Sachin": 70669.0
       },
       "Kitchen equipments": {
         "Sachin": 500000.0,
         "Sooraj": 351300.0,
-        "Vikas": 308765.0,
-        "vendors": {
-          "Dolar Engineering": 1095000.0
-        }
+        "Vikas": 308765.0
       },
       "signboard": {
         "Sooraj": 40000.0,
@@ -307,7 +289,7 @@
   "expenses": {
     "total": 2614628.3000000003,
     "cogs": {
-      "total": 1401053.23,
+      "total": 1299139.3900000001,
       "breakdown": {
         "Annapoorneshwari Foods": 46586.0,
         "Ganesh Food Products": 24500.0,
@@ -316,39 +298,20 @@
         "SLNS Traders": 3731.0,
         "SP Soap Oil": 8265.0,
         "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (partner-paid)": 33221.0,
-        "Metro (partner-paid)": 98261.75,
-        "Digen (partner-paid)": 29500.0,
-        "Ganesh Food Products (partner-paid)": 7000.0,
-        "Byers Coffee (partner-paid)": 10500.0,
-        "HyperPure (partner-paid)": 58754.8,
-        "I Bake Foods (partner-paid)": 4400.0,
-        "Amazon (partner-paid)": 36888.0
+        "Blinkit (food) (partner-paid)": 21622.0,
+        "metro (food) (partner-paid)": 9840.0,
+        "Digen (food) (partner-paid)": 14750.0,
+        "Ganesh Food (partner-paid)": 7000.0,
+        "Metro (food) (partner-paid)": 71263.20999999999,
+        "Byers coffee (partner-paid)": 7000.0,
+        "HyperPure (food) (partner-paid)": 33667.5,
+        "ibake (partner-paid)": 4400.0,
+        "Amazon (food) (partner-paid)": 7069.0
       },
-      "by_vendor": {
-        "Annapoorneshwari Foods": 46586.0,
-        "Ganesh Food Products": 24500.0,
-        "I Bake Foods": 2560.0,
-        "MKP Enterprises": 80170.0,
-        "SLNS Traders": 3731.0,
-        "SP Soap Oil": 8265.0,
-        "Melaange Foods (invoiced)": 956715.68,
-        "Blinkit (partner-paid)": 33221.0,
-        "Metro (partner-paid)": 98261.75,
-        "Digen (partner-paid)": 29500.0,
-        "Ganesh Food Products (partner-paid)": 7000.0,
-        "Byers Coffee (partner-paid)": 10500.0,
-        "HyperPure (partner-paid)": 58754.8,
-        "I Bake Foods (partner-paid)": 4400.0,
-        "Amazon (partner-paid)": 36888.0
-      },
-      "by_category": {
-        "Batter & Ready Items": 53546.0,
-        "Beverages": 38500.0,
-        "Cooking Gas": 80170.0,
-        "Groceries & Provisions": 161942.71,
-        "Cooking Oil": 8265.0,
-        "Main Ingredients": 956715.68
+      "monthly": {
+        "2025-11": 429326.46,
+        "2025-12": 534623.3500000001,
+        "2026-01": 158577.87
       }
     },
     "opex": {
@@ -418,32 +381,32 @@
   "monthly": [
     {
       "month": "2025-11",
-      "revenue": 161523.41999999998,
+      "revenue": 222078.41999999998,
       "capital_contributions": 272362.0,
       "cogs": 429326.46,
-      "gross_profit": -267803.04000000004,
+      "gross_profit": -207248.04000000004,
       "opex": 2436.0,
-      "operating_profit": -270239.04000000004,
+      "operating_profit": -209684.04000000004,
       "capex": 0.0
     },
     {
       "month": "2025-12",
-      "revenue": 322982.24,
+      "revenue": 322982.24000000005,
       "capital_contributions": 903095.1799999999,
       "cogs": 534623.3500000001,
-      "gross_profit": -211641.1100000001,
+      "gross_profit": -211641.11000000004,
       "opex": 629272.15,
-      "operating_profit": -840913.2600000001,
+      "operating_profit": -840913.26,
       "capex": 30000.0
     },
     {
       "month": "2026-01",
-      "revenue": 227034.21,
+      "revenue": 329543.39,
       "capital_contributions": 628068.89,
       "cogs": 158577.87,
-      "gross_profit": 68456.34,
+      "gross_profit": 170965.52000000002,
       "opex": 506275.76,
-      "operating_profit": -437819.42000000004,
+      "operating_profit": -335310.24,
       "capex": 0.0
     }
   ],
@@ -451,18 +414,18 @@
     {
       "week_start": "2025-11-03",
       "week_end": "2025-11-09",
-      "revenue": 0,
+      "revenue": 30569.0,
       "cogs": 0.0,
       "opex": 0.0,
-      "operating_profit": 0.0
+      "operating_profit": 30569.0
     },
     {
       "week_start": "2025-11-10",
       "week_end": "2025-11-16",
-      "revenue": 30252.480000000003,
+      "revenue": 60238.479999999996,
       "cogs": 0.0,
       "opex": 0.0,
-      "operating_profit": 30252.480000000003
+      "operating_profit": 60238.479999999996
     },
     {
       "week_start": "2025-11-17",
@@ -702,7 +665,7 @@
   ],
   "reconciliation": {
     "revenue": {
-      "petpooja_sales": 711539.87,
+      "petpooja_sales": 874604.05,
       "bank_deposits_total": 1803526.07,
       "difference_type": "capital_contributions",
       "source": "petpooja_exports"

@@ -1,547 +1,54 @@
 {
   "outlet": "The Zamorins",
-  "last_updated": "2026-01-20T15:50:05.845831",
+  "last_updated": "2026-01-21T14:53:12.507461",
   "metrics": {
     "total_sales": 722733.0,
     "avg_daily_sales": 120455.5,
-    "days_recorded": 75,
-    "total_items_sold": 2235.0,
-    "total_revenue": 974002.04,
-    "avg_daily_revenue": 12986.693866666667
+    "days_recorded": 6,
+    "total_items_sold": 2559.0
   },
   "daily_sales": [
     {
-      "date": "2025-11-07",
-      "revenue": 10683.0,
-      "total_sales": 10683.0,
-      "bills": 0,
-      "discount": 0,
-      "source": "bank_statement"
-    },
-    {
-      "date": "2025-11-08",
-      "revenue": 8756.0,
-      "total_sales": 8756.0,
-      "bills": 0,
-      "discount": 0,
-      "source": "bank_statement"
-    },
-    {
-      "date": "2025-11-09",
-      "revenue": 11130.0,
-      "total_sales": 11130.0,
-      "bills": 0,
-      "discount": 0,
-      "source": "bank_statement"
-    },
-    {
-      "date": "2025-11-10",
-      "revenue": 5730.0,
-      "total_sales": 5730.0,
-      "bills": 0,
-      "discount": 0,
-      "source": "bank_statement"
-    },
-    {
-      "date": "2025-11-11",
-      "revenue": 8325.0,
-      "total_sales": 8325.0,
-      "bills": 0,
-      "discount": 0,
-      "source": "bank_statement"
-    },
-    {
-      "date": "2025-11-12",
-      "revenue": 11560.0,
-      "total_sales": 11560.0,
-      "bills": 0,
-      "discount": 0,
-      "source": "bank_statement"
-    },
-    {
-      "date": "2025-11-13",
-      "revenue": 4371.0,
-      "total_sales": 4371.0,
-      "bills": 0,
-      "discount": 0,
-      "source": "bank_statement",
-      "note": "Estimated from T+2 settlement on Nov 15"
-    },
-    {
-      "date": "2025-11-14",
-      "revenue": 10223.86,
-      "total_sales": 10485.0,
-      "bills": 57,
-      "discount": 238.56
-    },
-    {
-      "date": "2025-11-15",
-      "revenue": 7819.06,
-      "total_sales": 8105.0,
-      "bills": 48,
-      "discount": 90.48
-    },
-    {
-      "date": "2025-11-16",
-      "revenue": 12209.56,
-      "total_sales": 11399.0,
-      "bills": 62,
-      "discount": 1858.11
-    },
-    {
-      "date": "2025-11-17",
-      "revenue": 5214.34,
-      "total_sales": 5475.0,
-      "bills": 38,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-18",
-      "revenue": 6761.88,
-      "total_sales": 6970.0,
-      "bills": 40,
-      "discount": 123.81
-    },
-    {
-      "date": "2025-11-19",
-      "revenue": 8542.77,
-      "total_sales": 8970.0,
-      "bills": 61,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-20",
-      "revenue": 11571.4,
-      "total_sales": 12150.0,
-      "bills": 59,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-21",
-      "revenue": 7828.53,
-      "total_sales": 8220.0,
-      "bills": 46,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-22",
-      "revenue": 10509.53,
-      "total_sales": 11251.0,
-      "bills": 58,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-23",
-      "revenue": 11627.54,
-      "total_sales": 12209.0,
-      "bills": 53,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-24",
-      "revenue": 10484.74,
-      "total_sales": 10781.0,
-      "bills": 58,
-      "discount": 220.0
-    },
-    {
-      "date": "2025-11-25",
-      "revenue": 9980.88,
-      "total_sales": 10480.0,
-      "bills": 67,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-26",
-      "revenue": 8250.44,
-      "total_sales": 8548.0,
-      "bills": 52,
-      "discount": 109.52
-    },
-    {
-      "date": "2025-11-27",
-      "revenue": 9222.88,
-      "total_sales": 9684.0,
-      "bills": 53,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-28",
-      "revenue": 6428.53,
-      "total_sales": 6750.0,
-      "bills": 50,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-29",
-      "revenue": 9438.02,
-      "total_sales": 10025.0,
-      "bills": 41,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-11-30",
-      "revenue": 15409.46,
-      "total_sales": 16180.0,
-      "bills": 55,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-01",
-      "revenue": 9323.79,
-      "total_sales": 9790.0,
-      "bills": 56,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-02",
-      "revenue": 10638.11,
-      "total_sales": 11035.0,
-      "bills": 57,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-03",
-      "revenue": 14718.92,
-      "total_sales": 15375.0,
-      "bills": 70,
-      "discount": 76.2
-    },
-    {
-      "date": "2025-12-04",
-      "revenue": 11185.64,
-      "total_sales": 11745.0,
-      "bills": 68,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-05",
-      "revenue": 8345.67,
-      "total_sales": 8763.0,
-      "bills": 49,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-06",
-      "revenue": 11418.02,
-      "total_sales": 11988.0,
-      "bills": 58,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-07",
-      "revenue": 10888.53,
-      "total_sales": 11433.0,
-      "bills": 57,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-08",
-      "revenue": 12589.54,
-      "total_sales": 13219.0,
-      "bills": 64,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-09",
-      "revenue": 9827.47,
-      "total_sales": 10319.0,
-      "bills": 56,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-10",
-      "revenue": 10165.61,
-      "total_sales": 10674.0,
-      "bills": 60,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-11",
-      "revenue": 10412.34,
-      "total_sales": 10933.0,
-      "bills": 60,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-12",
-      "revenue": 14328.63,
-      "total_sales": 15045.0,
-      "bills": 63,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-13",
-      "revenue": 13194.21,
-      "total_sales": 13864.0,
-      "bills": 56,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-14",
-      "revenue": 10984.98,
-      "total_sales": 11509.0,
-      "bills": 53,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-15",
-      "revenue": 16195.13,
-      "total_sales": 17005.0,
-      "bills": 69,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-16",
-      "revenue": 12944.72,
-      "total_sales": 13592.0,
-      "bills": 69,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-17",
-      "revenue": 11027.55,
-      "total_sales": 11579.0,
-      "bills": 63,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-18",
-      "revenue": 12379.13,
-      "total_sales": 13028.0,
-      "bills": 76,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-19",
-      "revenue": 7874.21,
-      "total_sales": 8268.0,
-      "bills": 60,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-20",
-      "revenue": 11149.36,
-      "total_sales": 11567.0,
-      "bills": 58,
-      "discount": 133.33
-    },
-    {
-      "date": "2025-12-21",
-      "revenue": 9641.89,
-      "total_sales": 10124.0,
-      "bills": 47,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-22",
-      "revenue": 7847.63,
-      "total_sales": 8240.0,
-      "bills": 51,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-23",
-      "revenue": 12582.73,
-      "total_sales": 13207.0,
-      "bills": 61,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-24",
-      "revenue": 9474.22,
-      "total_sales": 10033.0,
-      "bills": 44,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-25",
-      "revenue": 7403.8,
-      "total_sales": 7774.0,
-      "bills": 39,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-26",
-      "revenue": 7176.09,
-      "total_sales": 7535.0,
-      "bills": 43,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-27",
-      "revenue": 4984.77,
-      "total_sales": 5234.0,
-      "bills": 33,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-28",
-      "revenue": 5795.13,
-      "total_sales": 6085.0,
-      "bills": 28,
-      "discount": 0.0
-    },
-    {
-      "date": "2025-12-29",
-      "revenue": 9704.68,
-      "total_sales": 10106.0,
-      "bills": 59,
-      "discount": 79.99
-    },
-    {
-      "date": "2025-12-30",
-      "revenue": 8727.41,
-      "total_sales": 8871.0,
-      "bills": 49,
-      "discount": 280.0
-    },
-    {
-      "date": "2025-12-31",
-      "revenue": 10052.33,
-      "total_sales": 10285.0,
-      "bills": 53,
-      "discount": 257.5
-    },
-    {
-      "date": "2026-01-01",
-      "revenue": 13491.32,
-      "total_sales": 13589.0,
-      "bills": 55,
-      "discount": 550.49
-    },
-    {
-      "date": "2026-01-02",
-      "revenue": 8440.38,
-      "total_sales": 8737.0,
-      "bills": 52,
-      "discount": 119.5
-    },
-    {
-      "date": "2026-01-03",
-      "revenue": 13042.1,
-      "total_sales": 13454.0,
-      "bills": 70,
-      "discount": 247.45
-    },
-    {
-      "date": "2026-01-04",
-      "revenue": 10009.8,
-      "total_sales": 9989.0,
-      "bills": 52,
-      "discount": 511.67
-    },
-    {
-      "date": "2026-01-05",
-      "revenue": 13070.15,
-      "total_sales": 13330.0,
-      "bills": 79,
-      "discount": 376.32
-    },
-    {
-      "date": "2026-01-06",
-      "revenue": 18244.45,
-      "total_sales": 19054.0,
-      "bills": 94,
-      "discount": 97.5
-    },
-    {
-      "date": "2026-01-07",
-      "revenue": 16134.13,
-      "total_sales": 16137.0,
-      "bills": 84,
-      "discount": 792.16
-    },
-    {
-      "date": "2026-01-08",
-      "revenue": 17855.9,
-      "total_sales": 17863.0,
-      "bills": 100,
-      "discount": 845.73
-    },
-    {
-      "date": "2026-01-09",
-      "revenue": 15365.19,
-      "total_sales": 16134.0,
-      "bills": 87,
-      "discount": 0.0
-    },
-    {
-      "date": "2026-01-10",
-      "revenue": 13194.43,
-      "total_sales": 13927.0,
-      "bills": 62,
-      "discount": 0.0
-    },
-    {
       "date": "2026-01-11",
-      "revenue": 17192.0,
-      "total_sales": 17192.0,
-      "bills": 76,
-      "discount": 99.98
+      "total_sales": 113319.0,
+      "net_sales": 0,
+      "discount": 2131.69,
+      "tax": 5387.88
     },
     {
       "date": "2026-01-12",
-      "revenue": 17160.0,
-      "total_sales": 17160.0,
-      "bills": 77,
-      "discount": 0.0
+      "total_sales": 117244.0,
+      "net_sales": 0,
+      "discount": 1755.37,
+      "tax": 5571.84
     },
     {
       "date": "2026-01-13",
-      "revenue": 17151.54,
-      "total_sales": 18053.0,
-      "bills": 88,
-      "discount": 0.0
+      "total_sales": 116243.0,
+      "net_sales": 0,
+      "discount": 1657.87,
+      "tax": 5522.12
     },
     {
       "date": "2026-01-14",
-      "revenue": 18013.0,
-      "total_sales": 18013.0,
-      "bills": 92,
-      "discount": 0.0
+      "total_sales": 118119.0,
+      "net_sales": 0,
+      "discount": 865.71,
+      "tax": 5610.86
     },
     {
       "date": "2026-01-15",
-      "revenue": 21242.0,
-      "total_sales": 21242.0,
-      "bills": 120,
-      "discount": 0
-    },
-    {
-      "date": "2026-01-16",
-      "revenue": 21447.0,
-      "total_sales": 21447.0,
-      "bills": 86,
-      "discount": 560.0
-    },
-    {
-      "date": "2026-01-17",
-      "revenue": 18194.0,
-      "total_sales": 18194.0,
-      "bills": 76,
-      "discount": 679.9499999999999
+      "total_sales": 121666.0,
+      "net_sales": 0,
+      "discount": 379.98,
+      "tax": 5764.84
     },
     {
       "date": "2026-01-18",
-      "revenue": 23352.0,
-      "total_sales": 23352.0,
-      "bills": 100,
-      "discount": 0.0
-    },
-    {
-      "date": "2026-01-19",
-      "revenue": 18472.0,
-      "total_sales": 18472.0,
-      "bills": 97,
-      "discount": 0.0
-    },
-    {
-      "date": "2026-01-20",
-      "revenue": 18472.0,
-      "total_sales": 18472.0,
-      "bills": 97,
-      "discount": 0.0
+      "total_sales": 136142.0,
+      "net_sales": 0,
+      "discount": 619.97,
+      "tax": 6456.2
     }
   ],
   "category_breakdown": {
@@ -584,123 +91,123 @@
   "top_items": [
     {
       "item": "Masala Dosa",
-      "qty": 96.0,
-      "revenue": 10730.55,
+      "qty": 107.0,
+      "revenue": 11924.67,
       "category": "All Day Items"
     },
     {
       "item": "Red Rice Meals",
-      "qty": 70.0,
-      "revenue": 7700.0,
+      "qty": 85.0,
+      "revenue": 9350.0,
       "category": "Lunch Items"
     },
     {
       "item": "Coffee",
-      "qty": 215.0,
-      "revenue": 7523.869999999982,
+      "qty": 231.0,
+      "revenue": 8083.78999999998,
       "category": "Beverages"
     },
     {
-      "item": "Idiyappam With Stew",
-      "qty": 74.0,
-      "revenue": 6659.339999999989,
+      "item": "Kerala Porotta With Kuruma",
+      "qty": 82.0,
+      "revenue": 7379.459999999992,
       "category": "All Day Items"
     },
     {
-      "item": "Kerala Porotta With Kuruma",
-      "qty": 68.0,
-      "revenue": 6119.5799999999945,
+      "item": "Idiyappam With Stew",
+      "qty": 81.0,
+      "revenue": 7289.289999999988,
       "category": "All Day Items"
     },
     {
       "item": "Puttu (with Kadala)",
-      "qty": 62.0,
-      "revenue": 5579.499999999993,
+      "qty": 70.0,
+      "revenue": 6299.439999999991,
       "category": "All Day Items"
     },
     {
       "item": "Plain Dosa",
-      "qty": 48.0,
-      "revenue": 4411.889999999998,
+      "qty": 55.0,
+      "revenue": 5072.5899999999965,
       "category": "All Day Items"
     },
     {
+      "item": "Normal Tea 90 Ml",
+      "qty": 221.0,
+      "revenue": 4421.110000000012,
+      "category": "Beverages"
+    },
+    {
+      "item": "White Rice Meal",
+      "qty": 39.0,
+      "revenue": 4290.0,
+      "category": "Lunch Items"
+    },
+    {
       "item": "Ghee Roast Dosa",
-      "qty": 37.0,
-      "revenue": 4070.0,
+      "qty": 38.0,
+      "revenue": 4180.0,
       "category": "All Day Items"
     },
     {
       "item": "Idli",
-      "qty": 80.0,
-      "revenue": 4000.0,
+      "qty": 83.0,
+      "revenue": 4150.0,
       "category": "All Day Items"
     },
     {
       "item": "Onion Oothappam [o]",
-      "qty": 27.0,
-      "revenue": 3885.0800000000017,
+      "qty": 29.0,
+      "revenue": 4145.100000000002,
       "category": "All Day Items"
     },
     {
-      "item": "White Rice Meal",
-      "qty": 34.0,
-      "revenue": 3740.0,
-      "category": "Lunch Items"
-    },
-    {
-      "item": "Normal Tea 90 Ml",
-      "qty": 184.0,
-      "revenue": 3680.9800000000096,
-      "category": "Beverages"
-    },
-    {
       "item": "Ghee Masala Dosa",
-      "qty": 29.0,
-      "revenue": 3512.4800000000014,
+      "qty": 32.0,
+      "revenue": 3872.510000000002,
       "category": "All Day Items"
     },
     {
       "item": "Podi Masala Dosa",
-      "qty": 26.0,
-      "revenue": 3120.2200000000016,
-      "category": "All Day Items"
-    },
-    {
-      "item": "Medu Vada",
-      "qty": 54.0,
-      "revenue": 2700.04,
+      "qty": 27.0,
+      "revenue": 3240.230000000002,
       "category": "All Day Items"
     },
     {
       "item": "Parippu Vada",
-      "qty": 151.0,
-      "revenue": 2566.82,
+      "qty": 172.0,
+      "revenue": 2911.8800000000015,
       "category": "Snacks"
     },
     {
-      "item": "Muringa Leaves Dos",
-      "qty": 18.0,
-      "revenue": 2519.8399999999992,
-      "category": "All Day Items"
+      "item": "Ginger Tea",
+      "qty": 115.0,
+      "revenue": 2875.4500000000025,
+      "category": "Beverages"
     },
     {
       "item": "Pesarattu",
-      "qty": 20.0,
-      "revenue": 2432.3900000000003,
+      "qty": 23.0,
+      "revenue": 2855.0800000000004,
       "category": "All Day Items"
     },
     {
-      "item": "Rava Dosa",
-      "qty": 16.0,
-      "revenue": 2273.13,
+      "item": "Medu Vada",
+      "qty": 57.0,
+      "revenue": 2850.04,
       "category": "All Day Items"
     },
     {
-      "item": "Puttu Kadala Combo",
-      "qty": 19.0,
-      "revenue": 2226.34,
-      "category": "All Day Combos"
+      "item": "Set Dosa",
+      "qty": 25.0,
+      "revenue": 2845.2799999999997,
+      "category": "All Day Items"
+    },
+    {
+      "item": "Pazham Pori",
+      "qty": 93.0,
+      "revenue": 2560.4400000000005,
+      "category": "Snacks"
     }
   ]
 }
