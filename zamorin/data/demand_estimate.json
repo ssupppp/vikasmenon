@@ -1,0 +1,214 @@
+{
+  "generated_at": "2026-01-20T20:57:01.180687",
+  "estimate_for": {
+    "date": "2026-01-21",
+    "day_of_week": "Wednesday"
+  },
+  "method": "Weighted: 50% last Wed + 30% prev Wed + 10% third Wed + 10% yesterday",
+  "data_used": {
+    "dates": [
+      "2026-01-14",
+      "2026-01-07",
+      "2025-12-31",
+      "2026-01-19"
+    ],
+    "weights": [
+      0.5,
+      0.3,
+      0.1,
+      0.1
+    ]
+  },
+  "reference_totals": {
+    "2026-01-14": 296,
+    "2026-01-07": 264,
+    "2025-12-31": 144,
+    "2026-01-19": 277
+  },
+  "estimated_items": [
+    {
+      "item": "Normal Tea 90 Ml",
+      "expected_qty": 35,
+      "history": [
+        43,
+        34,
+        13,
+        20
+      ]
+    },
+    {
+      "item": "Coffee",
+      "expected_qty": 24,
+      "history": [
+        29,
+        16,
+        10,
+        32
+      ]
+    },
+    {
+      "item": "Ginger Tea",
+      "expected_qty": 15,
+      "history": [
+        13,
+        23,
+        2,
+        18
+      ]
+    },
+    {
+      "item": "Parippu Vada",
+      "expected_qty": 14,
+      "history": [
+        21,
+        5,
+        3,
+        17
+      ]
+    },
+    {
+      "item": "Punjabi Samosa",
+      "expected_qty": 11,
+      "history": [
+        8,
+        21,
+        3,
+        5
+      ]
+    },
+    {
+      "item": "Red Rice Meals",
+      "expected_qty": 11,
+      "history": [
+        16,
+        0,
+        4,
+        22
+      ]
+    },
+    {
+      "item": "Kerala Porotta With Kuruma",
+      "expected_qty": 10,
+      "history": [
+        12,
+        9,
+        6,
+        10
+      ]
+    },
+    {
+      "item": "Puttu (with Kadala)",
+      "expected_qty": 10,
+      "history": [
+        9,
+        13,
+        2,
+        11
+      ]
+    },
+    {
+      "item": "Plain Dosa",
+      "expected_qty": 9,
+      "history": [
+        16,
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "item": "Idiyappam With Stew",
+      "expected_qty": 7,
+      "history": [
+        5,
+        11,
+        5,
+        8
+      ]
+    },
+    {
+      "item": "Masala Dosa",
+      "expected_qty": 7,
+      "history": [
+        4,
+        8,
+        12,
+        14
+      ]
+    },
+    {
+      "item": "Ela Ada",
+      "expected_qty": 7,
+      "history": [
+        7,
+        7,
+        3,
+        7
+      ]
+    },
+    {
+      "item": "Pazham Pori",
+      "expected_qty": 6,
+      "history": [
+        7,
+        3,
+        3,
+        11
+      ]
+    },
+    {
+      "item": "Red Rice Meal",
+      "expected_qty": 5,
+      "history": [
+        0,
+        17,
+        0,
+        0
+      ]
+    },
+    {
+      "item": "Idli",
+      "expected_qty": 5,
+      "history": [
+        7,
+        3,
+        1,
+        6
+      ]
+    },
+    {
+      "item": "Single Vada",
+      "expected_qty": 5,
+      "history": [
+        7,
+        3,
+        1,
+        3
+      ]
+    }
+  ],
+  "total_expected_items": 181,
+  "historical_data": {
+    "Monday": {
+      "count": 10
+    },
+    "Tuesday": {
+      "count": 10
+    },
+    "Wednesday": {
+      "count": 10
+    },
+    "Thursday": {
+      "count": 10
+    },
+    "Friday": {
+      "count": 10
+    },
+    "Saturday": {
+      "count": 10
+    },
+    "Sunday": {
+      "count": 10
+    }
+  }
+}

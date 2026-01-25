@@ -1,0 +1,685 @@
+{
+  "generated_at": "2026-01-22T13:24:16.885124",
+  "period": {
+    "start": "2025-11-07",
+    "end": "2026-01-20",
+    "days": 75
+  },
+  "pnl": {
+    "period": {
+      "start": "2025-11-07",
+      "end": "2026-01-20",
+      "days": 75
+    },
+    "revenue": {
+      "total": 874604.05,
+      "breakdown": {
+        "2025-11": 222078.41999999998,
+        "2025-12": 322982.24000000005,
+        "2026-01": 329543.39
+      },
+      "by_source": {
+        "Petpooja Sales": 874604.05
+      },
+      "by_channel": {
+        "Dine-in/Direct": 874604.05,
+        "Swiggy": 0,
+        "Zomato": 0
+      },
+      "source": "petpooja_exports",
+      "period": {
+        "start": "2025-11-07",
+        "end": "2026-01-20",
+        "days": 75
+      }
+    },
+    "cogs": {
+      "total": 1299139.3900000001,
+      "breakdown": {
+        "Annapoorneshwari Foods": 46586.0,
+        "Ganesh Food Products": 24500.0,
+        "I Bake Foods": 2560.0,
+        "MKP Enterprises": 80170.0,
+        "SLNS Traders": 3731.0,
+        "SP Soap Oil": 8265.0,
+        "Melaange Foods (invoiced)": 956715.68,
+        "Blinkit (food) (partner-paid)": 21622.0,
+        "metro (food) (partner-paid)": 9840.0,
+        "Digen (food) (partner-paid)": 14750.0,
+        "Ganesh Food (partner-paid)": 7000.0,
+        "Metro (food) (partner-paid)": 71263.20999999999,
+        "Byers coffee (partner-paid)": 7000.0,
+        "HyperPure (food) (partner-paid)": 33667.5,
+        "ibake (partner-paid)": 4400.0,
+        "Amazon (food) (partner-paid)": 7069.0
+      },
+      "by_vendor": {
+        "Annapoorneshwari Foods": 46586.0,
+        "Ganesh Food Products": 24500.0,
+        "I Bake Foods": 2560.0,
+        "MKP Enterprises": 80170.0,
+        "SLNS Traders": 3731.0,
+        "SP Soap Oil": 8265.0,
+        "Melaange Foods (invoiced)": 956715.68,
+        "Blinkit (food) (partner-paid)": 21622.0,
+        "metro (food) (partner-paid)": 9840.0,
+        "Digen (food) (partner-paid)": 14750.0,
+        "Ganesh Food (partner-paid)": 7000.0,
+        "Metro (food) (partner-paid)": 71263.20999999999,
+        "Byers coffee (partner-paid)": 7000.0,
+        "HyperPure (food) (partner-paid)": 33667.5,
+        "ibake (partner-paid)": 4400.0,
+        "Amazon (food) (partner-paid)": 7069.0
+      },
+      "by_category": {
+        "Batter & Ready Items": 53546.0,
+        "Beverages": 38500.0,
+        "Cooking Gas": 80170.0,
+        "Groceries & Provisions": 161942.71,
+        "Cooking Oil": 8265.0,
+        "Main Ingredients": 956715.68
+      }
+    },
+    "gross_profit": -424535.3400000001,
+    "gross_margin_pct": -48.5,
+    "opex": {
+      "total": 1315488.9100000001,
+      "breakdown": {
+        "Association Fees": 12000.0,
+        "Cleaning": 10000.0,
+        "Delivery": 12700.0,
+        "Payment Gateway": 3182.92,
+        "Platform Fees": 37898.23,
+        "Rent": 351133.64,
+        "Salaries": 489116.12,
+        "Security": 96917.0,
+        "Taxes": 236.0,
+        "Uniforms": 52000.0,
+        "Water": 72800.0,
+        "Software (partner-paid)": 62162.0,
+        "Electricity (partner-paid)": 32706.0,
+        "Marketing (partner-paid)": 62219.0,
+        "Mobile/Telecom (partner-paid)": 418.0,
+        "Licenses (partner-paid)": 20000.0
+      },
+      "by_category": {
+        "Association Fees": 12000.0,
+        "Cleaning": 10000.0,
+        "Delivery": 12700.0,
+        "Payment Gateway": 3182.92,
+        "Platform Fees": 37898.23,
+        "Rent": 351133.64,
+        "Salaries": 489116.12,
+        "Security": 96917.0,
+        "Taxes": 236.0,
+        "Uniforms": 52000.0,
+        "Water": 72800.0,
+        "Software (partner-paid)": 62162.0,
+        "Electricity (partner-paid)": 32706.0,
+        "Marketing (partner-paid)": 62219.0,
+        "Mobile/Telecom (partner-paid)": 418.0,
+        "Licenses (partner-paid)": 20000.0
+      },
+      "fixed": {
+        "Association Fees": 12000.0,
+        "Rent": 351133.64,
+        "Salaries": 489116.12,
+        "Security": 96917.0,
+        "Software (partner-paid)": 62162.0,
+        "Mobile/Telecom (partner-paid)": 418.0,
+        "Licenses (partner-paid)": 20000.0
+      },
+      "variable": {
+        "Cleaning": 10000.0,
+        "Delivery": 12700.0,
+        "Payment Gateway": 3182.92,
+        "Platform Fees": 37898.23,
+        "Taxes": 236.0,
+        "Uniforms": 52000.0,
+        "Water": 72800.0,
+        "Electricity (partner-paid)": 32706.0,
+        "Marketing (partner-paid)": 62219.0
+      },
+      "fixed_total": 1031746.76,
+      "variable_total": 283742.15,
+      "bank_paid": 1137983.9100000001,
+      "partner_paid": 177505.0
+    },
+    "operating_profit": -1740024.2500000002,
+    "operating_margin_pct": -198.9,
+    "other_expenses": 11612.9,
+    "net_profit": -1751637.1500000001,
+    "capex": 30000.0,
+    "cogs_pct": 148.5,
+    "opex_pct": 150.4
+  },
+  "cash_flow": {
+    "period": {
+      "start": "2025-11-07",
+      "end": "2026-01-10"
+    },
+    "opening_balance": 0.0,
+    "closing_balance": 86297.57,
+    "operations": {
+      "inflows": 0.0,
+      "outflows": 1675615.6,
+      "net": -1675615.6
+    },
+    "investing": {
+      "capex": 30000.0,
+      "net": -30000.0
+    },
+    "financing": {
+      "transfers_in": 0.0,
+      "transfers_out": 0.0,
+      "net": 1803526.07
+    },
+    "other": {
+      "in": 0.0,
+      "out": 11612.9,
+      "net": -11612.9
+    },
+    "net_change": 86297.57
+  },
+  "balance_sheet": {
+    "as_of": "2026-01-10",
+    "assets": {
+      "current": {
+        "cash": 86297.57,
+        "receivables": 0,
+        "inventory": 0
+      },
+      "non_current": {
+        "security_deposits": 1190001.0
+      },
+      "fixed": {
+        "equipment": 1146312.948,
+        "furniture": 382104.31600000005,
+        "interior": 2292625.896
+      },
+      "total": 5097341.73
+    },
+    "liabilities": {
+      "current": {
+        "accounts_payable": 674367.65,
+        "accounts_payable_breakdown": {
+          "Melaange": 674367.65
+        },
+        "accrued_expenses": 0
+      },
+      "long_term": {
+        "loans": 0
+      },
+      "total": 674367.65
+    },
+    "equity": {
+      "partner_capital": 4422974.08,
+      "retained_earnings": 0,
+      "total": 4422974.08
+    }
+  },
+  "capex": {
+    "total": 3821043.16,
+    "breakdown": {
+      "Furniture": 127048.0,
+      "Interior": 1930669.0,
+      "Kitchen equipments": 1160065.0,
+      "signboard": 71000.0,
+      "crockery": 730.0,
+      "Camera": 24302.0,
+      "Crockery/Hotbox (Sunnleks)": 507229.16000000003
+    },
+    "by_category": {
+      "Furniture": 127048.0,
+      "Interior": 1930669.0,
+      "Kitchen equipments": 1160065.0,
+      "signboard": 71000.0,
+      "crockery": 730.0,
+      "Camera": 24302.0,
+      "Crockery/Hotbox (Sunnleks)": 507229.16000000003
+    },
+    "by_partner": {
+      "Sunil": 734943.16,
+      "Sachin": 610619.0,
+      "Sooraj": 1316716.0,
+      "Vikas": 1158765.0
+    },
+    "details": {
+      "Furniture": {
+        "Sunil": 72984.0,
+        "Sachin": 8950.0,
+        "Sooraj": 45114.0
+      },
+      "Interior": {
+        "Vikas": 850000.0,
+        "Sunil": 154000.0,
+        "Sooraj": 856000.0,
+        "Sachin": 70669.0
+      },
+      "Kitchen equipments": {
+        "Sachin": 500000.0,
+        "Sooraj": 351300.0,
+        "Vikas": 308765.0
+      },
+      "signboard": {
+        "Sooraj": 40000.0,
+        "Sachin": 31000.0
+      },
+      "crockery": {
+        "Sunil": 730.0
+      },
+      "Camera": {
+        "Sooraj": 24302.0
+      },
+      "Crockery/Hotbox (Sunnleks)": {
+        "Sunil": 507229.16000000003
+      }
+    }
+  },
+  "partner_opex": {
+    "total": 177505.0,
+    "breakdown": {
+      "Software": 62162.0,
+      "Electricity": 32706.0,
+      "Marketing": 62219.0,
+      "Mobile/Telecom": 418.0,
+      "Licenses": 20000.0
+    }
+  },
+  "expenses": {
+    "total": 2614628.3000000003,
+    "cogs": {
+      "total": 1299139.3900000001,
+      "breakdown": {
+        "Annapoorneshwari Foods": 46586.0,
+        "Ganesh Food Products": 24500.0,
+        "I Bake Foods": 2560.0,
+        "MKP Enterprises": 80170.0,
+        "SLNS Traders": 3731.0,
+        "SP Soap Oil": 8265.0,
+        "Melaange Foods (invoiced)": 956715.68,
+        "Blinkit (food) (partner-paid)": 21622.0,
+        "metro (food) (partner-paid)": 9840.0,
+        "Digen (food) (partner-paid)": 14750.0,
+        "Ganesh Food (partner-paid)": 7000.0,
+        "Metro (food) (partner-paid)": 71263.20999999999,
+        "Byers coffee (partner-paid)": 7000.0,
+        "HyperPure (food) (partner-paid)": 33667.5,
+        "ibake (partner-paid)": 4400.0,
+        "Amazon (food) (partner-paid)": 7069.0
+      },
+      "monthly": {
+        "2025-11": 429326.46,
+        "2025-12": 534623.3500000001,
+        "2026-01": 158577.87
+      }
+    },
+    "opex": {
+      "total": 1315488.9100000001,
+      "breakdown": {
+        "Association Fees": 12000.0,
+        "Cleaning": 10000.0,
+        "Delivery": 12700.0,
+        "Payment Gateway": 3182.92,
+        "Platform Fees": 37898.23,
+        "Rent": 351133.64,
+        "Salaries": 489116.12,
+        "Security": 96917.0,
+        "Taxes": 236.0,
+        "Uniforms": 52000.0,
+        "Water": 72800.0,
+        "Software (partner-paid)": 62162.0,
+        "Electricity (partner-paid)": 32706.0,
+        "Marketing (partner-paid)": 62219.0,
+        "Mobile/Telecom (partner-paid)": 418.0,
+        "Licenses (partner-paid)": 20000.0
+      },
+      "monthly": {
+        "2025-11": 2436.0,
+        "2025-12": 629272.15,
+        "2026-01": 506275.76
+      }
+    },
+    "capex": {
+      "total": 3821043.16,
+      "by_category": {
+        "Furniture": 127048.0,
+        "Interior": 1930669.0,
+        "Kitchen equipments": 1160065.0,
+        "signboard": 71000.0,
+        "crockery": 730.0,
+        "Camera": 24302.0,
+        "Crockery/Hotbox (Sunnleks)": 507229.16000000003
+      },
+      "by_partner": {
+        "Sunil": 734943.16,
+        "Sachin": 610619.0,
+        "Sooraj": 1316716.0,
+        "Vikas": 1158765.0
+      }
+    },
+    "by_partner": {
+      "Sunil": 734943.16,
+      "Sachin": 610619.0,
+      "Sooraj": 1316716.0,
+      "Vikas": 1158765.0
+    },
+    "security_deposits": {
+      "total": 1190001.0,
+      "breakdown": {
+        "Deposit": 1190001.0
+      },
+      "by_partner": {
+        "Sachin": 383000.0,
+        "Vikas": 33000.0,
+        "Sooraj": 33000.0,
+        "Sunil": 741001.0
+      },
+      "note": "Assets (recoverable), not expenses"
+    }
+  },
+  "monthly": [
+    {
+      "month": "2025-11",
+      "revenue": 222078.41999999998,
+      "capital_contributions": 272362.0,
+      "cogs": 429326.46,
+      "gross_profit": -207248.04000000004,
+      "opex": 2436.0,
+      "operating_profit": -209684.04000000004,
+      "capex": 0.0
+    },
+    {
+      "month": "2025-12",
+      "revenue": 322982.24000000005,
+      "capital_contributions": 903095.1799999999,
+      "cogs": 534623.3500000001,
+      "gross_profit": -211641.11000000004,
+      "opex": 629272.15,
+      "operating_profit": -840913.26,
+      "capex": 30000.0
+    },
+    {
+      "month": "2026-01",
+      "revenue": 329543.39,
+      "capital_contributions": 628068.89,
+      "cogs": 158577.87,
+      "gross_profit": 170965.52000000002,
+      "opex": 506275.76,
+      "operating_profit": -335310.24,
+      "capex": 0.0
+    }
+  ],
+  "weekly": [
+    {
+      "week_start": "2025-11-03",
+      "week_end": "2025-11-09",
+      "revenue": 30569.0,
+      "cogs": 0.0,
+      "opex": 0.0,
+      "operating_profit": 30569.0
+    },
+    {
+      "week_start": "2025-11-10",
+      "week_end": "2025-11-16",
+      "revenue": 60238.479999999996,
+      "cogs": 0.0,
+      "opex": 0.0,
+      "operating_profit": 60238.479999999996
+    },
+    {
+      "week_start": "2025-11-17",
+      "week_end": "2025-11-23",
+      "revenue": 62055.99,
+      "cogs": 14461.0,
+      "opex": 0.0,
+      "operating_profit": 47594.99
+    },
+    {
+      "week_start": "2025-11-24",
+      "week_end": "2025-11-30",
+      "revenue": 69214.94999999998,
+      "cogs": 123689.63,
+      "opex": 2436.0,
+      "operating_profit": -56910.68000000002
+    },
+    {
+      "week_start": "2025-12-01",
+      "week_end": "2025-12-07",
+      "revenue": 76518.68,
+      "cogs": 72146.0,
+      "opex": 435194.94,
+      "operating_profit": -430822.26
+    },
+    {
+      "week_start": "2025-12-08",
+      "week_end": "2025-12-14",
+      "revenue": 81502.78,
+      "cogs": 130451.0,
+      "opex": 53810.21,
+      "operating_profit": -102758.43
+    },
+    {
+      "week_start": "2025-12-15",
+      "week_end": "2025-12-21",
+      "revenue": 81211.98999999999,
+      "cogs": 65570.0,
+      "opex": 2100.0,
+      "operating_profit": 13541.98999999999
+    },
+    {
+      "week_start": "2025-12-22",
+      "week_end": "2025-12-28",
+      "revenue": 55264.37,
+      "cogs": 0.0,
+      "opex": 0.0,
+      "operating_profit": 55264.37
+    },
+    {
+      "week_start": "2025-12-29",
+      "week_end": "2026-01-04",
+      "revenue": 73468.01999999999,
+      "cogs": 7000.0,
+      "opex": 229167.0,
+      "operating_profit": -162698.98
+    },
+    {
+      "week_start": "2026-01-05",
+      "week_end": "2026-01-10",
+      "revenue": 93864.25,
+      "cogs": 124314.06,
+      "opex": 415275.76,
+      "operating_profit": -445725.57
+    }
+  ],
+  "vendors": [
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Staff",
+      "total": 489116.12,
+      "transactions": 31
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "Melaange Foods",
+      "total": 371819.69,
+      "transactions": 4
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Jyothi (Landlord)",
+      "total": 351133.64,
+      "transactions": 10
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "HMS Security",
+      "total": 96917.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "MKP Enterprises",
+      "total": 80170.0,
+      "transactions": 3
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Water Tanker",
+      "total": 56400.0,
+      "transactions": 2
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Byra Uniforms",
+      "total": 52000.0,
+      "transactions": 2
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "Annapoorneshwari Foods",
+      "total": 46586.0,
+      "transactions": 4
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Zomato",
+      "total": 37898.23,
+      "transactions": 11
+    },
+    {
+      "expense_type": "capex",
+      "category": "CapEx",
+      "vendor": "Deposit",
+      "total": 30000.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "Ganesh Food Products",
+      "total": 24500.0,
+      "transactions": 6
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Drinking Water",
+      "total": 16400.0,
+      "transactions": 2
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Residents Association",
+      "total": 12000.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "other",
+      "category": "Other",
+      "vendor": "Unknown",
+      "total": 11612.9,
+      "transactions": 1
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Pickup Service",
+      "total": 10600.0,
+      "transactions": 18
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Cleaning Service",
+      "total": 10000.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "SP Soap Oil",
+      "total": 8265.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "SLNS Traders",
+      "total": 3731.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "PayU",
+      "total": 3182.92,
+      "transactions": 1
+    },
+    {
+      "expense_type": "cogs",
+      "category": "COGS",
+      "vendor": "I Bake Foods",
+      "total": 2560.0,
+      "transactions": 4
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Delivery Partner",
+      "total": 2100.0,
+      "transactions": 1
+    },
+    {
+      "expense_type": "opex",
+      "category": "OpEx",
+      "vendor": "Government",
+      "total": 236.0,
+      "transactions": 2
+    }
+  ],
+  "accounting_basis": {
+    "cogs": "accrual (invoice-based for Melaange, partner-paid for others)",
+    "opex": "cash (bank payments) + partner-paid (electricity, internet, licenses)",
+    "revenue": "petpooja_email_reports (daily auto-fetched sales data)",
+    "capex": "from partner expense tracker"
+  },
+  "warnings": [
+    "COGS uses accrual basis for Melaange Foods (invoices)",
+    "Partner-paid COGS includes Metro, HyperPure, Blinkit, etc.",
+    "Partner-paid OpEx includes Electricity, Internet, Licenses, Software",
+    "CapEx from partner expense tracker (not all in bank statement)",
+    "Balance sheet equity is simplified (Assets - Liabilities)",
+    "Receivables not tracked (Swiggy/Zomato pending payouts)",
+    "Missing: Insurance, Pest Control, CA fees (not tracked)"
+  ],
+  "reconciliation": {
+    "revenue": {
+      "petpooja_sales": 874604.05,
+      "bank_deposits_total": 1803526.07,
+      "difference_type": "capital_contributions",
+      "source": "petpooja_exports"
+    },
+    "validations": [],
+    "data_sources": {
+      "petpooja": [
+        "Dec15_Jan13_daywise.xlsx",
+        "Nov_14_Dec_14_daywise.xlsx",
+        "Jan14_daywise.xlsx"
+      ],
+      "bank": "C:\\Users\\vikas\\Downloads\\Jan\\zamorin\\account statement\\Acct Statement_XX4144_12012026.xls",
+      "partner_expense": "Zamorin_Latest_To_Export_Expenses.csv"
+    },
+    "data_quality": "verified"
+  }
+}
