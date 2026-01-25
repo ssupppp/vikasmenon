@@ -1183,70 +1183,149 @@
                     <div class="summary-value" id="menuTotalItems">--</div>
                     <div class="summary-label">Menu Items</div>
                 </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="menuIngredientCount">--</div>
+                    <div class="summary-label">Ingredients</div>
+                </div>
             </div>
 
-            <!-- Category Filter -->
+            <!-- Sub-tabs for COGS sections -->
             <div class="type-filter" style="margin-bottom:var(--space-md);">
-                <button class="type-btn active" data-menu-cat="all" onclick="filterMenuCategory('all')">All</button>
-                <button class="type-btn" data-menu-cat="DOSA" onclick="filterMenuCategory('DOSA')">Dosa</button>
-                <button class="type-btn" data-menu-cat="BREAKFAST" onclick="filterMenuCategory('BREAKFAST')">Breakfast</button>
-                <button class="type-btn" data-menu-cat="LUNCH" onclick="filterMenuCategory('LUNCH')">Lunch</button>
-                <button class="type-btn" data-menu-cat="DINNER" onclick="filterMenuCategory('DINNER')">Dinner</button>
-                <button class="type-btn" data-menu-cat="SNACKS" onclick="filterMenuCategory('SNACKS')">Snacks</button>
+                <button class="type-btn active" data-cogs-tab="rates" onclick="switchCogsTab('rates')">1. Ingredient Rates</button>
+                <button class="type-btn" data-cogs-tab="menu" onclick="switchCogsTab('menu')">2. Menu Items</button>
+                <button class="type-btn" data-cogs-tab="breakdown" onclick="switchCogsTab('breakdown')">3. Cost Breakdown</button>
             </div>
 
-            <div class="charts-grid">
-                <div class="chart-card">
-                    <h3>Margin by Category</h3>
-                    <div class="chart-container">
-                        <canvas id="marginByCategoryChart"></canvas>
+            <!-- ========== SECTION 1: INGREDIENT RATES ========== -->
+            <div id="cogs-rates" class="cogs-section">
+                <div class="table-card">
+                    <h3>Ingredient Rates - Single Source of Truth</h3>
+                    <p style="color:var(--text-muted);font-size:0.75rem;margin-bottom:1rem;">All ingredient costs with vendor source. Updated from invoices.</p>
+                    <div style="margin-bottom:1rem;">
+                        <input type="text" id="ingredientSearch" placeholder="Search ingredients..."
+                               style="padding:0.5rem 1rem;border-radius:6px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);width:100%;max-width:300px;"
+                               oninput="filterIngredientRates(this.value)">
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Ingredient</th>
+                                <th class="right">Rate (Rs)</th>
+                                <th>Unit</th>
+                                <th>Vendor / Source</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ingredientRatesTable">
+                            <tr><td colspan="4" class="loading">Loading...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ========== SECTION 2: MENU ITEMS ========== -->
+            <div id="cogs-menu" class="cogs-section" style="display:none;">
+                <div class="table-card">
+                    <h3>Menu Items - What's Served</h3>
+                    <p style="color:var(--text-muted);font-size:0.75rem;margin-bottom:1rem;">Click any row to see detailed cost breakdown.</p>
+                    <!-- Category Filter -->
+                    <div class="type-filter" style="margin-bottom:var(--space-md);">
+                        <button class="type-btn active" data-menu-cat="all" onclick="filterMenuCategory('all')">All</button>
+                        <button class="type-btn" data-menu-cat="DOSA" onclick="filterMenuCategory('DOSA')">Dosa</button>
+                        <button class="type-btn" data-menu-cat="BREAKFAST" onclick="filterMenuCategory('BREAKFAST')">Breakfast</button>
+                        <button class="type-btn" data-menu-cat="COMBO" onclick="filterMenuCategory('COMBO')">Combos</button>
+                        <button class="type-btn" data-menu-cat="LUNCH" onclick="filterMenuCategory('LUNCH')">Lunch</button>
+                        <button class="type-btn" data-menu-cat="DINNER" onclick="filterMenuCategory('DINNER')">Dinner</button>
+                        <button class="type-btn" data-menu-cat="SNACKS" onclick="filterMenuCategory('SNACKS')">Snacks</button>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Category</th>
+                                <th>What's Served (Qty)</th>
+                                <th class="right">Price</th>
+                                <th class="right">Cost</th>
+                                <th class="right">Margin %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="menuItemsTable">
+                            <tr><td colspan="6" class="loading">Loading...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Worst Margins Alert -->
+                <div class="table-card" style="border-left:3px solid var(--warning);margin-top:var(--space-lg);">
+                    <h3 style="color:var(--warning);">Low Margin Items (Review Pricing)</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Category</th>
+                                <th class="right">Price</th>
+                                <th class="right">Cost</th>
+                                <th class="right">Margin %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="worstMarginsTable">
+                            <tr><td colspan="5" class="loading">Loading...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ========== SECTION 3: COST BREAKDOWN ========== -->
+            <div id="cogs-breakdown" class="cogs-section" style="display:none;">
+                <div class="table-card">
+                    <h3>Cost Breakdown by Item</h3>
+                    <p style="color:var(--text-muted);font-size:0.75rem;margin-bottom:1rem;">Ingredient-wise cost for each menu item.</p>
+                    <div style="margin-bottom:1rem;">
+                        <select id="breakdownItemSelect" style="padding:0.5rem 1rem;border-radius:6px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);min-width:300px;" onchange="showItemBreakdown(this.value)">
+                            <option value="">-- Select a menu item --</option>
+                        </select>
+                    </div>
+                    <div id="itemBreakdownContainer" style="display:none;">
+                        <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:1rem;">
+                            <div><strong>Price:</strong> <span id="bdPrice">--</span></div>
+                            <div><strong>Total Cost:</strong> <span id="bdCost">--</span></div>
+                            <div><strong>Margin:</strong> <span id="bdMargin">--</span></div>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th class="right">Quantity</th>
+                                    <th class="right">Rate</th>
+                                    <th class="right">Cost (Rs)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="itemBreakdownTable">
+                            </tbody>
+                            <tfoot>
+                                <tr style="font-weight:600;background:var(--bg-tertiary);">
+                                    <td colspan="3">Total Cost</td>
+                                    <td class="right" id="bdTotalCost">--</td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
-                <div class="chart-card">
-                    <h3>Top 10 High Margin Items</h3>
-                    <div class="chart-container">
-                        <canvas id="bestMarginsChart"></canvas>
+
+                <!-- Charts -->
+                <div class="charts-grid" style="margin-top:var(--space-lg);">
+                    <div class="chart-card">
+                        <h3>Margin by Category</h3>
+                        <div class="chart-container">
+                            <canvas id="marginByCategoryChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Top 10 High Margin Items</h3>
+                        <div class="chart-container">
+                            <canvas id="bestMarginsChart"></canvas>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Menu Items Table -->
-            <div class="table-card">
-                <h3>Menu Items Cost Analysis</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Category</th>
-                            <th class="right">Price</th>
-                            <th class="right">Cost</th>
-                            <th class="right">Margin</th>
-                            <th class="right">%</th>
-                        </tr>
-                    </thead>
-                    <tbody id="menuCostsTable">
-                        <tr><td colspan="6" class="loading">Loading...</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Worst Margins Alert -->
-            <div class="table-card" style="border-left:3px solid var(--warning);">
-                <h3 style="color:var(--warning);">⚠️ Low Margin Items (Review Pricing)</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Category</th>
-                            <th class="right">Price</th>
-                            <th class="right">Cost</th>
-                            <th class="right">Margin %</th>
-                        </tr>
-                    </thead>
-                    <tbody id="worstMarginsTable">
-                        <tr><td colspan="5" class="loading">Loading...</td></tr>
-                    </tbody>
-                </table>
             </div>
         </div>
 
@@ -2298,9 +2377,9 @@
                     finData = await finResponse.json();
                 }
 
-                // Load menu costs data
+                // Load menu costs data (from ingredient_master.json - single source of truth)
                 let menuCostsData = null;
-                const menuPaths = ['../data/menu_costs.json', './data/menu_costs.json', 'data/menu_costs.json'];
+                const menuPaths = ['../data/ingredient_master.json', './data/ingredient_master.json', 'data/ingredient_master.json'];
                 for (const path of menuPaths) {
                     try {
                         const menuResponse = await fetch(path + cacheBuster, { cache: 'no-store' });
@@ -3219,10 +3298,24 @@
         checkApiServer();
 
         // ============================================
-        // MENU COSTS TAB
+        // MENU COSTS TAB (COGS - 3 Sections)
         // ============================================
         let globalMenuCostsData = null;
         let currentMenuCategory = 'all';
+        let globalIngredientRates = [];
+
+        function switchCogsTab(tab) {
+            // Update button states
+            document.querySelectorAll('[data-cogs-tab]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.cogsTab === tab);
+            });
+
+            // Show/hide sections
+            document.querySelectorAll('.cogs-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById('cogs-' + tab).style.display = 'block';
+        }
 
         function renderMenuCosts(data) {
             globalMenuCostsData = data;
@@ -3232,13 +3325,74 @@
             document.getElementById('menuFoodCost').textContent = data.overall_avg_food_cost_pct + '%';
             document.getElementById('menuTotalItems').textContent = data.total_items;
 
+            // Ingredient count
+            if (data.ingredient_rates) {
+                document.getElementById('menuIngredientCount').textContent = data.ingredient_rates.length;
+                globalIngredientRates = data.ingredient_rates;
+                renderIngredientRatesTable(data.ingredient_rates);
+            }
+
+            // Render Section 2: Menu Items
+            renderMenuItemsTable(data.menu_items);
+            renderWorstMarginsTable(data.menu_items);
+
+            // Populate breakdown dropdown
+            populateBreakdownDropdown(data.menu_items);
+
             // Render charts
             renderMarginByCategoryChart(data.category_summary);
-            renderBestMarginsChart(data.best_margins);
+            renderBestMarginsChart(data.menu_items);
+        }
 
-            // Render tables
-            renderMenuCostsTable(data.items);
-            renderWorstMarginsTable(data.worst_margins);
+        // ========== SECTION 1: INGREDIENT RATES ==========
+        function renderIngredientRatesTable(rates) {
+            const tbody = document.getElementById('ingredientRatesTable');
+            if (!tbody) return;
+
+            tbody.innerHTML = rates.map(r => `
+                <tr>
+                    <td>${r.ingredient}</td>
+                    <td class="right" style="font-weight:600;">Rs.${r.rate}</td>
+                    <td style="color:var(--text-muted);">${r.unit}</td>
+                    <td style="font-size:0.75rem;color:var(--text-dim);">${r.source}</td>
+                </tr>
+            `).join('');
+        }
+
+        function filterIngredientRates(searchTerm) {
+            const filtered = globalIngredientRates.filter(r =>
+                r.ingredient.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                r.source.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            renderIngredientRatesTable(filtered);
+        }
+
+        // ========== SECTION 2: MENU ITEMS ==========
+        function renderMenuItemsTable(items) {
+            const tbody = document.getElementById('menuItemsTable');
+            if (!tbody) return;
+
+            const filteredItems = currentMenuCategory === 'all'
+                ? items
+                : items.filter(i => i.category === currentMenuCategory || i.category === currentMenuCategory + '_COMBO');
+
+            const sortedItems = [...filteredItems].sort((a, b) => b.margin_pct - a.margin_pct);
+
+            tbody.innerHTML = sortedItems.map(item => {
+                const marginColor = item.margin_pct >= 60 ? 'var(--success)' :
+                                   item.margin_pct >= 50 ? 'var(--text-primary)' :
+                                   item.margin_pct >= 40 ? 'var(--warning)' : 'var(--danger)';
+                return `
+                    <tr style="cursor:pointer;" onclick="showItemBreakdownByName('${item.name.replace(/'/g, "\\'")}')">
+                        <td><strong>${item.name}</strong></td>
+                        <td style="color:var(--text-muted);font-size:0.75rem">${item.category}</td>
+                        <td style="font-size:0.75rem;color:var(--text-dim);max-width:300px;overflow:hidden;text-overflow:ellipsis;">${item.serves || '--'}</td>
+                        <td class="right">Rs.${item.price}</td>
+                        <td class="right">Rs.${item.total_cost.toFixed(1)}</td>
+                        <td class="right" style="color:${marginColor};font-weight:600">${item.margin_pct}%</td>
+                    </tr>
+                `;
+            }).join('');
         }
 
         function filterMenuCategory(category) {
@@ -3250,11 +3404,104 @@
             });
 
             if (globalMenuCostsData) {
-                const filteredItems = category === 'all'
-                    ? globalMenuCostsData.items
-                    : globalMenuCostsData.items.filter(i => i.category === category);
-                renderMenuCostsTable(filteredItems);
+                renderMenuItemsTable(globalMenuCostsData.menu_items);
             }
+        }
+
+        function renderWorstMarginsTable(items) {
+            const tbody = document.getElementById('worstMarginsTable');
+            if (!tbody) return;
+
+            const worstItems = [...items]
+                .sort((a, b) => a.margin_pct - b.margin_pct)
+                .slice(0, 10);
+
+            tbody.innerHTML = worstItems.map(item => {
+                const marginColor = item.margin_pct < 0 ? 'var(--danger)' : 'var(--warning)';
+                return `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td style="color:var(--text-muted);font-size:0.75rem">${item.category}</td>
+                        <td class="right">Rs.${item.price}</td>
+                        <td class="right">Rs.${item.total_cost.toFixed(1)}</td>
+                        <td class="right" style="color:${marginColor};font-weight:600">${item.margin_pct}%</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // ========== SECTION 3: COST BREAKDOWN ==========
+        function populateBreakdownDropdown(items) {
+            const select = document.getElementById('breakdownItemSelect');
+            if (!select) return;
+
+            // Group by category
+            const byCategory = {};
+            items.forEach(item => {
+                if (!byCategory[item.category]) byCategory[item.category] = [];
+                byCategory[item.category].push(item);
+            });
+
+            let html = '<option value="">-- Select a menu item --</option>';
+            Object.keys(byCategory).sort().forEach(cat => {
+                html += `<optgroup label="${cat}">`;
+                byCategory[cat].forEach(item => {
+                    html += `<option value="${item.name}">${item.name} (Rs.${item.price})</option>`;
+                });
+                html += '</optgroup>';
+            });
+
+            select.innerHTML = html;
+        }
+
+        function showItemBreakdown(itemName) {
+            if (!itemName || !globalMenuCostsData) {
+                document.getElementById('itemBreakdownContainer').style.display = 'none';
+                return;
+            }
+
+            const item = globalMenuCostsData.menu_items.find(i => i.name === itemName);
+            if (!item) return;
+
+            // Show container
+            document.getElementById('itemBreakdownContainer').style.display = 'block';
+
+            // Summary
+            const marginColor = item.margin_pct >= 50 ? 'var(--success)' : item.margin_pct >= 30 ? 'var(--warning)' : 'var(--danger)';
+            document.getElementById('bdPrice').innerHTML = `<strong>Rs.${item.price}</strong>`;
+            document.getElementById('bdCost').innerHTML = `<strong>Rs.${item.total_cost.toFixed(2)}</strong>`;
+            document.getElementById('bdMargin').innerHTML = `<strong style="color:${marginColor}">${item.margin_pct}%</strong> (Rs.${item.margin.toFixed(2)})`;
+
+            // Ingredients table
+            const tbody = document.getElementById('itemBreakdownTable');
+            tbody.innerHTML = item.ingredients.map(ing => {
+                const qty = ing.quantity_g ? `${ing.quantity_g}g` :
+                           ing.quantity_ml ? `${ing.quantity_ml}ml` :
+                           ing.quantity_pcs ? `${ing.quantity_pcs} pc` : '--';
+
+                // Find rate from ingredient_rates
+                const ingName = ing.ingredient.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                const rateInfo = globalIngredientRates.find(r => r.ingredient.toLowerCase() === ingName.toLowerCase());
+                const rateStr = rateInfo ? `Rs.${rateInfo.rate}/${rateInfo.unit.replace('per ', '')}` : '--';
+
+                return `
+                    <tr>
+                        <td>${ingName}</td>
+                        <td class="right">${qty}</td>
+                        <td class="right" style="color:var(--text-muted);font-size:0.75rem;">${rateStr}</td>
+                        <td class="right" style="font-weight:600;">Rs.${ing.cost.toFixed(2)}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('bdTotalCost').textContent = `Rs.${item.total_cost.toFixed(2)}`;
+        }
+
+        function showItemBreakdownByName(name) {
+            // Switch to breakdown tab and show item
+            switchCogsTab('breakdown');
+            document.getElementById('breakdownItemSelect').value = name;
+            showItemBreakdown(name);
         }
 
         function renderMarginByCategoryChart(categorySummary) {
@@ -3305,13 +3552,18 @@
             });
         }
 
-        function renderBestMarginsChart(bestMargins) {
+        function renderBestMarginsChart(menuItems) {
             const ctx = document.getElementById('bestMarginsChart');
             if (!ctx) return;
 
             if (chartInstances.bestMargins) {
                 chartInstances.bestMargins.destroy();
             }
+
+            // Sort by margin and take top 10
+            const bestMargins = [...menuItems]
+                .sort((a, b) => b.margin_pct - a.margin_pct)
+                .slice(0, 10);
 
             chartInstances.bestMargins = new Chart(ctx, {
                 type: 'bar',
@@ -3334,7 +3586,7 @@
                             callbacks: {
                                 label: ctx => {
                                     const item = bestMargins[ctx.dataIndex];
-                                    return `₹${item.price} - Cost: ₹${item.cost} = ${item.margin_pct}%`;
+                                    return `Rs.${item.price} - Cost: Rs.${item.total_cost.toFixed(1)} = ${item.margin_pct}%`;
                                 }
                             }
                         }

@@ -1,6 +1,6 @@
 {
-  "grand_total": 956715.66,
-  "invoice_count": 68,
+  "grand_total": 1106812.73,
+  "invoice_count": 78,
   "by_period": {
     "Unknown": {
       "total": 10710.0,
@@ -69,6 +69,21 @@
         "0593"
       ]
     },
+    " 11th Jan_26 to 20th Jan_26": {
+      "total": 150097.06999999998,
+      "invoices": [
+        "0667",
+        "0668",
+        "0669",
+        "0670",
+        "0671",
+        "0672",
+        "0673",
+        "0674",
+        "0675",
+        "0676"
+      ]
+    },
     " 21st Dec_25 to 31st Dec_25": {
       "total": 148839.46,
       "invoices": [
@@ -119,487 +134,557 @@
   "by_month": {
     "2025-11": 411365.44,
     "2025-12": 409456.35,
-    "2026-01": 135893.87
+    "2026-01": 285990.93999999994
   },
   "invoices": [
     {
       "invoice_num": "0460",
       "period": "Unknown",
       "total": 10710.0,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\THE_ZAMORINS_DELICACY_PRIVATE_LIMITED-_Invoice_No__MF046025-26\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- Invoice No_ MF_0460_25-26\\Invoice-0460 THE ZAMORINS DELICACY PRIVATE LIMITED (4).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\THE_ZAMORINS_DELICACY_PRIVATE_LIMITED-_Invoice_No__MF046025-26\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- Invoice No_ MF_0460_25-26\\Invoice-0460 THE ZAMORINS DELICACY PRIVATE LIMITED (4).pdf",
       "delivered_date": "2025-11-03"
     },
     {
       "invoice_num": "0467",
       "period": " 5th Nov_25 to 10th Nov_25",
       "total": 16692.48,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0467 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0467 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
       "delivered_date": "2025-11-05"
     },
     {
       "invoice_num": "0468",
       "period": " 5th Nov_25 to 10th Nov_25",
       "total": 13974.32,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0468 THE ZAMORINS DELICACY PRIVATE LIMITED (4).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0468 THE ZAMORINS DELICACY PRIVATE LIMITED (4).pdf",
       "delivered_date": "2025-11-06"
     },
     {
       "invoice_num": "0469",
       "period": " 5th Nov_25 to 10th Nov_25",
       "total": 16332.71,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0469 THE ZAMORINS DELICACY PRIVATE LIMITED (2).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0469 THE ZAMORINS DELICACY PRIVATE LIMITED (2).pdf",
       "delivered_date": "2025-11-07"
     },
     {
       "invoice_num": "0470",
       "period": " 5th Nov_25 to 10th Nov_25",
       "total": 16342.33,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0470 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0470 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
       "delivered_date": "2025-11-08"
     },
     {
       "invoice_num": "0473",
       "period": " 5th Nov_25 to 10th Nov_25",
       "total": 24381.42,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0473 THE ZAMORINS DELICACY PRIVATE LIMITED (5).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0473 THE ZAMORINS DELICACY PRIVATE LIMITED (5).pdf",
       "delivered_date": "2025-11-09"
     },
     {
       "invoice_num": "0474",
       "period": " 5th Nov_25 to 10th Nov_25",
       "total": 21756.36,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0474 THE ZAMORINS DELICACY PRIVATE LIMITED (2).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 5th Nov_25 to 10th Nov_25)\\Invoice-0474 THE ZAMORINS DELICACY PRIVATE LIMITED (2).pdf",
       "delivered_date": "2025-11-10"
     },
     {
       "invoice_num": "0481",
       "period": " 11th Nov_25 to 16th Nov_25",
       "total": 17220.4,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0481 THE ZAMORINS DELICACY PRIVATE LIMITED (2).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0481 THE ZAMORINS DELICACY PRIVATE LIMITED (2).pdf",
       "delivered_date": "2025-11-11"
     },
     {
       "invoice_num": "0482",
       "period": " 11th Nov_25 to 16th Nov_25",
       "total": 16416.27,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0482 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0482 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-12"
     },
     {
       "invoice_num": "0483",
       "period": " 11th Nov_25 to 16th Nov_25",
       "total": 13894.34,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0483 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0483 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-13"
     },
     {
       "invoice_num": "0484",
       "period": " 11th Nov_25 to 16th Nov_25",
       "total": 13894.34,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0484 THE ZAMORINS DELICACY PRIVATE LIMITED - Copy.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0484 THE ZAMORINS DELICACY PRIVATE LIMITED - Copy.pdf",
       "delivered_date": "2025-11-14"
     },
     {
       "invoice_num": "0485",
       "period": " 11th Nov_25 to 16th Nov_25",
       "total": 13894.34,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0485 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0485 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-15"
     },
     {
       "invoice_num": "0486",
       "period": " 11th Nov_25 to 16th Nov_25",
       "total": 13320.3,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0486 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z2\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Nov_25 to 16th Nov_25)\\Invoice-0486 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-16"
     },
     {
       "invoice_num": "0488",
       "period": " 17th Nov_25 to 21st Nov_25",
       "total": 15199.28,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0488 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0488 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
       "delivered_date": "2025-11-17"
     },
     {
       "invoice_num": "0489",
       "period": " 17th Nov_25 to 21st Nov_25",
       "total": 14579.78,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0489 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0489 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-18"
     },
     {
       "invoice_num": "0490",
       "period": " 17th Nov_25 to 21st Nov_25",
       "total": 14579.78,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0490 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0490 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-19"
     },
     {
       "invoice_num": "0491",
       "period": " 17th Nov_25 to 21st Nov_25",
       "total": 14579.78,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0491 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0491 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-20"
     },
     {
       "invoice_num": "0492",
       "period": " 17th Nov_25 to 21st Nov_25",
       "total": 14579.78,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0492 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 17th Nov_25 to 21st Nov_25)\\Invoice-0492 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-21"
     },
     {
       "invoice_num": "0506",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 14579.78,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0506 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0506 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-22"
     },
     {
       "invoice_num": "0507",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 14579.78,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0507 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0507 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-23"
     },
     {
       "invoice_num": "0508",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 14472.68,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0508 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0508 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-24"
     },
     {
       "invoice_num": "0509",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 14472.68,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0509 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0509 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-25"
     },
     {
       "invoice_num": "0510",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 14472.68,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0510 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0510 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
       "delivered_date": "2025-11-26"
     },
     {
       "invoice_num": "0511",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 14472.68,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0511 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0511 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
       "delivered_date": "2025-11-27"
     },
     {
       "invoice_num": "0512",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 13931.72,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0512 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0512 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-28"
     },
     {
       "invoice_num": "0513",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 13931.72,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0513 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0513 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-29"
     },
     {
       "invoice_num": "0514",
       "period": " 22nd Nov_25 to 30th Nov_25",
       "total": 14103.71,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0514 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z5\\HE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 22nd Nov_25 to 30th Nov_25)\\Invoice-0514 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-11-30"
     },
     {
       "invoice_num": "0584",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 12994.91,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0584 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0584 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-11"
     },
     {
       "invoice_num": "0585",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 14552.48,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0585 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0585 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-12"
     },
     {
       "invoice_num": "0586",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 13486.94,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0586 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0586 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-13"
     },
     {
       "invoice_num": "0587",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 12480.51,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0587 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0587 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-14"
     },
     {
       "invoice_num": "0588",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 13442.73,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0588 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0588 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-15"
     },
     {
       "invoice_num": "0589",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 12843.29,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0589 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0589 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-16"
     },
     {
       "invoice_num": "0590",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 13362.83,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0590 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0590 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-17"
     },
     {
       "invoice_num": "0591",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 13218.47,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0591 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0591 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-18"
     },
     {
       "invoice_num": "0592",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 13018.26,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0592 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0592 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-19"
     },
     {
       "invoice_num": "0593",
       "period": " 11th Dec_25 to 20th Dec_25",
       "total": 13392.65,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0593 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z6\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Dec_25 to 20th Dec_25)\\Invoice-0593 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-20"
+    },
+    {
+      "invoice_num": "0667",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 14539.98,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0667 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-11"
+    },
+    {
+      "invoice_num": "0668",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 14719.22,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0668 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-12"
+    },
+    {
+      "invoice_num": "0669",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 14984.59,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0669 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-13"
+    },
+    {
+      "invoice_num": "0670",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 14699.9,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0670 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-14"
+    },
+    {
+      "invoice_num": "0671",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 15124.52,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0671 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-15"
+    },
+    {
+      "invoice_num": "0672",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 15177.02,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0672 THE ZAMORINS DELICACY PRIVATE LIMITED (1).pdf",
+      "delivered_date": "2026-01-16"
+    },
+    {
+      "invoice_num": "0673",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 14892.65,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0673 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-17"
+    },
+    {
+      "invoice_num": "0674",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 14955.65,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0674 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-18"
+    },
+    {
+      "invoice_num": "0675",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 15522.55,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0675 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-19"
+    },
+    {
+      "invoice_num": "0676",
+      "period": " 11th Jan_26 to 20th Jan_26",
+      "total": 15480.99,
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\z7\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 11th Jan_26 to 20th Jan_26)\\Invoice-0676 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "delivered_date": "2026-01-20"
     },
     {
       "invoice_num": "0607",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 14047.01,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0607 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0607 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-21"
     },
     {
       "invoice_num": "0608",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 13536.16,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0608 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0608 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-22"
     },
     {
       "invoice_num": "0609",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 12966.77,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0609 THE ZAMORINS DELICACY PRIVATE LIMITED - Copy.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0609 THE ZAMORINS DELICACY PRIVATE LIMITED - Copy.pdf",
       "delivered_date": "2025-12-23"
     },
     {
       "invoice_num": "0610",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 13209.95,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0610 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0610 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-24"
     },
     {
       "invoice_num": "0611",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 12960.26,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0611 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0611 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-25"
     },
     {
       "invoice_num": "0612",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 13553.88,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0612 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0612 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-26"
     },
     {
       "invoice_num": "0613",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 13687.28,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0613 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0613 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-27"
     },
     {
       "invoice_num": "0614",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 13937.7,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0614 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0614 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-28"
     },
     {
       "invoice_num": "0615",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 13659.03,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0615 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0615 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-29"
     },
     {
       "invoice_num": "0616",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 13267.17,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0616 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0616 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-30"
     },
     {
       "invoice_num": "0617",
       "period": " 21st Dec_25 to 31st Dec_25",
       "total": 14014.25,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0617 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin1\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 21st Dec_25 to 31st Dec_25)\\Invoice-0617 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-31"
     },
     {
       "invoice_num": "0635",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 15233.19,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0635 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0635 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-01"
     },
     {
       "invoice_num": "0636",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 13160.24,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0636 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0636 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-02"
     },
     {
       "invoice_num": "0637",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 12597.23,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0637 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0637 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-03"
     },
     {
       "invoice_num": "0638",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 13160.95,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0638 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0638 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-04"
     },
     {
       "invoice_num": "0639",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 13600.86,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0639 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0639 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-05"
     },
     {
       "invoice_num": "0640",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 12126.77,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0640 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0640 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-06"
     },
     {
       "invoice_num": "0641",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 13413.96,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0641 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0641 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-07"
     },
     {
       "invoice_num": "0642",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 13467.05,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0642 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0642 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-08"
     },
     {
       "invoice_num": "0643",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 14484.23,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0643 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0643 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-09"
     },
     {
       "invoice_num": "0644",
       "period": " 1st Jan_26 to 10th Jan_26",
       "total": 14649.39,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0644 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin3\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Jan_26 to 10th Jan_26)\\Invoice-0644 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2026-01-10"
     },
     {
       "invoice_num": "0548",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12985.04,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0548 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0548 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-01"
     },
     {
       "invoice_num": "0549",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12985.04,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0549 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0549 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-02"
     },
     {
       "invoice_num": "0550",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12985.04,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0550 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0550 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-03"
     },
     {
       "invoice_num": "0551",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12985.04,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0551 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0551 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-04"
     },
     {
       "invoice_num": "0552",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12199.32,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0552 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0552 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-05"
     },
     {
       "invoice_num": "0553",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12463.61,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0553 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0553 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-06"
     },
     {
       "invoice_num": "0554",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 13327.44,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0554 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0554 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-07"
     },
     {
       "invoice_num": "0555",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12314.76,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0555 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0555 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-08"
     },
     {
       "invoice_num": "0556",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12923.51,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0556 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0556 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-09"
     },
     {
       "invoice_num": "0557",
       "period": " 1st Dec_25 to 10th Dec_25",
       "total": 12655.02,
-      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\Invoice\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0557 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
+      "file": "C:\\Users\\Vikas\\Documents\\Projects\\zamorin\\data\\invoices\\melaangie\\zamorin4\\THE ZAMORIN_S DELICACY PRIVATE LIMITED- INVOICES ( 1st Dec_25 to 10th Dec_25)\\Invoice-0557 THE ZAMORINS DELICACY PRIVATE LIMITED.pdf",
       "delivered_date": "2025-12-10"
     }
   ],
-  "generated_at": "2026-01-20T14:43:15.995150",
+  "generated_at": "2026-01-25T12:16:30.798037",
   "notes": {
     "accounting_basis": "accrual (delivery date)",
     "restaurant_opened": "2025-11-04",

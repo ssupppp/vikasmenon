@@ -1,0 +1,2528 @@
+{
+  "generated_at": "2026-01-25T13:04:22.512492",
+  "version": "3.0",
+  "ingredient_rates": [
+    {
+      "ingredient": "Adai Batter",
+      "rate": 100,
+      "unit": "per kg",
+      "source": "Shri Annaporneshwari Food Services"
+    },
+    {
+      "ingredient": "Avial",
+      "rate": 63,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Bisibele Bath",
+      "rate": 89,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Cake Slice",
+      "rate": 35,
+      "unit": "per piece",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Chana Dal",
+      "rate": 90,
+      "unit": "per kg",
+      "source": "In-house"
+    },
+    {
+      "ingredient": "Chocolate Sauce",
+      "rate": 133,
+      "unit": "per kg",
+      "source": "Local Market"
+    },
+    {
+      "ingredient": "Coconut Chutney",
+      "rate": 94,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Coriander Chutney",
+      "rate": 96,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Curd",
+      "rate": 60,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Curd Rice",
+      "rate": 80,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Dosa Batter",
+      "rate": 50,
+      "unit": "per kg",
+      "source": "Shri Annaporneshwari Food Services"
+    },
+    {
+      "ingredient": "Dosa Masala",
+      "rate": 72,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Ela Ada",
+      "rate": 12,
+      "unit": "per piece",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Fried Rice",
+      "rate": 64,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Garlic Mayo",
+      "rate": 130,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Ghee",
+      "rate": 593,
+      "unit": "per L",
+      "source": "Hyperpure Marketplace"
+    },
+    {
+      "ingredient": "Idiappam",
+      "rate": 50,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Idli Batter",
+      "rate": 95,
+      "unit": "per kg",
+      "source": "Shri Annaporneshwari Food Services"
+    },
+    {
+      "ingredient": "Kadala Curry",
+      "rate": 130,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Kesari",
+      "rate": 77,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Manchurian",
+      "rate": 120,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Medu Vada Batter",
+      "rate": 110,
+      "unit": "per kg",
+      "source": "Shri Annaporneshwari Food Services"
+    },
+    {
+      "ingredient": "Mint Chutney",
+      "rate": 86,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Onion",
+      "rate": 50,
+      "unit": "per kg",
+      "source": "Local Market"
+    },
+    {
+      "ingredient": "Parippu Vada Batter",
+      "rate": 100,
+      "unit": "per kg",
+      "source": "In-house"
+    },
+    {
+      "ingredient": "Pastry",
+      "rate": 35,
+      "unit": "per piece",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Payasam",
+      "rate": 80,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Pazham Pori",
+      "rate": 12,
+      "unit": "per piece",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Pesarattu Batter",
+      "rate": 110,
+      "unit": "per kg",
+      "source": "Shri Annaporneshwari Food Services"
+    },
+    {
+      "ingredient": "Pineapple Chutney",
+      "rate": 134,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Podi",
+      "rate": 150,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Pongal",
+      "rate": 126,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Poriyal",
+      "rate": 59,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Porotta Batter",
+      "rate": 56,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Pulav",
+      "rate": 96,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Puliyogare",
+      "rate": 100,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Puttu",
+      "rate": 120,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Rasam",
+      "rate": 36,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Rava Dosa Batter",
+      "rate": 55,
+      "unit": "per kg",
+      "source": "Shri Annaporneshwari Food Services"
+    },
+    {
+      "ingredient": "Red Chamandi",
+      "rate": 300,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Red Rice",
+      "rate": 32.8,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Sambar",
+      "rate": 128,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Samosa",
+      "rate": 11,
+      "unit": "per piece",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Sunflower Oil",
+      "rate": 180,
+      "unit": "per L",
+      "source": "Hyperpure Marketplace"
+    },
+    {
+      "ingredient": "Sweet Chutney",
+      "rate": 112,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Tomato Chutney",
+      "rate": 89,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Upma",
+      "rate": 65,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Veg Kurma",
+      "rate": 150,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "Veg Stew",
+      "rate": 73,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    },
+    {
+      "ingredient": "White Rice",
+      "rate": 26,
+      "unit": "per kg",
+      "source": "Melaangie Foods"
+    }
+  ],
+  "menu_items": [
+    {
+      "category": "DOSA",
+      "name": "Plain Dosa",
+      "price": 90,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 37.63,
+      "margin": 52.37,
+      "margin_pct": 58.2,
+      "food_cost_pct": 41.8,
+      "serves": "Dosa Batter 125g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Masala Dosa",
+      "price": 110,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "dosa_masala",
+          "quantity_g": 130,
+          "cost": 9.36
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 46.99,
+      "margin": 63.01,
+      "margin_pct": 57.3,
+      "food_cost_pct": 42.7,
+      "serves": "Dosa Batter 125g + Dosa Masala 130g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Ghee Dosa",
+      "price": 110,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 6,
+          "cost": 3.95
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 41.58,
+      "margin": 68.42,
+      "margin_pct": 62.2,
+      "food_cost_pct": 37.8,
+      "serves": "Dosa Batter 125g + Ghee 6g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Ghee Roast Dosa",
+      "price": 110,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 6,
+          "cost": 3.95
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 41.58,
+      "margin": 68.42,
+      "margin_pct": 62.2,
+      "food_cost_pct": 37.8,
+      "serves": "Dosa Batter 125g + Ghee 6g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Ghee Masala Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "dosa_masala",
+          "quantity_g": 130,
+          "cost": 9.36
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 6,
+          "cost": 3.95
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 50.94,
+      "margin": 69.06,
+      "margin_pct": 57.6,
+      "food_cost_pct": 42.4,
+      "serves": "Dosa Batter 125g + Dosa Masala 130g + Ghee 6g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Dosa",
+      "price": 110,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 10,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 39.13,
+      "margin": 70.87,
+      "margin_pct": 64.4,
+      "food_cost_pct": 35.6,
+      "serves": "Dosa Batter 125g + Podi 10g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Masala Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "dosa_masala",
+          "quantity_g": 130,
+          "cost": 9.36
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 10,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 48.49,
+      "margin": 71.51,
+      "margin_pct": 59.6,
+      "food_cost_pct": 40.4,
+      "serves": "Dosa Batter 125g + Dosa Masala 130g + Podi 10g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Ghee Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 6,
+          "cost": 3.95
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 10,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 43.08,
+      "margin": 76.92,
+      "margin_pct": 64.1,
+      "food_cost_pct": 35.9,
+      "serves": "Dosa Batter 125g + Ghee 6g + Podi 10g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Dosa",
+      "price": 110,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 39.13,
+      "margin": 70.87,
+      "margin_pct": 64.4,
+      "food_cost_pct": 35.6,
+      "serves": "Dosa Batter 125g + Onion 30g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Masala Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "dosa_masala",
+          "quantity_g": 130,
+          "cost": 9.36
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 48.49,
+      "margin": 71.51,
+      "margin_pct": 59.6,
+      "food_cost_pct": 40.4,
+      "serves": "Dosa Batter 125g + Dosa Masala 130g + Onion 30g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Ghee Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 6,
+          "cost": 3.95
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 43.08,
+      "margin": 76.92,
+      "margin_pct": 64.1,
+      "food_cost_pct": 35.9,
+      "serves": "Dosa Batter 125g + Ghee 6g + Onion 30g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Ghee Masala Dosa",
+      "price": 130,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "dosa_masala",
+          "quantity_g": 130,
+          "cost": 9.36
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 6,
+          "cost": 3.95
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 52.44,
+      "margin": 77.56,
+      "margin_pct": 59.7,
+      "food_cost_pct": 40.3,
+      "serves": "Dosa Batter 125g + Dosa Masala 130g + Ghee 6g + Onion 30g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Onion Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 10,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 40.63,
+      "margin": 79.37,
+      "margin_pct": 66.1,
+      "food_cost_pct": 33.9,
+      "serves": "Dosa Batter 125g + Podi 10g + Onion 30g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Onion Masala Dosa",
+      "price": 130,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "dosa_masala",
+          "quantity_g": 130,
+          "cost": 9.36
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 10,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 49.99,
+      "margin": 80.01,
+      "margin_pct": 61.5,
+      "food_cost_pct": 38.5,
+      "serves": "Dosa Batter 125g + Dosa Masala 130g + Podi 10g + Onion 30g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Onion Ghee Dosa",
+      "price": 130,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 6,
+          "cost": 3.95
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 10,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 44.58,
+      "margin": 85.42,
+      "margin_pct": 65.7,
+      "food_cost_pct": 34.3,
+      "serves": "Dosa Batter 125g + Ghee 6g + Podi 10g + Onion 30g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Podi Onion Ghee Masala Dosa",
+      "price": 140,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "dosa_masala",
+          "quantity_g": 130,
+          "cost": 9.36
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 6,
+          "cost": 3.95
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 10,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 53.94,
+      "margin": 86.06,
+      "margin_pct": 61.5,
+      "food_cost_pct": 38.5,
+      "serves": "Dosa Batter 125g + Dosa Masala 130g + Ghee 6g + Podi 10g + Onion 30g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Set Dosa",
+      "price": 110,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 270,
+          "cost": 13.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 20,
+          "cost": 3.6
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 45.78,
+      "margin": 64.22,
+      "margin_pct": 58.4,
+      "food_cost_pct": 41.6,
+      "serves": "Dosa Batter 270g + Sunflower Oil 20ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Rava Dosa",
+      "price": 140,
+      "ingredients": [
+        {
+          "ingredient": "rava_dosa_batter",
+          "quantity_g": 180,
+          "cost": 9.9
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 41.28,
+      "margin": 98.72,
+      "margin_pct": 70.5,
+      "food_cost_pct": 29.5,
+      "serves": "Rava Dosa Batter 180g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Rava Masala Dosa",
+      "price": 150,
+      "ingredients": [
+        {
+          "ingredient": "rava_dosa_batter",
+          "quantity_g": 180,
+          "cost": 9.9
+        },
+        {
+          "ingredient": "dosa_masala",
+          "quantity_g": 130,
+          "cost": 9.36
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 50.64,
+      "margin": 99.36,
+      "margin_pct": 66.2,
+      "food_cost_pct": 33.8,
+      "serves": "Rava Dosa Batter 180g + Dosa Masala 130g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Pesarattu Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "pesarattu_batter",
+          "quantity_g": 130,
+          "cost": 14.3
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 45.68,
+      "margin": 74.32,
+      "margin_pct": 61.9,
+      "food_cost_pct": 38.1,
+      "serves": "Pesarattu Batter 130g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Adai Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "adai_batter",
+          "quantity_g": 130,
+          "cost": 13.0
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 44.38,
+      "margin": 75.62,
+      "margin_pct": 63.0,
+      "food_cost_pct": 37.0,
+      "serves": "Adai Batter 130g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Muringa Leaves Dosa",
+      "price": 140,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 180,
+          "cost": 9.0
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 40.38,
+      "margin": 99.62,
+      "margin_pct": 71.2,
+      "food_cost_pct": 28.8,
+      "serves": "Dosa Batter 180g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Onion Oothappam",
+      "price": 130,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 200,
+          "cost": 10.0
+        },
+        {
+          "ingredient": "onion",
+          "quantity_g": 30,
+          "cost": 1.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 20,
+          "cost": 3.6
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 43.78,
+      "margin": 86.22,
+      "margin_pct": 66.3,
+      "food_cost_pct": 33.7,
+      "serves": "Dosa Batter 200g + Onion 30g + Sunflower Oil 20ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "DOSA",
+      "name": "Chocolate Dosa",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "dosa_batter",
+          "quantity_g": 125,
+          "cost": 6.25
+        },
+        {
+          "ingredient": "chocolate_sauce",
+          "quantity_g": 60,
+          "cost": 7.98
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 25,
+          "cost": 2.23
+        },
+        {
+          "ingredient": "coriander_chutney",
+          "quantity_g": 25,
+          "cost": 2.4
+        },
+        {
+          "ingredient": "pineapple_chutney",
+          "quantity_g": 25,
+          "cost": 3.35
+        }
+      ],
+      "total_cost": 45.61,
+      "margin": 74.39,
+      "margin_pct": 62.0,
+      "food_cost_pct": 38.0,
+      "serves": "Dosa Batter 125g + Chocolate Sauce 60g + Sunflower Oil 15ml + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 25g + Coriander Chutney 25g + Pineapple Chutney 25g"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Idli (2 pcs)",
+      "price": 50,
+      "ingredients": [
+        {
+          "ingredient": "idli_batter",
+          "quantity_g": 142,
+          "cost": 13.49
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        }
+      ],
+      "total_cost": 34.19,
+      "margin": 15.81,
+      "margin_pct": 31.6,
+      "food_cost_pct": 68.4,
+      "serves": "Idli Batter 142g + Sambar 125g + Coconut Chutney 50g"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Single Idli",
+      "price": 25,
+      "ingredients": [
+        {
+          "ingredient": "idli_batter",
+          "quantity_g": 71,
+          "cost": 6.74
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 62,
+          "cost": 7.94
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 25,
+          "cost": 2.35
+        }
+      ],
+      "total_cost": 17.03,
+      "margin": 7.97,
+      "margin_pct": 31.9,
+      "food_cost_pct": 68.1,
+      "serves": "Idli Batter 71g + Sambar 62g + Coconut Chutney 25g"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Medu Vada (2 pcs)",
+      "price": 50,
+      "ingredients": [
+        {
+          "ingredient": "medu_vada_batter",
+          "quantity_g": 222,
+          "cost": 24.42
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 50,
+          "cost": 9.0
+        }
+      ],
+      "total_cost": 54.12,
+      "margin": -4.12,
+      "margin_pct": -8.2,
+      "food_cost_pct": 108.2,
+      "serves": "Medu Vada Batter 222g + Sambar 125g + Coconut Chutney 50g + Sunflower Oil 50ml"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Single Vada",
+      "price": 25,
+      "ingredients": [
+        {
+          "ingredient": "medu_vada_batter",
+          "quantity_g": 111,
+          "cost": 12.21
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 62,
+          "cost": 7.94
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 25,
+          "cost": 2.35
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 25,
+          "cost": 4.5
+        }
+      ],
+      "total_cost": 27.0,
+      "margin": -2.0,
+      "margin_pct": -8.0,
+      "food_cost_pct": 108.0,
+      "serves": "Medu Vada Batter 111g + Sambar 62g + Coconut Chutney 25g + Sunflower Oil 25ml"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Upma",
+      "price": 60,
+      "ingredients": [
+        {
+          "ingredient": "upma",
+          "quantity_g": 265,
+          "cost": 17.23
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "tomato_chutney",
+          "quantity_g": 27,
+          "cost": 2.4
+        }
+      ],
+      "total_cost": 40.33,
+      "margin": 19.67,
+      "margin_pct": 32.8,
+      "food_cost_pct": 67.2,
+      "serves": "Upma 265g + Sambar 125g + Coconut Chutney 50g + Tomato Chutney 27g"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Pongal",
+      "price": 60,
+      "ingredients": [
+        {
+          "ingredient": "pongal",
+          "quantity_g": 250,
+          "cost": 31.5
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        }
+      ],
+      "total_cost": 52.2,
+      "margin": 7.8,
+      "margin_pct": 13.0,
+      "food_cost_pct": 87.0,
+      "serves": "Pongal 250g + Sambar 125g + Coconut Chutney 50g"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Kesari Bath",
+      "price": 60,
+      "ingredients": [
+        {
+          "ingredient": "kesari",
+          "quantity_g": 160,
+          "cost": 12.32
+        }
+      ],
+      "total_cost": 12.32,
+      "margin": 47.68,
+      "margin_pct": 79.5,
+      "food_cost_pct": 20.5,
+      "serves": "Kesari 160g"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Kerala Puttu",
+      "price": 90,
+      "ingredients": [
+        {
+          "ingredient": "puttu",
+          "quantity_g": 230,
+          "cost": 27.6
+        },
+        {
+          "ingredient": "kadala_curry",
+          "quantity_g": 250,
+          "cost": 32.5
+        }
+      ],
+      "total_cost": 60.1,
+      "margin": 29.9,
+      "margin_pct": 33.2,
+      "food_cost_pct": 66.8,
+      "serves": "Puttu 230g + Kadala Curry 250g"
+    },
+    {
+      "category": "BREAKFAST",
+      "name": "Idiappam with Veg Stew",
+      "price": 90,
+      "ingredients": [
+        {
+          "ingredient": "idiappam",
+          "quantity_g": 200,
+          "cost": 10.0
+        },
+        {
+          "ingredient": "veg_stew",
+          "quantity_g": 115,
+          "cost": 8.39
+        },
+        {
+          "ingredient": "kadala_curry",
+          "quantity_g": 120,
+          "cost": 15.6
+        }
+      ],
+      "total_cost": 33.99,
+      "margin": 56.01,
+      "margin_pct": 62.2,
+      "food_cost_pct": 37.8,
+      "serves": "Idiappam 200g + Veg Stew 115g + Kadala Curry 120g"
+    },
+    {
+      "category": "COMBO",
+      "name": "Idli-Vada Combo",
+      "price": 85,
+      "ingredients": [
+        {
+          "ingredient": "idli_batter",
+          "quantity_g": 142,
+          "cost": 13.49
+        },
+        {
+          "ingredient": "medu_vada_batter",
+          "quantity_g": 111,
+          "cost": 12.21
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 25,
+          "cost": 4.5
+        }
+      ],
+      "total_cost": 50.9,
+      "margin": 34.1,
+      "margin_pct": 40.1,
+      "food_cost_pct": 59.9,
+      "serves": "Idli Batter 142g + Medu Vada Batter 111g + Sambar 125g + Coconut Chutney 50g + Sunflower Oil 25ml"
+    },
+    {
+      "category": "COMBO",
+      "name": "Upma + Vada Combo",
+      "price": 90,
+      "ingredients": [
+        {
+          "ingredient": "upma",
+          "quantity_g": 265,
+          "cost": 17.23
+        },
+        {
+          "ingredient": "medu_vada_batter",
+          "quantity_g": 111,
+          "cost": 12.21
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 25,
+          "cost": 4.5
+        }
+      ],
+      "total_cost": 54.64,
+      "margin": 35.36,
+      "margin_pct": 39.3,
+      "food_cost_pct": 60.7,
+      "serves": "Upma 265g + Medu Vada Batter 111g + Sambar 125g + Coconut Chutney 50g + Sunflower Oil 25ml"
+    },
+    {
+      "category": "COMBO",
+      "name": "Pongal + Vada Combo",
+      "price": 90,
+      "ingredients": [
+        {
+          "ingredient": "pongal",
+          "quantity_g": 250,
+          "cost": 31.5
+        },
+        {
+          "ingredient": "medu_vada_batter",
+          "quantity_g": 111,
+          "cost": 12.21
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 25,
+          "cost": 4.5
+        }
+      ],
+      "total_cost": 68.91,
+      "margin": 21.09,
+      "margin_pct": 23.4,
+      "food_cost_pct": 76.6,
+      "serves": "Pongal 250g + Medu Vada Batter 111g + Sambar 125g + Coconut Chutney 50g + Sunflower Oil 25ml"
+    },
+    {
+      "category": "COMBO",
+      "name": "Upma + Kesari Bath Combo",
+      "price": 120,
+      "ingredients": [
+        {
+          "ingredient": "upma",
+          "quantity_g": 265,
+          "cost": 17.23
+        },
+        {
+          "ingredient": "kesari",
+          "quantity_g": 160,
+          "cost": 12.32
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 125,
+          "cost": 16.0
+        },
+        {
+          "ingredient": "coconut_chutney",
+          "quantity_g": 50,
+          "cost": 4.7
+        }
+      ],
+      "total_cost": 50.25,
+      "margin": 69.75,
+      "margin_pct": 58.1,
+      "food_cost_pct": 41.9,
+      "serves": "Upma 265g + Kesari 160g + Sambar 125g + Coconut Chutney 50g"
+    },
+    {
+      "category": "LUNCH_COMBO",
+      "name": "Lunch Combo 1",
+      "price": 130,
+      "ingredients": [
+        {
+          "ingredient": "curd_rice",
+          "quantity_g": 300,
+          "cost": 24.0
+        },
+        {
+          "ingredient": "puliyogare",
+          "quantity_g": 230,
+          "cost": 23.0
+        },
+        {
+          "ingredient": "pulav",
+          "quantity_g": 240,
+          "cost": 23.04
+        }
+      ],
+      "total_cost": 70.04,
+      "margin": 59.96,
+      "margin_pct": 46.1,
+      "food_cost_pct": 53.9,
+      "serves": "Curd Rice 300g + Puliyogare 230g + Pulav 240g"
+    },
+    {
+      "category": "LUNCH_COMBO",
+      "name": "Lunch Combo 2",
+      "price": 130,
+      "ingredients": [
+        {
+          "ingredient": "curd_rice",
+          "quantity_g": 300,
+          "cost": 24.0
+        },
+        {
+          "ingredient": "bisibele_bath",
+          "quantity_g": 270,
+          "cost": 24.03
+        },
+        {
+          "ingredient": "pongal",
+          "quantity_g": 250,
+          "cost": 31.5
+        }
+      ],
+      "total_cost": 79.53,
+      "margin": 50.47,
+      "margin_pct": 38.8,
+      "food_cost_pct": 61.2,
+      "serves": "Curd Rice 300g + Bisibele Bath 270g + Pongal 250g"
+    },
+    {
+      "category": "LUNCH_COMBO",
+      "name": "Lunch Combo 3",
+      "price": 130,
+      "ingredients": [
+        {
+          "ingredient": "curd_rice",
+          "quantity_g": 300,
+          "cost": 24.0
+        },
+        {
+          "ingredient": "bisibele_bath",
+          "quantity_g": 270,
+          "cost": 24.03
+        },
+        {
+          "ingredient": "pulav",
+          "quantity_g": 240,
+          "cost": 23.04
+        }
+      ],
+      "total_cost": 71.07,
+      "margin": 58.93,
+      "margin_pct": 45.3,
+      "food_cost_pct": 54.7,
+      "serves": "Curd Rice 300g + Bisibele Bath 270g + Pulav 240g"
+    },
+    {
+      "category": "LUNCH_COMBO",
+      "name": "Lunch Combo 4",
+      "price": 130,
+      "ingredients": [
+        {
+          "ingredient": "bisibele_bath",
+          "quantity_g": 270,
+          "cost": 24.03
+        },
+        {
+          "ingredient": "puliyogare",
+          "quantity_g": 230,
+          "cost": 23.0
+        },
+        {
+          "ingredient": "pulav",
+          "quantity_g": 240,
+          "cost": 23.04
+        }
+      ],
+      "total_cost": 70.07,
+      "margin": 59.93,
+      "margin_pct": 46.1,
+      "food_cost_pct": 53.9,
+      "serves": "Bisibele Bath 270g + Puliyogare 230g + Pulav 240g"
+    },
+    {
+      "category": "LUNCH",
+      "name": "Rice Meal (White)",
+      "price": 110,
+      "ingredients": [
+        {
+          "ingredient": "white_rice",
+          "quantity_g": 450,
+          "cost": 11.7
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 100,
+          "cost": 12.8
+        },
+        {
+          "ingredient": "rasam",
+          "quantity_g": 100,
+          "cost": 3.6
+        },
+        {
+          "ingredient": "curd",
+          "quantity_g": 50,
+          "cost": 3.0
+        },
+        {
+          "ingredient": "avial",
+          "quantity_g": 50,
+          "cost": 3.15
+        },
+        {
+          "ingredient": "poriyal",
+          "quantity_g": 50,
+          "cost": 2.95
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 15,
+          "cost": 2.25
+        },
+        {
+          "ingredient": "payasam",
+          "quantity_g": 50,
+          "cost": 4.0
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 5,
+          "cost": 3.29
+        },
+        {
+          "ingredient": "pappad",
+          "quantity_pcs": 1,
+          "cost": 2
+        }
+      ],
+      "total_cost": 48.74,
+      "margin": 61.26,
+      "margin_pct": 55.7,
+      "food_cost_pct": 44.3,
+      "serves": "White Rice 450g + Sambar 100g + Rasam 100g + Curd 50g + Avial 50g + Poriyal 50g + Podi 15g + Payasam 50g + Ghee 5g + Pappad x1"
+    },
+    {
+      "category": "LUNCH",
+      "name": "Rice Meal (Red)",
+      "price": 110,
+      "ingredients": [
+        {
+          "ingredient": "red_rice",
+          "quantity_g": 450,
+          "cost": 14.76
+        },
+        {
+          "ingredient": "sambar",
+          "quantity_g": 100,
+          "cost": 12.8
+        },
+        {
+          "ingredient": "rasam",
+          "quantity_g": 100,
+          "cost": 3.6
+        },
+        {
+          "ingredient": "curd",
+          "quantity_g": 50,
+          "cost": 3.0
+        },
+        {
+          "ingredient": "avial",
+          "quantity_g": 50,
+          "cost": 3.15
+        },
+        {
+          "ingredient": "poriyal",
+          "quantity_g": 50,
+          "cost": 2.95
+        },
+        {
+          "ingredient": "podi",
+          "quantity_g": 15,
+          "cost": 2.25
+        },
+        {
+          "ingredient": "payasam",
+          "quantity_g": 50,
+          "cost": 4.0
+        },
+        {
+          "ingredient": "ghee",
+          "quantity_g": 5,
+          "cost": 3.29
+        },
+        {
+          "ingredient": "pappad",
+          "quantity_pcs": 1,
+          "cost": 2
+        }
+      ],
+      "total_cost": 51.8,
+      "margin": 58.2,
+      "margin_pct": 52.9,
+      "food_cost_pct": 47.1,
+      "serves": "Red Rice 450g + Sambar 100g + Rasam 100g + Curd 50g + Avial 50g + Poriyal 50g + Podi 15g + Payasam 50g + Ghee 5g + Pappad x1"
+    },
+    {
+      "category": "LUNCH",
+      "name": "Curd Rice",
+      "price": 60,
+      "ingredients": [
+        {
+          "ingredient": "curd_rice",
+          "quantity_g": 300,
+          "cost": 24.0
+        }
+      ],
+      "total_cost": 24.0,
+      "margin": 36.0,
+      "margin_pct": 60.0,
+      "food_cost_pct": 40.0,
+      "serves": "Curd Rice 300g"
+    },
+    {
+      "category": "LUNCH",
+      "name": "Bisi Bele Bath",
+      "price": 80,
+      "ingredients": [
+        {
+          "ingredient": "bisibele_bath",
+          "quantity_g": 270,
+          "cost": 24.03
+        }
+      ],
+      "total_cost": 24.03,
+      "margin": 55.97,
+      "margin_pct": 70.0,
+      "food_cost_pct": 30.0,
+      "serves": "Bisibele Bath 270g"
+    },
+    {
+      "category": "LUNCH",
+      "name": "Puliyogare",
+      "price": 80,
+      "ingredients": [
+        {
+          "ingredient": "puliyogare",
+          "quantity_g": 230,
+          "cost": 23.0
+        }
+      ],
+      "total_cost": 23.0,
+      "margin": 57.0,
+      "margin_pct": 71.2,
+      "food_cost_pct": 28.7,
+      "serves": "Puliyogare 230g"
+    },
+    {
+      "category": "LUNCH",
+      "name": "Pulav",
+      "price": 80,
+      "ingredients": [
+        {
+          "ingredient": "pulav",
+          "quantity_g": 240,
+          "cost": 23.04
+        }
+      ],
+      "total_cost": 23.04,
+      "margin": 56.96,
+      "margin_pct": 71.2,
+      "food_cost_pct": 28.8,
+      "serves": "Pulav 240g"
+    },
+    {
+      "category": "DINNER",
+      "name": "Kerala Porotta with Kadala",
+      "price": 90,
+      "ingredients": [
+        {
+          "ingredient": "porotta_batter",
+          "quantity_g": 180,
+          "cost": 10.08
+        },
+        {
+          "ingredient": "kadala_curry",
+          "quantity_g": 250,
+          "cost": 32.5
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 15,
+          "cost": 2.7
+        }
+      ],
+      "total_cost": 45.28,
+      "margin": 44.72,
+      "margin_pct": 49.7,
+      "food_cost_pct": 50.3,
+      "serves": "Porotta Batter 180g + Kadala Curry 250g + Sunflower Oil 15ml"
+    },
+    {
+      "category": "DINNER",
+      "name": "Idiappam with Veg Kurma",
+      "price": 90,
+      "ingredients": [
+        {
+          "ingredient": "idiappam",
+          "quantity_g": 200,
+          "cost": 10.0
+        },
+        {
+          "ingredient": "veg_kurma",
+          "quantity_g": 200,
+          "cost": 30.0
+        }
+      ],
+      "total_cost": 40.0,
+      "margin": 50.0,
+      "margin_pct": 55.6,
+      "food_cost_pct": 44.4,
+      "serves": "Idiappam 200g + Veg Kurma 200g"
+    },
+    {
+      "category": "DINNER",
+      "name": "Fried Rice with Gobi Manchurian",
+      "price": 165,
+      "ingredients": [
+        {
+          "ingredient": "fried_rice",
+          "quantity_g": 300,
+          "cost": 19.2
+        },
+        {
+          "ingredient": "manchurian",
+          "quantity_g": 150,
+          "cost": 18.0
+        }
+      ],
+      "total_cost": 37.2,
+      "margin": 127.8,
+      "margin_pct": 77.5,
+      "food_cost_pct": 22.5,
+      "serves": "Fried Rice 300g + Manchurian 150g"
+    },
+    {
+      "category": "SNACKS",
+      "name": "Punjabi Samosa",
+      "price": 35,
+      "ingredients": [
+        {
+          "ingredient": "samosa",
+          "quantity_pcs": 1,
+          "cost": 11
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 25,
+          "cost": 4.5
+        }
+      ],
+      "total_cost": 15.5,
+      "margin": 19.5,
+      "margin_pct": 55.7,
+      "food_cost_pct": 44.3,
+      "serves": "Samosa x1 + Sunflower Oil 25ml"
+    },
+    {
+      "category": "SNACKS",
+      "name": "Pazham Pori",
+      "price": 25,
+      "ingredients": [
+        {
+          "ingredient": "pazham_pori",
+          "quantity_pcs": 1,
+          "cost": 12
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 30,
+          "cost": 5.4
+        }
+      ],
+      "total_cost": 17.4,
+      "margin": 7.6,
+      "margin_pct": 30.4,
+      "food_cost_pct": 69.6,
+      "serves": "Pazham Pori x1 + Sunflower Oil 30ml"
+    },
+    {
+      "category": "SNACKS",
+      "name": "Parippu Vada",
+      "price": 15,
+      "ingredients": [
+        {
+          "ingredient": "parippu_vada_batter",
+          "quantity_g": 50,
+          "cost": 5.0
+        },
+        {
+          "ingredient": "sunflower_oil",
+          "quantity_ml": 25,
+          "cost": 4.5
+        }
+      ],
+      "total_cost": 9.5,
+      "margin": 5.5,
+      "margin_pct": 36.7,
+      "food_cost_pct": 63.3,
+      "serves": "Parippu Vada Batter 50g + Sunflower Oil 25ml"
+    },
+    {
+      "category": "SNACKS",
+      "name": "Ela Ada",
+      "price": 40,
+      "ingredients": [
+        {
+          "ingredient": "ela_ada",
+          "quantity_pcs": 1,
+          "cost": 12
+        }
+      ],
+      "total_cost": 12,
+      "margin": 28,
+      "margin_pct": 70.0,
+      "food_cost_pct": 30.0,
+      "serves": "Ela Ada x1"
+    },
+    {
+      "category": "DESSERTS",
+      "name": "Pastries",
+      "price": 95,
+      "ingredients": [
+        {
+          "ingredient": "pastry",
+          "quantity_pcs": 1,
+          "cost": 35
+        }
+      ],
+      "total_cost": 35,
+      "margin": 60,
+      "margin_pct": 63.2,
+      "food_cost_pct": 36.8,
+      "serves": "Pastry x1"
+    },
+    {
+      "category": "DESSERTS",
+      "name": "Cake",
+      "price": 95,
+      "ingredients": [
+        {
+          "ingredient": "cake_slice",
+          "quantity_pcs": 1,
+          "cost": 35
+        }
+      ],
+      "total_cost": 35,
+      "margin": 60,
+      "margin_pct": 63.2,
+      "food_cost_pct": 36.8,
+      "serves": "Cake Slice x1"
+    }
+  ],
+  "category_summary": [
+    {
+      "category": "DOSA",
+      "item_count": 24,
+      "avg_margin_pct": 63.0,
+      "avg_food_cost_pct": 37.0
+    },
+    {
+      "category": "BREAKFAST",
+      "item_count": 9,
+      "avg_margin_pct": 35.0,
+      "avg_food_cost_pct": 65.0
+    },
+    {
+      "category": "COMBO",
+      "item_count": 4,
+      "avg_margin_pct": 41.6,
+      "avg_food_cost_pct": 58.4
+    },
+    {
+      "category": "LUNCH_COMBO",
+      "item_count": 4,
+      "avg_margin_pct": 44.1,
+      "avg_food_cost_pct": 55.9
+    },
+    {
+      "category": "LUNCH",
+      "item_count": 6,
+      "avg_margin_pct": 62.6,
+      "avg_food_cost_pct": 37.4
+    },
+    {
+      "category": "DINNER",
+      "item_count": 3,
+      "avg_margin_pct": 64.5,
+      "avg_food_cost_pct": 35.5
+    },
+    {
+      "category": "SNACKS",
+      "item_count": 4,
+      "avg_margin_pct": 52.7,
+      "avg_food_cost_pct": 47.3
+    },
+    {
+      "category": "DESSERTS",
+      "item_count": 2,
+      "avg_margin_pct": 63.2,
+      "avg_food_cost_pct": 36.8
+    }
+  ],
+  "total_items": 56,
+  "overall_avg_margin_pct": 57.0,
+  "overall_avg_food_cost_pct": 43.0
+}

@@ -1,11 +1,11 @@
 {
   "outlet": "The Zamorins",
-  "last_updated": "2026-01-21T14:53:12.507461",
+  "last_updated": "2026-01-25T12:15:28.964214",
   "metrics": {
-    "total_sales": 722733.0,
-    "avg_daily_sales": 120455.5,
-    "days_recorded": 6,
-    "total_items_sold": 2559.0
+    "total_sales": 1128464.0,
+    "avg_daily_sales": 125384.88888888889,
+    "days_recorded": 9,
+    "total_items_sold": 3766.0
   },
   "daily_sales": [
     {
@@ -44,170 +44,191 @@
       "tax": 5764.84
     },
     {
+      "date": "2026-01-16",
+      "total_sales": 127034.0,
+      "net_sales": 0,
+      "discount": 719.95,
+      "tax": 6018.12
+    },
+    {
       "date": "2026-01-18",
       "total_sales": 136142.0,
       "net_sales": 0,
       "discount": 619.97,
       "tax": 6456.2
+    },
+    {
+      "date": "2026-01-20",
+      "total_sales": 138966.0,
+      "net_sales": 0,
+      "discount": 786.77,
+      "tax": 6597.78
+    },
+    {
+      "date": "2026-01-24",
+      "total_sales": 139731.0,
+      "net_sales": 0,
+      "discount": 1469.39,
+      "tax": 6652.58
     }
   ],
   "category_breakdown": {
     "All Day Items": {
-      "qty": 2952.0,
-      "total": 271704.24000000005
+      "qty": 4148.0,
+      "total": 388871.84000000026
     },
     "All Day Combos": {
-      "qty": 316.0,
-      "total": 35057.759999999995
+      "qty": 596.0,
+      "total": 65615.76
     },
     "Beverages": {
-      "qty": 2156.0,
-      "total": 62521.439999999995
+      "qty": 3540.0,
+      "total": 101710.88000000005
     },
     "Breakfast Items": {
-      "qty": 80.0,
-      "total": 6939.360000000002
+      "qty": 164.0,
+      "total": 14198.800000000005
     },
     "Desserts": {
       "qty": 52.0,
       "total": 4940.0
     },
     "Lunch Items": {
-      "qty": 480.0,
-      "total": 48012.03999999999
+      "qty": 756.0,
+      "total": 77412.23999999999
     },
     "Snacks": {
-      "qty": 1056.0,
-      "total": 28601.12000000001
+      "qty": 1760.0,
+      "total": 46688.16000000002
     }
   },
   "payment_breakdown": {
-    "Cash": 1570.0,
+    "Cash": 2125.0,
     "Card": 190.0,
-    "Other": 102982.0,
-    "Swiggy Online": 7663.0,
-    "Zomato Online": 2607.0
+    "Other": 157192.0,
+    "Swiggy Online": 11593.0,
+    "Zomato Online": 4393.0
   },
   "top_items": [
     {
       "item": "Masala Dosa",
-      "qty": 107.0,
-      "revenue": 11924.67,
+      "qty": 140.0,
+      "revenue": 15554.67,
       "category": "All Day Items"
     },
     {
       "item": "Red Rice Meals",
-      "qty": 85.0,
-      "revenue": 9350.0,
+      "qty": 137.0,
+      "revenue": 15070.0,
       "category": "Lunch Items"
     },
     {
-      "item": "Coffee",
-      "qty": 231.0,
-      "revenue": 8083.78999999998,
-      "category": "Beverages"
-    },
-    {
       "item": "Kerala Porotta With Kuruma",
-      "qty": 82.0,
-      "revenue": 7379.459999999992,
+      "qty": 131.0,
+      "revenue": 11789.109999999984,
       "category": "All Day Items"
     },
     {
+      "item": "Coffee",
+      "qty": 333.0,
+      "revenue": 11653.25999999997,
+      "category": "Beverages"
+    },
+    {
       "item": "Idiyappam With Stew",
-      "qty": 81.0,
-      "revenue": 7289.289999999988,
+      "qty": 123.0,
+      "revenue": 11069.009999999982,
       "category": "All Day Items"
     },
     {
       "item": "Puttu (with Kadala)",
-      "qty": 70.0,
-      "revenue": 6299.439999999991,
+      "qty": 94.0,
+      "revenue": 8459.219999999987,
       "category": "All Day Items"
     },
     {
       "item": "Plain Dosa",
-      "qty": 55.0,
-      "revenue": 5072.5899999999965,
+      "qty": 82.0,
+      "revenue": 7594.669999999993,
       "category": "All Day Items"
-    },
-    {
-      "item": "Normal Tea 90 Ml",
-      "qty": 221.0,
-      "revenue": 4421.110000000012,
-      "category": "Beverages"
     },
     {
       "item": "White Rice Meal",
-      "qty": 39.0,
-      "revenue": 4290.0,
+      "qty": 68.0,
+      "revenue": 7480.0,
       "category": "Lunch Items"
     },
     {
-      "item": "Ghee Roast Dosa",
-      "qty": 38.0,
-      "revenue": 4180.0,
-      "category": "All Day Items"
-    },
-    {
-      "item": "Idli",
-      "qty": 83.0,
-      "revenue": 4150.0,
-      "category": "All Day Items"
+      "item": "Normal Tea 90 Ml",
+      "qty": 372.0,
+      "revenue": 7441.960000000031,
+      "category": "Beverages"
     },
     {
       "item": "Onion Oothappam [o]",
-      "qty": 29.0,
-      "revenue": 4145.100000000002,
+      "qty": 41.0,
+      "revenue": 5705.220000000005,
       "category": "All Day Items"
     },
     {
       "item": "Ghee Masala Dosa",
-      "qty": 32.0,
-      "revenue": 3872.510000000002,
+      "qty": 46.0,
+      "revenue": 5552.610000000004,
       "category": "All Day Items"
     },
     {
-      "item": "Podi Masala Dosa",
-      "qty": 27.0,
-      "revenue": 3240.230000000002,
+      "item": "Idli Vada Combo",
+      "qty": 69.0,
+      "revenue": 5501.949999999996,
+      "category": "Breakfast Items"
+    },
+    {
+      "item": "Ghee Roast Dosa",
+      "qty": 48.0,
+      "revenue": 5311.76,
       "category": "All Day Items"
     },
     {
-      "item": "Parippu Vada",
-      "qty": 172.0,
-      "revenue": 2911.8800000000015,
-      "category": "Snacks"
+      "item": "Idli",
+      "qty": 101.0,
+      "revenue": 5050.0,
+      "category": "All Day Items"
     },
     {
       "item": "Ginger Tea",
-      "qty": 115.0,
-      "revenue": 2875.4500000000025,
+      "qty": 194.0,
+      "revenue": 4850.700000000008,
       "category": "Beverages"
     },
     {
-      "item": "Pesarattu",
-      "qty": 23.0,
-      "revenue": 2855.0800000000004,
+      "item": "Combo Meal  Choice Of Three",
+      "qty": 34.0,
+      "revenue": 4420.260000000003,
+      "category": "Lunch Items"
+    },
+    {
+      "item": "Parippu Vada",
+      "qty": 273.0,
+      "revenue": 4413.390000000008,
+      "category": "Snacks"
+    },
+    {
+      "item": "Podi Masala Dosa",
+      "qty": 35.0,
+      "revenue": 4232.560000000003,
       "category": "All Day Items"
     },
     {
-      "item": "Medu Vada",
-      "qty": 57.0,
-      "revenue": 2850.04,
-      "category": "All Day Items"
+      "item": "Fried Rice With Gobi Manjurian",
+      "qty": 22.0,
+      "revenue": 3659.26,
+      "category": "All Day Combos"
     },
     {
       "item": "Set Dosa",
-      "qty": 25.0,
-      "revenue": 2845.2799999999997,
+      "qty": 32.0,
+      "revenue": 3615.2799999999997,
       "category": "All Day Items"
-    },
-    {
-      "item": "Pazham Pori",
-      "qty": 93.0,
-      "revenue": 2560.4400000000005,
-      "category": "Snacks"
     }
   ]
 }
