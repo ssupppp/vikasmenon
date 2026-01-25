@@ -1077,6 +1077,33 @@
                     </table>
                 </div>
             </div>
+
+            <!-- Upcoming Payments Section -->
+            <div class="table-card" style="margin-top: var(--space-lg);">
+                <h3>Upcoming Payments (Next 30 Days)</h3>
+                <p style="color:var(--text-muted);font-size:0.75rem;margin-bottom:1rem;">Based on historical payment patterns from bank statements</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Payment</th>
+                            <th>Vendor</th>
+                            <th class="right">Est. Amount</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="upcomingPaymentsTable">
+                        <tr><td colspan="5" class="loading">Loading...</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr style="background:var(--bg-tertiary);font-weight:600;">
+                            <td colspan="2">Total Upcoming</td>
+                            <td class="right" id="upcomingTotal">--</td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
 
         <!-- Estimate Tab -->
@@ -2516,6 +2543,7 @@
             if (finData && finData.pnl) {
                 renderOpexChart(finData.pnl.opex.by_category || finData.pnl.opex.breakdown, finData);
                 renderAccountsPayable(finData);
+                renderUpcomingPayments(finData);
             } else {
                 renderOpexChart(data.expenses.opex.breakdown, null);
             }
@@ -2686,6 +2714,111 @@
             } else {
                 tbody.innerHTML = '<tr><td colspan="2" style="color:var(--text-muted);">No payables data</td></tr>';
             }
+        }
+
+        function renderUpcomingPayments(finData) {
+            const tbody = document.getElementById('upcomingPaymentsTable');
+            if (!tbody) return;
+
+            // Get current date info
+            const today = new Date();
+            const currentDay = today.getDate();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+
+            // Define recurring payments based on bank statement analysis
+            // Format: { name, vendor, amount, dayOfMonth, frequency }
+            const recurringPayments = [
+                { name: 'Staff Salaries', vendor: 'Staff (Multiple)', amount: 245000, dayOfMonth: 5, frequency: 'monthly' },
+                { name: 'Rent', vendor: 'Anil M + Others', amount: 117000, dayOfMonth: 5, frequency: 'monthly' },
+                { name: 'Security', vendor: 'HMS Security Services', amount: 32000, dayOfMonth: 28, frequency: 'monthly' },
+                { name: 'Water', vendor: 'BWSSB (via Satish)', amount: 24000, dayOfMonth: 2, frequency: 'monthly' },
+                { name: 'Gas (Cooking)', vendor: 'MKP Enterprises', amount: 35000, dayOfMonth: 12, frequency: 'monthly' },
+                { name: 'Batter Supply', vendor: 'Shri Annaporneshwari', amount: 12000, dayOfMonth: 5, frequency: 'monthly' },
+                { name: 'Platform Fees', vendor: 'Razorpay/Swiggy/Zomato', amount: 12000, dayOfMonth: 15, frequency: 'monthly' },
+            ];
+
+            // Calculate upcoming payments for next 30 days
+            let upcomingPayments = [];
+            let totalUpcoming = 0;
+
+            recurringPayments.forEach(payment => {
+                let dueDate = new Date(currentYear, currentMonth, payment.dayOfMonth);
+
+                // If due date has passed this month, use next month
+                if (dueDate < today) {
+                    dueDate = new Date(currentYear, currentMonth + 1, payment.dayOfMonth);
+                }
+
+                // Check if within 30 days
+                const daysUntilDue = Math.ceil((dueDate - today) / (1000 * 60 * 60 * 24));
+                if (daysUntilDue <= 30 && daysUntilDue >= 0) {
+                    let status = 'upcoming';
+                    let statusColor = 'var(--text-muted)';
+                    let statusText = `${daysUntilDue}d`;
+
+                    if (daysUntilDue <= 3) {
+                        status = 'due-soon';
+                        statusColor = 'var(--warning)';
+                        statusText = daysUntilDue === 0 ? 'Today' : `${daysUntilDue}d`;
+                    } else if (daysUntilDue <= 7) {
+                        status = 'this-week';
+                        statusColor = 'var(--primary)';
+                    }
+
+                    upcomingPayments.push({
+                        ...payment,
+                        dueDate: dueDate,
+                        dueDateStr: dueDate.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' }),
+                        daysUntilDue: daysUntilDue,
+                        status: status,
+                        statusColor: statusColor,
+                        statusText: statusText
+                    });
+                    totalUpcoming += payment.amount;
+                }
+            });
+
+            // Add pending payables as immediate dues
+            if (finData && finData.balance_sheet && finData.balance_sheet.liabilities.current.accounts_payable_breakdown) {
+                const breakdown = finData.balance_sheet.liabilities.current.accounts_payable_breakdown;
+                Object.entries(breakdown).forEach(([vendor, amount]) => {
+                    upcomingPayments.unshift({
+                        name: 'Outstanding Invoice',
+                        vendor: vendor,
+                        amount: amount,
+                        dueDate: today,
+                        dueDateStr: 'Overdue',
+                        daysUntilDue: 0,
+                        status: 'overdue',
+                        statusColor: 'var(--danger)',
+                        statusText: 'Due Now'
+                    });
+                    totalUpcoming += amount;
+                });
+            }
+
+            // Sort by due date
+            upcomingPayments.sort((a, b) => a.daysUntilDue - b.daysUntilDue);
+
+            // Render table
+            let html = '';
+            upcomingPayments.forEach(p => {
+                html += `<tr>
+                    <td><strong>${p.name}</strong></td>
+                    <td style="font-size:0.85rem;color:var(--text-muted);">${p.vendor}</td>
+                    <td class="right" style="font-weight:600;">${formatCurrency(p.amount)}</td>
+                    <td style="font-size:0.85rem;">${p.dueDateStr}</td>
+                    <td style="color:${p.statusColor};font-weight:600;font-size:0.85rem;">${p.statusText}</td>
+                </tr>`;
+            });
+
+            if (html === '') {
+                html = '<tr><td colspan="5" style="color:var(--text-muted);">No upcoming payments</td></tr>';
+            }
+
+            tbody.innerHTML = html;
+            document.getElementById('upcomingTotal').textContent = formatCurrency(totalUpcoming);
         }
 
         function renderOpexChart(opexByCategory, finData) {

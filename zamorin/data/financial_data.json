@@ -203,14 +203,15 @@
       "current": {
         "accounts_payable": 674367.65,
         "accounts_payable_breakdown": {
-          "Melaange": 674367.65
+          "Melaange": 674367.65,
+          "MKP Enterprises (Gas)": 15660
         },
         "accrued_expenses": 0
       },
       "long_term": {
         "loans": 0
       },
-      "total": 674367.65
+      "total": 690027.65
     },
     "equity": {
       "partner_capital": 4422974.08,
