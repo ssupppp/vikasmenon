@@ -1050,43 +1050,32 @@
                 </div>
 
                 <div class="chart-card">
-                    <h3>Sales by Category</h3>
-                    <div class="chart-container">
-                        <canvas id="categoryChart"></canvas>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <h3 style="margin: 0;">Operating Expenses</h3>
+                        <div class="period-selector" style="margin: 0;">
+                            <button class="period-btn active" data-opex-view="monthly" onclick="setOpexView('monthly')">Monthly</button>
+                            <button class="period-btn" data-opex-view="cumulative" onclick="setOpexView('cumulative')">Till Date</button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="chart-card">
-                    <h3>Operating Expenses Breakdown</h3>
                     <div class="chart-container">
                         <canvas id="opexChart"></canvas>
                     </div>
                 </div>
-            </div>
 
-            <div class="table-card">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                    <h3 style="margin: 0;">Top Selling Items</h3>
-                    <div class="period-selector" style="margin: 0;">
-                        <button class="period-btn active" data-top-period="all" onclick="setTopItemsPeriod('all')">All Time</button>
-                        <button class="period-btn" data-top-period="week" onclick="setTopItemsPeriod('week')">Last Week</button>
-                        <button class="period-btn" data-top-period="yesterday" onclick="setTopItemsPeriod('yesterday')">Yesterday</button>
-                    </div>
+                <div class="chart-card">
+                    <h3>Accounts Payable (Balance Due)</h3>
+                    <table class="data-table" style="margin-top: 10px;">
+                        <thead>
+                            <tr>
+                                <th>Vendor</th>
+                                <th class="right">Amount Due</th>
+                            </tr>
+                        </thead>
+                        <tbody id="accountsPayableTable">
+                            <tr><td colspan="2" class="loading">Loading...</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th style="width:40px">#</th>
-                            <th>Item</th>
-                            <th>Category</th>
-                            <th class="right">Qty</th>
-                            <th class="right">Revenue</th>
-                        </tr>
-                    </thead>
-                    <tbody id="topItemsTable">
-                        <tr><td colspan="5" class="loading">Loading...</td></tr>
-                    </tbody>
-                </table>
             </div>
         </div>
 
@@ -2524,11 +2513,11 @@
 
             // Charts
             renderRevenueTrendChart(data.daily_sales, finData);
-            renderCategoryChart(data.category_sales);
             if (finData && finData.pnl) {
-                renderOpexChart(finData.pnl.opex.breakdown);
+                renderOpexChart(finData.pnl.opex.by_category || finData.pnl.opex.breakdown, finData);
+                renderAccountsPayable(finData);
             } else {
-                renderOpexChart(data.expenses.opex.breakdown);
+                renderOpexChart(data.expenses.opex.breakdown, null);
             }
             renderSalesItemsChart(data.daily_sales);
 
@@ -2542,7 +2531,6 @@
             }
 
             // Tables
-            try { renderTopItemsTable(data.top_items); } catch(e) { console.error('TopItems error:', e); }
             try { renderCategoryTable(data.category_sales); } catch(e) { console.error('Category error:', e); }
             try { renderAllItemsTable(data.top_items); } catch(e) { console.error('AllItems error:', e); }
             // Use financial data for expenses (has correct breakdown)
@@ -2566,13 +2554,28 @@
             }
         }
 
+        let currentOpexView = 'monthly';
+        let globalFinData = null;
+
+        function setOpexView(view) {
+            currentOpexView = view;
+            document.querySelectorAll('[data-opex-view]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.opexView === view);
+            });
+            if (globalFinData) {
+                renderOpexChart(globalFinData.pnl.opex.by_category, globalFinData);
+            }
+        }
+
         function renderRevenueTrendChart(dailySales, finData) {
+            globalFinData = finData;
             const isMobile = window.innerWidth < 768;
             const ctx = document.getElementById('revenueTrendChart').getContext('2d');
 
             let displayData = [];
             let labels = [];
             let chartType = 'line';
+            let revenueField = 'revenue';
 
             if (currentTrendPeriod === 'weekly' && finData && finData.weekly) {
                 // Weekly view
@@ -2580,9 +2583,13 @@
                 labels = displayData.map(w => w.week || w.label || `Week ${displayData.indexOf(w) + 1}`);
                 chartType = 'bar';
             } else if (currentTrendPeriod === 'monthly' && finData && finData.monthly) {
-                // Monthly view
+                // Monthly view - use revenue field from monthly data
                 displayData = finData.monthly;
-                labels = displayData.map(m => m.month);
+                labels = displayData.map(m => {
+                    const [year, month] = m.month.split('-');
+                    const monthNames = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                    return `${monthNames[parseInt(month)]} ${year.slice(2)}`;
+                });
                 chartType = 'bar';
             } else {
                 // Daily view (default)
@@ -2594,6 +2601,13 @@
                 });
             }
 
+            // Get revenue values
+            const revenueData = displayData.map(d => d.revenue || d.total_sales || 0);
+            const maxRevenue = Math.max(...revenueData);
+
+            // Calculate appropriate Y-axis max (round up to nice number)
+            const yMax = Math.ceil(maxRevenue / 50000) * 50000;
+
             if (chartInstances.revenueTrend) chartInstances.revenueTrend.destroy();
             chartInstances.revenueTrend = new Chart(ctx, {
                 type: chartType,
@@ -2601,7 +2615,7 @@
                     labels: labels,
                     datasets: [{
                         label: 'Revenue',
-                        data: displayData.map(d => d.revenue || d.total_sales || 0),
+                        data: revenueData,
                         borderColor: colors.primary,
                         backgroundColor: chartType === 'bar' ? colors.primary : colors.primary + '20',
                         fill: chartType === 'line',
@@ -2614,13 +2628,26 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => `Revenue: ${formatCurrency(ctx.raw)}`
+                            }
+                        }
+                    },
                     scales: {
                         y: {
                             beginAtZero: true,
+                            suggestedMax: yMax,
                             ticks: {
-                                callback: v => formatCurrency(v),
-                                font: { size: isMobile ? 10 : 12 }
+                                callback: v => {
+                                    if (v >= 100000) return '₹' + (v/100000).toFixed(1) + 'L';
+                                    if (v >= 1000) return '₹' + (v/1000).toFixed(0) + 'K';
+                                    return '₹' + v;
+                                },
+                                font: { size: isMobile ? 10 : 12 },
+                                maxTicksLimit: 6
                             }
                         },
                         x: {
@@ -2636,51 +2663,62 @@
             });
         }
 
-        function renderCategoryChart(categorySales) {
-            const categories = Object.entries(categorySales).sort((a, b) => b[1].revenue - a[1].revenue);
-            const ctx = document.getElementById('categoryChart').getContext('2d');
-            const isMobile = window.innerWidth < 768;
+        function renderAccountsPayable(finData) {
+            const tbody = document.getElementById('accountsPayableTable');
+            if (!tbody) return;
 
-            if (chartInstances.category) chartInstances.category.destroy();
-            chartInstances.category = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: categories.map(([name]) => name),
-                    datasets: [{
-                        data: categories.map(([, d]) => d.revenue),
-                        backgroundColor: colors.chart,
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: isMobile ? 'bottom' : 'right',
-                            labels: {
-                                boxWidth: isMobile ? 10 : 12,
-                                padding: isMobile ? 8 : 10,
-                                font: { size: isMobile ? 11 : 12 }
-                            }
-                        }
-                    }
-                }
-            });
+            if (finData && finData.balance_sheet && finData.balance_sheet.liabilities.current.accounts_payable_breakdown) {
+                const breakdown = finData.balance_sheet.liabilities.current.accounts_payable_breakdown;
+                const total = finData.balance_sheet.liabilities.current.accounts_payable;
+
+                let html = '';
+                Object.entries(breakdown).sort((a, b) => b[1] - a[1]).forEach(([vendor, amount]) => {
+                    html += `<tr>
+                        <td>${vendor}</td>
+                        <td class="right" style="font-weight:600;color:var(--warning);">${formatCurrency(amount)}</td>
+                    </tr>`;
+                });
+                html += `<tr style="background:var(--bg-tertiary);font-weight:600;">
+                    <td>Total Payable</td>
+                    <td class="right" style="color:var(--danger);">${formatCurrency(total)}</td>
+                </tr>`;
+                tbody.innerHTML = html;
+            } else {
+                tbody.innerHTML = '<tr><td colspan="2" style="color:var(--text-muted);">No payables data</td></tr>';
+            }
         }
 
-        function renderOpexChart(opexByCategory) {
+        function renderOpexChart(opexByCategory, finData) {
             const isMobile = window.innerWidth < 768;
-            const categories = Object.entries(opexByCategory).sort((a, b) => b[1] - a[1]).slice(0, isMobile ? 5 : 7);
             const ctx = document.getElementById('opexChart').getContext('2d');
+
+            let chartData = [];
+            let labels = [];
+            let chartTitle = 'Till Date';
+
+            if (currentOpexView === 'monthly' && finData && finData.monthly) {
+                // Monthly view - show opex by month
+                chartData = finData.monthly.map(m => m.opex || 0);
+                labels = finData.monthly.map(m => {
+                    const [year, month] = m.month.split('-');
+                    const monthNames = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                    return `${monthNames[parseInt(month)]} ${year.slice(2)}`;
+                });
+                chartTitle = 'Monthly';
+            } else {
+                // Cumulative/Till Date view - show by category
+                const categories = Object.entries(opexByCategory).sort((a, b) => b[1] - a[1]).slice(0, isMobile ? 6 : 8);
+                chartData = categories.map(([, v]) => v);
+                labels = categories.map(([name]) => name.replace(' (partner-paid)', '*').substring(0, 14));
+            }
 
             if (chartInstances.opex) chartInstances.opex.destroy();
             chartInstances.opex = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: categories.map(([name]) => name.replace(' (partner-paid)', '').substring(0, 12)),
+                    labels: labels,
                     datasets: [{
-                        data: categories.map(([, v]) => v),
+                        data: chartData,
                         backgroundColor: colors.chart,
                         borderRadius: 4
                     }]
