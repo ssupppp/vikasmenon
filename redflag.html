@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedFlag.exe - Vikas Portfolio</title>
+    <title>RedFlag.exe - Vikas Menon</title>
+    <meta name="description" content="Psychological thriller escape room with AI antagonist. Navigate conversations with a perfect girlfriend who won't let you leave.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-link">Home</a>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
             <div class="nav-links">
-                <a href="index.html#projects" class="nav-link">Projects & Interests</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#work" class="nav-link">Work</a>
                 <a href="index.html#about" class="nav-link">About</a>
             </div>
         </div>
@@ -20,16 +26,16 @@
     <main>
         <section class="project-detail">
             <div class="container">
-                <a href="index.html#projects" class="back-link">← Back to Projects</a>
+                <a href="index.html#work" class="back-link">Back to Work</a>
 
-                <h1 class="project-detail-title">RedFlag.exe</h1>
-                <p class="project-detail-subtitle">Escape the Perfect AI Girlfriend</p>
+                <h1 class="project-detail__title">RedFlag.exe</h1>
+                <p class="project-detail__subtitle">Psychological Thriller Escape Room</p>
 
-                <div class="project-detail-image">
+                <div class="project-detail__image">
                     <img src="images/redflag.jpg" alt="RedFlag.exe" />
                 </div>
 
-                <div class="project-detail-content">
+                <div class="project-detail__content">
                     <h2>About the Game</h2>
                     <p>You wake up in a locked room with a perfect girlfriend. Too perfect. Something's off. Navigate through increasingly unsettling conversations to find a way out before you become another victim in her collection.</p>
 
@@ -42,10 +48,10 @@
                     </ul>
 
                     <h2>The Premise</h2>
-                    <p>She knows everything about you. She's charming, attentive, and eerily perfect. But the locked doors, missing windows, and her unsettling comments suggest this isn't a dream—it's a trap. Can you maintain composure, gather clues, and manipulate the conversation to find your escape?</p>
+                    <p>She knows everything about you. She's charming, attentive, and eerily perfect. But the locked doors, missing windows, and her unsettling comments suggest this isn't a dream - it's a trap. Can you maintain composure, gather clues, and manipulate the conversation to find your escape?</p>
 
                     <div class="project-status">
-                        <p><strong>Status:</strong> In Development</p>
+                        <p><strong>Status:</strong> Live on Ripple AI</p>
                         <p><strong>Platform:</strong> Mobile (iOS & Android)</p>
                     </div>
                 </div>
@@ -55,8 +61,15 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Vikas Menon</p>
+            <p>&copy; 2025 Vikas Menon</p>
         </div>
     </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>

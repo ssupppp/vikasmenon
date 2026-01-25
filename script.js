@@ -1,79 +1,50 @@
-// Tab switching for navigation links
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
+        const targetId = this.getAttribute('href');
 
-        // Hide all sections
-        document.querySelectorAll('section').forEach(section => {
-            section.style.display = 'none';
-        });
+        // Skip if it's just "#" or an external link
+        if (targetId === '#' || targetId.length <= 1) return;
 
-        // Show target section
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.style.display = 'block';
-        }
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            const navHeight = document.querySelector('.nav')?.offsetHeight || 80;
+            const targetPosition = targetElement.offsetTop - navHeight - 20;
 
-        // Update active nav link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.style.color = '';
-        });
-        this.style.color = '#8b7355';
-
-        // Scroll to top
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Show articles section by default on load
-window.addEventListener('load', function() {
-    document.querySelectorAll('section').forEach(section => {
-        section.style.display = 'none';
-    });
-    const articlesSection = document.getElementById('articles');
-    if (articlesSection) {
-        articlesSection.style.display = 'block';
-    }
-    // Set articles link as active
-    document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('href') === '#articles') {
-            link.style.color = '#8b7355';
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         }
     });
 });
 
-// Article expand/collapse functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+// Add subtle fade-in animation on scroll
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
 
-    readMoreButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const articleId = this.getAttribute('data-article');
-            const fullContent = document.getElementById(`article-${articleId}`);
-            const articleCard = this.closest('.article-card');
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
 
-            if (fullContent.style.display === 'none') {
-                fullContent.style.display = 'block';
-                this.textContent = 'Show less';
-                articleCard.classList.add('expanded');
-            } else {
-                fullContent.style.display = 'none';
-                this.textContent = 'Read more';
-                articleCard.classList.remove('expanded');
+// Observe work cards and article items for fade-in effect
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.work__card, .article-item, .article-full');
 
-                // Scroll to article top when collapsing
-                const navHeight = document.querySelector('nav').offsetHeight;
-                const articleTop = articleCard.offsetTop - navHeight - 20;
-                window.scrollTo({
-                    top: articleTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
+    animatedElements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+        fadeObserver.observe(el);
     });
 });
-
