@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helicopter Game - Vikas Portfolio</title>
+    <title>Helicopter Game - Vikas Menon</title>
+    <meta name="description" content="Navigate tight corridors and avoid obstacles in this fast-paced aerial challenge.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-link">Home</a>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
             <div class="nav-links">
-                <a href="index.html#projects" class="nav-link">Projects & Interests</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#work" class="nav-link">Work</a>
                 <a href="index.html#about" class="nav-link">About</a>
             </div>
         </div>
@@ -20,16 +26,16 @@
     <main>
         <section class="project-detail">
             <div class="container">
-                <a href="index.html#projects" class="back-link">← Back to Projects</a>
+                <a href="index.html#work" class="back-link">Back to Work</a>
 
-                <h1 class="project-detail-title">Helicopter Game</h1>
-                <p class="project-detail-subtitle">Test Your Reflexes in This Aerial Challenge</p>
+                <h1 class="project-detail__title">Helicopter Game</h1>
+                <p class="project-detail__subtitle">One-Touch Arcade Challenge</p>
 
-                <div class="project-detail-image">
+                <div class="project-detail__image">
                     <img src="images/helicopter_game.jpg" alt="Helicopter Game" />
                 </div>
 
-                <div class="project-detail-content">
+                <div class="project-detail__content">
                     <h2>About the Game</h2>
                     <p>Navigate your helicopter through increasingly tight corridors and avoid deadly obstacles in this fast-paced arcade challenge. One touch controls, infinite skill ceiling.</p>
 
@@ -45,8 +51,9 @@
                     <p>Test your reflexes and precision flying skills. Each run is different, and every mistake is instant death. Perfect for quick sessions or extended skill-testing marathons.</p>
 
                     <div class="project-status">
-                        <p><strong>Status:</strong> Concept / Early Development</p>
-                        <p><strong>Platform:</strong> Mobile (iOS & Android)</p>
+                        <p><strong>Status:</strong> Playable</p>
+                        <p><strong>Platform:</strong> Web</p>
+                        <a href="https://helicpoter-game-menonvikz.replit.app" target="_blank" rel="noopener" class="project-cta">Play Now</a>
                     </div>
                 </div>
             </div>
@@ -55,8 +62,15 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Vikas Menon</p>
+            <p>&copy; 2025 Vikas Menon</p>
         </div>
     </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>

@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy Team Rater - Vikas Portfolio</title>
+    <title>Fantasy Team Rater - Vikas Menon</title>
+    <meta name="description" content="AI-powered rating tool for Fantasy Premier League teams. Get your team rated 1-100.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-link">Home</a>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
             <div class="nav-links">
-                <a href="index.html#projects" class="nav-link">Projects & Interests</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#work" class="nav-link">Work</a>
                 <a href="index.html#about" class="nav-link">About</a>
             </div>
         </div>
@@ -20,18 +26,18 @@
     <main>
         <section class="project-detail">
             <div class="container">
-                <a href="index.html#projects" class="back-link">← Back to Projects</a>
+                <a href="index.html#projects" class="back-link">Back to Projects</a>
 
-                <h1 class="project-detail-title">Fantasy Premier League Team Rater</h1>
-                <p class="project-detail-subtitle">AI-Powered FPL Analysis Tool</p>
+                <h1 class="project-detail__title">Fantasy Team Rater</h1>
+                <p class="project-detail__subtitle">AI-Powered FPL Analysis Tool</p>
 
-                <div class="project-detail-image">
+                <div class="project-detail__image">
                     <img src="images/fpl.jpg" alt="Fantasy Team Rater" />
                 </div>
 
-                <div class="project-detail-content">
+                <div class="project-detail__content">
                     <h2>About the Project</h2>
-                    <p>For over a decade, I've been playing Fantasy Premier League. And for over a decade, I've been consistently terrible at it. I decided to build an AI-powered tool to help analyze teams better—and learned to code along the way.</p>
+                    <p>For over a decade, I've been playing Fantasy Premier League. And for over a decade, I've been consistently terrible at it. I decided to build an AI-powered tool to help analyze teams better - and learned to code along the way.</p>
 
                     <h2>Key Features</h2>
                     <ul>
@@ -42,17 +48,14 @@
                     </ul>
 
                     <h2>The Journey</h2>
-                    <p>This was my first complete full-stack project. I started with OCR to read team screenshots (it failed hilariously), pivoted to the FPL API, and built the entire backend with Node.js—all while learning to code with help from Claude AI.</p>
+                    <p>This was my first complete full-stack project. I started with OCR to read team screenshots (it failed hilariously), pivoted to the FPL API, and built the entire backend with Node.js - all while learning to code with help from Claude AI.</p>
 
                     <p>I'm still not great at FPL, but at least now I have data to explain why.</p>
-
-                    <div class="project-links" style="margin: 2rem 0;">
-                        <a href="https://fantasy-rater-menonvikz.replit.app/" target="_blank" class="project-link">Try the Tool →</a>
-                    </div>
 
                     <div class="project-status">
                         <p><strong>Status:</strong> Live</p>
                         <p><strong>Tech Stack:</strong> Node.js, Express, FPL API</p>
+                        <a href="https://fantasy-rater-menonvikz.replit.app/" target="_blank" rel="noopener" class="project-cta">Try the Tool</a>
                     </div>
                 </div>
             </div>
@@ -61,8 +64,15 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Vikas Menon</p>
+            <p>&copy; 2025 Vikas Menon</p>
         </div>
     </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>

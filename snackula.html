@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snackula - Vikas Portfolio</title>
+    <title>Snackula - Vikas Menon</title>
+    <meta name="description" content="AI-driven vampire social deduction game. Convince AI-powered neighbors to let you inside.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-link">Home</a>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
             <div class="nav-links">
-                <a href="index.html#projects" class="nav-link">Projects & Interests</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#work" class="nav-link">Work</a>
                 <a href="index.html#about" class="nav-link">About</a>
             </div>
         </div>
@@ -20,16 +26,16 @@
     <main>
         <section class="project-detail">
             <div class="container">
-                <a href="index.html#projects" class="back-link">← Back to Projects</a>
+                <a href="index.html#work" class="back-link">Back to Work</a>
 
-                <h1 class="project-detail-title">Snackula</h1>
-                <p class="project-detail-subtitle">AI-Driven Vampire Social Deduction Game</p>
+                <h1 class="project-detail__title">Snackula</h1>
+                <p class="project-detail__subtitle">AI-Driven Vampire Social Deduction Game</p>
 
-                <div class="project-detail-image">
+                <div class="project-detail__image">
                     <img src="images/snackula.jpg" alt="Snackula" />
                 </div>
 
-                <div class="project-detail-content">
+                <div class="project-detail__content">
                     <h2>About the Game</h2>
                     <p>You're a vampire looking for a midnight snack in a friendly neighborhood. The catch? You need to convince strangers to let you inside their homes. Each knock on a door reveals a unique AI-driven character with their own personality, fears, and reasoning.</p>
 
@@ -45,7 +51,7 @@
                     <p>Can you convince enough neighbors to let you in before sunrise? Each character remembers your previous interactions, and word spreads through the neighborhood. The more houses you visit, the harder it becomes to maintain your cover.</p>
 
                     <div class="project-status">
-                        <p><strong>Status:</strong> In Development</p>
+                        <p><strong>Status:</strong> Live on Ripple AI</p>
                         <p><strong>Platform:</strong> Mobile (iOS & Android)</p>
                     </div>
                 </div>
@@ -55,8 +61,15 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Vikas Menon</p>
+            <p>&copy; 2025 Vikas Menon</p>
         </div>
     </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>

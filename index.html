@@ -3,477 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikas - Portfolio</title>
+    <title>Vikas Menon</title>
+    <meta name="description" content="Head of Games & Platform at Terra. Building AI-native games. Previously Executive Producer at Zynga.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#articles" class="nav-link">Home</a>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-name">Vikas Menon</a>
             <div class="nav-links">
-                <a href="#projects" class="nav-link">Projects & Interests</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#writing" class="nav-link">Writing</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="#about" class="nav-link">About</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <section id="articles" class="articles">
+        <header class="hero">
             <div class="container">
-                <div class="article-feed">
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=800&h=400&fit=crop" alt="Breakfast" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">January 2025</div>
-                            <h2 class="article-title">Enjoy Your Breakfasts</h2>
-                            <p class="article-preview">And your projects. Just today I was trying to remember the last time I enjoyed breakfast. The last time I wasn't rushing to the next thing. The last time I actually relished a meal.</p>
-                            <button class="read-more-btn" data-article="breakfast">Read more</button>
-                            <div class="article-full-content" id="article-breakfast" style="display: none;">
-                                <p>And just today I caught myself rushing through a design problem on bowldem. Wanting to ship it, move on. But why?</p>
-                                <p>I need to chew it.</p>
-                                <p>That's how you enjoy projects.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=400&fit=crop" alt="AI Gaming" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">November 2024</div>
-                            <h2 class="article-title">AI-Native Games: Still Hour One</h2>
-                            <p class="article-preview">The AI-native game space is still very early. Mobile gaming especially has been lagging behind, which is unusual because gaming typically leads innovation at the intersection of art, entertainment, tech, and consumer behavior.</p>
-                            <button class="read-more-btn" data-article="1">Read more</button>
-                            <div class="article-full-content" id="article-1" style="display: none;">
-                                <p>The AI-native game space is still very early—hour one, if you will. But there's a big change coming, and the signs are there. Mobile gaming especially has been lagging behind, which is unusual because gaming typically leads innovation at the intersection of art, entertainment, tech, and consumer behavior.</p>
-                                <p>We need to be prepared, because this is going to explode the gaming landscape.</p>
-
-                                <p><strong>What Makes a Game AI-Native?</strong></p>
-                                <p>There's confusion about what AI-native actually means. People often conflate it with using AI in the development pipeline—procedural generation, asset creation, or level design. Different people interpret these differently.</p>
-                                <p>Playing with Inference offers a useful framework: AI-native games integrate machine learning or generative AI directly into the core game loop. These systems create content or behaviors that traditional development tools simply couldn't achieve at scale, fundamentally expanding what's possible for player agency, dynamic systems, and emergent behavior. It's about both the technology and how it transforms the player experience—not just where AI appears in production.</p>
-                                <p>A simpler way to think about it comes from Joseph Kim:</p>
-                                <p><em>If you remove AI from an AI-native game, the game collapses.</em></p>
-                                <p>AI needs to be at the center—driving the core experience and moving the player from point A to point B. The player has to be interacting with AI front and center. Obviously, there are more layers where AI can contribute, but this is the foundation—the starting point everything else builds on.</p>
-                                <p>The player must feel the AI. They don't need to know whether AI is generating the response, simulating logic, or mimicking a player—but they should feel the presence of intelligence in every interaction.</p>
-
-                                <p><strong>The PC Pioneers</strong></p>
-                                <p>This is best explained with examples. On PC and web, several games have already shown what truly AI-native experiences look like.</p>
-                                <p><strong>AI2U: With You Til The End</strong> — the player interacts with a Yandere girl while trying to escape. Every behavior—whether she leaves the room, stays, or offers hints—is driven by AI. Parameters are controlled by AI logic. Remove AI, and the entire experience collapses.</p>
-                                <p><strong>Suck Up!</strong> — another strong example. You play as a vampire negotiating entry into homes or talking to police officers. The entire progression depends on AI-driven dialogue and dynamic social reasoning.</p>
-                                <p>These examples show what's possible when AI drives the core experience. Right now, most of these implementations are text-driven and stat-based, but that will evolve quickly. Other interaction models—voice, gesture, emotion, expression—will soon define the next generation of AI-native games.</p>
-
-                                <p><strong>The Companion App Wave</strong></p>
-                                <p>On mobile, it's still early days, but the companion app space is seeing interesting movement.</p>
-                                <p>Ani and Valentine from Grok have set new standards for AI-driven companions. Their responses are rich and non-deterministic—but more importantly, AI controls emotion, movement, expression, and environmental cues in real time. AI spawns characters, manages animation systems, and generates emotional responses—creating a full-spectrum emotional experience led entirely by intelligence.</p>
-                                <p>Other apps like Replika, Character.AI, and Other Half have proven the demand for emotional, conversational AI. And now, new 3D-based companions are emerging, pushing the space further. There's real momentum here.</p>
-
-                                <p><strong>Mobile Gaming: The Add-On Problem</strong></p>
-                                <p>Gaming specifically is just catching up. In most cases, AI shows up as an add-on feature. You complete a level built by code and logic, and then hand over the experience to AI for a chat or report card. The core loop remains traditional; the AI layer sits on top.</p>
-                                <p>There are still great experiments. Pengu and Chonk are clever examples—co-parenting pet games built around nurturing and social play. The AI touches appear when the pet writes letters or reflects on how it felt being raised. That's creative and meaningful work.</p>
-                                <p>Match-3 and puzzle games are also starting to experiment—AI handling difficulty tuning, asset generation, or level variety. But here's the key distinction:</p>
-                                <p><em>If you remove AI, the game still works. The mechanic might change—but it doesn't collapse.</em></p>
-                                <p>These are promising first steps, but not the final destination. The next wave needs to move beyond enhancement into AI as the core interaction layer—where the gameplay itself wouldn't exist without AI.</p>
-
-                                <p><strong>Gaming Catches Up</strong></p>
-                                <p>The entire world has been exploring AI for the past few years. Every industry is figuring out what it means for them. But gaming has been unusually quiet. That's strange—because gaming has always been the bridge between new technology and human experience. We're the ones who make tech emotional, expressive, and playable.</p>
-                                <p>That's about to change—and fast.</p>
-
-                                <p><strong>Why We're Excited About Building AI-Native</strong></p>
-                                <p>At Ripple AI, we're building at the edge of what's possible. It feels like hour one again. Things are only going to accelerate from here.</p>
-                                <p>We already see hints of what's coming. Some early tests show genuine emotional connection and engagement. Others remind us how much work remains. That's the exciting part—it's unexplored territory.</p>
-                                <p>The opportunity is massive. LLMs are becoming more capable. Hardware is improving. Infrastructure is ready. Everything is aligning.</p>
-                                <p>The questions we're asking:</p>
-                                <ul>
-                                    <li>How do we make AI interactions feel natural and emotionally real?</li>
-                                    <li>How do we design loops that collapse without AI at the center?</li>
-                                    <li>How do we build experiences that couldn't exist before now?</li>
-                                </ul>
-                                <p>We don't have all the answers yet. We're experimenting, iterating, learning. But the path forward is clear—games that live and breathe through intelligence.</p>
-                                <p>Because that's where this is headed. Not AI-assisted. Not AI-enhanced.</p>
-                                <p><strong>AI-native.</strong></p>
-                                <p>And we're just getting started.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?w=800&h=400&fit=crop" alt="Progression" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">December 2024</div>
-                            <h2 class="article-title">Progression Systems Are Overrated for Game Platforms</h2>
-                            <p class="article-preview">Terra had 50+ games. Players would jump from Cricket to Tennis to Olympics, but there was no platform-level reason to come back tomorrow. So we built one. Six weeks to prove it mattered.</p>
-                            <button class="read-more-btn" data-article="2">Read more</button>
-                            <div class="article-full-content" id="article-2" style="display: none;">
-                                <p><strong>Progression Systems Are Overrated for Game Platforms</strong></p>
-                                <p>We tried to prove it wrong. A 6-week experiment.</p>
-
-                                <p>Terra had 50+ games. Sports, action, racing, casual. Players would jump from Cricket to Tennis to Olympics, but there was no platform-level reason to come back tomorrow. We had Terra Coins, basically Robux for our platform, earned through daily streaks and spendable on in-game boosts. The infrastructure was there. What we didn't have was any way to make playing multiple games feel like progress toward something.</p>
-
-                                <p>Individual games figured this out years ago. Battle Passes, prestige systems, XP ladders. They all work. Steam has had platform XP since 2013. Epic added it in 2021. Google Play Games built one for mobile. If every successful game needs progression, shouldn't platforms need it too?</p>
-
-                                <p>So we built one. Six weeks to prove it mattered.</p>
-
-                                <p><strong>The Bet</strong></p>
-                                <p>Here's what we knew going in: games use XP to keep players coming back. Some platforms tried it. Steam for badges, Epic for achievements, Google Play for cross-game progress. But we didn't know if players actually cared about platform progression. Or whether they'd prefer in-game boosts versus Terra Coins. Or if we could even make rewards feel meaningful when different players cared about completely different games.</p>
-
-                                <p>Six weeks. Build it, test it, see what happens.</p>
-
-                                <p><strong>The Hard Part</strong></p>
-                                <p>Building XP for a platform is different from building it for a game. Games reward depth. Play longer, level up, unlock more. Platforms need to reward breadth too. Try a new game, hit a milestone, get XP. Play your favorite for 20 minutes, get more XP. We balanced milestone-based rewards with time-based rewards, threw in multipliers to prevent people from just idling in games.</p>
-
-                                <p>The formula was transparent. You could see exactly what you'd earn.</p>
-
-                                <p>But here's where it got messy. Cricket players don't care about racing boosts. And all these games were already live. Going back to 50+ games to add meaningful rewards that players would understand at Level 2 or Level 3 meant coordinating across the entire catalog.</p>
-
-                                <p>Then there's the reward prediction problem. Players need to know what reward they're grinding toward. That calculation depends on which games they've played so far. If you show someone a boost for a game they never touch, there's no incentive. The grind has to match the value.</p>
-
-                                <p>We settled on two reward types:</p>
-                                <ul>
-                                    <li>Variant 1: Level up, get in-game boosts for games you actually play</li>
-                                    <li>Variant 2: Level up, get Terra Coins, spend them wherever</li>
-                                    <li>Control: No XP system</li>
-                                </ul>
-
-                                <p>We'd originally planned a third variant. Content unlock, where new games or levels gated behind your platform level. We killed it. Too much friction. Players would hit double grind (platform level plus in-game requirements), and if their favorite game got locked at Level 15, we'd just be punishing engagement.</p>
-
-                                <p>Three variants. Six weeks. Let's see.</p>
-
-                                <p><strong>What Happened</strong></p>
-                                <p>We added a new page to the platform. The level-up tree. It showed your current level, XP progress, and what rewards you'd unlock next. 16% of players clicked through from that page into games. For a meta-layer feature, that's real engagement. Players noticed it.</p>
-
-                                <p>Entry into favorite games went up. By favorite, I mean the games players spent the most time in on D0. The system pushed people back to what they already liked.</p>
-
-                                <p>Items beat TC on gametime. Makes sense. A 2x jump boost right now feels better than coins you'll spend later.</p>
-
-                                <p>But retention barely moved. D1 was slightly better for TC. D2, same story. D7 and beyond, no meaningful difference from control.</p>
-
-                                <p>Time spent didn't move either. Players leveled up, got rewards, went back to playing. But they didn't play longer or come back more often in any way that mattered.</p>
-
-                                <p>The system worked. It just didn't matter.</p>
-
-                                <p><strong>What We Got Wrong</strong></p>
-                                <p>Progression works when it's the point, not when it's decoration. Steam's XP is about status and collecting. Google Play ties XP to real rewards through Play Points. We built a system that players engaged with, but their behavior didn't change.</p>
-
-                                <p>Which explains why Roblox doesn't have platform progression. Or Netflix. Players don't need meta-progression to enjoy a gaming platform. They need good games and easy access.</p>
-
-                                <p>Progression systems for platforms? Overrated.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=400&fit=crop" alt="Reflection" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">December 2024</div>
-                            <h2 class="article-title">I Was Afraid of the Wrong Thing</h2>
-                            <p class="article-preview">Several years ago in a meeting room that smelled like it had been occupied for way too long, we discussed our next bold beat. I lost it internally. New bold beat? We were struggling with regular releases.</p>
-                            <button class="read-more-btn" data-article="3">Read more</button>
-                            <div class="article-full-content" id="article-3" style="display: none;">
-                                <p>Several years ago in a meeting room that smelled like it had been occupied for way too long, we discussed our next bold beat. Bold beat - a term from gaming for a major feature release.</p>
-                                <p>I lost it internally.</p>
-                                <p>New bold beat? We were struggling with regular releases. Every release had a hotfix. The team worked weekends just to cobble things together.</p>
-                                <p>And now, a new bold beat?</p>
-                                <p>My lips didn't move. My eyes didn't reveal my thoughts.</p>
-                                <p>The discussion went on. Big features. Competitor analysis. Growth plans.</p>
-                                <p><strong>The Wrong Optimization</strong></p>
-                                <p>On one hand: you need stability. Clean releases. Predictable timelines. This is responsible leadership.</p>
-                                <p>On the other hand: time is precious and every game is at war to demand player attention. Test fast, fail fast, ship fast. Six months to ship anything is a death sentence. All games die - the ones that take risks last longer.</p>
-                                <p>My mind was wired for the first. The market demands the second. It didn't even register.</p>
-                                <p>I sat there thinking everyone else was being reckless.</p>
-                                <p>I was the reckless one. Reckless with time. Reckless with opportunity. Reckless by being risk averse. Craving stability that ensures death.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="images/paradise.jpg" alt="Paradise" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">May 2025</div>
-                            <h2 class="article-title">Paradise</h2>
-                            <p class="article-preview">This small ring of sand against the endless blue, each footfall teaching how vastness lives in letting go of what we think we are.</p>
-                            <button class="read-more-btn" data-article="3">Read more</button>
-                            <div class="article-full-content" id="article-3" style="display: none;">
-                                <div class="article-image" style="margin-bottom: 1.5rem;">
-                                    <img src="images/bali_run2.jpg" alt="Bali" />
-                                </div>
-                                <p><em>This small ring of sand<br>against the endless blue,<br>each footfall teaching<br>how vastness lives<br>in letting go of what we think we are</em></p>
-                                <p>Sometimes the best way to explore a new place is one step at a time.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="images/fpl.jpg" alt="Fantasy Premier League" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">January 2025</div>
-                            <h2 class="article-title">How I Used AI to create a Fantasy Premier League Team Rater</h2>
-                            <p class="article-preview">For over a decade, I've been playing Fantasy Premier League. And for over a decade, I've been consistently terrible at it. I decided to build something to help analyze it better.</p>
-                            <button class="read-more-btn" data-article="3">Read more</button>
-                            <div class="article-full-content" id="article-3" style="display: none;">
-                                <p>For over a decade, I've been playing Fantasy Premier League (FPL). And for over a decade, I've been consistently terrible at it. Don't get me wrong – I love the game. But after years of mid-table finishes and failed triple-captain choices, I decided to do something different. If I couldn't beat the game with gut instinct, maybe I could build something to help analyze it better.</p>
-                                <p>One small catch: I hadn't coded in years.</p>
-                                <p><strong>The Spark</strong></p>
-                                <p>It started with someone mentioning these new AI assistants that could help with coding. As someone whose last significant coding experience was debugging on Lotus Notes, this caught my attention. Could AI help bridge my knowledge gap?</p>
-                                <p>Enter Claude and Replit. Both were new to me, but they seemed user-friendly enough for a rusty developer to experiment with.</p>
-                                <p><strong>First Attempt: The Screenshot Dream</strong></p>
-                                <p>My first approach was simple: build an app that could analyze FPL team screenshots. Why screenshots? Because that's how most of us share our teams in WhatsApp groups. It's quick, it's easy, and it shows everything at a glance.</p>
-                                <p>I dove into Optical Character Recognition (OCR) – the technology that converts images to text. Sounds straightforward, right? Well, as it turns out, teaching a computer to read player names from screenshots is about as reliable as my captain picks this season. Sometimes it would read "Mohamed Salah" as "No Bad Sala", and other times it would think the pitch grid lines were player names.</p>
-                                <p><strong>The API Pivot</strong></p>
-                                <p>After a week of wrestling with OCR, I remembered something: FPL has an API. I'd known about it for a while but had initially avoided it. Why? Because I wanted this tool to be accessible to everyone, not just the tech-savvy who could find their team ID.</p>
-                                <p>But sometimes the easier path isn't the better one. Once I started working with the API, things clicked. My first successful API call felt like scoring in the 90th minute!</p>
-                                <p><strong>Building the Brain</strong></p>
-                                <p>With reliable data flowing in, I could focus on what mattered: the rating algorithm. How do you quantify if a team is good? I developed a system that looks at: Goalkeepers and Defenders (70% based on clean sheets, 30% on attacking returns), Midfielders (80% attacking returns, 20% clean sheets), and Forwards (Pure attacking returns).</p>
-                                <p>I also incorporated Fixture Difficulty Rating (FDR) because let's face it – playing against Manchester City away isn't the same as hosting a newly promoted team.</p>
-                                <p><strong>The Final Product</strong></p>
-                                <p>The result? A web application that rates your FPL team on a scale of 1-100, analyzes player performance based on position, and considers upcoming fixtures in the rating.</p>
-                                <p>You can try it here: <a href="https://fantasy-rater-menonvikz.replit.app/" target="_blank">https://fantasy-rater-menonvikz.replit.app/</a></p>
-                                <p>I'm still not great at FPL, but at least now I have data to explain why.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="images/4thinkinghats.jpg" alt="Thinking Hats" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">January 2025</div>
-                            <h2 class="article-title">4 Thinking Hats of Production</h2>
-                            <p class="article-preview">IGDC 2020 - An interactive session on how I think of Production as 4 key pillars across Project, Process, People and Player Management.</p>
-                            <button class="read-more-btn" data-article="4">Read more</button>
-                            <div class="article-full-content" id="article-4" style="display: none;">
-                                <p><strong>IGDC 2020</strong></p>
-                                <p>I take an interactive session of how I think of Production - as 4 key pillars across Project, Process, People and Player Management with some examples & lots of memes.</p>
-                                <div class="video-embed">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/7KtWOLetuIo?start=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="images/vision.jpg" alt="Velocity" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">January 2025</div>
-                            <h2 class="article-title">Focusing on Velocity</h2>
-                            <p class="article-preview">Jeff Bezos provided a framework that I found interesting. I have used it a few times when presented with a complex question with no easy answers. He was a master of inverting.</p>
-                            <button class="read-more-btn" data-article="5">Read more</button>
-                            <div class="article-full-content" id="article-5" style="display: none;">
-                                <p>Jeff Bezos provided a framework that I found interesting. I have used it a few times when presented with a complex question with no easy answers. He was a master of inverting.</p>
-                                <p><em>"I very frequently get the question: 'What's going to change in the next 10 years?' And that is a very interesting question; it's a very common one. I almost never get the question: 'What's not going to change in the next 10 years?' And I submit to you that that second question is actually the more important of the two -- because you can build a business strategy around the things that are stable in time. ... [I]n our retail business, we know that customers want low prices, and I know that's going to be true 10 years from now. They want fast delivery; they want vast selection."</em></p>
-                                <p>In game development, the pace of innovation is extremely fast. Technologies change, relationships with partners change, the industry evolves and before you know it the pipeline that caters to deliver great games needs to play catch up.</p>
-                                <p>If everything else is changing, a good question to ask yourself as a game producer is - "What will not change in the next decade?"</p>
-                                <p>It is impossible to imagine a scenario where great games and software updates will not be necessary to be delivered with great urgency and high predictability. Time to market will make or break game studios.</p>
-                                <p>Your game development strategy needs to be focused on not speed, but instead velocity. Your game development strategy needs to be a living organism - constantly iterating and evolving, asking the right questions every turn. If you have a new game idea, ask yourself: How fast you can validate that idea? How fast can you take that idea to market?</p>
-                                <p>If you are not happy with the answer - time to tinker with your process. Your entire organization needs to be set up that way. You need to be ok to take hard calls. You should be ok to prioritize ruthlessly. You must be able to provide focus for your team. Don't add, but instead subtract. Remove bets that don't matter.</p>
-                                <p>Focusing on velocity ensures that the team is moving in the right direction. Focusing on volume ensures you have more frequent updates and more releases, but overall you will find you are shipping less meaningful work.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="images/values2.jpg" alt="Values" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">January 2025</div>
-                            <h2 class="article-title">MY VALUES</h2>
-                            <p class="article-preview">What do I stand for? Through introspection and reviewing professional and personal relationships over the last couple of decades, I've identified three core values: Integrity, Respect, and Resilience.</p>
-                            <button class="read-more-btn" data-article="6">Read more</button>
-                            <div class="article-full-content" id="article-6" style="display: none;">
-                                <p>It seems quite surreal that here I am writing a post about values while through my professional career, I have had a hard time believing that any organization takes its values seriously. Like they say… <strong>When the Student is Ready, the Teacher Will Appear</strong></p>
-                                <p>So what are my core values? What is it that I stand for?</p>
-                                <p><strong>Integrity</strong></p>
-                                <p>A long, long time ago I had an interesting conversation with one of my professors. It was midnight. There was a surprise raid in our hostel block. The warden found a bottle of Old Monk in my cupboard. This was bad news.</p>
-                                <p>I was called on to provide an explanation. The professor spoke - "Vikas, I know this bottle is not yours. Someone kept it there. I don't believe you would do this and break the rules. Tell me whose bottle this is?". I was taken aback but my reply was quite quick- "This bottle is mine."</p>
-                                <p>Before leaving the room, my professor thanked me for my honesty and said that he appreciates how I owned up in spite of him cooking up a random story.</p>
-                                <p>I don't cook up random stories. I am honest and show a consistent adherence to moral and ethical values, however uncomfortable it might be for me.</p>
-                                <p><strong>Respect</strong></p>
-                                <p>I now tend to take a long term view of relationships. I keep reminding myself of this quote from the Pale Blue Dot: "It has been said that astronomy is a humbling and character-building experience. To me, it underscores our responsibility to deal more kindly with one another."</p>
-                                <p>I understand the world is huge and diverse. There are a lot of differences in beliefs, cultures and ways of thinking but one thing that remains consistent is how you make people feel. I like to treat people the same way I would like to be treated - with respect.</p>
-                                <p>Being respectful also means being honest. When something is not well done, it needs to be communicated appropriately. This core pillar allows me to build meaningful relationships with my team and with time, build trust.</p>
-                                <p><strong>Resilience</strong></p>
-                                <p>Failures are quite common in game development. There are more chances of a game not working than of an outsized success. At the same time, being conservative in your bet is not going to help you win the market.</p>
-                                <p>Chess has taught me to look at the board and activate all the pieces. Even then, failures are par for the course. This means it is more important to get back up and take more shots than just give up.</p>
-                                <p>I have made peace with failures. I try now to instill the same in the teams I am working with. You never know what you find on the other side of the failure cliff and a high performing team will keep searching for that edge.</p>
-                                <p><strong>JANUARY 2025 EDIT:</strong> The world is my Oyster. I have become increasingly convinced of this Steve Jobs' quote: <em>"Everything around you that you call life was made up by people that were no smarter than you."</em></p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="images/podcast.jpg" alt="LiveOps" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">December 2024</div>
-                            <h2 class="article-title">Podcast: How to Run LiveOps</h2>
-                            <p class="article-preview">I join Stan Minasov from AppMagic in the 9th episode of Games & Names. We cover everything LiveOps - challenges, pitfalls, and the secret sauce of maintaining a performing game for years.</p>
-                            <button class="read-more-btn" data-article="7">Read more</button>
-                            <div class="article-full-content" id="article-7" style="display: none;">
-                                <p>I join Stan Minasov from AppMagic in the 9th episode of Games & Names. We cover everything liveops.</p>
-                                <p>In this episode, we're talking about LiveOps and how to cook it the best way. How to run a successful LiveOps? What are the main challenges and pitfalls you should be aware of? What to do, when players know your game better than you do? And what is the secret sauce of maintaining a performing game for years? Together with Vikas Menon, executive producer with almost 12 years of experience at Zynga, we're discussing the ins and outs of LiveOps!</p>
-                                <div class="video-embed">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/TDJbikbzK6c?start=20&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="images/horses_courses.jpg" alt="Running" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">December 2024</div>
-                            <h2 class="article-title">Horses for Courses</h2>
-                            <p class="article-preview">I was an athlete once. I loved sprinting. My choice event was the 100m dash. I built quite a collection of bronze and silver medals from those days. But I wasn't the fastest.</p>
-                            <button class="read-more-btn" data-article="8">Read more</button>
-                            <div class="article-full-content" id="article-8" style="display: none;">
-                                <p><strong>I was an athlete once.</strong></p>
-                                <p>I loved sprinting. My choice event was the 100m dash. I loved it. I was faster than many others and ranked among the top three in my school. I built quite a collection of bronze and silver medals from those days.</p>
-                                <p>But, I wasn't the fastest. I didn't care much about that, till at least our sports teacher decided to take the next inter-school championship little more seriously. He enrolled us "athletes" into a running camp. And boy, was that hardcore.</p>
-                                <p>Every day right after school, we assembled in our playground where the coach was already waiting with his equipment. I remember my 12-13 year old body giving up many times but we would still go on. He would try to break us every single day and every day he would succeed.</p>
-                                <p>A week before the sports tournament, he took all of us aside and shared what events we will participate in. I was so sure that my name will be picked for the 100m dash, and I remember the lump I felt in my throat when I found that my name wasn't in that list. Heck, I didn't even make it to the 100m relay team. My name made it's mention only in the 1K. I didn't even know that there was an event like that.</p>
-                                <p>I was gutted and I guessed this was obvious from my expression. He took me aside and told me to focus on my stamina and leg strengthening. He said he had high hopes for me in the long distance running. Looking back, he was kind. He left out the part where he didn't mention that I was hopeless in the 100m dash category.</p>
-                                <p>Come race day, I found myself doing exceptionally well running long distances. Heck, I was well ahead of the competition. I won my first 1K and finished 2nd in the finals. I didn't know I had it in me and since then I have enjoyed long distance running.</p>
-                                <p>The coach saw then what I didn't. I didn't have it in me to be the best at 100m dash. You need skill and talent, sure. You also need the mental fortitude which I lacked. I was ok being the 2nd best in my school - but I knew that was not good enough. He took my talent, and he maximized my chances of success by training me on stamina.</p>
-                                <p>He broke me everyday, but he picked the right horse for the course. He pushed me everyday, and he chose a path for me that I have made my own. I have never participated in a 100m dash since then.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&h=400&fit=crop" alt="Creativity" />
-                        </div>
-                        <div class="article-content">
-                            <div class="article-date">December 2024</div>
-                            <h2 class="article-title">Creativity vs. Shipping: Finding Balance in Game Development</h2>
-                            <p class="article-preview">Finding the balance between creativity and delivering a game on time is hard, but necessary. It's probably the most important trait a producer needs in game development.</p>
-                            <button class="read-more-btn" data-article="9">Read more</button>
-                            <div class="article-full-content" id="article-9" style="display: none;">
-                                <p><strong>HOW IS YOUR RHYTHM?</strong></p>
-                                <p>Finding the balance between creativity and delivering a game on time is hard, but necessary. It's probably the most important trait a producer needs in game development.</p>
-                                <p>Game post-mortems are littered with anecdotes of ideas that needed to be given more time to hit the quality benchmarks, or find product market fit. There are probably equal or more instances in game development where the team feels their development cycles are not nearly fast enough. We need to ship faster!</p>
-                                <p>So how do you navigate and walk the tight rope? How do you find the balance?</p>
-                                <p>Well, the answer is - "It depends."</p>
-                                <p>The best leaders I have worked with typically approach this problem with the following mindset:</p>
-                                <p>• There needs to be periods where the team needs to be creative. During this period, they have the license to go completely blue sky & off the rails. There will be no second thought given to killing old ideas for new ones or of work that's gone to waste. This is the period the right side of the brain will flex.</p>
-                                <p>• There will also be periods where the team will focus on execution. This means gathering all the ideas, documenting and developing them. There will be lesser focus on new ideas, more focus on bringing current ideas to light. Heads down & build.</p>
-                                <p><strong>The rhythm of moving game development along the phases of divergent and convergent thinking will eventually determine the success of your game.</strong></p>
-                                <p>The entire game development lifecycle will be a tango dance between these 2 phases. You will have periods of blue sky and then a period of execution. This will define the rhythm of your game development and how well you manage the ground rules in these phases will determine the eventual success of your game.</p>
-                                <p>Another useful way to think about creative decision is if it's a two way decision or an irreversible one. Take plenty of time for the irreversible decision points. For the ones you can walk back from, no point in mulling over it. Pick a solution and move as fast as you can. You can always come back to it later.</p>
-                                <p>The success of the team depends on a number of creative decisions made through the game development lifecycle. The proof of the pudding is when the game finally ships and in players hands.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
+                <p class="hero-eyebrow">Head of Games & Platform</p>
+                <h1 class="hero-title">Building <em>AI-native</em> games at Terra</h1>
+                <p class="hero-intro">
+                    I make games and tools. Currently at <a href="#work">Terra</a> building AI-native experiences.
+                    Previously Executive Producer at <a href="#work">Zynga</a> for 11+ years. I write about
+                    game development, velocity, and lessons learned.
+                </p>
             </div>
-        </section>
+        </header>
 
-        <section id="projects" class="projects">
+        <!-- SIDE PROJECTS - PRIMARY -->
+        <section id="projects">
             <div class="container">
-                <span class="section-label">Work & Play</span>
-                <h2 class="section-title">Projects & Interests</h2>
+                <div class="section-header">
+                    <span class="section-title">Side Projects</span>
+                    <a href="https://github.com/ssupppp" target="_blank" class="section-link">GitHub →</a>
+                </div>
 
-                <div class="game-tiles">
-                    <a href="snackula.html" class="game-tile">
-                        <div class="game-tile-image">
-                            <img src="images/snackula.jpg" alt="Snackula" />
+                <!-- Featured Project: Bowldem -->
+                <div class="featured-project">
+                    <a href="https://ssupppp.github.io/bowldem/" target="_blank" class="featured-link">
+                        <span class="featured-label">Featured</span>
+                        <h2 class="featured-title">Bowldem</h2>
+                        <p class="featured-desc">Wordle, but for cricket. Guess the mystery cricketer in 6 tries using clues about nationality, role, batting/bowling style, IPL team, and career stats. New puzzle daily. Built with vanilla JS and a curated database of 500+ cricketers.</p>
+                        <span class="featured-cta">Play now →</span>
+                    </a>
+                </div>
+
+                <div class="project-list">
+                    <a href="https://github.com/ssupppp/valuepickr" target="_blank" class="project-item">
+                        <div class="project-content">
+                            <span class="project-label">Python + RAG</span>
+                            <h3 class="project-title">ValuePickr Chat</h3>
+                            <p class="project-desc">RAG-powered chat interface to explore 10+ years of ValuePickr investment forum discussions. Uses embeddings and vector search.</p>
                         </div>
-                        <div class="game-tile-content">
-                            <h3 class="game-tile-title">Snackula</h3>
-                            <p class="game-tile-description">You're a vampire looking for a midnight snack. Knock on doors and convince strangers to let you inside. Each neighbor is an AI-driven character with dynamic dialogue.</p>
-                        </div>
+                        <span class="project-meta">2025</span>
                     </a>
 
-                    <a href="redflag.html" class="game-tile">
-                        <div class="game-tile-image">
-                            <img src="images/redflag.jpg" alt="RedFlag.exe" />
+                    <a href="fantasy-team-rater.html" class="project-item">
+                        <div class="project-content">
+                            <span class="project-label">Node.js + FPL API</span>
+                            <h3 class="project-title">Fantasy Team Rater</h3>
+                            <p class="project-desc">Rates your FPL team 1-100. Pulls live data from official API, scores by position, considers fixture difficulty.</p>
                         </div>
-                        <div class="game-tile-content">
-                            <h3 class="game-tile-title">RedFlag.exe</h3>
-                            <p class="game-tile-description">Wake up locked in a room with a perfect girlfriend. Or is she? Navigate conversations and escape before you become another victim. AI girlfriend is the core mechanic.</p>
-                        </div>
-                    </a>
-
-                    <a href="fantasy-team-rater.html" class="game-tile">
-                        <div class="game-tile-image">
-                            <img src="images/fpl.jpg" alt="Fantasy Team Rater" />
-                        </div>
-                        <div class="game-tile-content">
-                            <h3 class="game-tile-title">Fantasy Team Rater</h3>
-                            <p class="game-tile-description">AI-powered rating tool for Fantasy Premier League teams. Rates teams 1-100, analyzing player performance and upcoming fixtures.</p>
-                            <div class="game-tile-links">
-                                <span class="game-tile-link">Try it →</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="plumo.html" class="game-tile">
-                        <div class="game-tile-image">
-                            <img src="images/plumo.png" alt="Plumo" />
-                        </div>
-                        <div class="game-tile-content">
-                            <h3 class="game-tile-title">Plumo</h3>
-                            <p class="game-tile-description">A whimsical puzzle adventure featuring a plucky cloud character navigating through atmospheric challenges and dreamy landscapes.</p>
-                        </div>
-                    </a>
-
-                    <a href="helicopter-game.html" class="game-tile">
-                        <div class="game-tile-image">
-                            <img src="images/helicopter_game.jpg" alt="Helicopter Game" />
-                        </div>
-                        <div class="game-tile-content">
-                            <h3 class="game-tile-title">Helicopter Game</h3>
-                            <p class="game-tile-description">Navigate tight corridors and avoid obstacles in this fast-paced aerial challenge. Test your reflexes and precision flying skills.</p>
-                        </div>
-                    </a>
-
-                    <a href="bowldem.html" class="game-tile">
-                        <div class="game-tile-image">
-                            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=400&h=300&fit=crop" alt="Bowldem" />
-                        </div>
-                        <div class="game-tile-content">
-                            <h3 class="game-tile-title">Bowldem</h3>
-                            <p class="game-tile-description">Daily cricket puzzle game. Think Wordle, but for cricket fans. Guess the mystery cricketer each day.</p>
-                        </div>
+                        <span class="project-meta">2024</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <!-- WRITING - PRIMARY -->
+        <section id="writing">
             <div class="container">
-                <h2 class="about-title">About</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I like playing games and I make games too.</p>
-                        <p>Currently heading Games & Product at Terra, building AI-native games and experiences on Ripple AI. Previously, I was an Executive Producer at Zynga for over a decade, leading teams on titles like CSR2, Farmville, and Mafia Wars.</p>
-                        <p>I believe in focusing on velocity over volume, embracing failures as learning opportunities, and treating people with respect. The world is made up by people no smarter than you—so why not take a swing at something new?</p>
+                <div class="section-header">
+                    <span class="section-title">Writing</span>
+                    <a href="articles.html" class="section-link">View all →</a>
+                </div>
+
+                <div class="writing-list">
+                    <a href="articles.html#ai-native" class="writing-item">
+                        <h3 class="writing-title">AI-Native Games: Still Hour One</h3>
+                        <span class="writing-date">Nov 2024</span>
+                    </a>
+
+                    <a href="articles.html#progression" class="writing-item">
+                        <h3 class="writing-title">Progression Systems Are Overrated for Game Platforms</h3>
+                        <span class="writing-date">Dec 2024</span>
+                    </a>
+
+                    <a href="articles.html#wrong-thing" class="writing-item">
+                        <h3 class="writing-title">I Was Afraid of the Wrong Thing</h3>
+                        <span class="writing-date">Dec 2024</span>
+                    </a>
+
+                    <a href="articles.html#velocity" class="writing-item">
+                        <h3 class="writing-title">Focusing on Velocity</h3>
+                        <span class="writing-date">Jan 2025</span>
+                    </a>
+
+                    <a href="articles.html#creativity" class="writing-item">
+                        <h3 class="writing-title">Creativity vs. Shipping: Finding Balance</h3>
+                        <span class="writing-date">Dec 2024</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK EXPERIENCE - SECONDARY -->
+        <section id="work" class="work-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-title">Work Experience</span>
+                    <a href="portfolio.html" class="section-link">Full portfolio →</a>
+                </div>
+
+                <div class="work-list">
+                    <!-- Terra -->
+                    <div class="work-group">
+                        <div class="work-company">
+                            <span class="work-company-name">Terra / Ripple AI</span>
+                            <span class="work-company-period">2024 – Present</span>
+                        </div>
+                        <p class="work-role">Head of Games & Platform</p>
+
+                        <div class="work-projects">
+                            <a href="snackula.html" class="work-item">
+                                <div class="work-content">
+                                    <span class="work-label">AI-Native</span>
+                                    <h3 class="work-title">Snackula</h3>
+                                    <p class="work-desc">Vampire social deduction. Each neighbor is AI-driven with unique personality and reasoning. Charm, deceive, or intimidate your way inside.</p>
+                                </div>
+                                <span class="work-meta">Live</span>
+                            </a>
+
+                            <a href="redflag.html" class="work-item">
+                                <div class="work-content">
+                                    <span class="work-label">AI-Native</span>
+                                    <h3 class="work-title">RedFlag.exe</h3>
+                                    <p class="work-desc">Psychological thriller escape room. Wake up locked with a perfect girlfriend. Detect red flags and manipulate conversations to escape.</p>
+                                </div>
+                                <span class="work-meta">Live</span>
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Zynga -->
+                    <div class="work-group">
+                        <div class="work-company">
+                            <span class="work-company-name">Zynga</span>
+                            <span class="work-company-period">2012 – 2024</span>
+                        </div>
+                        <p class="work-role">Executive Producer</p>
+
+                        <div class="work-projects">
+                            <a href="portfolio.html" class="work-item">
+                                <div class="work-content">
+                                    <h3 class="work-title">CSR2 Racing</h3>
+                                    <p class="work-desc">#1 racing game on mobile. 73M+ downloads, $1B+ lifetime revenue.</p>
+                                </div>
+                                <span class="work-meta">2020–23</span>
+                            </a>
+
+                            <a href="portfolio.html" class="work-item">
+                                <div class="work-content">
+                                    <h3 class="work-title">Farmville Country Escape</h3>
+                                    <p class="work-desc">700M+ franchise downloads. 83M peak MAU.</p>
+                                </div>
+                                <span class="work-meta">2017–20</span>
+                            </a>
+
+                            <a href="portfolio.html" class="work-item">
+                                <div class="work-content">
+                                    <h3 class="work-title">Mafia Wars</h3>
+                                    <p class="work-desc">Live operations and feature development for social RPG franchise.</p>
+                                </div>
+                                <span class="work-meta">2012–17</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-title">About</span>
+                </div>
+
+                <div class="about-content">
+                    <p class="about-text">
+                        I like to write and I like to build. Currently heading Games & Platform at Terra,
+                        building AI-native experiences on Ripple AI. Before that, I spent over a decade at Zynga
+                        as an Executive Producer shipping games to hundreds of millions of players.
+                    </p>
+                    <p class="about-text">
+                        I believe in velocity over volume, embracing failure as learning, and treating people
+                        with respect. The world is made up by people no smarter than you—so why not take a
+                        swing at something new?
+                    </p>
+
                     <div class="about-links">
-                        <a href="Vikas_Menon_Resume.pdf" target="_blank" class="icon-link" title="Resume">📄 Resume</a>
-                        <a href="portfolio.html" class="icon-link" title="Portfolio">🎮 Portfolio</a>
-                        <a href="mailto:menonvikz@gmail.com" class="icon-link" title="Email">✉️ Email</a>
-                        <a href="https://linkedin.com/in/vikasmenon" target="_blank" class="icon-link" title="LinkedIn">💼 LinkedIn</a>
-                        <a href="https://twitter.com/vikasmenon" target="_blank" class="icon-link" title="Twitter">𝕏 Twitter</a>
-                        <a href="https://github.com/ssupppp" target="_blank" class="icon-link" title="GitHub">💻 GitHub</a>
+                        <a href="portfolio.html" class="about-link">Portfolio</a>
+                        <a href="mailto:menonvikz@gmail.com" class="about-link">Email</a>
+                        <a href="https://linkedin.com/in/vikasmenon" target="_blank" rel="noopener" class="about-link">LinkedIn</a>
+                        <a href="https://twitter.com/vikasmenon" target="_blank" rel="noopener" class="about-link">Twitter</a>
+                        <a href="Vikas_Menon_Resume.pdf" target="_blank" class="about-link">Resume</a>
+                        <a href="https://github.com/ssupppp" target="_blank" rel="noopener" class="about-link">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -482,10 +223,29 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Vikas Menon</p>
+            <p>© 2025 Vikas Menon</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Nav scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 100;
+                    const top = target.offsetTop - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
