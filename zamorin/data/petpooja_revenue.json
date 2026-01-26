@@ -1,17 +1,17 @@
 {
-  "total": 874604.05,
-  "total_sales": 874604.05,
+  "total": 968747.05,
+  "total_sales": 968747.05,
   "total_bills": 4271,
-  "days_count": 75,
+  "days_count": 80,
   "period": {
     "start": "2025-11-07",
-    "end": "2026-01-20",
-    "days": 75
+    "end": "2026-01-25",
+    "days": 80
   },
   "monthly": {
     "2025-11": 222078.41999999998,
     "2025-12": 322982.24000000005,
-    "2026-01": 329543.39
+    "2026-01": 423686.39
   },
   "monthly_bills": {
     "2025-11": 898,
@@ -551,6 +551,41 @@
       "total_sales": 18472.0,
       "bills": 97,
       "discount": 0
+    },
+    {
+      "date": "2026-01-21",
+      "revenue": 21436.0,
+      "total_sales": 21436.0,
+      "bills": 0,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-22",
+      "revenue": 22564.0,
+      "total_sales": 22564.0,
+      "bills": 0,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-23",
+      "revenue": 14873.0,
+      "total_sales": 14873.0,
+      "bills": 0,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-24",
+      "revenue": 19720.0,
+      "total_sales": 19720.0,
+      "bills": 0,
+      "discount": 0
+    },
+    {
+      "date": "2026-01-25",
+      "revenue": 15550.0,
+      "total_sales": 15550.0,
+      "bills": 0,
+      "discount": 0
     }
   ],
   "payment_modes": {
@@ -565,5 +600,5 @@
     "Nov_14_Dec_14_daywise.xlsx",
     "Jan14_daywise.xlsx"
   ],
-  "parsed_at": "2026-01-15T22:26:48.006037"
+  "parsed_at": "2026-01-26T08:34:24.179062"
 }

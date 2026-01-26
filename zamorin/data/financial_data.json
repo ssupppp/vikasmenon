@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-01-22T13:24:16.885124",
+  "generated_at": "2026-01-26T08:41:57.281030",
   "period": {
     "start": "2025-11-07",
-    "end": "2026-01-20",
-    "days": 75
+    "end": "2026-01-25",
+    "days": 80
   },
   "pnl": {
     "period": {
       "start": "2025-11-07",
-      "end": "2026-01-20",
-      "days": 75
+      "end": "2026-01-25",
+      "days": 80
     },
     "revenue": {
-      "total": 874604.05,
+      "total": 968747.05,
       "breakdown": {
         "2025-11": 222078.41999999998,
         "2025-12": 322982.24000000005,
-        "2026-01": 329543.39
+        "2026-01": 423686.39
       },
       "by_source": {
         "Petpooja Sales": 874604.05
@@ -80,8 +80,8 @@
         "Main Ingredients": 956715.68
       }
     },
-    "gross_profit": -424535.3400000001,
-    "gross_margin_pct": -48.5,
+    "gross_profit": -330392.3400000001,
+    "gross_margin_pct": -34.1,
     "opex": {
       "total": 1315488.9100000001,
       "breakdown": {
@@ -145,13 +145,13 @@
       "bank_paid": 1137983.9100000001,
       "partner_paid": 177505.0
     },
-    "operating_profit": -1740024.2500000002,
-    "operating_margin_pct": -198.9,
+    "operating_profit": -1645881.2500000002,
+    "operating_margin_pct": -169.9,
     "other_expenses": 11612.9,
-    "net_profit": -1751637.1500000001,
+    "net_profit": -1657494.1500000001,
     "capex": 30000.0,
-    "cogs_pct": 148.5,
-    "opex_pct": 150.4
+    "cogs_pct": 134.1,
+    "opex_pct": 135.8
   },
   "cash_flow": {
     "period": {
@@ -666,7 +666,7 @@
   ],
   "reconciliation": {
     "revenue": {
-      "petpooja_sales": 874604.05,
+      "petpooja_sales": 968747.05,
       "bank_deposits_total": 1803526.07,
       "difference_type": "capital_contributions",
       "source": "petpooja_exports"
