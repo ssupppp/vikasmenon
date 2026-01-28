@@ -1034,34 +1034,45 @@
                 </div>
             </div>
 
+            <!-- Revenue Trend Chart -->
+            <div class="chart-card full-width" style="margin-bottom: var(--space-lg);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <h3 style="margin: 0;">Revenue Trend</h3>
+                    <div class="period-selector" style="margin: 0;">
+                        <button class="period-btn active" data-trend-period="daily" onclick="setTrendPeriod('daily')">Daily</button>
+                        <button class="period-btn" data-trend-period="weekly" onclick="setTrendPeriod('weekly')">Weekly</button>
+                        <button class="period-btn" data-trend-period="monthly" onclick="setTrendPeriod('monthly')">Monthly</button>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="revenueTrendChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Upcoming Payments Section - PROMINENT -->
+            <div class="table-card" style="margin-bottom: var(--space-lg); border: 1px solid var(--warning); border-radius: var(--radius-lg);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <h3 style="margin: 0; color: var(--warning);">Upcoming Payments (Next 30 Days)</h3>
+                    <span id="upcomingTotal" style="font-size: 1.25rem; font-weight: 700; color: var(--warning);">--</span>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Payment</th>
+                            <th>Vendor</th>
+                            <th class="right">Amount</th>
+                            <th>Due</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="upcomingPaymentsTable">
+                        <tr><td colspan="5" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Accounts Payable & OpEx Charts -->
             <div class="charts-grid">
-                <div class="chart-card full-width">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <h3 style="margin: 0;">Revenue Trend</h3>
-                        <div class="period-selector" style="margin: 0;">
-                            <button class="period-btn active" data-trend-period="daily" onclick="setTrendPeriod('daily')">Daily</button>
-                            <button class="period-btn" data-trend-period="weekly" onclick="setTrendPeriod('weekly')">Weekly</button>
-                            <button class="period-btn" data-trend-period="monthly" onclick="setTrendPeriod('monthly')">Monthly</button>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="revenueTrendChart"></canvas>
-                    </div>
-                </div>
-
-                <div class="chart-card">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <h3 style="margin: 0;">Operating Expenses</h3>
-                        <div class="period-selector" style="margin: 0;">
-                            <button class="period-btn active" data-opex-view="monthly" onclick="setOpexView('monthly')">Monthly</button>
-                            <button class="period-btn" data-opex-view="cumulative" onclick="setOpexView('cumulative')">Till Date</button>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="opexChart"></canvas>
-                    </div>
-                </div>
-
                 <div class="chart-card">
                     <h3>Accounts Payable (Balance Due)</h3>
                     <table class="data-table" style="margin-top: 10px;">
@@ -1076,33 +1087,21 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
 
-            <!-- Upcoming Payments Section -->
-            <div class="table-card" style="margin-top: var(--space-lg);">
-                <h3>Upcoming Payments (Next 30 Days)</h3>
-                <p style="color:var(--text-muted);font-size:0.75rem;margin-bottom:1rem;">Based on historical payment patterns from bank statements</p>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Payment</th>
-                            <th>Vendor</th>
-                            <th class="right">Est. Amount</th>
-                            <th>Due Date</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="upcomingPaymentsTable">
-                        <tr><td colspan="5" class="loading">Loading...</td></tr>
-                    </tbody>
-                    <tfoot>
-                        <tr style="background:var(--bg-tertiary);font-weight:600;">
-                            <td colspan="2">Total Upcoming</td>
-                            <td class="right" id="upcomingTotal">--</td>
-                            <td colspan="2"></td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <div class="chart-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <h3 style="margin: 0;">Operating Expenses</h3>
+                        <div class="period-selector" style="margin: 0;">
+                            <button class="period-btn active" data-opex-view="monthly" onclick="setOpexView('monthly')">Monthly</button>
+                            <button class="period-btn" data-opex-view="cumulative" onclick="setOpexView('cumulative')">Till Date</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="opexChart"></canvas>
+                    </div>
+                    <!-- OpEx Breakdown Table -->
+                    <div id="opexBreakdownTable" style="margin-top: 15px; max-height: 200px; overflow-y: auto;"></div>
+                </div>
             </div>
         </div>
 
@@ -2483,7 +2482,8 @@
             document.getElementById('lastUpdated').textContent =
                 `Updated: ${updated.toLocaleDateString('en-IN')} ${updated.toLocaleTimeString('en-IN', {hour: '2-digit', minute: '2-digit'})}`;
 
-            // Store globally for detail rendering
+            // Store globally for detail rendering and period selectors
+            globalData = data;
             globalFinData = finData;
 
             // Render expandable detail panels
@@ -2607,7 +2607,13 @@
             if (currentTrendPeriod === 'weekly' && finData && finData.weekly) {
                 // Weekly view
                 displayData = finData.weekly;
-                labels = displayData.map(w => w.week || w.label || `Week ${displayData.indexOf(w) + 1}`);
+                labels = displayData.map(w => {
+                    if (w.week_start) {
+                        const start = new Date(w.week_start);
+                        return start.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
+                    }
+                    return w.week || w.label || `Week ${displayData.indexOf(w) + 1}`;
+                });
                 chartType = 'bar';
             } else if (currentTrendPeriod === 'monthly' && finData && finData.monthly) {
                 // Monthly view - use revenue field from monthly data
@@ -2874,6 +2880,40 @@
                     }
                 }
             });
+
+            // Render OpEx breakdown table
+            renderOpexBreakdown(opexByCategory, finData);
+        }
+
+        function renderOpexBreakdown(opexByCategory, finData) {
+            const container = document.getElementById('opexBreakdownTable');
+            if (!container) return;
+
+            const total = Object.values(opexByCategory).reduce((a, b) => a + b, 0);
+            const sorted = Object.entries(opexByCategory).sort((a, b) => b[1] - a[1]);
+
+            let html = `<table class="data-table" style="font-size: 0.8rem;">
+                <thead><tr><th>Category</th><th class="right">Amount</th><th class="right">%</th></tr></thead>
+                <tbody>`;
+
+            sorted.forEach(([cat, amount]) => {
+                const pct = total > 0 ? ((amount / total) * 100).toFixed(1) : 0;
+                const isPartnerPaid = cat.includes('partner-paid');
+                const displayName = cat.replace(' (partner-paid)', '');
+                html += `<tr${isPartnerPaid ? ' style="color:var(--text-muted)"' : ''}>
+                    <td>${displayName}${isPartnerPaid ? ' *' : ''}</td>
+                    <td class="right">${formatCurrency(amount)}</td>
+                    <td class="right">${pct}%</td>
+                </tr>`;
+            });
+
+            html += `</tbody>
+                <tfoot><tr style="font-weight:600;background:var(--bg-tertiary);">
+                    <td>Total</td><td class="right">${formatCurrency(total)}</td><td class="right">100%</td>
+                </tr></tfoot></table>
+                <p style="font-size:0.7rem;color:var(--text-muted);margin-top:5px;">* Partner-paid (not from bank)</p>`;
+
+            container.innerHTML = html;
         }
 
         function renderSalesItemsChart(dailySales) {
