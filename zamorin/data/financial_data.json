@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-01-28T06:48:00.612802",
+  "generated_at": "2026-01-29T21:56:11.747648",
   "period": {
     "start": "2025-11-07",
-    "end": "2026-01-27",
-    "days": 82
+    "end": "2026-01-28",
+    "days": 83
   },
   "pnl": {
     "period": {
       "start": "2025-11-07",
-      "end": "2026-01-27",
-      "days": 82
+      "end": "2026-01-28",
+      "days": 83
     },
     "revenue": {
-      "total": 1000519.05,
+      "total": 1020426.05,
       "breakdown": {
         "2025-11": 222078.41999999998,
         "2025-12": 322982.24000000005,
-        "2026-01": 455458.39
+        "2026-01": 475365.39
       },
       "by_source": {
-        "Petpooja Sales": 874604.05
+        "Petpooja Sales": 1020426.05
       },
       "by_channel": {
-        "Dine-in/Direct": 874604.05,
+        "Dine-in/Direct": 1020426.05,
         "Swiggy": 0,
         "Zomato": 0
       },
       "source": "petpooja_exports",
       "period": {
         "start": "2025-11-07",
-        "end": "2026-01-20",
-        "days": 75
+        "end": "2026-01-28",
+        "days": 83
       }
     },
     "cogs": {
@@ -80,8 +80,8 @@
         "Main Ingredients": 956715.68
       }
     },
-    "gross_profit": -298620.3400000001,
-    "gross_margin_pct": -29.8,
+    "gross_profit": -278713.3400000001,
+    "gross_margin_pct": -27.3,
     "opex": {
       "total": 1315488.9100000001,
       "breakdown": {
@@ -145,13 +145,13 @@
       "bank_paid": 1137983.9100000001,
       "partner_paid": 177505.0
     },
-    "operating_profit": -1614109.2500000002,
-    "operating_margin_pct": -161.3,
+    "operating_profit": -1594202.2500000002,
+    "operating_margin_pct": -156.2,
     "other_expenses": 11612.9,
-    "net_profit": -1625722.1500000001,
+    "net_profit": -1605815.1500000001,
     "capex": 30000.0,
-    "cogs_pct": 129.8,
-    "opex_pct": 131.5
+    "cogs_pct": 127.3,
+    "opex_pct": 128.9
   },
   "cash_flow": {
     "period": {
@@ -203,15 +203,14 @@
       "current": {
         "accounts_payable": 674367.65,
         "accounts_payable_breakdown": {
-          "Melaange": 674367.65,
-          "MKP Enterprises (Gas)": 15660
+          "Melaange": 674367.65
         },
         "accrued_expenses": 0
       },
       "long_term": {
         "loans": 0
       },
-      "total": 690027.65
+      "total": 674367.65
     },
     "equity": {
       "partner_capital": 4422974.08,
@@ -402,12 +401,12 @@
     },
     {
       "month": "2026-01",
-      "revenue": 329543.39,
+      "revenue": 475365.39,
       "capital_contributions": 628068.89,
       "cogs": 158577.87,
-      "gross_profit": 170965.52000000002,
+      "gross_profit": 316787.52,
       "opex": 506275.76,
-      "operating_profit": -335310.24,
+      "operating_profit": -189488.24,
       "capex": 0.0
     }
   ],
@@ -666,7 +665,7 @@
   ],
   "reconciliation": {
     "revenue": {
-      "petpooja_sales": 1000519.05,
+      "petpooja_sales": 1020426.05,
       "bank_deposits_total": 1803526.07,
       "difference_type": "capital_contributions",
       "source": "petpooja_exports"

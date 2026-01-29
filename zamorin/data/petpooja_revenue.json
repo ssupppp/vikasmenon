@@ -1,22 +1,22 @@
 {
-  "total": 1000519.05,
-  "total_sales": 1000519.05,
+  "total": 1020426.05,
+  "total_sales": 1046095.0,
   "total_bills": 4271,
-  "days_count": 82,
+  "days_count": 83,
   "period": {
     "start": "2025-11-07",
-    "end": "2026-01-27",
-    "days": 82
+    "end": "2026-01-28",
+    "days": 83
   },
   "monthly": {
     "2025-11": 222078.41999999998,
     "2025-12": 322982.24000000005,
-    "2026-01": 455458.39
+    "2026-01": 475365.39
   },
   "monthly_bills": {
     "2025-11": 898,
     "2025-12": 1729,
-    "2026-01": 1637
+    "2026-01": 1644
   },
   "daily": [
     {
@@ -557,35 +557,40 @@
       "revenue": 21436.0,
       "total_sales": 21436.0,
       "bills": 0,
-      "discount": 0
+      "discount": 0,
+      "source": "email_last7days"
     },
     {
       "date": "2026-01-22",
       "revenue": 22564.0,
       "total_sales": 22564.0,
       "bills": 0,
-      "discount": 0
+      "discount": 0,
+      "source": "email_last7days"
     },
     {
       "date": "2026-01-23",
       "revenue": 14873.0,
       "total_sales": 14873.0,
       "bills": 0,
-      "discount": 0
+      "discount": 0,
+      "source": "email_last7days"
     },
     {
       "date": "2026-01-24",
-      "revenue": 19720.0,
-      "total_sales": 19720.0,
+      "revenue": 19469.0,
+      "total_sales": 19469.0,
       "bills": 0,
-      "discount": 0
+      "discount": 0,
+      "source": "email_last7days"
     },
     {
       "date": "2026-01-25",
       "revenue": 15550.0,
       "total_sales": 15550.0,
       "bills": 0,
-      "discount": 0
+      "discount": 0,
+      "source": "email_last7days"
     },
     {
       "date": "2026-01-26",
@@ -593,11 +598,7 @@
       "total_sales": 17915.0,
       "bills": 0,
       "discount": 0,
-      "cash": 90.0,
-      "card": 0.0,
-      "other": 14483.0,
-      "online": 3342.0,
-      "source": "payment_wise_summary"
+      "source": "email_last7days"
     },
     {
       "date": "2026-01-27",
@@ -605,11 +606,15 @@
       "total_sales": 13857.0,
       "bills": 0,
       "discount": 0,
-      "cash": 0.0,
-      "card": 0.0,
-      "other": 12512.0,
-      "online": 1345.0,
-      "source": "payment_wise_summary"
+      "source": "email_last7days"
+    },
+    {
+      "date": "2026-01-28",
+      "revenue": 20158.0,
+      "total_sales": 20158.0,
+      "bills": 0,
+      "discount": 0,
+      "source": "email_last7days"
     }
   ],
   "payment_modes": {
@@ -624,5 +629,5 @@
     "Nov_14_Dec_14_daywise.xlsx",
     "Jan14_daywise.xlsx"
   ],
-  "parsed_at": "2026-01-28T06:48:00.554006"
+  "parsed_at": "2026-01-29T21:56:02.500135"
 }
