@@ -1,14 +1,13 @@
 {
-  "last_updated": "2026-01-28T06:48:07.628996",
-  "data_through_date": "2026-01-27",
-  "total_revenue": 1000519.05,
+  "last_updated": "2026-01-31T07:20:01.249447",
+  "data_through_date": "2026-01-30",
+  "total_revenue": 1056995.05,
   "emails_fetched": 8,
   "revenue_dates_added": [
-    "2026-01-26",
-    "2026-01-27"
+    "2026-01-30"
   ],
-  "days_processed": 1,
-  "items_processed": 363,
+  "days_processed": 0,
+  "items_processed": 221,
   "success": true,
   "errors": []
 }
