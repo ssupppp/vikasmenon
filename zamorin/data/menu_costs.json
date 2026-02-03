@@ -210,13 +210,17 @@
       "category": "DOSA",
       "name": "Plain Dosa",
       "price": 90,
-      "cost": 34.93,
-      "margin": 55.07,
-      "margin_pct": 61.2,
+      "cost": 52.93,
+      "margin": 37.07,
+      "margin_pct": 41.2,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "sambar",
@@ -244,13 +248,17 @@
       "category": "DOSA",
       "name": "Masala Dosa",
       "price": 110,
-      "cost": 44.29,
-      "margin": 65.72,
-      "margin_pct": 59.7,
+      "cost": 62.29,
+      "margin": 47.71,
+      "margin_pct": 43.4,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "dosa_masala",
@@ -282,9 +290,9 @@
       "category": "DOSA",
       "name": "Ghee Dosa",
       "price": 110,
-      "cost": 37.92,
-      "margin": 72.08,
-      "margin_pct": 65.5,
+      "cost": 67.18,
+      "margin": 42.82,
+      "margin_pct": 38.9,
       "ingredients": [
         {
           "name": "dosa_batter",
@@ -292,7 +300,7 @@
         },
         {
           "name": "ghee",
-          "qty_gm": 6
+          "qty_gm": 50
         },
         {
           "name": "sambar",
@@ -314,15 +322,16 @@
           "name": "pineapple_chutney",
           "qty_gm": 25
         }
-      ]
+      ],
+      "notes": "Ghee replaces oil - 50g ghee (₹32.25)"
     },
     {
       "category": "DOSA",
       "name": "Ghee Roast Dosa",
       "price": 110,
-      "cost": 37.92,
-      "margin": 72.08,
-      "margin_pct": 65.5,
+      "cost": 67.18,
+      "margin": 42.82,
+      "margin_pct": 38.9,
       "ingredients": [
         {
           "name": "dosa_batter",
@@ -330,7 +339,7 @@
         },
         {
           "name": "ghee",
-          "qty_gm": 6
+          "qty_gm": 50
         },
         {
           "name": "sambar",
@@ -358,9 +367,9 @@
       "category": "DOSA",
       "name": "Ghee Masala Dosa",
       "price": 120,
-      "cost": 47.29,
-      "margin": 72.72,
-      "margin_pct": 60.6,
+      "cost": 76.54,
+      "margin": 43.46,
+      "margin_pct": 36.2,
       "ingredients": [
         {
           "name": "dosa_batter",
@@ -372,7 +381,7 @@
         },
         {
           "name": "ghee",
-          "qty_gm": 6
+          "qty_gm": 50
         },
         {
           "name": "sambar",
@@ -400,13 +409,17 @@
       "category": "DOSA",
       "name": "Podi Dosa",
       "price": 110,
-      "cost": 35.43,
-      "margin": 74.57,
-      "margin_pct": 67.8,
+      "cost": 53.43,
+      "margin": 56.57,
+      "margin_pct": 51.4,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "podi",
@@ -438,13 +451,17 @@
       "category": "DOSA",
       "name": "Podi Masala Dosa",
       "price": 120,
-      "cost": 44.79,
-      "margin": 75.22,
-      "margin_pct": 62.7,
+      "cost": 62.79,
+      "margin": 57.21,
+      "margin_pct": 47.7,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "dosa_masala",
@@ -480,9 +497,9 @@
       "category": "DOSA",
       "name": "Podi Ghee Dosa",
       "price": 120,
-      "cost": 38.42,
-      "margin": 81.58,
-      "margin_pct": 68.0,
+      "cost": 67.68,
+      "margin": 52.32,
+      "margin_pct": 43.6,
       "ingredients": [
         {
           "name": "dosa_batter",
@@ -494,7 +511,7 @@
         },
         {
           "name": "ghee",
-          "qty_gm": 6
+          "qty_gm": 50
         },
         {
           "name": "sambar",
@@ -522,13 +539,17 @@
       "category": "DOSA",
       "name": "Onion Dosa",
       "price": 110,
-      "cost": 35.93,
-      "margin": 74.07,
-      "margin_pct": 67.3,
+      "cost": 53.93,
+      "margin": 56.07,
+      "margin_pct": 51.0,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "onion",
@@ -560,13 +581,17 @@
       "category": "DOSA",
       "name": "Onion Masala Dosa",
       "price": 120,
-      "cost": 45.29,
-      "margin": 74.72,
-      "margin_pct": 62.3,
+      "cost": 63.29,
+      "margin": 56.71,
+      "margin_pct": 47.3,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "dosa_masala",
@@ -602,9 +627,9 @@
       "category": "DOSA",
       "name": "Onion Ghee Dosa",
       "price": 120,
-      "cost": 38.92,
-      "margin": 81.08,
-      "margin_pct": 67.6,
+      "cost": 68.18,
+      "margin": 51.82,
+      "margin_pct": 43.2,
       "ingredients": [
         {
           "name": "dosa_batter",
@@ -616,7 +641,7 @@
         },
         {
           "name": "ghee",
-          "qty_gm": 6
+          "qty_gm": 50
         },
         {
           "name": "sambar",
@@ -644,9 +669,9 @@
       "category": "DOSA",
       "name": "Onion Ghee Masala Dosa",
       "price": 130,
-      "cost": 48.29,
-      "margin": 81.72,
-      "margin_pct": 62.9,
+      "cost": 77.54,
+      "margin": 52.46,
+      "margin_pct": 40.4,
       "ingredients": [
         {
           "name": "dosa_batter",
@@ -662,7 +687,7 @@
         },
         {
           "name": "ghee",
-          "qty_gm": 6
+          "qty_gm": 50
         },
         {
           "name": "sambar",
@@ -690,13 +715,17 @@
       "category": "DOSA",
       "name": "Podi Onion Dosa",
       "price": 120,
-      "cost": 36.43,
-      "margin": 83.57,
-      "margin_pct": 69.6,
+      "cost": 54.43,
+      "margin": 65.57,
+      "margin_pct": 54.6,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "podi",
@@ -732,13 +761,17 @@
       "category": "DOSA",
       "name": "Podi Onion Masala Dosa",
       "price": 130,
-      "cost": 45.79,
-      "margin": 84.22,
-      "margin_pct": 64.8,
+      "cost": 63.79,
+      "margin": 66.21,
+      "margin_pct": 50.9,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "dosa_masala",
@@ -778,9 +811,9 @@
       "category": "DOSA",
       "name": "Podi Onion Ghee Dosa",
       "price": 130,
-      "cost": 39.42,
-      "margin": 90.58,
-      "margin_pct": 69.7,
+      "cost": 68.68,
+      "margin": 61.32,
+      "margin_pct": 47.2,
       "ingredients": [
         {
           "name": "dosa_batter",
@@ -796,7 +829,7 @@
         },
         {
           "name": "ghee",
-          "qty_gm": 6
+          "qty_gm": 50
         },
         {
           "name": "sambar",
@@ -824,9 +857,9 @@
       "category": "DOSA",
       "name": "Podi Onion Ghee Masala Dosa",
       "price": 140,
-      "cost": 48.79,
-      "margin": 91.22,
-      "margin_pct": 65.2,
+      "cost": 78.04,
+      "margin": 61.96,
+      "margin_pct": 44.3,
       "ingredients": [
         {
           "name": "dosa_batter",
@@ -846,7 +879,7 @@
         },
         {
           "name": "ghee",
-          "qty_gm": 6
+          "qty_gm": 50
         },
         {
           "name": "sambar",
@@ -874,13 +907,17 @@
       "category": "DOSA",
       "name": "Set Dosa",
       "price": 110,
-      "cost": 42.18,
-      "margin": 67.82,
-      "margin_pct": 61.7,
+      "cost": 60.18,
+      "margin": 49.82,
+      "margin_pct": 45.3,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 270
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "sambar",
@@ -908,13 +945,17 @@
       "category": "DOSA",
       "name": "Rava Dosa",
       "price": 140,
-      "cost": 37.68,
-      "margin": 102.32,
-      "margin_pct": 73.1,
+      "cost": 55.68,
+      "margin": 84.32,
+      "margin_pct": 60.2,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 180
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "sambar",
@@ -942,13 +983,17 @@
       "category": "DOSA",
       "name": "Rava Masala Dosa",
       "price": 150,
-      "cost": 47.04,
-      "margin": 102.97,
-      "margin_pct": 68.6,
+      "cost": 65.04,
+      "margin": 84.96,
+      "margin_pct": 56.6,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 180
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "dosa_masala",
@@ -980,13 +1025,17 @@
       "category": "DOSA",
       "name": "Pesarattu Dosa",
       "price": 120,
-      "cost": 35.18,
-      "margin": 84.82,
-      "margin_pct": 70.7,
+      "cost": 53.18,
+      "margin": 66.82,
+      "margin_pct": 55.7,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 130
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "sambar",
@@ -1014,13 +1063,21 @@
       "category": "DOSA",
       "name": "Adai Dosa",
       "price": 120,
-      "cost": 35.18,
-      "margin": 84.82,
-      "margin_pct": 70.7,
+      "cost": 64.58,
+      "margin": 55.42,
+      "margin_pct": 46.2,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 130
+        },
+        {
+          "name": "butter",
+          "qty_gm": 20
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "sambar",
@@ -1042,19 +1099,24 @@
           "name": "pineapple_chutney",
           "qty_gm": 25
         }
-      ]
+      ],
+      "notes": "Butter 20g (₹11.40) + oil ₹18"
     },
     {
       "category": "DOSA",
       "name": "Muringa Leaves Dosa",
       "price": 140,
-      "cost": 37.68,
-      "margin": 102.32,
-      "margin_pct": 73.1,
+      "cost": 55.68,
+      "margin": 84.32,
+      "margin_pct": 60.2,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 180
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "sambar",
@@ -1082,13 +1144,17 @@
       "category": "DOSA",
       "name": "Chocolate Dosa",
       "price": 120,
-      "cost": 42.93,
-      "margin": 77.07,
-      "margin_pct": 64.2,
+      "cost": 60.93,
+      "margin": 59.07,
+      "margin_pct": 49.2,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 125
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "chocolate",
@@ -1120,13 +1186,17 @@
       "category": "DOSA",
       "name": "Oothappam",
       "price": 130,
-      "cost": 37.18,
-      "margin": 92.82,
-      "margin_pct": 71.4,
+      "cost": 55.18,
+      "margin": 74.82,
+      "margin_pct": 57.6,
       "ingredients": [
         {
           "name": "dosa_batter",
           "qty_gm": 150
+        },
+        {
+          "name": "oil",
+          "qty_ml": 100
         },
         {
           "name": "onion",
@@ -1158,9 +1228,9 @@
       "category": "BREAKFAST",
       "name": "Idli (2 pcs)",
       "price": 50,
-      "cost": 34.19,
-      "margin": 15.81,
-      "margin_pct": 31.6,
+      "cost": 42.17,
+      "margin": 7.83,
+      "margin_pct": 15.7,
       "ingredients": [
         {
           "name": "idli_batter",
@@ -1173,16 +1243,29 @@
         {
           "name": "coconut_chutney",
           "qty_gm": 50
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 25
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 25
         }
-      ]
+      ],
+      "notes": "Same 4 chutneys as dosas"
     },
     {
       "category": "BREAKFAST",
       "name": "Single Idli",
       "price": 25,
-      "cost": 17.03,
-      "margin": 7.97,
-      "margin_pct": 31.9,
+      "cost": 21.02,
+      "margin": 3.98,
+      "margin_pct": 15.9,
       "ingredients": [
         {
           "name": "idli_batter",
@@ -1195,20 +1278,37 @@
         {
           "name": "coconut_chutney",
           "qty_gm": 25
+        },
+        {
+          "name": "tomato_chutney",
+          "qty_gm": 12
+        },
+        {
+          "name": "coriander_chutney",
+          "qty_gm": 12
+        },
+        {
+          "name": "pineapple_chutney",
+          "qty_gm": 12
         }
-      ]
+      ],
+      "notes": "Same 4 chutneys as dosas (half portion)"
     },
     {
       "category": "BREAKFAST",
       "name": "Medu Vada (2 pcs)",
       "price": 50,
-      "cost": 45.12,
-      "margin": 4.88,
-      "margin_pct": 9.8,
+      "cost": 55.12,
+      "margin": -5.12,
+      "margin_pct": -10.2,
       "ingredients": [
         {
           "name": "vada_batter",
           "qty_gm": 222
+        },
+        {
+          "name": "oil_vada",
+          "cost": 10
         },
         {
           "name": "sambar",
@@ -1218,37 +1318,35 @@
           "name": "coconut_chutney",
           "qty_gm": 50
         }
-      ]
+      ],
+      "notes": "LOSS ITEM - oil ₹10 for 2 vadas"
     },
     {
       "category": "BREAKFAST",
       "name": "Single Vada",
       "price": 25,
-      "cost": 22.5,
-      "margin": 2.5,
-      "margin_pct": 10.0,
+      "cost": 17.21,
+      "margin": 7.79,
+      "margin_pct": 31.2,
       "ingredients": [
         {
           "name": "vada_batter",
           "qty_gm": 111
         },
         {
-          "name": "sambar",
-          "qty_gm": 62
-        },
-        {
-          "name": "coconut_chutney",
-          "qty_gm": 25
+          "name": "oil_vada",
+          "cost": 5
         }
-      ]
+      ],
+      "notes": "No accompaniments served"
     },
     {
       "category": "BREAKFAST",
       "name": "Upma",
       "price": 60,
-      "cost": 40.33,
-      "margin": 19.67,
-      "margin_pct": 32.8,
+      "cost": 37.92,
+      "margin": 22.08,
+      "margin_pct": 36.8,
       "ingredients": [
         {
           "name": "upma",
@@ -1261,10 +1359,6 @@
         {
           "name": "coconut_chutney",
           "qty_gm": 50
-        },
-        {
-          "name": "tomato_chutney",
-          "qty_gm": 27
         }
       ]
     },
@@ -1366,9 +1460,9 @@
       "category": "COMBO",
       "name": "Idli-Vada Combo",
       "price": 85,
-      "cost": 50.4,
-      "margin": 34.6,
-      "margin_pct": 40.7,
+      "cost": 55.40,
+      "margin": 29.60,
+      "margin_pct": 34.8,
       "ingredients": [
         {
           "name": "idli_batter",
@@ -1379,6 +1473,10 @@
           "qty_gm": 111
         },
         {
+          "name": "oil_vada",
+          "cost": 5
+        },
+        {
           "name": "sambar",
           "qty_gm": 125
         },
@@ -1386,15 +1484,16 @@
           "name": "coconut_chutney",
           "qty_gm": 50
         }
-      ]
+      ],
+      "notes": "Includes half tea/coffee - beverage COGS not included"
     },
     {
       "category": "COMBO",
       "name": "Upma + Vada Combo",
       "price": 90,
-      "cost": 54.14,
-      "margin": 35.86,
-      "margin_pct": 39.8,
+      "cost": 56.73,
+      "margin": 33.27,
+      "margin_pct": 37.0,
       "ingredients": [
         {
           "name": "upma",
@@ -1405,6 +1504,10 @@
           "qty_gm": 111
         },
         {
+          "name": "oil_vada",
+          "cost": 5
+        },
+        {
           "name": "sambar",
           "qty_gm": 125
         },
@@ -1412,15 +1515,16 @@
           "name": "coconut_chutney",
           "qty_gm": 50
         }
-      ]
+      ],
+      "notes": "Includes half tea/coffee - beverage COGS not included"
     },
     {
       "category": "COMBO",
       "name": "Pongal + Vada Combo",
       "price": 90,
-      "cost": 68.41,
-      "margin": 21.59,
-      "margin_pct": 24.0,
+      "cost": 73.41,
+      "margin": 16.59,
+      "margin_pct": 18.4,
       "ingredients": [
         {
           "name": "pongal",
@@ -1431,6 +1535,10 @@
           "qty_gm": 111
         },
         {
+          "name": "oil_vada",
+          "cost": 5
+        },
+        {
           "name": "sambar",
           "qty_gm": 125
         },
@@ -1438,7 +1546,8 @@
           "name": "coconut_chutney",
           "qty_gm": 50
         }
-      ]
+      ],
+      "notes": "Includes half tea/coffee - beverage COGS not included"
     },
     {
       "category": "COMBO",
@@ -1464,7 +1573,8 @@
           "name": "coconut_chutney",
           "qty_gm": 50
         }
-      ]
+      ],
+      "notes": "Includes half tea/coffee - beverage COGS not included"
     },
     {
       "category": "COMBO",
@@ -1488,9 +1598,9 @@
       "category": "LUNCH",
       "name": "Rice Meal (Red Rice)",
       "price": 110,
-      "cost": 47.76,
-      "margin": 62.24,
-      "margin_pct": 56.6,
+      "cost": 73.45,
+      "margin": 36.55,
+      "margin_pct": 33.2,
       "ingredients": [
         {
           "name": "red_rice",
@@ -1506,7 +1616,7 @@
         },
         {
           "name": "curd",
-          "qty_gm": 50
+          "qty_gm": 100
         },
         {
           "name": "avial",
@@ -1523,16 +1633,25 @@
         {
           "name": "payasam",
           "qty_gm": 50
+        },
+        {
+          "name": "pickle",
+          "qty_gm": 50
+        },
+        {
+          "name": "pappadam",
+          "qty_pcs": 1
         }
-      ]
+      ],
+      "notes": "Curd 100g (₹7.44) + pickle 50g (₹18.75) + pappadam (₹2.50)"
     },
     {
       "category": "LUNCH",
       "name": "Rice Meal (White Rice)",
       "price": 110,
-      "cost": 44.7,
-      "margin": 65.3,
-      "margin_pct": 59.4,
+      "cost": 70.39,
+      "margin": 39.61,
+      "margin_pct": 36.0,
       "ingredients": [
         {
           "name": "white_rice",
@@ -1548,7 +1667,7 @@
         },
         {
           "name": "curd",
-          "qty_gm": 50
+          "qty_gm": 100
         },
         {
           "name": "avial",
@@ -1565,8 +1684,17 @@
         {
           "name": "payasam",
           "qty_gm": 50
+        },
+        {
+          "name": "pickle",
+          "qty_gm": 50
+        },
+        {
+          "name": "pappadam",
+          "qty_pcs": 1
         }
-      ]
+      ],
+      "notes": "Curd 100g (₹7.44) + pickle 50g (₹18.75) + pappadam (₹2.50)"
     },
     {
       "category": "LUNCH",
@@ -1658,41 +1786,24 @@
       "category": "DINNER",
       "name": "Kerala Porotta with Kadala",
       "price": 90,
-      "cost": 42.58,
-      "margin": 47.42,
-      "margin_pct": 52.7,
+      "cost": 78.58,
+      "margin": 11.42,
+      "margin_pct": 12.7,
       "ingredients": [
         {
           "name": "porotta_batter",
           "qty_gm": 180
         },
         {
-          "name": "kadala_curry",
-          "qty_gm": 250
-        }
-      ]
-    },
-    {
-      "category": "DINNER",
-      "name": "Porotta (2) + Kadala + Kurma",
-      "price": 150,
-      "cost": 82.66,
-      "margin": 67.34,
-      "margin_pct": 44.9,
-      "ingredients": [
-        {
-          "name": "porotta_batter",
-          "qty_gm": 360
+          "name": "oil",
+          "qty_ml": 200
         },
         {
           "name": "kadala_curry",
           "qty_gm": 250
-        },
-        {
-          "name": "veg_kurma",
-          "qty_gm": 200
         }
-      ]
+      ],
+      "notes": "Oil ₹36 (200ml per parotta)"
     },
     {
       "category": "DINNER",
@@ -1762,15 +1873,20 @@
       "category": "SNACKS",
       "name": "Parippu Vada",
       "price": 15,
-      "cost": 5,
-      "margin": 10,
-      "margin_pct": 66.7,
+      "cost": 13.50,
+      "margin": 1.50,
+      "margin_pct": 10.0,
       "ingredients": [
         {
-          "name": "parippu_vada",
-          "qty_gm": 1
+          "name": "channa_dal",
+          "qty_gm": 50
+        },
+        {
+          "name": "oil",
+          "qty_ml": 50
         }
-      ]
+      ],
+      "notes": "Channa dal ₹4.50 (1kg makes 20) + oil ₹9"
     },
     {
       "category": "SNACKS",
@@ -1842,7 +1958,7 @@
     "payasam": 80,
     "manchurian": 120,
     "fried_rice": 64,
-    "curd": 60,
+    "curd": 74.4,
     "dosa_batter": 50,
     "idli_batter": 95,
     "vada_batter": 110,
@@ -1853,6 +1969,23 @@
     "pazham_pori_piece": 12,
     "samosa_piece": 11,
     "parippu_vada_piece": 5,
-    "ela_ada_piece": 8
+    "ela_ada_piece": 8,
+    "oil_per_dosa": 18,
+    "oil_per_parotta": 36,
+    "oil_per_vada": 9,
+    "ghee": 645,
+    "pickle": 375,
+    "pappadam": 2.5,
+    "channa_dal": 90,
+    "butter": 570
+  },
+  "ingredient_notes": {
+    "oil": "₹180/L - 100ml per dosa, 200ml per parotta, 50ml per vada",
+    "ghee": "₹600/L (~645/kg) - 50g per ghee dosa",
+    "pickle": "₹150/400g (₹375/kg) - 50g serving with rice meals = ₹18.75",
+    "pappadam": "₹50/20 pieces - 1 pc with rice meals",
+    "channa_dal": "₹90/kg - 1kg makes 20 parippu vada",
+    "butter": "₹285/500g (₹570/kg) - 20g per Adai dosa",
+    "curd": "Amul ₹372/5kg (₹74.4/kg) - 100g serving with rice meals = ₹7.44"
   }
 }

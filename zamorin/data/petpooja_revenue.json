@@ -1,17 +1,18 @@
 {
-  "total": 1078613.05,
-  "total_sales": 1078613.05,
+  "total": 1135971.05,
+  "total_sales": 1135971.05,
   "total_bills": 4271,
-  "days_count": 86,
+  "days_count": 88,
   "period": {
     "start": "2025-11-07",
-    "end": "2026-01-31",
-    "days": 86
+    "end": "2026-02-02",
+    "days": 88
   },
   "monthly": {
     "2025-11": 222078.41999999998,
     "2025-12": 322982.24000000005,
-    "2026-01": 533552.39
+    "2026-01": 533552.39,
+    "2026-02": 57358.0
   },
   "monthly_bills": {
     "2025-11": 898,
@@ -658,6 +659,30 @@
       "other": 17522.0,
       "online": 4096.0,
       "source": "payment_wise_summary"
+    },
+    {
+      "date": "2026-02-01",
+      "revenue": 25612.0,
+      "total_sales": 25612.0,
+      "bills": 0,
+      "discount": 0,
+      "cash": 0.0,
+      "card": 0.0,
+      "other": 22137.0,
+      "online": 3475.0,
+      "source": "payment_wise_summary"
+    },
+    {
+      "date": "2026-02-02",
+      "revenue": 31746.0,
+      "total_sales": 31746.0,
+      "bills": 0,
+      "discount": 0,
+      "cash": 0.0,
+      "card": 0.0,
+      "other": 30558.0,
+      "online": 1188.0,
+      "source": "payment_wise_summary"
     }
   ],
   "payment_modes": {
@@ -672,5 +697,5 @@
     "Nov_14_Dec_14_daywise.xlsx",
     "Jan14_daywise.xlsx"
   ],
-  "parsed_at": "2026-02-01T10:18:31.690243"
+  "parsed_at": "2026-02-03T20:53:40.501427"
 }

@@ -1,10 +1,10 @@
 {
   "outlet": "The Zamorins",
-  "last_updated": "2026-02-01T10:23:10.211702",
+  "last_updated": "2026-02-03T22:38:40.947260",
   "metrics": {
-    "total_sales": 1078613.05,
-    "avg_daily_sales": 12542.012209302326,
-    "days_recorded": 86,
+    "total_sales": 1135971.05,
+    "avg_daily_sales": 12908.761931818182,
+    "days_recorded": 88,
     "total_items_sold": 3985.0
   },
   "daily_sales": [
@@ -606,6 +606,20 @@
     {
       "date": "2026-01-31",
       "total_sales": 21618.0,
+      "net_sales": 0,
+      "discount": 0,
+      "tax": 0
+    },
+    {
+      "date": "2026-02-01",
+      "total_sales": 25612.0,
+      "net_sales": 0,
+      "discount": 0,
+      "tax": 0
+    },
+    {
+      "date": "2026-02-02",
+      "total_sales": 31746.0,
       "net_sales": 0,
       "discount": 0,
       "tax": 0
