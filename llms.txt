@@ -1,0 +1,37 @@
+# Vikas Menon
+
+> Head of Games & Platform at Terra / Ripple AI. Building AI-native games. Previously Executive Producer at Zynga for 11+ years.
+
+## Site Map
+
+- [Home](https://ssupppp.github.io/vikasmenon/): Overview, projects, writing, work experience, about
+- [Portfolio](https://ssupppp.github.io/vikasmenon/portfolio.html): Full professional portfolio — Zynga (CSR2, Farmville, Mafia Wars), Terra (Snackula, RedFlag.exe, Plumo)
+- [Writing](https://ssupppp.github.io/vikasmenon/articles.html): Articles on game development, AI-native experiences, velocity, creativity, and production
+
+## Projects
+
+- [Bowldem](https://ssupppp.github.io/vikasmenon/bowldem.html): Daily cricket puzzle game (Wordle for cricket). 500+ cricketers, new puzzle daily.
+- [Snackula](https://ssupppp.github.io/vikasmenon/snackula.html): AI-native vampire social deduction game. Convince AI-driven neighbors to let you inside.
+- [RedFlag.exe](https://ssupppp.github.io/vikasmenon/redflag.html): Psychological thriller escape room with AI antagonist.
+- [Fantasy Team Rater](https://ssupppp.github.io/vikasmenon/fantasy-team-rater.html): AI-powered FPL team rating tool (1-100 scale).
+- [Helicopter Game](https://ssupppp.github.io/vikasmenon/helicopter-game.html): One-touch arcade challenge — navigate tight corridors.
+- [Plumo](https://ssupppp.github.io/vikasmenon/plumo.html): Whimsical puzzle adventure with a cloud character. In development.
+
+## Career
+
+- **Terra / Ripple AI** (2024–Present): Head of Games & Platform. Building AI-native game experiences.
+- **Zynga** (2012–2024): Executive Producer. CSR2 Racing (#1 racing, 73M+ downloads, $1B+ revenue), Farmville Country Escape (700M+ franchise downloads, 83M peak MAU), Mafia Wars, Farmville 2.
+
+## Key Topics
+
+- AI-native game design: games where AI is the core, not a feature
+- Live operations at scale: running games with hundreds of millions of players
+- Game production: velocity over volume, divergent/convergent thinking, resilience
+- Side projects and indie development
+
+## Contact
+
+- Email: menonvikz@gmail.com
+- LinkedIn: https://linkedin.com/in/vikasmenon
+- Twitter: https://twitter.com/vikasmenon
+- GitHub: https://github.com/ssupppp
