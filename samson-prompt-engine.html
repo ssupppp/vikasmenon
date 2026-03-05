@@ -20,6 +20,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Dark code/prompt blocks */
+        .article-content .prompt-block {
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.75rem;
+            line-height: 1.7;
+            background: #1C1917;
+            color: #E7E5E4;
+            padding: 1.5rem 1.75rem;
+            border-radius: 6px;
+            margin: 1.5rem 0 1.75rem;
+            overflow-x: auto;
+            white-space: pre;
+            letter-spacing: 0.01em;
+            border: none;
+        }
+
+        /* Light bordered block for conflict examples */
+        .article-content .context-block {
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.75rem;
+            line-height: 1.7;
+            background: var(--surface);
+            color: var(--text);
+            padding: 1.5rem 1.75rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin: 1.5rem 0 1.75rem;
+            overflow-x: auto;
+            white-space: pre;
+            letter-spacing: 0.01em;
+        }
+
+        /* Prompt label */
+        .prompt-label {
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            display: block;
+        }
+
+        /* Left-bordered prompt plain text */
+        .prompt-plain {
+            border-left: 2px solid var(--border);
+            padding-left: 1.25rem;
+            margin: 0.5rem 0 1.75rem;
+        }
+
+        .prompt-plain p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin-bottom: 0.75rem;
+            font-style: normal;
+        }
+
+        .prompt-plain p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Sign-off line */
+        .sign-off {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text);
+            margin-top: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .article-content .prompt-block,
+            .article-content .context-block {
+                font-size: 0.68rem;
+                padding: 1rem 1.25rem;
+            }
+        }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -62,7 +144,7 @@
                 <article class="article-full">
                     <div class="article-content">
 
-                        <p>My love for Sanju Samson is not a secret. It is embarrassingly plain. I dread when he is mid-twenties and I switch off when he gets out. But watching him bat against the West Indies was like watching all things coming together. Performance meets potential. The true Kerala Story.</p>
+                        <p>My love for Sanju Samson is not a secret. It is embarrassingly plain. I dread and sweat buckets when he is mid-twenties and I switch off when he gets out. His mastery in hitting short balls out of the boundary and directly into the hands of the fielder keeps every ball interesting to watch. But watching him bat against the West Indies was like watching all things coming together. Performance meets potential. The true Kerala Story.</p>
 
                         <p>Which got me thinking. What would it take to design a prompt configuration that runs Samson? Which got me to this piece.</p>
 
@@ -70,57 +152,22 @@
 
                         <h2>The Architecture</h2>
 
-                        <p>Any system that takes inputs and produces outputs has three parts. There is identity: stable configuration that does not change between runs. There is context: dynamic state that gets passed alongside identity, different every time. And there is routing: the orchestration layer that decides what context to pass and when.</p>
+                        <p>Any prompt configuration that takes inputs and produces outputs has three parts. There is identity: stable configuration that does not change between runs. There is context: dynamic state that gets passed alongside identity, different every time. And there is routing: the orchestration layer that decides what context to pass and when.</p>
 
-                        <p>Put another way: <code>output = f(identity, context(state, time))</code>. The identity is fixed. The context is a function of what is happening and when. The routing is the <em>f</em>.</p>
+                        <p>Put another way: <strong>output = f(identity, context(state, time))</strong>. The identity is fixed. The context is a function of what is happening and when. The routing is the f.</p>
 
                         <p>For Samson, identity is the system prompt. Context is the match situation. Routing is the brain.</p>
 
                         <p>We will keep variables simple. Let's assume one system prompt is enough. What changes is what gets passed alongside it, and when.</p>
 
-<pre>
-You are Sanju Samson. Right-hand batsman, wicketkeeper.
+<pre class="prompt-block">You are Sanju Samson. Right-hand batsman, wicketkeeper.
 Your objective is to maximise your team's probability of winning.
 You time the ball exceptionally. You have fast hands, strong wrists,
-and 360-degree range.
-</pre>
+and 360-degree range.</pre>
 
                         <p>That is the system prompt. Short. Does not change between matches. Does not need to know the target, the phase, the bowler. All of that comes later, from context.</p>
 
-<pre>
-┌──────────────────────────────────────────────────┐
-│              SYSTEM PROMPT                       │
-│  (identity, capability — stable)                 │
-└───────────────────────┬──────────────────────────┘
-                        │
-                        ▼
-┌──────────────────────────────────────────────────┐
-│              ROUTING LOGIC                       │
-│  (brain / experience / coaching)                 │
-│                                                  │
-│  reads match state → selects relevant inputs     │
-│  decides what enters context, what doesn't       │
-└───────┬───────────────┬───────────────┬──────────┘
-        │               │               │
-        ▼               ▼               ▼
-  ┌───────────┐   ┌───────────┐   ┌───────────┐
-  │   MODE    │   │   PHASE   │   │  BOWLER   │
-  │ chase/set │   │PP/mid/death│  │ pace/spin │
-  └─────┬─────┘   └─────┬─────┘   └─────┬─────┘
-        │               │               │
-        └───────────────┼───────────────┘
-                        │
-                 ┌──────▼──────┐
-                 │   CONTEXT   │
-                 │   WINDOW    │
-                 └──────┬──────┘
-                        │
-                        ▼
-                 ┌─────────────┐
-                 │   OUTPUT    │
-                 │  (the shot) │
-                 └─────────────┘
-</pre>
+                        <p>But a system prompt alone does not produce the right shot. What matters just as much is what gets loaded alongside it, and in what order. In any prompt system, the sequence in which inputs arrive determines their weight. Inputs that persist carry background influence. Inputs that arrive last carry the most authority. The system prompt sets the floor. The most recent signal calls the shot. This is why the loading order matters.</p>
 
                         <h2>The Loading Order</h2>
 
@@ -128,8 +175,13 @@ and 360-degree range.
 
                         <p>Samson's system works the same way. The system prompt is always there. The innings situation lasts twenty overs. The bowler context lasts six balls. The ball in the air lasts less than half a second. And the ball in the air decides the shot.</p>
 
-<pre>
-LOAD SEQUENCE:
+                        <p>These inputs split into two categories. There is <strong>macro context</strong> — the innings-level state. Mode, position, phase, required rate, wickets in hand. It loads once at the start and only updates when something significant happens: a wicket falls, the phase changes, the rate spikes. It is the strategic layer. It tells the system what kind of innings this is.</p>
+
+                        <p>Then there is <strong>micro context</strong> — everything that is immediate and temporary. The bowler's type, the field, the patterns observed this over. The stance, the trigger, the preparation for this specific ball. And finally, the ball itself — length, line, pace, movement, trajectory — classified in a fraction of a second and gone after the shot is played. Micro context is tactical. It tells the system what to do right now.</p>
+
+                        <p>The load sequence runs from permanent to momentary:</p>
+
+<pre class="prompt-block">LOAD SEQUENCE:
 
 T0 ─── SYSTEM PROMPT
         loads once, never changes
@@ -159,53 +211,21 @@ T4 ─── MICRO CONTEXT: POST-RELEASE
         five classification variables: length, line, pace, movement, trajectory
         │
         │   highest priority, shortest lifespan
-        │   gone after the shot
-</pre>
+        │   gone after the shot</pre>
 
                         <p>The system prompt is permanent. The macro context survives the whole innings but gets patched when events fire. Pre-over micro context lasts six balls. Pre-delivery lasts one ball. Post-release classification exists for less than half a second.</p>
 
-                        <p>The shorter the lifespan, the higher the weight. The system prompt is always there but it does not pick the shot. The ball in the air does. Here is the window at any given moment with a delivery incoming:</p>
-
-<pre>
-CONTEXT WINDOW — BALL IN AIR
-
-┌──────────────────────────────────────────────────┐
-│                                                  │
-│  SYSTEM PROMPT           always present, low wt  │
-│  ──────────────────────────────────────────────  │
-│  MACRO: mode             persistent, medium wt   │
-│  MACRO: position         persistent, medium wt   │
-│  MACRO: phase            persistent, medium wt   │
-│  MACRO: constraints      if any injected         │
-│  ──────────────────────────────────────────────  │
-│  MICRO: bowler type      this over               │
-│  MICRO: field            this over               │
-│  MICRO: patterns         this over               │
-│  MICRO: preparation      this ball               │
-│  ──────────────────────────────────────────────  │
-│  CLASSIFICATION           ← 0.4 sec, highest wt │
-│  length                                          │
-│  line                                            │
-│  pace                                            │
-│  movement                                        │
-│  trajectory                                      │
-│                                                  │
-└──────────────────────────────────────────────────┘
-</pre>
-
-                        <p>The window is finite. Not everything fits. The routing logic's job is deciding what gets in and what stays out.</p>
+                        <p>The shorter the lifespan, the higher the weight. The system prompt is always there but it does not pick the shot. The ball in the air does.</p>
 
                         <h2>When Layers Disagree</h2>
 
                         <p>Layers will conflict. That is the normal state of the system on most deliveries.</p>
 
-<pre>
-MACRO says:    phase = POWERPLAY → attack
-MICRO says:    bowler = fast, new ball, slips in → caution
-BALL says:     full, on pads, no movement → hittable
+<pre class="context-block">MACRO says:    phase = POWERPLAY  →  attack
+MICRO says:    bowler = fast, new ball, slips in  →  caution
+BALL says:     full, on pads, no movement  →  hittable</pre>
 
-Three layers. Three different instructions.
-</pre>
+                        <p>Three layers. Three different instructions.</p>
 
                         <p>In a deterministic system, conflicts are simple. You write priority queues, explicit rules, if-else chains. The system always knows which layer wins. Every run produces the same result.</p>
 
@@ -213,8 +233,7 @@ Three layers. Three different instructions.
 
                         <p>But the system still has tendencies. The resolution leans a certain way, most of the time:</p>
 
-<pre>
-RESOLUTION RULES:
+<pre class="prompt-block">RESOLUTION RULES:
 
 1. Ball data overrides micro context
    (what the ball IS beats what you expected)
@@ -226,59 +245,44 @@ RESOLUTION RULES:
    (the match situation beats general identity)
 
 4. System prompt is the tiebreaker
-   (when everything else is neutral, identity decides)
-</pre>
+   (when everything else is neutral, identity decides)</pre>
 
-                        <p>These are not hard rules. They are tendencies. Most of the time ball data wins. But sometimes a constraint from higher up — three quick wickets, a rebuilding phase — suppresses what the ball is asking for. The system can look at a half-volley and choose to defend it. Not because the ball says defend. Because the situation says survive.</p>
-
-                        <p>Bad form is this going wrong. Not wrong inputs. Wrong weights. The ball says hit but an old constraint is still loaded from three overs ago, overriding everything. Stale data that the routing logic has not cleaned out.</p>
+                        <p>Most of the time ball data wins. Bad form is this going wrong. Not wrong inputs. Wrong weights. The ball says hit but an old constraint is still loaded from three overs ago, overriding everything. Stale data and wrong inputs leading to less than ideal outcomes. Or maybe it's just a short ball that begged to be hit to the fielder.</p>
 
                         <h2>The Prompts, Plain</h2>
 
                         <p>Strip the pseudocode. Here is what the system runs on.</p>
 
-                        <p><strong>System:</strong></p>
-
-                        <blockquote>
+                        <span class="prompt-label">System</span>
+                        <div class="prompt-plain">
                             <p>You are Sanju Samson. Right-hand batsman, wicketkeeper. Your hands are fast, your wrists are strong, you hit to all parts of the ground. Your job is to maximise your team's chance of winning. Nothing else matters.</p>
-                        </blockquote>
+                        </div>
 
-                        <p><strong>Macro context (loaded at innings start, updated on interrupts):</strong></p>
-
-                        <blockquote>
+                        <span class="prompt-label">Macro Context — loaded at innings start, updated on interrupts</span>
+                        <div class="prompt-plain">
                             <p>You are chasing 196 in 20 overs. You are opening the batting. The powerplay is active. The field is up, there are gaps behind square, aggression is rewarded. Your required rate is 9.8.</p>
                             <p>If a wicket falls, recalculate. Reassess who is with you. If it is early and the rate is climbing, stay controlled but do not shut down. If a partnership crosses 30 runs, release yourself. Full range.</p>
-                        </blockquote>
+                        </div>
 
-                        <p><strong>Micro context (loaded per over, updated per ball):</strong></p>
-
-                        <blockquote>
+                        <span class="prompt-label">Micro Context — loaded per over, updated per ball</span>
+                        <div class="prompt-plain">
                             <p>The bowler is left-arm orthodox. He has bowled three overs tonight. Two maidens in the powerplay, then got hit for 14 in the middle overs when he went fuller. He favours a length outside off with backward point and deep cover in place. Mid-on is up.</p>
-                        </blockquote>
+                        </div>
 
-                        <p><strong>Per-delivery (loaded 0.4 seconds after release):</strong></p>
-
-                        <blockquote>
+                        <span class="prompt-label">Per-delivery — loaded 0.4 seconds after release</span>
+                        <div class="prompt-plain">
                             <p>Full. On off stump. Flighted. Dipping. Spinning away.</p>
-                            <p>Three options:</p>
-                            <ol>
-                                <li>Step out and loft straight. Mid-on is up. The pitch is there.</li>
-                                <li>Drive through cover. Deep cover is back but the gap is wide if you keep it down.</li>
-                                <li>Defend and wait. Next ball.</li>
-                            </ol>
-                        </blockquote>
+                            <p>Three options:<br>
+                            Step out and loft straight. Mid-on is up. The pitch is there.<br>
+                            Drive through cover. Deep cover is back but the gap is wide if you keep it down.<br>
+                            Defend and wait. Next ball.</p>
+                        </div>
 
-                        <h2>The Maze</h2>
-
-                        <p>One system prompt. Four layers of context loading at different speeds. A set of resolution rules that are really just tendencies. No debugger. No stack trace. Just a shot, a run, or a wicket.</p>
-
-                        <p>The model above is clean. Real batting is not. Every layer makes sense on its own. Then two layers disagree and there is no arbiter. Attack the powerplay. Rebuild after the early wicket. This ball is a half-volley. Three instructions, three directions. That is the maze.</p>
-
-                        <p>When Samson was out of form, the system was not broken. It was drowning. Too many inputs firing at the wrong time. Stale constraints overriding fresh data. The fix was not more prompts. It was fewer inputs at the right time. One calibration. Trigger movement timed a fraction better. Everything downstream resolved.</p>
+                        <p>One system prompt. Four layers of context loading at different speeds. A set of resolution rules that are really just tendencies.</p>
 
                         <p>In Kolkata, against the West Indies, the engine ran clean. He reached his 50 and took guard again. Wickets fell around him and he played singles. The prompt said attack. He chose to survive. Then the constraint cleared and he opened up.</p>
 
-                        <p>Ninety-seven not out. Game won. The true Kerala Story.</p>
+                        <p class="sign-off"><em>Ninety-seven not out. Game won. Come on Sanju. The prompt that will win us the World Cup.</em></p>
 
                     </div>
                 </article>
