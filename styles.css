@@ -500,6 +500,53 @@ footer p {
 
 .article-content a:hover { border-color: var(--text); }
 
+.article-content h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-top: 3rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.article-content h2:first-child { margin-top: 0; }
+
+.article-content pre {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.72rem;
+    line-height: 1.55;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    color: var(--text);
+    white-space: pre;
+}
+
+.article-content blockquote {
+    border-left: 2px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1rem 0;
+}
+
+.article-content blockquote p {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-content ol {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+}
+
+.article-content ol li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
 .video-embed {
     position: relative;
     padding-bottom: 56.25%;
