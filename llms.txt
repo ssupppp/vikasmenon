@@ -4,18 +4,18 @@
 
 ## Site Map
 
-- [Home](https://ssupppp.github.io/vikasmenon/): Overview, projects, writing, work experience, about
-- [Portfolio](https://ssupppp.github.io/vikasmenon/portfolio.html): Full professional portfolio — Zynga (CSR2, Farmville, Mafia Wars), Terra (Snackula, RedFlag.exe, Plumo)
-- [Writing](https://ssupppp.github.io/vikasmenon/articles.html): Articles on game development, AI-native experiences, velocity, creativity, and production
+- [Home](https://www.vikasmenon.com/): Overview, projects, writing, work experience, about
+- [Portfolio](https://www.vikasmenon.com/portfolio.html): Full professional portfolio — Zynga (CSR2, Farmville, Mafia Wars), Terra (Snackula, RedFlag.exe, Plumo)
+- [Writing](https://www.vikasmenon.com/articles.html): Articles on game development, AI-native experiences, velocity, creativity, and production
 
 ## Projects
 
-- [Bowldem](https://ssupppp.github.io/vikasmenon/bowldem.html): Daily cricket puzzle game (Wordle for cricket). 500+ cricketers, new puzzle daily.
-- [Snackula](https://ssupppp.github.io/vikasmenon/snackula.html): AI-native vampire social deduction game. Convince AI-driven neighbors to let you inside.
-- [RedFlag.exe](https://ssupppp.github.io/vikasmenon/redflag.html): Psychological thriller escape room with AI antagonist.
-- [Fantasy Team Rater](https://ssupppp.github.io/vikasmenon/fantasy-team-rater.html): AI-powered FPL team rating tool (1-100 scale).
-- [Helicopter Game](https://ssupppp.github.io/vikasmenon/helicopter-game.html): One-touch arcade challenge — navigate tight corridors.
-- [Plumo](https://ssupppp.github.io/vikasmenon/plumo.html): Whimsical puzzle adventure with a cloud character. In development.
+- [Bowldem](https://www.vikasmenon.com/bowldem.html): Daily cricket puzzle game (Wordle for cricket). 500+ cricketers, new puzzle daily.
+- [Snackula](https://www.vikasmenon.com/snackula.html): AI-native vampire social deduction game. Convince AI-driven neighbors to let you inside.
+- [RedFlag.exe](https://www.vikasmenon.com/redflag.html): Psychological thriller escape room with AI antagonist.
+- [Fantasy Team Rater](https://www.vikasmenon.com/fantasy-team-rater.html): AI-powered FPL team rating tool (1-100 scale).
+- [Helicopter Game](https://www.vikasmenon.com/helicopter-game.html): One-touch arcade challenge — navigate tight corridors.
+- [Plumo](https://www.vikasmenon.com/plumo.html): Whimsical puzzle adventure with a cloud character. In development.
 
 ## Career
 

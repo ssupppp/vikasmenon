@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ssupppp.github.io/vikasmenon/sitemap.xml
+Sitemap: https://www.vikasmenon.com/sitemap.xml
