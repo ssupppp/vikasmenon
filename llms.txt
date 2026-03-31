@@ -31,6 +31,6 @@ Game development, AI-native games, live operations, prompt engineering, velocity
 
 ## Contact
 - Email: menonvikz@gmail.com
-- LinkedIn: https://linkedin.com/in/vikasmenon
+- LinkedIn: https://linkedin.com/in/vikmenon
 - GitHub: https://github.com/ssupppp
 - Resume: https://vikasmenon.com/Vikas_Menon_Resume.pdf
