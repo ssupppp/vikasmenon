@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Vikas Menon</title>
+    <meta name="description" content="Side projects, hackathon entries, and tools built by Vikas Menon.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/projects.html">
+    <meta property="og:title" content="Projects - Vikas Menon">
+    <meta property="og:description" content="Side projects, hackathon entries, and tools built by Vikas Menon.">
+    <meta property="og:url" content="https://vikasmenon.com/projects.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <div class="container">
+                <h1 class="page-title">Projects</h1>
+                <p class="page-desc">Side projects, hackathon entries, and tools I've built.</p>
+            </div>
+        </header>
+
+        <section class="projects-page">
+            <div class="container">
+                <div class="projects-grid">
+
+                    <a href="bowldem.html" class="project-tile featured">
+                        <p class="project-tile-label">Side Project &bull; Live</p>
+                        <h2 class="project-tile-title">Bowldem</h2>
+                        <p class="project-tile-desc">Daily cricket puzzle game. Wordle for cricket fans — guess the mystery cricketer in 6 tries using clues about nationality, role, batting/bowling style, IPL team, and career stats. Built with vanilla JS and a curated database of 500+ cricketers.</p>
+                        <span class="project-tile-meta">2025 &bull; bowldem.com</span>
+                    </a>
+
+                    <a href="rook.html" class="project-tile">
+                        <p class="project-tile-label">AI Assistant &bull; Python</p>
+                        <h2 class="project-tile-title">Rook</h2>
+                        <p class="project-tile-desc">Personal AI assistant built on OpenClaw. Controls smart home devices, aggregates daily digests across email and messaging platforms.</p>
+                        <span class="project-tile-meta">2025</span>
+                    </a>
+
+                    <a href="sony-tv-skill.html" class="project-tile">
+                        <p class="project-tile-label">Smart Home &bull; Python</p>
+                        <h2 class="project-tile-title">Sony TV Skill</h2>
+                        <p class="project-tile-desc">OpenClaw skill for controlling Sony Bravia TV via REST API. Power, volume, and app launching through natural language commands.</p>
+                        <span class="project-tile-meta">2025</span>
+                    </a>
+
+                    <a href="rizz-messenger.html" class="project-tile">
+                        <p class="project-tile-label">Reddit Game &bull; TypeScript</p>
+                        <h2 class="project-tile-title">Rizz Messenger</h2>
+                        <p class="project-tile-desc">Chat challenge game built on Reddit's Devvit platform. AI-powered conversations using Google Gemini API.</p>
+                        <span class="project-tile-meta">2025</span>
+                    </a>
+
+                    <a href="playbowldem-reddit.html" class="project-tile">
+                        <p class="project-tile-label">Hackathon &bull; TypeScript</p>
+                        <h2 class="project-tile-title">PlayBowldem on Reddit</h2>
+                        <p class="project-tile-desc">Bowldem reimagined for Reddit. Guess the T20 World Cup Man of the Match from scorecards. Built for the Reddit Games &amp; Puzzles Hackathon 2026.</p>
+                        <span class="project-tile-meta">2026 &bull; r/playbowldem</span>
+                    </a>
+
+                    <a href="https://github.com/ssupppp/valuepickr" target="_blank" rel="noopener" class="project-tile">
+                        <p class="project-tile-label">Python &bull; RAG</p>
+                        <h2 class="project-tile-title">ValuePickr Chat</h2>
+                        <p class="project-tile-desc">RAG-powered chat interface for 10+ years of ValuePickr investment forum discussions. Vector search with ChromaDB + Llama 3.</p>
+                        <span class="project-tile-meta">2025 &bull; GitHub</span>
+                    </a>
+
+                    <a href="fantasy-team-rater.html" class="project-tile">
+                        <p class="project-tile-label">Node.js &bull; FPL API</p>
+                        <h2 class="project-tile-title">Fantasy Team Rater</h2>
+                        <p class="project-tile-desc">Rates your FPL team 1-100. Pulls live data from the official API, scores by position, considers fixture difficulty.</p>
+                        <span class="project-tile-meta">2024</span>
+                    </a>
+
+                    <a href="helicopter-game.html" class="project-tile">
+                        <p class="project-tile-label">Web Game</p>
+                        <h2 class="project-tile-title">Helicopter Game</h2>
+                        <p class="project-tile-desc">One-touch arcade game with progressive difficulty and precision physics. Endless mode.</p>
+                        <span class="project-tile-meta">2024</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

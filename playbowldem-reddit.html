@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayBowldem on Reddit - Vikas Menon</title>
+    <meta name="description" content="Bowldem reimagined for Reddit. Guess the T20 World Cup Man of the Match from scorecards. Reddit Games & Puzzles Hackathon 2026.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/playbowldem-reddit.html">
+    <meta property="og:title" content="PlayBowldem on Reddit — Hackathon Entry">
+    <meta property="og:description" content="Bowldem reimagined for Reddit. Guess the T20 World Cup Man of the Match from scorecards.">
+    <meta property="og:url" content="https://vikasmenon.com/playbowldem-reddit.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <a href="projects.html" class="back-link">Back to Projects</a>
+
+                <h1 class="project-detail__title">PlayBowldem on Reddit</h1>
+                <p class="project-detail__subtitle">Reddit Games & Puzzles Hackathon 2026</p>
+
+                <div class="project-detail__content">
+                    <h2>What it is</h2>
+                    <p>Bowldem reimagined for Reddit. Instead of guessing cricketers by attributes, players see a T20 World Cup match venue and scorecard (team names hidden) and guess the Man of the Match in 5 tries.</p>
+
+                    <h2>How it works</h2>
+                    <ul>
+                        <li><strong>Daily puzzles:</strong> 60 curated T20 World Cup matches, one new puzzle each day</li>
+                        <li><strong>Feedback system:</strong> Each guess reveals whether the player was in the match (P), on the same team (T), played the same role (R), or is the correct answer (M)</li>
+                        <li><strong>Leaderboard:</strong> Stats tracking and competitive ranking via Redis</li>
+                        <li><strong>Shareable results:</strong> Emoji grid summaries for sharing on Reddit</li>
+                    </ul>
+
+                    <h2>Built for Reddit</h2>
+                    <p>Runs natively on Reddit's Devvit platform as an interactive post type. Full client/server architecture with React frontend, Express backend, and Redis for persistent stats and leaderboard data. Built for the Reddit Games & Puzzles Hackathon 2026.</p>
+
+                    <div class="project-status">
+                        <p><strong>Status:</strong> Hackathon submission</p>
+                        <p><strong>Stack:</strong> TypeScript, React, Tailwind CSS, Express, Redis, Devvit</p>
+                        <a href="https://github.com/ssupppp/bowldem-reddit" target="_blank" rel="noopener" class="project-cta">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

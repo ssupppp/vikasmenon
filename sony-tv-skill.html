@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sony TV Skill - Vikas Menon</title>
+    <meta name="description" content="OpenClaw skill for controlling Sony Bravia TV through natural language commands. Power, volume, and app control via REST API.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/sony-tv-skill.html">
+    <meta property="og:title" content="Sony TV Skill — Smart Home Control">
+    <meta property="og:description" content="OpenClaw skill for controlling Sony Bravia TV through natural language commands.">
+    <meta property="og:url" content="https://vikasmenon.com/sony-tv-skill.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <a href="projects.html" class="back-link">Back to Projects</a>
+
+                <h1 class="project-detail__title">Sony TV Skill</h1>
+                <p class="project-detail__subtitle">Smart Home Control for Rook</p>
+
+                <div class="project-detail__content">
+                    <h2>What it does</h2>
+                    <p>A skill for the Rook AI assistant (built on OpenClaw) that controls a Sony Bravia TV over the home network. Say "turn on the TV" or "open Netflix" and it handles the rest.</p>
+
+                    <h2>Capabilities</h2>
+                    <ul>
+                        <li><strong>Power control:</strong> Turn TV on (via Wake-on-LAN magic packets) and off</li>
+                        <li><strong>Volume:</strong> Adjust up/down, set specific level (0-100), mute/unmute</li>
+                        <li><strong>App launching:</strong> Open Netflix, YouTube, Hotstar, Prime Video, or any installed app</li>
+                        <li><strong>Status queries:</strong> Check power state, volume level, mute status</li>
+                        <li><strong>App discovery:</strong> List all installed apps with their URIs</li>
+                    </ul>
+
+                    <h2>How it works</h2>
+                    <p>The skill maps natural language commands to a Python script that communicates with the TV's REST API using JSON-RPC. Power-on uses Wake-on-LAN since the REST API isn't available when the TV is off. Unlisted apps are matched via fuzzy search against the TV's installed app list.</p>
+
+                    <div class="project-status">
+                        <p><strong>Status:</strong> Active</p>
+                        <p><strong>Stack:</strong> Python, Sony Bravia REST API, Wake-on-LAN</p>
+                        <p><strong>Part of:</strong> <a href="rook.html">Rook AI Assistant</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

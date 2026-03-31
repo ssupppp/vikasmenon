@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizz Messenger - Vikas Menon</title>
+    <meta name="description" content="Chat challenge game built on Reddit's Devvit platform with AI-powered conversations using Google Gemini.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/rizz-messenger.html">
+    <meta property="og:title" content="Rizz Messenger — Reddit Chat Game">
+    <meta property="og:description" content="Chat challenge game on Reddit with AI-powered conversations using Google Gemini.">
+    <meta property="og:url" content="https://vikasmenon.com/rizz-messenger.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <a href="projects.html" class="back-link">Back to Projects</a>
+
+                <h1 class="project-detail__title">Rizz Messenger</h1>
+                <p class="project-detail__subtitle">AI Chat Challenge on Reddit</p>
+
+                <div class="project-detail__content">
+                    <h2>What it is</h2>
+                    <p>A chat challenge game built as a Reddit Devvit app. Moderators create "Rizz Challenge" posts where players engage in AI-powered conversations. The AI responds dynamically using Google Gemini, creating unique social interactions every time.</p>
+
+                    <h2>How it works</h2>
+                    <ul>
+                        <li><strong>Devvit platform:</strong> Runs natively inside Reddit as an interactive post type</li>
+                        <li><strong>AI-powered chat:</strong> Google Gemini API on the backend drives dynamic, non-deterministic conversations</li>
+                        <li><strong>Full stack:</strong> Client (React 19 + Tailwind CSS 4), server (Express 5), shared types — all TypeScript</li>
+                    </ul>
+
+                    <h2>The concept</h2>
+                    <p>Players test their conversational skills against AI characters. Each interaction is unique — the AI adapts its personality and responses based on the conversation flow. Built to explore what social gaming looks like when AI is the core mechanic, not a wrapper.</p>
+
+                    <div class="project-status">
+                        <p><strong>Status:</strong> Built</p>
+                        <p><strong>Stack:</strong> TypeScript, React 19, Tailwind CSS, Devvit, Gemini API</p>
+                        <a href="https://github.com/ssupppp/redditmessenger" target="_blank" rel="noopener" class="project-cta">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
