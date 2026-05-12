@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoAcquire — Agent-Driven Ad Engine - Vikas Menon</title>
+    <meta name="description" content="An autonomous acquisition engine for Bowldem. Three agents rotate daily on a cron tick: read, judge, mutate, ship. Inspired by Karpathy's autoresearch loop.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/autoacquire.html">
+    <meta property="og:title" content="AutoAcquire — Agent-Driven Ad Engine">
+    <meta property="og:description" content="An autonomous acquisition engine for Bowldem. Three agents rotate daily: read, judge, mutate, ship.">
+    <meta property="og:url" content="https://vikasmenon.com/autoacquire.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="AutoAcquire — Agent-Driven Ad Engine">
+    <meta name="twitter:description" content="An autonomous acquisition engine for Bowldem. Three agents rotate daily: read, judge, mutate, ship.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="index.html#building" class="nav-link">Building</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#now" class="nav-link">Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <a href="index.html#building" class="back-link">Back</a>
+
+                <h1 class="project-detail__title">AutoAcquire</h1>
+                <p class="project-detail__subtitle">Agent-Driven Ad Engine for Bowldem</p>
+
+                <div class="project-detail__content">
+                    <h2>About the Project</h2>
+                    <p>AutoAcquire is an autonomous user acquisition engine built for <a href="https://bowldem.com" target="_blank" rel="noopener">Bowldem</a>, a daily cricket puzzle game. The idea came from reading Karpathy's essay on autoresearch — a loop where an agent evaluates its own output, kills what fails, breeds from what works, and repeats on a fixed tick. An ad campaign is structurally identical: you're searching across creative variants for the one that converts cheapest.</p>
+
+                    <p>Give it an outcome — email subscribers — and a daily budget. The engine figures out the rest. No daily tweaking, no manual A/B tests, no logging into Ads Manager to pause losers.</p>
+
+                    <h2>How It Works</h2>
+                    <p>Three agents, one cron job, one shared state object in Supabase. The cron fires at 06:00 UTC. Twenty-four hours later it fires again.</p>
+
+                    <p><strong>The CMO agent</strong> reads yesterday's funnel data — impressions, clicks, landings, plays, subscriptions — and scores every active variant. The scoring rule is tiered: if a variant has a real conversion, it outranks any variant with only clicks, no matter how high the CTR. The first version scored on CTR alone and spent two weeks optimizing toward clickbait that never converted.</p>
+
+                    <p><strong>The setup agent</strong> takes the CMO's brief and builds campaign scaffolding on Meta. Ad sets, budgets, targeting, UTM structure. It talks to Meta's Marketing API directly.</p>
+
+                    <p><strong>The creative agent</strong> fills those ad sets with new variants. It mutates yesterday's winners — same value prop, different hook. Provider chain is layered: Grok first, Gemini as fallback, static templates as the always-works option so the cycle ships even if every model is down.</p>
+
+                    <h2>The Handoff</h2>
+                    <p>Each agent writes its output to a shared state object in Supabase. The next agent reads from the same object. No chat, no negotiation, no multi-turn back-and-forth. Agent A writes. Agent B reads. The state object is the protocol.</p>
+
+                    <p>This matters because the failure mode of multi-agent systems is usually coordination. The cog-wheel design avoids it by making every handoff unidirectional.</p>
+
+                    <h2>Safety Rails</h2>
+                    <p>Four rails run every cycle: token expiry preflight, hard daily budget cap, paired ad+adset kills (never one without the other), and the provider fallback chain. These rails do not learn. That's on purpose. The part of the system that can hurt you should not also be the part that changes.</p>
+
+                    <h2>What I Learned</h2>
+                    <p>Attribution has to close before the loop is useful. We burned ₹2,068 across 4,279 clicks with zero attributed plays before finding that the Supabase view was keyed on a UTM field the creative agent never populated. The agents were rotating against noise for ten days. The loop is only as good as the data feeding it.</p>
+
+                    <div class="project-status">
+                        <p><strong>Status:</strong> Live</p>
+                        <p><strong>Tech Stack:</strong> Supabase, Meta Marketing API, Multi-agent orchestration</p>
+                        <a href="https://github.com/ssupppp/bowldem" target="_blank" rel="noopener" class="project-cta">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

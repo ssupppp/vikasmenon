@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowldem for Reddit — Daily Cricket Puzzle on Devvit - Vikas Menon</title>
+    <meta name="description" content="Bowldem ported to Reddit's Devvit platform for the Reddit Games Hackathon. Daily cricket puzzles as a native Reddit experience.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/bowldem-reddit.html">
+    <meta property="og:title" content="Bowldem for Reddit — Daily Cricket Puzzle on Devvit">
+    <meta property="og:description" content="Bowldem ported to Reddit's Devvit platform for the Reddit Games Hackathon.">
+    <meta property="og:url" content="https://vikasmenon.com/bowldem-reddit.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bowldem for Reddit — Daily Cricket Puzzle on Devvit">
+    <meta name="twitter:description" content="Bowldem ported to Reddit's Devvit platform for the Reddit Games Hackathon.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="index.html#building" class="nav-link">Building</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#now" class="nav-link">Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <a href="index.html#building" class="back-link">Back</a>
+
+                <h1 class="project-detail__title">Bowldem for Reddit</h1>
+                <p class="project-detail__subtitle">Reddit Games Hackathon Submission</p>
+
+                <div class="project-detail__content">
+                    <h2>About the Project</h2>
+                    <p>Bowldem for Reddit is a port of <a href="https://bowldem.com" target="_blank" rel="noopener">Bowldem</a> — a daily cricket puzzle game — to Reddit's Devvit platform. Built as a submission for the Reddit Games Hackathon, targeting the Best Daily Game category ($15,000 prize).</p>
+
+                    <p>The idea was simple: cricket fans already live on r/Cricket and related subreddits. Instead of dragging them to a website, bring the puzzle to where they already are.</p>
+
+                    <h2>How It Works</h2>
+                    <p>Every day, a new puzzle post goes up. Players see a T20 World Cup match venue and scorecard with team names hidden. Five guesses to identify the Man of the Match. Each guess gives feedback on whether the player was in the match, on the right team, playing the right role.</p>
+
+                    <p>Results render as emoji grids that players can share directly in the comments — the same viral loop that made Wordle spread, but native to Reddit's community mechanics.</p>
+
+                    <h2>The Build</h2>
+                    <p>Devvit is Reddit's app platform — TypeScript, server-side rendering, tight integration with Reddit's post and comment APIs. The migration from vanilla JS (web Bowldem) to Devvit's reactive framework was the bulk of the work. Puzzle data, scoring logic, and the daily rotation system all had to be rearchitected for Devvit's server-client split.</p>
+
+                    <h2>What I Learned</h2>
+                    <p>Platform constraints shape the product. Devvit's sandbox limitations meant rethinking things I took for granted on the web — no arbitrary DOM manipulation, no client-side storage, different auth model. The puzzle had to be simpler and more self-contained than the web version, which turned out to make it better as a daily drop.</p>
+
+                    <div class="project-status">
+                        <p><strong>Status:</strong> Hackathon submission</p>
+                        <p><strong>Tech Stack:</strong> Reddit Devvit, TypeScript</p>
+                        <a href="https://github.com/ssupppp/bowldem-reddit" target="_blank" rel="noopener" class="project-cta">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
