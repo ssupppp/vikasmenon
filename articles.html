@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing - Vikas Menon</title>
-    <meta name="description" content="Thoughts on game development, AI-native experiences, and building products.">
+    <title>Writing — Vikas Menon</title>
+    <meta name="description" content="Essays by Vikas Menon on building AI-native consumer products, prompt engineering, production lessons from a decade at Zynga, and side projects in flight.">
     <meta name="author" content="Vikas Menon">
     <link rel="canonical" href="https://vikasmenon.com/articles.html">
     <!-- Open Graph -->
-    <meta property="og:title" content="Writing - Vikas Menon">
-    <meta property="og:description" content="Thoughts on game development, AI-native experiences, and building products.">
-    <meta property="og:image" content="https://vikasmenon.com/images/4thinkinghats.jpg">
-    <meta property="og:url" content="https://vikasmenon.com/articles.html">
+    <meta property="og:title" content="Writing — Vikas Menon">
+    <meta property="og:description" content="Essays on AI-native consumer products, prompt engineering, and what I'm shipping on the side.">
+    <meta property="og:image" content="https://www.vikasmenon.com/images/4thinkinghats.jpg">
+    <meta property="og:url" content="https://www.vikasmenon.com/articles.html">
     <meta property="og:type" content="website">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Writing - Vikas Menon">
-    <meta name="twitter:description" content="Thoughts on game development, AI-native experiences, and building products.">
-    <meta name="twitter:image" content="https://vikasmenon.com/images/4thinkinghats.jpg">
+    <meta name="twitter:title" content="Writing — Vikas Menon">
+    <meta name="twitter:description" content="Essays on AI-native consumer products, prompt engineering, and what I'm shipping on the side.">
+    <meta name="twitter:image" content="https://www.vikasmenon.com/images/4thinkinghats.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
@@ -27,8 +27,8 @@
       "@context": "https://schema.org",
       "@type": "Blog",
       "name": "Writing - Vikas Menon",
-      "description": "Thoughts on game development, AI-native experiences, and building products.",
-      "url": "https://vikasmenon.com/articles.html",
+      "description": "Essays on AI-native consumer products, prompt engineering, production lessons, and side projects in flight.",
+      "url": "https://www.vikasmenon.com/articles.html",
       "author": {
         "@type": "Person",
         "name": "Vikas Menon",
@@ -107,25 +107,127 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-name">Vikas Menon</a>
             <div class="nav-links">
-                <a href="projects.html" class="nav-link">Projects</a>
                 <a href="articles.html" class="nav-link">Writing</a>
-                <a href="work.html" class="nav-link">Work</a>
-                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#building" class="nav-link">Building</a>
+                <a href="index.html#now" class="nav-link">Now</a>
             </div>
         </div>
     </nav>
 
     <main>
         <header class="page-header">
-            <div class="container">
+            <div class="container container--wide">
                 <a href="index.html" class="back-link">Back</a>
-                <h1 class="page-title">Writing</h1>
-                <p class="page-desc">Thoughts on game development, AI-native experiences, product strategy, and lessons learned along the way.</p>
+                <h1 class="page-title">Writing.</h1>
+                <p class="page-desc">Essays on building AI-native consumer products, prompt engineering, production lessons from a decade at Zynga, and what I'm shipping on the side.</p>
             </div>
         </header>
 
         <section class="articles-page">
             <div class="container">
+
+                <!-- Index TOC -->
+                <nav class="articles-index" aria-label="All essays">
+                    <p class="articles-index-title">All Essays</p>
+
+                    <a href="#sony-tv" class="essay">
+                        <span class="essay-date">March 2026</span>
+                        <h3 class="essay-title">Goodbye to the Big Green Button</h3>
+                        <p class="essay-dek">My TV remote was unreliable. I taught the TV to answer to Telegram instead, then shipped the skill open-source.</p>
+                    </a>
+
+                    <a href="samson-prompt-engine.html" class="essay">
+                        <span class="essay-date">March 2026</span>
+                        <h3 class="essay-title">The Prompt Engine That Runs Sanju Samson</h3>
+                        <p class="essay-dek">Modeling a Test batsman as a prompt system. Identity, macro context, micro context, and a priority tree for when the layers disagree.</p>
+                    </a>
+
+                    <a href="#ai-native" class="essay">
+                        <span class="essay-date">November 2024</span>
+                        <h3 class="essay-title">AI-Native Games: Still Hour One</h3>
+                        <p class="essay-dek">Remove AI from an AI-native game and the game collapses. The simpler definition — and why mobile is still hour one.</p>
+                    </a>
+
+                    <a href="#progression" class="essay">
+                        <span class="essay-date">December 2024</span>
+                        <h3 class="essay-title">Progression Systems Are Overrated for Game Platforms</h3>
+                        <p class="essay-dek">Terra ran the six-week experiment. The system worked. It just didn't matter.</p>
+                    </a>
+
+                    <a href="#velocity" class="essay">
+                        <span class="essay-date">January 2025</span>
+                        <h3 class="essay-title">Focusing on Velocity</h3>
+                        <p class="essay-dek">Velocity, not volume. The Bezos invert: what won't change in the next decade of shipping software, and why subtraction beats addition.</p>
+                    </a>
+
+                    <a href="#wrong-thing" class="essay">
+                        <span class="essay-date">December 2024</span>
+                        <h3 class="essay-title">I Was Afraid of the Wrong Thing</h3>
+                        <p class="essay-dek">I was the reckless one. Reckless with time, reckless with opportunity, reckless by being risk-averse.</p>
+                    </a>
+
+                    <a href="#creativity" class="essay">
+                        <span class="essay-date">December 2024</span>
+                        <h3 class="essay-title">Creativity vs. Shipping: Finding Balance</h3>
+                        <p class="essay-dek">When to go blue-sky off the rails, and when to go heads-down and build. The rhythm of divergent and convergent thinking is the producer's job.</p>
+                    </a>
+
+                    <a href="#breakfast" class="essay">
+                        <span class="essay-date">January 2025</span>
+                        <h3 class="essay-title">Enjoy Your Breakfasts</h3>
+                        <p class="essay-dek">I caught myself rushing through a Bowldem design problem. Wanted to ship it, move on. But why?</p>
+                    </a>
+
+                    <a href="#horses" class="essay">
+                        <span class="essay-date">December 2024</span>
+                        <h3 class="essay-title">Horses for Courses</h3>
+                        <p class="essay-dek">I was an athlete once. Top three at the 100m at school. The coach picked me for the 1K, and won.</p>
+                    </a>
+
+                    <a href="#fpl" class="essay">
+                        <span class="essay-date">January 2025</span>
+                        <h3 class="essay-title">How I Used AI to Create a Fantasy Premier League Team Rater</h3>
+                        <p class="essay-dek">I hadn't coded in years. The FPL API and AI assistance got me from screenshot OCR to a 1-100 team rating in a weekend.</p>
+                    </a>
+
+                    <a href="#values" class="essay">
+                        <span class="essay-date">January 2025</span>
+                        <h3 class="essay-title">My Values</h3>
+                        <p class="essay-dek">Three things I've earned over two decades: integrity, respect, resilience. Old Monk in the cupboard. Astronomy as humility.</p>
+                    </a>
+
+                    <a href="#thinking-hats" class="essay">
+                        <span class="essay-date">January 2025</span>
+                        <h3 class="essay-title">4 Thinking Hats of Production</h3>
+                        <p class="essay-dek">IGDC 2020 talk. Production as four pillars: Project, Process, People, Player.</p>
+                    </a>
+
+                    <a href="#podcast" class="essay">
+                        <span class="essay-date">December 2024</span>
+                        <h3 class="essay-title">Podcast: How to Run LiveOps</h3>
+                        <p class="essay-dek">On Games &amp; Names with Stan Minasov from AppMagic. LiveOps challenges, pitfalls, and the secret sauce of keeping a game alive for years.</p>
+                    </a>
+                </nav>
+
+                <!-- Controlling My Sony TV From Telegram -->
+                <article class="article-full" id="sony-tv">
+                    <span class="article-date">March 2026</span>
+                    <h2 class="article-title">Goodbye to the Big Green Button</h2>
+                    <div class="article-content">
+                        <p>One of my most annoying experiences in life is when I press a button on my TV remote only to see a much delayed response. I press the green button — wait — nothing happens. I press again — wait — nothing happens. I question my life choices. I press again — voila — the TV turns off, only to turn on again because of the multipress.</p>
+                        <p>Well, no more. I've set up my TV to be controlled by messaging. Interested? Read on.</p>
+
+                        <ul>
+                            <li><strong>Set up OpenClaw as a 24/7 assistant</strong> — OpenClaw is an open-source AI agent that runs on my laptop and connects to Telegram. It's always on, always listening.</li>
+                            <li><strong>Taught it to control my Sony TV</strong> — Turns out Sony TVs have a way for other devices on your Wi-Fi to talk to them. I had no idea this existed. Using Claude Code and OpenClaw, I set it up in one evening without needing to understand any of the technical bits myself. Now I just message things like "open Netflix", "volume 20", or "pause" on Telegram and the TV responds instantly. No remote needed. No lag. No questioning my life choices.</li>
+                            <li><strong>Published it for anyone to use</strong> — I packaged the whole thing as an open-source skill on ClawHub. If you have a Sony Bravia TV (2015 or newer), you can install it with one command: <code>clawhub install sony-bravia-tv</code>. First Sony TV skill on the platform.</li>
+                        </ul>
+
+                        <video controls playsinline style="width:100%; max-width:480px; border-radius:4px; margin-top:1rem;">
+                            <source src="images/sony-tv-netflix.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
 
                 <!-- The Prompt Engine That Runs Sanju Samson -->
                 <article class="article-full" id="samson-prompt-engine">
@@ -353,6 +455,19 @@
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 100;
+                    const top = target.offsetTop - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
         });
     </script>
 </body>
