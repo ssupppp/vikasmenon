@@ -12,6 +12,7 @@
 - PlotPix.ai (https://www.plotpix.ai) — AI-native video pipeline for short-form vertical content at scale
 
 ## Projects
+- Gates of Hormuz (https://vikasmenon.com/gates-of-hormuz.html) — Real-time strait-authority web game; triage ships under Papers-Please tension with a tycoon economy; in review on CrazyGames and Poki
 - Bowldem (https://www.bowldem.com) — Daily cricket puzzle game, Wordle for cricket fans
 - Rook — Personal AI assistant on OpenClaw, smart home control + daily digests
 - Sony TV Skill — OpenClaw skill for controlling Sony Bravia TV via REST API
