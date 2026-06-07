@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port of Hormuz — A Real-Time Ship-Triage Game - Vikas Menon</title>
+    <meta name="description" content="A fast ship-triage game for the web. You run the gate of a busy shipping strait — clear, inspect, or divert each vessel — and the pressure scales the longer you last.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/port-of-hormuz.html">
+    <meta property="og:title" content="Port of Hormuz — A Real-Time Ship-Triage Game">
+    <meta property="og:description" content="Run the gate of a busy shipping strait. Clear, inspect, or divert each vessel as the waves build. Built web-first, on CrazyGames and Poki.">
+    <meta property="og:url" content="https://vikasmenon.com/port-of-hormuz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://vikasmenon.com/images/port-of-hormuz.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Port of Hormuz — A Real-Time Ship-Triage Game">
+    <meta name="twitter:description" content="Run the gate of a busy shipping strait. Clear, inspect, or divert each vessel as the waves build.">
+    <meta name="twitter:image" content="https://vikasmenon.com/images/port-of-hormuz.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="index.html#building" class="nav-link">Building</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#now" class="nav-link">Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <a href="index.html#building" class="back-link">Back</a>
+
+                <h1 class="project-detail__title">Port of Hormuz</h1>
+                <p class="project-detail__subtitle">A real-time ship-triage game for the web</p>
+
+                <div class="project-detail__image">
+                    <img src="images/port-of-hormuz.jpg" alt="Port of Hormuz key art" />
+                </div>
+
+                <div class="project-detail__content">
+                    <h2>What it is</h2>
+                    <p>Port of Hormuz is a real-time triage game. You run the gate of a busy shipping strait, and the ships keep coming. Your whole job is to sort them, fast: clear it through, pull it in to inspect, or divert it away. One clean decision, made over and over.</p>
+
+                    <p>Early on you have room to think. As the waves build, ships arrive quicker and dirtier, and the same call gets harder. The game is really about staying sharp while the rate climbs — quick triage that scales until it breaks you.</p>
+
+                    <div class="project-detail__image">
+                        <video src="images/port-of-hormuz-preview.mp4" poster="images/port-of-hormuz-still.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+                    </div>
+
+                    <h2>Why a web game</h2>
+                    <p>The biggest lesson from building <a href="bowldem.html">Bowldem</a> was that making the game is the easy part. Distribution is the hard part. So this time I built for the web first: it runs in any browser, nothing to install, and it's the same build everywhere.</p>
+
+                    <p>Poki, CrazyGames, and itch.io are the experiments layered on top — portals that bring their own audiences. Building web-first keeps the game portable across all of them instead of betting the whole thing on one channel.</p>
+
+                    <h2>Why this game</h2>
+                    <p>It's also topical. The strait it's named after sits in the middle of the news cycle, and when I went looking for prior art I couldn't find many ship-triaging games. The lane felt open: a familiar mechanic — sort the queue under pressure — pointed at a setting nobody had really used.</p>
+
+                    <h2>How it works</h2>
+                    <p>Ships approach the gate in waves. Clear a clean ship and it pays into your treasury. Wave a dirty one through, or stop traffic you shouldn't have, and it costs you a life — three lives and the run ends.</p>
+
+                    <p>The payoff beat is the inspection. Catch a ship carrying something it shouldn't and the seizure pays out big: the screen freezes for a moment, gold bursts, and the win lands before play resumes.</p>
+
+                    <h2>The build</h2>
+                    <p>This is the first real-time game I've built for the open web. React 19 and Vite handle the shell, but the game itself runs on a hand-written canvas loop — ships, waves, economy, and the moment-to-moment feel all live in a single tick. Shipping to CrazyGames and Poki meant building to each portal's SDK and rules: save systems, ad timing, pause behavior, mobile and desktop.</p>
+
+                    <h2>What I learned</h2>
+                    <p>Feel is everything in a real-time game, and feel lives in details you can't plan on a whiteboard. The seizure payout did nothing until I added the freeze-frame and the gold burst — same mechanic, completely different game. Almost all the work after "it functions" was tuning that gap between working and good.</p>
+
+                    <div class="project-status">
+                        <p><strong>Status:</strong> In review — CrazyGames &amp; Poki</p>
+                        <p><strong>Tech Stack:</strong> React 19, Vite, TypeScript, HTML5 Canvas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
