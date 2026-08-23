@@ -45,9 +45,8 @@ Full procedure for each verb lives in `~/.claude/skills/vikasmenon/SKILL.md`.
 |---|---|
 | `index.html` | Homepage — Hero / Writing / Building / Now / Contact strip |
 | `articles.html` | All essays — TOC with deks at top, full text below |
-| `portfolio.html` | Archive — Terra projects + Side Projects |
 | `styles.css` | Single source of truth for tokens, components, responsive |
-| `snackula.html`, `redflag.html`, `bowldem.html`, `plumo.html`, `helicopter-game.html`, `fantasy-team-rater.html`, `samson-prompt-engine.html` | Detail pages using `.project-detail__*` template |
+| `snackula.html`, `redflag.html`, `bowldem.html`, `plumo.html`, `helicopter-game.html`, `fantasy-team-rater.html`, `samson-prompt-engine.html`, `rook.html`, `port-of-hormuz.html`, `autoacquire.html`, `bowldem-reddit.html`, `sony-tv-skill.html`, `session-memory.html` | Detail pages using `.project-detail__*` template, all linked from the homepage Building list |
 | `llms.txt`, `robots.txt`, `sitemap.xml` | LLM/SEO surfaces |
 
 ## What does NOT go on this site
@@ -56,6 +55,13 @@ Full procedure for each verb lives in `~/.claude/skills/vikasmenon/SKILL.md`.
 - **Brand framework names exposed as UI.** No `CRAFT` / `BUILDING` / `BUSINESS` tags, no pillar labels, no "Operator notes" tagline (the tagline is deferred; brand bible flags it as unloved).
 - **"AI expert" / "AI thought leader" framing.** Brand explicitly anti-positioning. Don't reintroduce.
 - **Fabricated metrics or anecdotes.** If a number isn't grounded in real data, leave it out.
+
+## Active Work
+
+- **Blue Revision rebuild — on `feat/blue-revision-rebuild` (off `main`, not `preview`), Retain/Improve/Kill/Decide all done.** Kill list fully executed (portfolio.html, projects.html, work.html, playbowldem-reddit.html, script.js, content.txt all deleted). Decide items resolved: Helicopter Game/Plumo/Sony TV Skill promoted to homepage Building entries; ValuePickr Chat + Rizz Messenger hidden (unlinked, not deleted — "incomplete projects" per Vikas); Resume PDF unlinked (positioning conflict with site's AI-native-builder brand — see MEMORY.md). `sitemap.xml` + `llms.txt` both rebuilt clean.
+- **Design decision this session:** no standalone `/projects` or `/work` hub page going forward — homepage Building list is the single source of truth (was drifting stale across three separate listings before this cleanup).
+- **Still open:** reconcile this branch back into `preview`/`main` before shipping; real browser/visual QA has not happened yet (Chrome extension unavailable both times it was needed).
+- Full session-by-session detail: see `MEMORY.md` in this directory.
 
 ## Dispatch-specific rules
 

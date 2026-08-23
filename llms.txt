@@ -1,37 +1,37 @@
 # Vikas Menon — vikasmenon.com
 
-> Head of Games & Platform at Terra. Building PlotPix.ai — AI-native video pipeline for vertical content at scale.
+> Head of Content & AI at Terra. Building PlotPix.ai — an AI-native video pipeline for TikTok-style vertical short-form content at scale.
 
 ## Site Map
 - Home: https://vikasmenon.com/
-- Projects: https://vikasmenon.com/projects.html
-- Work: https://vikasmenon.com/work.html
+- Building: https://vikasmenon.com/#building
 - Writing: https://vikasmenon.com/articles.html
+- Now: https://vikasmenon.com/#now
 
-## Currently Building
+## Currently Building (day job)
 - PlotPix.ai (https://www.plotpix.ai) — AI-native video pipeline for short-form vertical content at scale
 
 ## Projects
-- Port of Hormuz (https://vikasmenon.com/port-of-hormuz.html) — Real-time ship-triage web game; sort a rising stream of vessels (clear, inspect, or divert) as the pressure scales; built web-first, in review on CrazyGames and Poki
+- Session Memory (https://vikasmenon.com/session-memory.html) — Claude Code skill for per-project memory across several active codebases, open source
+- Port of Hormuz (https://vikasmenon.com/port-of-hormuz.html) — Real-time ship-triage web game; sort a rising stream of vessels as the pressure scales; live on itch.io
+- AutoAcquire (https://vikasmenon.com/autoacquire.html) — Autonomous multi-agent ad-acquisition engine for Bowldem
+- Rook (https://vikasmenon.com/rook.html) — 24/7 personal AI agent on Telegram, built on OpenClaw
+- Bowldem for Reddit (https://vikasmenon.com/bowldem-reddit.html) — Bowldem ported to Reddit's Devvit platform, hackathon submission
 - Bowldem (https://www.bowldem.com) — Daily cricket puzzle game, Wordle for cricket fans
-- Rook — Personal AI assistant on OpenClaw, smart home control + daily digests
-- Sony TV Skill — OpenClaw skill for controlling Sony Bravia TV via REST API
-- Rizz Messenger (https://github.com/ssupppp/redditmessenger) — AI chat challenge game on Reddit/Devvit
-- PlayBowldem on Reddit (https://github.com/ssupppp/bowldem-reddit) — Cricket puzzle for Reddit, hackathon 2026
-- ValuePickr Chat (https://github.com/ssupppp/valuepickr) — RAG-powered investment forum chat
-- Fantasy Team Rater — FPL team rating tool using live API data
-- Helicopter Game — One-touch arcade web game
+- Fantasy Team Rater (https://vikasmenon.com/fantasy-team-rater.html) — FPL team rating tool using live API data
+- Sony TV Skill (https://vikasmenon.com/sony-tv-skill.html) — OpenClaw skill for controlling a Sony Bravia TV via REST API
+- Plumo (https://vikasmenon.com/plumo.html) — Whimsical puzzle adventure, in development
+- Helicopter Game (https://vikasmenon.com/helicopter-game.html) — One-touch arcade web game
 
 ## Work
 - PlotPix.ai (2025–present) — AI-native video pipeline at Terra
-- Terra / Ripple AI (2024–present) — Head of Games & Platform. Built Snackula, RedFlag.exe, Plumo
-- Zynga (2012–2024) — Executive Producer. CSR2 Racing ($1B+ revenue), FarmVille Country Escape (700M+ downloads), Mafia Wars
+- Terra (2024–present) — Head of Content & AI. Previously produced AI-native games: Snackula, RedFlag.exe
+- Zynga (2012–2024) — Executive Producer. CSR2 Racing, FarmVille Country Escape, Mafia Wars
 
 ## Key Topics
-Game development, AI-native games, live operations, prompt engineering, velocity, production leadership
+Game development, AI-native games, AI-native video production, prompt engineering, production leadership
 
 ## Contact
 - Email: menonvikz@gmail.com
 - LinkedIn: https://linkedin.com/in/vikmenon
 - GitHub: https://github.com/ssupppp
-- Resume: https://vikasmenon.com/Vikas_Menon_Resume.pdf

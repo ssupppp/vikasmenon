@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Memory — Vikas Menon</title>
+    <meta name="description" content="A Claude Code skill for per-project memory across several active codebases. Each project keeps its own session log, real-failure log, and backlog, read and written narrowly, plus an optional shared last-touched index.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/session-memory.html">
+    <meta property="og:title" content="Session Memory — Per-Project AI Coding Memory">
+    <meta property="og:description" content="Each project gets its own small set of memory files. Starting a session reads only that project's files; ending one writes to whichever changed.">
+    <meta property="og:url" content="https://vikasmenon.com/session-memory.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Session Memory — Per-Project AI Coding Memory">
+    <meta name="twitter:description" content="Each project gets its own small set of memory files. Starting a session reads only that project's files; ending one writes to whichever changed.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="index.html#building" class="nav-link">Building</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#now" class="nav-link">Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <a href="index.html#building" class="back-link">Back</a>
+
+                <h1 class="project-detail__title">Session Memory</h1>
+                <p class="project-detail__subtitle">Per-Project Memory for AI Coding Sessions</p>
+
+                <a href="https://github.com/ssupppp/claude-session-memory" target="_blank" rel="noopener" class="project-cta">View on GitHub</a>
+
+                <div class="project-detail__content">
+                    <h2>The Problem</h2>
+                    <p>Running several active codebases at once, the usual ways of giving an AI coding assistant memory both break down in practice. Re-explain the project's state at the start of every session, and real time is lost to it. Keep one growing memory file instead, and every session loads irrelevant history from projects it isn't even touching.</p>
+
+                    <h2>How It Works</h2>
+                    <p>Session Memory takes a narrower approach. Each project gets its own small set of files: a running log of what happened, a log of what actually went wrong — not everything, only genuine failures — and whatever backlog is already kept. Ending a session writes to whichever of those actually changed. Starting one reads only that project's files and gives a short brief: what's done, what's next, what to watch for.</p>
+
+                    <figure style="margin:2rem 0 0;max-width:640px">
+                        <svg viewBox="0 0 640 220" role="img" aria-label="Two separate projects, each with its own MEMORY, ERRORS, and BACKLOG files. Both optionally connect, via a dashed opt-in line, to one shared index outside any project that only tracks which project was touched most recently.">
+                            <defs>
+                                <marker id="smArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path>
+                                </marker>
+                            </defs>
+                            <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+                                <rect x="20" y="16" width="220" height="120" fill="none" stroke="currentColor" stroke-width="1.25"></rect>
+                                <text x="34" y="38" font-weight="600">Project A</text>
+                                <line x1="34" y1="48" x2="226" y2="48" stroke="currentColor" stroke-width="0.5" opacity="0.4"></line>
+                                <text x="34" y="68" opacity="0.85">MEMORY.md</text>
+                                <text x="34" y="88" opacity="0.85">ERRORS.md</text>
+                                <text x="34" y="108" opacity="0.85">BACKLOG.md</text>
+
+                                <rect x="400" y="16" width="220" height="120" fill="none" stroke="currentColor" stroke-width="1.25"></rect>
+                                <text x="414" y="38" font-weight="600">Project B</text>
+                                <line x1="414" y1="48" x2="606" y2="48" stroke="currentColor" stroke-width="0.5" opacity="0.4"></line>
+                                <text x="414" y="68" opacity="0.85">MEMORY.md</text>
+                                <text x="414" y="88" opacity="0.85">ERRORS.md</text>
+                                <text x="414" y="108" opacity="0.85">BACKLOG.md</text>
+
+                                <rect x="200" y="172" width="240" height="40" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"></rect>
+                                <text x="320" y="196" text-anchor="middle" opacity="0.85">shared index — last touched</text>
+
+                                <line x1="130" y1="136" x2="270" y2="172" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#smArrow)" opacity="0.75"></line>
+                                <line x1="510" y1="136" x2="370" y2="172" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#smArrow)" opacity="0.75"></line>
+                                <text x="150" y="158" opacity="0.6" font-size="11">opt-in</text>
+                                <text x="480" y="158" opacity="0.6" font-size="11">opt-in</text>
+                            </g>
+                        </svg>
+                        <figcaption style="font-family:'Geist Mono',monospace;font-size:0.72rem;color:var(--text-tertiary);margin-top:0.75rem;">Each project keeps its own memory. A shared index — opt-in only — tracks which one was touched most recently.</figcaption>
+                    </figure>
+
+                    <h2>Two Modes</h2>
+                    <p>A deliberately small piece of infrastructure: two modes, a handful of markdown files, and clear rules about when to write versus skip. Work across several projects, and an optional shared index tracks which one was touched most recently — including ones with no git history, using a small timestamp file rather than commit dates. Nothing is shared between projects unless that's turned on.</p>
+
+                    <div class="project-status">
+                        <p><strong>Status:</strong> Live, open source</p>
+                        <p><strong>License:</strong> MIT</p>
+                        <p><strong>Stack:</strong> Markdown, Claude Code skill</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

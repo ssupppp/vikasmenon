@@ -63,7 +63,11 @@
                     <p>Four rails run every cycle: token expiry preflight, hard daily budget cap, paired ad+adset kills (never one without the other), and the provider fallback chain. These rails do not learn. That's on purpose. The part of the system that can hurt you should not also be the part that changes.</p>
 
                     <h2>What I Learned</h2>
-                    <p>Attribution has to close before the loop is useful. We burned ₹2,068 across 4,279 clicks with zero attributed plays before finding that the Supabase view was keyed on a UTM field the creative agent never populated. The agents were rotating against noise for ten days. The loop is only as good as the data feeding it.</p>
+                    <p>Attribution has to close before the loop is useful. The agents were rotating against noise for ten days before the gap surfaced. The loop is only as good as the data feeding it.</p>
+
+                    <div class="project-callout">
+                        <p>We burned ₹2,068 across 4,279 clicks with zero attributed plays before finding that the Supabase view was keyed on a UTM field the creative agent never populated.</p>
+                    </div>
 
                     <div class="project-status">
                         <p><strong>Status:</strong> Live</p>

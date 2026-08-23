@@ -293,6 +293,12 @@ section {
     border-bottom: 1px solid var(--rule);
 }
 
+.build-rail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
 .build-year {
     font-family: 'Geist Mono', monospace;
     font-size: 0.7rem;
@@ -300,6 +306,23 @@ section {
     color: var(--text-tertiary);
     padding-top: 0.45rem;
     white-space: nowrap;
+}
+
+.build-thumb {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--rule);
+    position: relative;
+    flex: none;
+}
+
+.build-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .build-body {
@@ -475,16 +498,17 @@ footer p {
     border-top: 1px solid var(--rule);
 }
 
-/* Index list at top of articles.html (TOC with deks) */
+/* Index list at top of articles.html (TOC with deks) — two-column */
 .articles-index {
-    display: flex;
-    flex-direction: column;
+    columns: 2;
+    column-gap: 3rem;
     margin-bottom: 5rem;
     padding-bottom: 4rem;
     border-bottom: 1px solid var(--rule);
 }
 
 .articles-index-title {
+    column-span: all;
     font-family: 'Geist Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.14em;
@@ -494,8 +518,10 @@ footer p {
 }
 
 .articles-index .essay {
+    display: block;
     padding: 1.5rem 0;
     border-top: 1px solid var(--rule);
+    break-inside: avoid;
 }
 
 .articles-index .essay:last-child {
@@ -752,6 +778,23 @@ footer p {
     border-color: var(--ink);
 }
 
+.project-callout {
+    margin: 2rem 0;
+    padding: 1.1rem 1.5rem;
+    border-left: 2px solid var(--accent);
+    background: var(--surface);
+    max-width: 40em;
+}
+
+.project-callout p {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
 .project-status {
     margin-top: 3rem;
     padding-top: 1.75rem;
@@ -867,11 +910,20 @@ footer p {
         padding: 1.5rem 0;
     }
 
-    .build-year {
+    .build-rail {
         grid-row: 1;
         grid-column: 1;
-        padding-top: 0;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
         order: -1;
+    }
+
+    .build-year { padding-top: 0; }
+
+    .build-thumb {
+        width: 2.25rem;
+        height: 2.25rem;
     }
 
     .build-arrow {
@@ -904,7 +956,7 @@ footer p {
     .article-title { font-size: 1.5rem; }
     .article-content { font-size: 1rem; }
     .articles-page { padding: 3rem 0 4rem; }
-    .articles-index { margin-bottom: 3.5rem; padding-bottom: 3rem; }
+    .articles-index { columns: 1; margin-bottom: 3.5rem; padding-bottom: 3rem; }
 
     .page-header { padding: 9rem 0 3rem; }
     .project-detail { padding: 9rem 0 4rem; }
