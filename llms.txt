@@ -12,16 +12,15 @@
 - PlotPix.ai (https://www.plotpix.ai) — AI-native video pipeline for short-form vertical content at scale
 
 ## Projects
-- Session Memory (https://vikasmenon.com/session-memory.html) — Claude Code skill for per-project memory across several active codebases, open source
+- Session Memory (https://vikasmenon.com/session-memory.html) — Claude Code / Codex skill for managing memory across multiple projects, open source
 - Port of Hormuz (https://vikasmenon.com/port-of-hormuz.html) — Real-time ship-triage web game; sort a rising stream of vessels as the pressure scales; live on itch.io
 - AutoAcquire (https://vikasmenon.com/autoacquire.html) — Autonomous multi-agent ad-acquisition engine for Bowldem
 - Rook (https://vikasmenon.com/rook.html) — 24/7 personal AI agent on Telegram, built on OpenClaw
 - Bowldem for Reddit (https://vikasmenon.com/bowldem-reddit.html) — Bowldem ported to Reddit's Devvit platform, hackathon submission
 - Bowldem (https://www.bowldem.com) — Daily cricket puzzle game, Wordle for cricket fans
 - Fantasy Team Rater (https://vikasmenon.com/fantasy-team-rater.html) — FPL team rating tool using live API data
-- Sony TV Skill (https://vikasmenon.com/sony-tv-skill.html) — OpenClaw skill for controlling a Sony Bravia TV via REST API
-- Plumo (https://vikasmenon.com/plumo.html) — Whimsical puzzle adventure, in development
-- Helicopter Game (https://vikasmenon.com/helicopter-game.html) — One-touch arcade web game
+- Sony TV Skill (https://vikasmenon.com/sony-tv-skill.html) — OpenClaw skill for controlling a Sony Bravia TV over the home network
+- Plumo (https://vikasmenon.com/plumo.html) — AI-native pet simulator, prototype, never shipped
 
 ## Work
 - PlotPix.ai (2025–present) — AI-native video pipeline at Terra

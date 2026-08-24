@@ -802,6 +802,13 @@ footer p {
 
 .project-cta:hover { background: var(--text); }
 
+.project-detail__content a.project-cta {
+    color: var(--bg);
+    border-bottom: none;
+}
+
+.project-detail__content a.project-cta:hover { color: var(--bg); }
+
 /* ========================================
    PORTFOLIO (rebuilt editorial)
    ======================================== */

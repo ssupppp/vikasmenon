@@ -10,8 +10,9 @@
     <meta property="og:title" content="Bowldem for Reddit — Daily Cricket Puzzle on Devvit">
     <meta property="og:description" content="Bowldem ported to Reddit's Devvit platform for the Reddit Games Hackathon.">
     <meta property="og:url" content="https://vikasmenon.com/bowldem-reddit.html">
+    <meta property="og:image" content="https://vikasmenon.com/images/bowldem-reddit.jpg">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bowldem for Reddit — Daily Cricket Puzzle on Devvit">
     <meta name="twitter:description" content="Bowldem ported to Reddit's Devvit platform for the Reddit Games Hackathon.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +40,10 @@
                 <h1 class="project-detail__title">Bowldem for Reddit</h1>
                 <p class="project-detail__subtitle">Reddit Games Hackathon Submission</p>
 
+                <div class="project-detail__image">
+                    <img src="images/bowldem-reddit.jpg" alt="Bowldem for Reddit" />
+                </div>
+
                 <div class="project-detail__content">
                     <h2>About the Project</h2>
                     <p>Bowldem for Reddit is a port of <a href="https://bowldem.com" target="_blank" rel="noopener">Bowldem</a> — a daily cricket puzzle game — to Reddit's Devvit platform. Built as a submission for the Reddit Games Hackathon, targeting the Best Daily Game category ($15,000 prize).</p>
@@ -53,18 +58,8 @@
                     <h2>The Build</h2>
                     <p>Devvit is Reddit's app platform — TypeScript, server-side rendering, tight integration with Reddit's post and comment APIs. The migration from vanilla JS (web Bowldem) to Devvit's reactive framework was the bulk of the work. Puzzle data, scoring logic, and the daily rotation system all had to be rearchitected for Devvit's server-client split.</p>
 
-                    <h2>What I Learned</h2>
-                    <p>Devvit's sandbox limitations meant rethinking things I took for granted on the web — no arbitrary DOM manipulation, no client-side storage, different auth model. The puzzle had to be simpler and more self-contained than the web version, which turned out to make it better as a daily drop.</p>
-
-                    <div class="project-callout">
-                        <p>Platform constraints shape the product.</p>
-                    </div>
-
-                    <div class="project-status">
-                        <p><strong>Status:</strong> Hackathon submission</p>
-                        <p><strong>Tech Stack:</strong> Reddit Devvit, TypeScript</p>
-                        <a href="https://github.com/ssupppp/bowldem-reddit" target="_blank" rel="noopener" class="project-cta">View on GitHub</a>
-                    </div>
+                    <a href="https://www.reddit.com/r/playbowldem/comments/1r0mrdq/bowldem_daily_cricket_puzzle/" target="_blank" rel="noopener" class="project-cta">View on Reddit</a>
+                    <a href="https://github.com/ssupppp/bowldem-reddit" target="_blank" rel="noopener" class="project-cta">View on GitHub</a>
                 </div>
             </div>
         </section>

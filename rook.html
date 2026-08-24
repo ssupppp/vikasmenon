@@ -10,7 +10,9 @@
     <meta property="og:title" content="Rook — Personal AI Assistant">
     <meta property="og:description" content="Personal AI assistant built on OpenClaw. Smart home control, daily digests, and natural language automation.">
     <meta property="og:url" content="https://vikasmenon.com/rook.html">
+    <meta property="og:image" content="https://vikasmenon.com/images/openclaw.jpg">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
@@ -36,25 +38,24 @@
                 <h1 class="project-detail__title">Rook</h1>
                 <p class="project-detail__subtitle">Personal AI Assistant on OpenClaw</p>
 
+                <div class="project-detail__image">
+                    <img src="images/openclaw.jpg" alt="OpenClaw, the platform Rook is built on" />
+                </div>
+
                 <div class="project-detail__content">
                     <h2>What it is</h2>
                     <p>Rook is a personal AI assistant built on the OpenClaw platform. It uses natural language to control smart home devices, aggregate information across messaging platforms, and automate daily routines.</p>
 
                     <h2>Skills</h2>
                     <ul>
-                        <li><strong>Sony TV Control:</strong> Power on/off, volume, app launching (Netflix, YouTube, Hotstar, Prime Video) for Sony Bravia TVs via REST API and Wake-on-LAN</li>
+                        <li><strong>Sony TV Control:</strong> Power on/off, volume, app launching (Netflix, YouTube, Hotstar, Prime Video) for Sony Bravia TVs over the home network</li>
                         <li><strong>Daily Digest:</strong> Read-only aggregation of priority messages across Email, WhatsApp, LinkedIn, Telegram, and iMessage — delivered as a structured summary to Telegram</li>
                     </ul>
 
                     <h2>How it works</h2>
-                    <p>Each skill is defined as a YAML manifest that maps natural language intents to executable scripts. The Sony TV skill runs a Python script that communicates with the TV over the home network. The Daily Digest skill monitors five messaging platforms, classifies messages by priority contacts and keywords, and surfaces what matters.</p>
+                    <p>Each skill maps natural language intents to an action. The Sony TV skill talks to the TV directly over the home network. The Daily Digest skill monitors five messaging platforms, classifies messages by priority contacts and keywords, and surfaces what matters.</p>
 
                     <p>The assistant is strictly read-only for messaging — it never sends replies or acts on behalf of the user. All actions are transparent and reversible.</p>
-
-                    <div class="project-status">
-                        <p><strong>Status:</strong> Active — private, no public demo</p>
-                        <p><strong>Stack:</strong> Python, OpenClaw, YAML, REST APIs</p>
-                    </div>
                 </div>
             </div>
         </section>
