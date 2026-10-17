@@ -12,6 +12,7 @@
 - PlotPix.ai (https://www.plotpix.ai) — AI-native video pipeline for short-form vertical content at scale
 
 ## Projects
+- Puff Hunt (https://vikasmenon.com/puff-hunt.html) — Webcam browser game played with your face: turn your head to aim, blink to pop; live on itch.io
 - Session Memory (https://vikasmenon.com/session-memory.html) — Claude Code / Codex skill for managing memory across multiple projects, open source
 - Port of Hormuz (https://vikasmenon.com/port-of-hormuz.html) — Real-time ship-triage web game; sort a rising stream of vessels as the pressure scales; live on itch.io
 - AutoAcquire (https://vikasmenon.com/autoacquire.html) — Autonomous multi-agent ad-acquisition engine for Bowldem

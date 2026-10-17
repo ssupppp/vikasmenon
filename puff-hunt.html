@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puff Hunt — A Webcam Game You Play With Your Face - Vikas Menon</title>
+    <meta name="description" content="A browser game you play with your face. Turn your head to aim, blink to pop the puffbirds. Face tracking runs locally in the browser. Play it free on itch.io.">
+    <meta name="author" content="Vikas Menon">
+    <link rel="canonical" href="https://vikasmenon.com/puff-hunt.html">
+    <meta property="og:title" content="Puff Hunt — A Webcam Game You Play With Your Face">
+    <meta property="og:description" content="Turn your head to aim. Blink to pop. A webcam browser game, live on itch.io.">
+    <meta property="og:url" content="https://vikasmenon.com/puff-hunt.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://vikasmenon.com/images/puff-hunt.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Puff Hunt — A Webcam Game You Play With Your Face">
+    <meta name="twitter:description" content="Turn your head to aim. Blink to pop. A webcam browser game, live on itch.io.">
+    <meta name="twitter:image" content="https://vikasmenon.com/images/puff-hunt.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Vikas Menon</a>
+            <div class="nav-links">
+                <a href="index.html#building" class="nav-link">Building</a>
+                <a href="articles.html" class="nav-link">Writing</a>
+                <a href="index.html#now" class="nav-link">Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <a href="index.html#building" class="back-link">Back</a>
+
+                <h1 class="project-detail__title">Puff Hunt</h1>
+                <p class="project-detail__subtitle">A webcam game you play with your face</p>
+
+                <a href="https://ssupppp.itch.io/puff-hunt" target="_blank" rel="noopener" class="project-cta">Play it on itch.io</a>
+
+                <div class="project-detail__image">
+                    <img src="images/puff-hunt.jpg" alt="Puff Hunt key art" />
+                </div>
+
+                <div class="project-detail__content">
+                    <p>Turn your head to aim, blink to pop. Puffbirds drift across a meadow and you shoot them down with your face, no mouse or keyboard needed. Pip the fox cheers when you hit one and laughs when you miss. Five rounds, each one faster than the last.</p>
+
+                    <p>The first time you play, a short setup under the night sky teaches the controls one at a time and maps how far your head actually turns. After that the game remembers you and drops you straight into the birds.</p>
+
+                    <div class="project-detail__image">
+                        <video src="images/puff-hunt-preview.mp4" poster="images/puff-hunt.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+                    </div>
+
+                    <div class="project-callout">
+                        <p>Face tracking runs in the browser with MediaPipe. The webcam video never leaves your machine. Needs a laptop or desktop with a camera.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vikas Menon</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
